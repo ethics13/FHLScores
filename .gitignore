@@ -20,5 +20,7 @@ venv/
 Thumbs.db
 .DS_Store
 
-# Dist
-C:\Claude\Projects\FHLScoring\dist\*
+# PyInstaller
+dist/
+build/
+*.spec
