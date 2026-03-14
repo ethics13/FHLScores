@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:api-web.nhle.com)",
+      "Bash(python:*)",
+      "Bash(pip install:*)",
+      "WebSearch",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "WebFetch(domain:fantraxapi.kometa.wiki)",
+      "Bash(pip show:*)",
+      "WebFetch(domain:replit.com)"
+    ]
+  }
+}

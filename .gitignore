@@ -1,0 +1,21 @@
+# Credentials — never commit these
+config.ini
+fantrax_cookies.pkl
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+*.egg-info/
+
+# IDE
+.vscode/
+.idea/
+*.suo
+*.user
+
+# OS
+Thumbs.db
+.DS_Store
