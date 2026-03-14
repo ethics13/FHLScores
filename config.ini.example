@@ -3,7 +3,7 @@ username = your_email@example.com
 password = yourpassword
 
 [leagues]
-j3yl79c7man4av42 = League One
+<fantrax League Id - usually in url> = League One
 ; add more: league_id = Display Name
 
 [team_ids]
