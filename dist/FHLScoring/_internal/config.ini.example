@@ -1,0 +1,16 @@
+[fantrax]
+username = your_email@example.com
+password = yourpassword
+
+[leagues]
+<fantrax League Id - usually in url> = League One
+; add more: league_id = Display Name
+
+[team_ids]
+<fantrax League Id - usually in url> = Team One
+; leave blank — auto-detected on first run
+
+[app]
+poll_interval_idle = 30
+poll_interval_live = 10
+flash_duration_ms = 10000

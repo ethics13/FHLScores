@@ -1,10 +1,15 @@
 from __future__ import annotations
 
 import configparser
+import sys
 from dataclasses import dataclass, field
 from pathlib import Path
 
-CONFIG_PATH = Path(__file__).parent.parent / "config.ini"
+if getattr(sys, "frozen", False):
+    # Running as a PyInstaller bundle — config.ini lives next to the .exe
+    CONFIG_PATH = Path(sys.executable).parent / "config.ini"
+else:
+    CONFIG_PATH = Path(__file__).parent.parent / "config.ini"
 
 
 class ConfigError(Exception):

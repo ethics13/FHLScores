@@ -8,11 +8,17 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Optional
 
+import sys
+
 import requests
 
 FANTRAX_BASE = "https://www.fantrax.com"
 API_URL = f"{FANTRAX_BASE}/fxpa/req"
-COOKIE_FILE = Path(__file__).parent.parent.parent / "fantrax_cookies.pkl"
+
+if getattr(sys, "frozen", False):
+    COOKIE_FILE = Path(sys.executable).parent / "fantrax_cookies.pkl"
+else:
+    COOKIE_FILE = Path(__file__).parent.parent.parent / "fantrax_cookies.pkl"
 
 # Fantrax shortName → our internal field name (for stat parsing).
 # All keys are uppercase — lookup normalises shortName with .upper().
