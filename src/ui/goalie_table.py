@@ -7,16 +7,13 @@ from PyQt6.QtWidgets import QWidget, QVBoxLayout, QTableWidget, QTableWidgetItem
 from ui.flash_delegate import FlashDelegate
 from scoring.engine import GoalieRow, GoalieTotals
 
-GOALIE_COLUMNS = ["Name", "Team", "Opp", "W", "OL", "GAA", "SV%", "SO", "SOGA", "SV"]
+GOALIE_COLUMNS = ["Name", "Team", "Opp", "W", "GAA", "SV%", "SV"]
 
 STAT_TO_COL: dict[str, int] = {
     "wins": 3,
-    "ot_losses": 4,
-    "gaa": 5,
-    "save_pct": 6,
-    "shutout": 7,
-    "shots_against": 8,
-    "saves": 9,
+    "gaa": 4,
+    "save_pct": 5,
+    "saves": 6,
 }
 
 _HEADER_STYLE = (
@@ -97,12 +94,9 @@ class GoalieTable(QWidget):
             self._set_cell(row_idx, 1, p.team_abbrev)
             self._set_cell(row_idx, 2, p.nhl_opponent)
             self._set_cell(row_idx, 3, str(p.wins))
-            self._set_cell(row_idx, 4, str(p.ot_losses))
-            self._set_cell(row_idx, 5, f"{p.gaa:.2f}")
-            self._set_cell(row_idx, 6, f"{p.save_pct:.3f}")
-            self._set_cell(row_idx, 7, str(p.shutout))
-            self._set_cell(row_idx, 8, str(p.shots_against))
-            self._set_cell(row_idx, 9, str(p.saves))
+            self._set_cell(row_idx, 4, f"{p.gaa:.2f}")
+            self._set_cell(row_idx, 5, f"{p.save_pct:.3f}")
+            self._set_cell(row_idx, 6, str(p.saves))
 
             for stat, col in STAT_TO_COL.items():
                 if (p.fantrax_id, stat) in changed_ids:
@@ -120,9 +114,9 @@ class GoalieTable(QWidget):
         bold_font.setPointSize(8)
         totals_data = [
             "TOTALS", "", "",
-            str(totals.wins), str(totals.ot_losses),
+            str(totals.wins),
             f"{totals.gaa:.2f}", f"{totals.save_pct:.3f}",
-            str(totals.shutout), str(totals.shots_against), str(totals.saves),
+            str(totals.saves),
         ]
         for col, val in enumerate(totals_data):
             item = QTableWidgetItem(val)

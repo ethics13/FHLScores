@@ -25,7 +25,7 @@ class NHLSkaterStats:
     goals: int = 0
     assists: int = 0
     points: int = 0
-    plus_minus: int = 0
+    blk: int = 0
     hits: int = 0
     sog: int = 0
     ppg: int = 0
@@ -209,7 +209,7 @@ def _parse_skaters(team_data: dict, team_abbrev: str) -> list[NHLSkaterStats]:
                 goals=s.get("goals", 0),
                 assists=s.get("assists", 0),
                 points=s.get("points", 0),
-                plus_minus=s.get("plusMinus", 0),
+                blk=s.get("blockedShots", s.get("blocks", s.get("blk", 0))),
                 hits=s.get("hits", 0),
                 sog=s.get("shots", s.get("sog", 0)),
                 ppg=s.get("powerPlayGoals", s.get("ppg", 0)),

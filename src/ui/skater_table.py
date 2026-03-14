@@ -7,17 +7,16 @@ from PyQt6.QtWidgets import QWidget, QVBoxLayout, QTableWidget, QTableWidgetItem
 from ui.flash_delegate import FlashDelegate
 from scoring.engine import SkaterRow, SkaterTotals
 
-SKATER_COLUMNS = ["Name", "Team", "Opp", "Pos", "G", "A", "PTS", "+/-", "Hits", "SOG", "PPP", "GWG"]
+SKATER_COLUMNS = ["Name", "Team", "Opp", "Pos", "G", "A", "BLK", "Hits", "SOG", "PPP", "GWG"]
 
 STAT_TO_COL: dict[str, int] = {
     "goals": 4,
     "assists": 5,
-    "points": 6,
-    "plus_minus": 7,
-    "hits": 8,
-    "sog": 9,
-    "ppp": 10,
-    "gwg": 11,
+    "blk": 6,
+    "hits": 7,
+    "sog": 8,
+    "ppp": 9,
+    "gwg": 10,
 }
 
 _HEADER_STYLE = (
@@ -97,12 +96,11 @@ class SkaterTable(QWidget):
             self._set_cell(row_idx, 3, p.position)
             self._set_cell(row_idx, 4, str(p.goals))
             self._set_cell(row_idx, 5, str(p.assists))
-            self._set_cell(row_idx, 6, str(p.points))
-            self._set_cell(row_idx, 7, str(p.plus_minus))
-            self._set_cell(row_idx, 8, str(p.hits))
-            self._set_cell(row_idx, 9, str(p.sog))
-            self._set_cell(row_idx, 10, str(p.ppp))
-            self._set_cell(row_idx, 11, str(p.gwg))
+            self._set_cell(row_idx, 6, str(p.blk))
+            self._set_cell(row_idx, 7, str(p.hits))
+            self._set_cell(row_idx, 8, str(p.sog))
+            self._set_cell(row_idx, 9, str(p.ppp))
+            self._set_cell(row_idx, 10, str(p.gwg))
 
             for stat, col in STAT_TO_COL.items():
                 if (p.fantrax_id, stat) in changed_ids:
@@ -115,8 +113,8 @@ class SkaterTable(QWidget):
         bold_font.setPointSize(8)
         totals_data = [
             "TOTALS", "", "", "",
-            str(totals.goals), str(totals.assists), str(totals.points),
-            str(totals.plus_minus), str(totals.hits), str(totals.sog),
+            str(totals.goals), str(totals.assists),
+            str(totals.blk), str(totals.hits), str(totals.sog),
             str(totals.ppp), str(totals.gwg),
         ]
         for col, val in enumerate(totals_data):

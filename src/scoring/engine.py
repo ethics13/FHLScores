@@ -23,7 +23,7 @@ class SkaterRow:
     goals: int = 0
     assists: int = 0
     points: int = 0
-    plus_minus: int = 0
+    blk: int = 0
     hits: int = 0
     sog: int = 0
     ppg: int = 0
@@ -54,7 +54,7 @@ class SkaterTotals:
     goals: int = 0
     assists: int = 0
     points: int = 0
-    plus_minus: int = 0
+    blk: int = 0
     hits: int = 0
     sog: int = 0
     ppg: int = 0
@@ -118,14 +118,14 @@ def _fantrax_skater_totals(group: dict[str, dict[str, float]]) -> SkaterTotals:
     """Build SkaterTotals from Fantrax active-stats group dict."""
     t = SkaterTotals()
     for ps in group.values():
-        t.goals      += int(ps.get("goals", 0))
-        t.assists    += int(ps.get("assists", 0))
-        t.plus_minus += int(ps.get("plus_minus", 0))
-        t.hits       += int(ps.get("hits", 0))
-        t.sog        += int(ps.get("sog", 0))
-        t.ppg        += int(ps.get("ppg", 0))
-        t.ppp        += int(ps.get("ppp", 0))
-        t.gwg        += int(ps.get("gwg", 0))
+        t.goals   += int(ps.get("goals", 0))
+        t.assists += int(ps.get("assists", 0))
+        t.blk     += int(ps.get("blk", 0))
+        t.hits    += int(ps.get("hits", 0))
+        t.sog     += int(ps.get("sog", 0))
+        t.ppg     += int(ps.get("ppg", 0))
+        t.ppp     += int(ps.get("ppp", 0))
+        t.gwg     += int(ps.get("gwg", 0))
     t.points = t.goals + t.assists
     return t
 
@@ -157,7 +157,7 @@ def _sum_skaters(rows: list[SkaterRow]) -> SkaterTotals:
         t.goals += r.goals
         t.assists += r.assists
         t.points += r.points
-        t.plus_minus += r.plus_minus
+        t.blk += r.blk
         t.hits += r.hits
         t.sog += r.sog
         t.ppg += r.ppg
@@ -360,7 +360,7 @@ class ScoringEngine:
                     row.goals = skater_stats.goals
                     row.assists = skater_stats.assists
                     row.points = skater_stats.points
-                    row.plus_minus = skater_stats.plus_minus
+                    row.blk = skater_stats.blk
                     row.hits = skater_stats.hits
                     row.sog = skater_stats.sog
                     row.ppg = skater_stats.ppg
@@ -430,7 +430,7 @@ def detect_changes(
             or_ = old_map.get(nr.fantrax_id)
             if not or_:
                 continue
-            for stat in ("goals", "assists", "points", "plus_minus", "hits", "sog", "ppg", "ppp", "gwg"):
+            for stat in ("goals", "assists", "points", "blk", "hits", "sog", "ppg", "ppp", "gwg"):
                 if getattr(or_, stat) != getattr(nr, stat):
                     changed.add((nr.fantrax_id, stat))
 

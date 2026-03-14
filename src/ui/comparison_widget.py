@@ -15,18 +15,14 @@ from scoring.engine import SkaterTotals, GoalieTotals
 _STATS: list[tuple[str, str, bool, bool]] = [
     ("G",    "goals",         False, False),
     ("A",    "assists",       False, False),
-    ("PTS",  "points",        False, False),
-    ("+/-",  "plus_minus",    False, False),
+    ("BLK",  "blk",           False, False),
     ("Hits", "hits",          False, False),
     ("SOG",  "sog",           False, False),
     ("PPP",  "ppp",           False, False),
     ("GWG",  "gwg",           False, False),
     ("W",    "wins",          True,  False),
-    ("OL",   "ot_losses",     True,  True),
     ("GAA",  "gaa",           True,  True),
     ("SV%",  "save_pct",      True,  False),
-    ("SO",   "shutout",       True,  False),
-    ("SOGA", "shots_against", True,  True),
     ("SV",   "saves",         True,  False),
 ]
 
