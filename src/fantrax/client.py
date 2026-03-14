@@ -80,7 +80,8 @@ class FantraxClient:
             "X-Requested-With": "XMLHttpRequest",
         })
         self._logged_in = False
-        self._positions: dict[str, str] = {}  # posId → shortName
+        self._positions: dict[str, str] = {}   # posId → shortName
+        self._team_names: dict[str, str] = {}  # team_id → display name
         self._day_stats_cache: dict[str, dict] = {}  # date_str → allTeamsStats dict
         self._scip_to_field: dict[str, str] = {}    # built once from API response
 
@@ -89,6 +90,7 @@ class FantraxClient:
         self._day_stats_cache.clear()
         self._scip_to_field.clear()
         self._positions.clear()
+        self._team_names.clear()
 
     def login(self) -> None:
         """Authenticate via Selenium (headless Chrome) and cache cookies."""
@@ -227,12 +229,30 @@ class FantraxClient:
         return results[0] if results else {}
 
     def initialize_league(self, league_id: str) -> None:
-        """Fetch league info to populate positions map. Called once after login."""
+        """Fetch league info to populate positions and team names. Called once after login."""
         data = self._api1(league_id, "getFantasyLeagueInfo")
         self._positions = {
             k: v.get("shortName", k)
             for k, v in data.get("positionMap", {}).items()
         }
+
+        # getFantasyLeagueInfo has no team list — use getTeamRosterInfo instead
+        roster_data = self._api1(league_id, "getTeamRosterInfo", {"view": "STATS"})
+        teams = roster_data.get("fantasyTeams", [])
+        if isinstance(teams, dict):
+            teams = list(teams.values())
+
+        self._team_names = {}
+        for t in teams:
+            tid = (t.get("id") or t.get("teamId") or
+                   t.get("fantasyTeamId") or t.get("teamid", ""))
+            if tid:
+                name = (t.get("shortName") or t.get("name") or
+                        t.get("teamName") or str(tid))
+                self._team_names[str(tid)] = name
+
+    def get_team_name(self, team_id: str) -> str:
+        return self._team_names.get(str(team_id), "")
 
     def get_my_team_id(self, league_id: str) -> str:
         """

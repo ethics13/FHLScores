@@ -189,6 +189,12 @@ class MainWindow(QMainWindow):
 
         self._my_widget.update_data(snapshot, is_my_team=True,  changed=changed)
         self._opp_widget.update_data(snapshot, is_my_team=False, changed=changed)
+        if snapshot.my_team_name:
+            self._my_widget.set_label(snapshot.my_team_name)
+        if snapshot.opp_team_name:
+            self._opp_widget.set_label(snapshot.opp_team_name)
+        if snapshot.my_team_name and snapshot.opp_team_name:
+            self._comparison.set_labels(snapshot.my_team_name, snapshot.opp_team_name)
         self._comparison.update_data(
             snapshot.my_skater_period_totals,  snapshot.my_goalie_period_totals,
             snapshot.opp_skater_period_totals, snapshot.opp_goalie_period_totals,

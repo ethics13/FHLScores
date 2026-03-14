@@ -93,6 +93,8 @@ class ScoringSnapshot:
     live_game_count: int = 0
     period_start: Optional[date] = None
     period_end: Optional[date] = None
+    my_team_name: str = ""
+    opp_team_name: str = ""
 
 
 # ---------------------------------------------------------------------------
@@ -301,6 +303,8 @@ class ScoringEngine:
             live_game_count=len(live_games),
             period_start=period_start,
             period_end=period_end,
+            my_team_name=self._fantrax.get_team_name(self._my_team_id),
+            opp_team_name=self._fantrax.get_team_name(opp_team_id),
         )
         self._last_snapshot = snapshot
         return snapshot
