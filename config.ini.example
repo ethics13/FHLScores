@@ -7,7 +7,7 @@ password = yourpassword
 ; add more: league_id = Display Name
 
 [team_ids]
-j3yl79c7man4av42 =
+<fantrax League Id - usually in url> = Team One
 ; leave blank — auto-detected on first run
 
 [app]
