@@ -20,6 +20,7 @@ class SkaterRow:
     team_abbrev: str
     nhl_opponent: str
     position: str
+    game_state: str = ""   # "LIVE", "FUT", "OFF", ""
     goals: int = 0
     assists: int = 0
     points: int = 0
@@ -37,6 +38,7 @@ class GoalieRow:
     name: str
     team_abbrev: str
     nhl_opponent: str
+    game_state: str = ""   # "LIVE", "FUT", "OFF", ""
     wins: int = 0
     ot_losses: int = 0
     gaa: float = 0.0
@@ -221,9 +223,10 @@ class ScoringEngine:
         today_games = self._nhl.get_games_for_date(today.isoformat())
         live_games = [g for g in today_games if g.state in _LIVE_STATES]
 
-        # Today's teams for table filter + opponent column
+        # Today's teams for table filter + opponent column + game state
         playing_teams: set[str] = set()
         team_to_opponent: dict[str, str] = {}
+        team_to_state: dict[str, str] = {}
         for g in today_games:
             at = g.away_team.upper()
             ht = g.home_team.upper()
@@ -231,6 +234,9 @@ class ScoringEngine:
             playing_teams.add(ht)
             team_to_opponent[at] = f"@{ht}"
             team_to_opponent[ht] = f"vs {at}"
+            state = "LIVE" if g.state in _LIVE_STATES else ("OFF" if g.state in _DONE_STATES else "FUT")
+            team_to_state[at] = state
+            team_to_state[ht] = state
 
         # Fetch today's boxscores for active/completed games
         skater_by_id: dict[int, NHLSkaterStats] = {}
@@ -277,8 +283,8 @@ class ScoringEngine:
         opp_roster = self._fantrax.get_roster(opp_team_id, self._league_id)
 
         # Today's players for the tables (filtered to teams playing today)
-        my_skaters, my_goalies = self._build_rows(my_roster, nhl_skater_map, nhl_goalie_map, playing_teams, team_to_opponent)
-        opp_skaters, opp_goalies = self._build_rows(opp_roster, nhl_skater_map, nhl_goalie_map, playing_teams, team_to_opponent)
+        my_skaters, my_goalies = self._build_rows(my_roster, nhl_skater_map, nhl_goalie_map, playing_teams, team_to_opponent, team_to_state)
+        opp_skaters, opp_goalies = self._build_rows(opp_roster, nhl_skater_map, nhl_goalie_map, playing_teams, team_to_opponent, team_to_state)
 
         # Period totals from Fantrax — exact match to their live scoring page
         my_ast  = active_stats.get(self._my_team_id, {})
@@ -316,6 +322,7 @@ class ScoringEngine:
         nhl_goalie_map: dict[str, list[NHLGoalieStats]],
         playing_teams: set[str] = None,
         team_to_opponent: dict[str, str] = None,
+        team_to_state: dict[str, str] = None,
     ) -> tuple[list[SkaterRow], list[GoalieRow]]:
         skaters: list[SkaterRow] = []
         goalies: list[GoalieRow] = []
@@ -326,6 +333,7 @@ class ScoringEngine:
             if playing_teams is not None and team_up not in playing_teams:
                 continue
             opp_str = (team_to_opponent or {}).get(team_up, "")
+            game_state = (team_to_state or {}).get(team_up, "")
             norm = _normalize_name(fp.name)
             if fp.position.upper() in ("G", "GOALIE"):
                 goalie_stats = _match_goalie(norm, fp.team_abbrev, nhl_goalie_map)
@@ -334,6 +342,7 @@ class ScoringEngine:
                     name=fp.name,
                     team_abbrev=fp.team_abbrev,
                     nhl_opponent=opp_str,
+                    game_state=game_state,
                 )
                 if goalie_stats:
                     row.wins = goalie_stats.wins
@@ -355,6 +364,7 @@ class ScoringEngine:
                     team_abbrev=fp.team_abbrev,
                     nhl_opponent=opp_str,
                     position=fp.position,
+                    game_state=game_state,
                 )
                 if skater_stats:
                     row.goals = skater_stats.goals

@@ -1,8 +1,14 @@
 from __future__ import annotations
 
 from PyQt6.QtCore import Qt
-from PyQt6.QtGui import QFont
+from PyQt6.QtGui import QColor, QFont
 from PyQt6.QtWidgets import QWidget, QVBoxLayout, QTableWidget, QTableWidgetItem, QHeaderView, QSizePolicy
+
+_STATE_COLOR: dict[str, QColor] = {
+    "LIVE": QColor(235, 248, 255),   # very light blue
+    "FUT":  QColor(219, 213, 205),   # light taupe
+    "OFF":  QColor(140, 140, 140),   # dark gray
+}
 
 from ui.flash_delegate import FlashDelegate
 from scoring.engine import GoalieRow, GoalieTotals
@@ -98,6 +104,9 @@ class GoalieTable(QWidget):
             self._set_cell(row_idx, 5, f"{p.save_pct:.3f}")
             self._set_cell(row_idx, 6, str(p.saves))
 
+            if p.game_state in _STATE_COLOR:
+                self._set_row_bg(row_idx, _STATE_COLOR[p.game_state])
+
             for stat, col in STAT_TO_COL.items():
                 if (p.fantrax_id, stat) in changed_ids:
                     self._delegate.mark_changed(row_idx, col)
@@ -125,6 +134,12 @@ class GoalieTable(QWidget):
             item.setFlags(item.flags() & ~Qt.ItemFlag.ItemIsSelectable)
             item.setTextAlignment(Qt.AlignmentFlag.AlignCenter)
             self._table.setItem(totals_row, col, item)
+
+    def _set_row_bg(self, row: int, color: QColor) -> None:
+        for col in range(self._table.columnCount()):
+            item = self._table.item(row, col)
+            if item:
+                item.setBackground(color)
 
     def _set_cell(self, row: int, col: int, text: str,
                   align: Qt.AlignmentFlag = Qt.AlignmentFlag.AlignCenter) -> None:
