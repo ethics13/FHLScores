@@ -6,7 +6,7 @@ from PyQt6.QtCore import Qt, QThread, QTimer, pyqtSignal
 from PyQt6.QtGui import QFont
 from PyQt6.QtWidgets import (
     QMainWindow, QSplitter, QStatusBar, QWidget, QVBoxLayout,
-    QHBoxLayout, QLabel, QComboBox,
+    QHBoxLayout, QLabel, QComboBox, QPushButton,
 )
 
 from config import AppConfig
@@ -15,6 +15,7 @@ from nhl.client import NHLClient
 from scoring.engine import ScoringEngine, ScoringSnapshot, detect_changes
 from ui.team_widget import TeamWidget
 from ui.comparison_widget import ComparisonWidget
+from ui.sound_player import SoundPlayer
 
 
 class WorkerThread(QThread):
@@ -47,6 +48,7 @@ class MainWindow(QMainWindow):
         self._fantrax = FantraxClient(config.username, config.password)
         self._nhl = NHLClient()
         self._engine: ScoringEngine | None = None
+        self._sound = SoundPlayer()
 
         # Central widget
         central = QWidget()
@@ -73,6 +75,14 @@ class MainWindow(QMainWindow):
         self._league_combo.currentIndexChanged.connect(self._on_league_changed)
         selector_layout.addWidget(self._league_combo)
         selector_layout.addStretch()
+
+        self._sound_btn = QPushButton("Sound: ON")
+        self._sound_btn.setFont(f)
+        self._sound_btn.setCheckable(True)
+        self._sound_btn.setChecked(True)
+        self._sound_btn.setFixedWidth(90)
+        self._sound_btn.clicked.connect(self._on_sound_toggled)
+        selector_layout.addWidget(self._sound_btn)
 
         main_layout.addWidget(selector_bar)
 
@@ -161,6 +171,10 @@ class MainWindow(QMainWindow):
 
         self._do_poll()
 
+    def _on_sound_toggled(self, checked: bool) -> None:
+        self._sound.enabled = checked
+        self._sound_btn.setText("Sound: ON" if checked else "Sound: OFF")
+
     def _on_league_changed(self, _index: int) -> None:
         # Ignore signals fired before initial load completes
         if not self._fantrax._logged_in:
@@ -186,6 +200,7 @@ class MainWindow(QMainWindow):
             changed = detect_changes(self._last_snapshot, snapshot)
 
         self._last_snapshot = snapshot
+        self._sound.handle_changes(changed)
 
         self._my_widget.update_data(snapshot, is_my_team=True,  changed=changed)
         self._opp_widget.update_data(snapshot, is_my_team=False, changed=changed)
@@ -214,7 +229,7 @@ class MainWindow(QMainWindow):
             pe = snapshot.period_end.strftime("%b %d").lstrip("0").replace(" 0", " ")
             period_str = f" | Period: {ps}–{pe}"
         self._status.showMessage(
-            f"Last updated: {ts}{period_str} | Live: {snapshot.live_game_count} | Poll: {interval_s}s"
+            f"Last updated: {ts}{period_str} | Live Games: {snapshot.live_game_count} | Poll: {interval_s}s"
         )
 
     def _on_error(self, message: str) -> None:

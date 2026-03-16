@@ -21,6 +21,7 @@ class SkaterRow:
     nhl_opponent: str
     position: str
     game_state: str = ""   # "LIVE", "FUT", "OFF", ""
+    wperf: float = 0.0     # scoring-period performance score
     goals: int = 0
     assists: int = 0
     points: int = 0
@@ -39,6 +40,7 @@ class GoalieRow:
     team_abbrev: str
     nhl_opponent: str
     game_state: str = ""   # "LIVE", "FUT", "OFF", ""
+    wperf: float = 0.0     # scoring-period performance score
     wins: int = 0
     ot_losses: int = 0
     gaa: float = 0.0
@@ -68,11 +70,12 @@ class SkaterTotals:
 class GoalieTotals:
     wins: int = 0
     ot_losses: int = 0
-    gaa: float = 0.0       # weighted average
+    gaa: float = 0.0       # period: goals-against count; daily: rate
     save_pct: float = 0.0  # weighted average
     shutout: int = 0
     shots_against: int = 0
     saves: int = 0
+    goals_against: int = 0
 
 
 @dataclass
@@ -182,11 +185,42 @@ def _sum_goalies(rows: list[GoalieRow]) -> GoalieTotals:
         total_ga += r.goals_against
         total_toi += r.toi_seconds
 
+    t.goals_against = total_ga
     if t.shots_against > 0:
         t.save_pct = t.saves / t.shots_against
     if total_toi > 0:
         t.gaa = (total_ga / total_toi) * 3600
     return t
+
+
+# ---------------------------------------------------------------------------
+# WPerf helpers
+# ---------------------------------------------------------------------------
+
+def _compute_skater_wperf(ps: dict) -> float:
+    """Score a skater's scoring-period stats. Higher = better performance."""
+    return (
+        ps.get("goals",   0) * 4.0 +
+        ps.get("assists", 0) * 3.0 +
+        ps.get("ppp",     0) * 2.0 +
+        ps.get("gwg",     0) * 5.0 +
+        ps.get("sog",     0) * 0.3 +
+        ps.get("hits",    0) * 0.5 +
+        ps.get("blk",     0) * 0.5
+    )
+
+
+def _compute_goalie_wperf(ps: dict) -> float:
+    """Score a goalie's scoring-period stats. Higher = better performance."""
+    wins     = ps.get("wins",     0)
+    saves    = ps.get("saves",    0)
+    save_pct = float(ps.get("save_pct", 0.0))
+    if wins == 0 and saves == 0:
+        return 0.0
+    score = wins * 5.0 + saves * 0.12
+    if save_pct > 0:
+        score += max(0.0, save_pct - 0.850) * 40.0
+    return score
 
 
 # ---------------------------------------------------------------------------
@@ -289,6 +323,16 @@ class ScoringEngine:
         # Period totals from Fantrax — exact match to their live scoring page
         my_ast  = active_stats.get(self._my_team_id, {})
         opp_ast = active_stats.get(opp_team_id, {})
+
+        # Compute per-player scoring-period performance scores
+        for row in my_skaters:
+            row.wperf = _compute_skater_wperf(my_ast.get("2010", {}).get(row.fantrax_id, {}))
+        for row in my_goalies:
+            row.wperf = _compute_goalie_wperf(my_ast.get("2020", {}).get(row.fantrax_id, {}))
+        for row in opp_skaters:
+            row.wperf = _compute_skater_wperf(opp_ast.get("2010", {}).get(row.fantrax_id, {}))
+        for row in opp_goalies:
+            row.wperf = _compute_goalie_wperf(opp_ast.get("2020", {}).get(row.fantrax_id, {}))
 
         snapshot = ScoringSnapshot(
             timestamp=datetime.now(),
@@ -450,7 +494,7 @@ def detect_changes(
             or_ = old_map.get(nr.fantrax_id)
             if not or_:
                 continue
-            for stat in ("wins", "ot_losses", "gaa", "save_pct", "shutout", "shots_against", "saves"):
+            for stat in ("wins", "ot_losses", "goals_against", "save_pct", "shutout", "shots_against", "saves"):
                 if getattr(or_, stat) != getattr(nr, stat):
                     changed.add((nr.fantrax_id, stat))
 

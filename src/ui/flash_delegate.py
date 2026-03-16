@@ -37,6 +37,9 @@ class FlashDelegate(QStyledItemDelegate):
         self._blue_cells.clear()
 
     def paint(self, painter: QPainter, option: QStyleOptionViewItem, index) -> None:
+        # Draw background + text first, then overlay colours on top
+        super().paint(painter, option, index)
+
         key = (index.row(), index.column())
 
         if key in self._flash_times:
@@ -49,12 +52,9 @@ class FlashDelegate(QStyledItemDelegate):
                 painter.save()
                 painter.fillRect(option.rect, QColor(0, 200, 0, alpha))
                 painter.restore()
-                super().paint(painter, option, index)
                 return
 
         if key in self._blue_cells:
             painter.save()
             painter.fillRect(option.rect, _BLUE)
             painter.restore()
-
-        super().paint(painter, option, index)

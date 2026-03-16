@@ -13,14 +13,30 @@ _STATE_COLOR: dict[str, QColor] = {
 from ui.flash_delegate import FlashDelegate
 from scoring.engine import GoalieRow, GoalieTotals
 
-GOALIE_COLUMNS = ["Name", "Team", "Opp", "W", "GAA", "SV%", "SV"]
+GOALIE_COLUMNS = ["Name", "WPerf", "Team", "Opp", "W", "GA", "SV%", "SV"]
 
 STAT_TO_COL: dict[str, int] = {
-    "wins": 3,
-    "gaa": 4,
-    "save_pct": 5,
-    "saves": 6,
+    "wins": 4,
+    "goals_against": 5,
+    "save_pct": 6,
+    "saves": 7,
 }
+
+_WPERF_COL = 1
+
+def _wperf_emoji(score: float) -> str:
+    if score <= 0:  return ""
+    if score < 2:   return "❄️"
+    if score < 4:   return "🚀"
+    if score < 7:   return "🔥"
+    return                  "🔥🔥"
+
+def _wperf_bg(score: float) -> QColor | None:
+    if score <= 0:  return None
+    if score < 2:   return QColor(173, 216, 230)   # light blue
+    if score < 4:   return QColor(255, 240, 80)    # yellow
+    if score < 7:   return QColor(255, 160, 40)    # orange
+    return                  QColor(210, 40, 40)     # red
 
 _HEADER_STYLE = (
     "QHeaderView::section {"
@@ -48,9 +64,11 @@ class GoalieTable(QWidget):
         self._table.horizontalHeader().setDefaultSectionSize(45)
         self._table.horizontalHeader().setMinimumSectionSize(30)
         self._table.horizontalHeader().setSectionResizeMode(0, QHeaderView.ResizeMode.Stretch)
-        self._table.horizontalHeader().setSectionResizeMode(1, QHeaderView.ResizeMode.ResizeToContents)
+        self._table.horizontalHeader().setSectionResizeMode(1, QHeaderView.ResizeMode.Fixed)
+        self._table.setColumnWidth(1, 40)
         self._table.horizontalHeader().setSectionResizeMode(2, QHeaderView.ResizeMode.ResizeToContents)
-        for col in range(3, len(GOALIE_COLUMNS)):
+        self._table.horizontalHeader().setSectionResizeMode(3, QHeaderView.ResizeMode.ResizeToContents)
+        for col in range(4, len(GOALIE_COLUMNS)):
             self._table.horizontalHeader().setSectionResizeMode(col, QHeaderView.ResizeMode.ResizeToContents)
         self._table.verticalHeader().setVisible(False)
         self._table.verticalHeader().setDefaultSectionSize(22)
@@ -97,15 +115,22 @@ class GoalieTable(QWidget):
 
         for row_idx, p in enumerate(active):
             self._set_cell(row_idx, 0, p.name, align=Qt.AlignmentFlag.AlignLeft | Qt.AlignmentFlag.AlignVCenter)
-            self._set_cell(row_idx, 1, p.team_abbrev)
-            self._set_cell(row_idx, 2, p.nhl_opponent)
-            self._set_cell(row_idx, 3, str(p.wins))
-            self._set_cell(row_idx, 4, f"{p.gaa:.2f}")
-            self._set_cell(row_idx, 5, f"{p.save_pct:.3f}")
-            self._set_cell(row_idx, 6, str(p.saves))
+            self._set_cell(row_idx, 1, _wperf_emoji(p.wperf))
+            bg = _wperf_bg(p.wperf)
+            if bg:
+                item = self._table.item(row_idx, _WPERF_COL)
+                if item:
+                    item.setBackground(bg)
+            self._set_cell(row_idx, 2, p.team_abbrev)
+            self._set_cell(row_idx, 3, p.nhl_opponent)
+            self._set_cell(row_idx, 4, str(p.wins))
+            self._set_cell(row_idx, 5, str(p.goals_against))
+            self._set_cell(row_idx, 6, f"{p.save_pct:.3f}")
+            self._set_cell(row_idx, 7, str(p.saves))
 
             if p.game_state in _STATE_COLOR:
                 self._set_row_bg(row_idx, _STATE_COLOR[p.game_state])
+
 
             for stat, col in STAT_TO_COL.items():
                 if (p.fantrax_id, stat) in changed_ids:
@@ -122,9 +147,9 @@ class GoalieTable(QWidget):
         bold_font.setBold(True)
         bold_font.setPointSize(8)
         totals_data = [
-            "TOTALS", "", "",
+            "TOTALS", "", "", "",
             str(totals.wins),
-            f"{totals.gaa:.2f}", f"{totals.save_pct:.3f}",
+            str(totals.goals_against), f"{totals.save_pct:.3f}",
             str(totals.saves),
         ]
         for col, val in enumerate(totals_data):

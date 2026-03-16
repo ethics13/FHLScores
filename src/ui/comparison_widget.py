@@ -21,7 +21,7 @@ _STATS: list[tuple[str, str, bool, bool]] = [
     ("PPP",  "ppp",           False, False),
     ("GWG",  "gwg",           False, False),
     ("W",    "wins",          True,  False),
-    ("GAA",  "gaa",           True,  True),
+    ("GA",   "gaa",           True,  True),
     ("SV%",  "save_pct",      True,  False),
     ("SV",   "saves",         True,  False),
 ]
@@ -29,7 +29,7 @@ _STATS: list[tuple[str, str, bool, bool]] = [
 _GREEN      = QColor(0, 160, 0)
 _RED        = QColor(200, 0, 0)
 _GRAY       = QColor(120, 120, 120)
-_ROW_FLASH  = QColor(255, 190, 40, 100)   # soft amber for score-change highlight
+_ROW_FLASH  = QColor(255, 165, 0, 220)    # vivid amber/orange for score-change highlight
 
 _HIGHLIGHT_MS = 10_000
 
@@ -46,7 +46,7 @@ _HEADER_STYLE = (
 
 def _fmt(val, is_goalie: bool, attr: str) -> str:
     if attr == "gaa":
-        return f"{val:.2f}"
+        return str(int(round(val)))
     if attr == "save_pct":
         return f"{val:.3f}"
     return str(val)

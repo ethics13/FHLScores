@@ -13,17 +13,33 @@ _STATE_COLOR: dict[str, QColor] = {
 from ui.flash_delegate import FlashDelegate
 from scoring.engine import SkaterRow, SkaterTotals
 
-SKATER_COLUMNS = ["Name", "Team", "Opp", "Pos", "G", "A", "BLK", "Hits", "SOG", "PPP", "GWG"]
+SKATER_COLUMNS = ["Name", "WPerf", "Team", "Opp", "Pos", "G", "A", "BLK", "Hits", "SOG", "PPP", "GWG"]
 
 STAT_TO_COL: dict[str, int] = {
-    "goals": 4,
-    "assists": 5,
-    "blk": 6,
-    "hits": 7,
-    "sog": 8,
-    "ppp": 9,
-    "gwg": 10,
+    "goals": 5,
+    "assists": 6,
+    "blk": 7,
+    "hits": 8,
+    "sog": 9,
+    "ppp": 10,
+    "gwg": 11,
 }
+
+_WPERF_COL = 1
+
+def _wperf_emoji(score: float) -> str:
+    if score <= 0:  return ""
+    if score < 2:   return "❄️"
+    if score < 4:   return "🚀"
+    if score < 7:   return "🔥"
+    return                  "🔥🔥"
+
+def _wperf_bg(score: float) -> QColor | None:
+    if score <= 0:  return None
+    if score < 2:   return QColor(173, 216, 230)   # light blue
+    if score < 4:   return QColor(255, 240, 80)    # yellow
+    if score < 7:   return QColor(255, 160, 40)    # orange
+    return                  QColor(210, 40, 40)     # red
 
 _HEADER_STYLE = (
     "QHeaderView::section {"
@@ -51,9 +67,11 @@ class SkaterTable(QWidget):
         self._table.horizontalHeader().setDefaultSectionSize(45)
         self._table.horizontalHeader().setMinimumSectionSize(30)
         self._table.horizontalHeader().setSectionResizeMode(0, QHeaderView.ResizeMode.Stretch)
-        self._table.horizontalHeader().setSectionResizeMode(1, QHeaderView.ResizeMode.ResizeToContents)
+        self._table.horizontalHeader().setSectionResizeMode(1, QHeaderView.ResizeMode.Fixed)
+        self._table.setColumnWidth(1, 40)
         self._table.horizontalHeader().setSectionResizeMode(2, QHeaderView.ResizeMode.ResizeToContents)
-        for col in range(3, len(SKATER_COLUMNS)):
+        self._table.horizontalHeader().setSectionResizeMode(3, QHeaderView.ResizeMode.ResizeToContents)
+        for col in range(4, len(SKATER_COLUMNS)):
             self._table.horizontalHeader().setSectionResizeMode(col, QHeaderView.ResizeMode.ResizeToContents)
         self._table.verticalHeader().setVisible(False)
         self._table.verticalHeader().setDefaultSectionSize(22)
@@ -97,19 +115,26 @@ class SkaterTable(QWidget):
 
         for row_idx, p in enumerate(players):
             self._set_cell(row_idx, 0, p.name, align=Qt.AlignmentFlag.AlignLeft | Qt.AlignmentFlag.AlignVCenter)
-            self._set_cell(row_idx, 1, p.team_abbrev)
-            self._set_cell(row_idx, 2, p.nhl_opponent)
-            self._set_cell(row_idx, 3, p.position)
-            self._set_cell(row_idx, 4, str(p.goals))
-            self._set_cell(row_idx, 5, str(p.assists))
-            self._set_cell(row_idx, 6, str(p.blk))
-            self._set_cell(row_idx, 7, str(p.hits))
-            self._set_cell(row_idx, 8, str(p.sog))
-            self._set_cell(row_idx, 9, str(p.ppp))
-            self._set_cell(row_idx, 10, str(p.gwg))
+            self._set_cell(row_idx, 1, _wperf_emoji(p.wperf))
+            bg = _wperf_bg(p.wperf)
+            if bg:
+                item = self._table.item(row_idx, _WPERF_COL)
+                if item:
+                    item.setBackground(bg)
+            self._set_cell(row_idx, 2, p.team_abbrev)
+            self._set_cell(row_idx, 3, p.nhl_opponent)
+            self._set_cell(row_idx, 4, p.position)
+            self._set_cell(row_idx, 5, str(p.goals))
+            self._set_cell(row_idx, 6, str(p.assists))
+            self._set_cell(row_idx, 7, str(p.blk))
+            self._set_cell(row_idx, 8, str(p.hits))
+            self._set_cell(row_idx, 9, str(p.sog))
+            self._set_cell(row_idx, 10, str(p.ppp))
+            self._set_cell(row_idx, 11, str(p.gwg))
 
             if p.game_state in _STATE_COLOR:
                 self._set_row_bg(row_idx, _STATE_COLOR[p.game_state])
+
 
             for stat, col in STAT_TO_COL.items():
                 if (p.fantrax_id, stat) in changed_ids:
@@ -121,7 +146,7 @@ class SkaterTable(QWidget):
         bold_font.setBold(True)
         bold_font.setPointSize(8)
         totals_data = [
-            "TOTALS", "", "", "",
+            "TOTALS", "", "", "", "",
             str(totals.goals), str(totals.assists),
             str(totals.blk), str(totals.hits), str(totals.sog),
             str(totals.ppp), str(totals.gwg),

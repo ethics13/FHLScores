@@ -12,5 +12,5 @@ password = yourpassword
 
 [app]
 poll_interval_idle = 30
-poll_interval_live = 10
+poll_interval_live = 5
 flash_duration_ms = 10000
