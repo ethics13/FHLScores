@@ -76,6 +76,14 @@ class MainWindow(QMainWindow):
         selector_layout.addWidget(self._league_combo)
         selector_layout.addStretch()
 
+        self._view_btn = QPushButton("Today")
+        self._view_btn.setFont(f)
+        self._view_btn.setCheckable(True)
+        self._view_btn.setChecked(False)
+        self._view_btn.setFixedWidth(75)
+        self._view_btn.clicked.connect(self._on_view_toggled)
+        selector_layout.addWidget(self._view_btn)
+
         self._sound_btn = QPushButton("Sound: ON")
         self._sound_btn.setFont(f)
         self._sound_btn.setCheckable(True)
@@ -170,6 +178,11 @@ class MainWindow(QMainWindow):
         )
 
         self._do_poll()
+
+    def _on_view_toggled(self, checked: bool) -> None:
+        self._view_btn.setText("Period" if checked else "Today")
+        self._my_widget.set_view_mode(checked)
+        self._opp_widget.set_view_mode(checked)
 
     def _on_sound_toggled(self, checked: bool) -> None:
         self._sound.enabled = checked

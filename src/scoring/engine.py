@@ -22,6 +22,7 @@ class SkaterRow:
     position: str
     game_state: str = ""   # "LIVE", "FUT", "OFF", ""
     wperf: float = 0.0     # scoring-period performance score
+    # Today's NHL stats
     goals: int = 0
     assists: int = 0
     points: int = 0
@@ -31,6 +32,14 @@ class SkaterRow:
     ppg: int = 0
     ppp: int = 0
     gwg: int = 0
+    # Full scoring-period stats (from Fantrax)
+    p_goals: int = 0
+    p_assists: int = 0
+    p_blk: int = 0
+    p_hits: int = 0
+    p_sog: int = 0
+    p_ppp: int = 0
+    p_gwg: int = 0
 
 
 @dataclass
@@ -41,6 +50,7 @@ class GoalieRow:
     nhl_opponent: str
     game_state: str = ""   # "LIVE", "FUT", "OFF", ""
     wperf: float = 0.0     # scoring-period performance score
+    # Today's NHL stats
     wins: int = 0
     ot_losses: int = 0
     gaa: float = 0.0
@@ -51,6 +61,11 @@ class GoalieRow:
     goals_against: int = 0
     toi_seconds: int = 0
     has_played: bool = False
+    # Full scoring-period stats (from Fantrax)
+    p_wins: int = 0
+    p_goals_against: int = 0
+    p_saves: int = 0
+    p_save_pct: float = 0.0
 
 
 @dataclass
@@ -95,6 +110,11 @@ class ScoringSnapshot:
     my_goalie_period_totals: GoalieTotals
     opp_skater_period_totals: SkaterTotals
     opp_goalie_period_totals: GoalieTotals
+    # All players active during the scoring period (for Period view)
+    my_period_skaters: list[SkaterRow] = field(default_factory=list)
+    my_period_goalies: list[GoalieRow] = field(default_factory=list)
+    opp_period_skaters: list[SkaterRow] = field(default_factory=list)
+    opp_period_goalies: list[GoalieRow] = field(default_factory=list)
     live_game_count: int = 0
     period_start: Optional[date] = None
     period_end: Optional[date] = None
@@ -223,6 +243,33 @@ def _compute_goalie_wperf(ps: dict) -> float:
     return score
 
 
+def _populate_period_stats(
+    skaters: list[SkaterRow],
+    goalies: list[GoalieRow],
+    sk_group: dict,
+    gl_group: dict,
+) -> None:
+    for row in skaters:
+        ps = sk_group.get(row.fantrax_id, {})
+        row.wperf     = _compute_skater_wperf(ps)
+        row.p_goals   = int(ps.get("goals",   0))
+        row.p_assists = int(ps.get("assists", 0))
+        row.p_blk     = int(ps.get("blk",     0))
+        row.p_hits    = int(ps.get("hits",    0))
+        row.p_sog     = int(ps.get("sog",     0))
+        row.p_ppp     = int(ps.get("ppp",     0))
+        row.p_gwg     = int(ps.get("gwg",     0))
+    for row in goalies:
+        ps = gl_group.get(row.fantrax_id, {})
+        row.wperf           = _compute_goalie_wperf(ps)
+        row.p_wins          = int(ps.get("wins",  0))
+        row.p_saves         = int(ps.get("saves", 0))
+        ga                  = int(round(float(ps.get("gaa", 0.0))))
+        row.p_goals_against = ga
+        inf_sa = row.p_saves + ga
+        row.p_save_pct      = row.p_saves / inf_sa if inf_sa > 0 else 0.0
+
+
 # ---------------------------------------------------------------------------
 # Engine
 # ---------------------------------------------------------------------------
@@ -324,15 +371,30 @@ class ScoringEngine:
         my_ast  = active_stats.get(self._my_team_id, {})
         opp_ast = active_stats.get(opp_team_id, {})
 
-        # Compute per-player scoring-period performance scores
-        for row in my_skaters:
-            row.wperf = _compute_skater_wperf(my_ast.get("2010", {}).get(row.fantrax_id, {}))
-        for row in my_goalies:
-            row.wperf = _compute_goalie_wperf(my_ast.get("2020", {}).get(row.fantrax_id, {}))
-        for row in opp_skaters:
-            row.wperf = _compute_skater_wperf(opp_ast.get("2010", {}).get(row.fantrax_id, {}))
-        for row in opp_goalies:
-            row.wperf = _compute_goalie_wperf(opp_ast.get("2020", {}).get(row.fantrax_id, {}))
+        # Period rows — all roster players regardless of today's game schedule
+        my_period_sk, my_period_gl = self._build_rows(
+            my_roster, nhl_skater_map, nhl_goalie_map, None, team_to_opponent, team_to_state)
+        opp_period_sk, opp_period_gl = self._build_rows(
+            opp_roster, nhl_skater_map, nhl_goalie_map, None, team_to_opponent, team_to_state)
+
+        # Populate period stats on today rows AND period rows
+        for team_sk, team_gl, ast in (
+            (my_skaters,    my_goalies,    my_ast),
+            (opp_skaters,   opp_goalies,   opp_ast),
+            (my_period_sk,  my_period_gl,  my_ast),
+            (opp_period_sk, opp_period_gl, opp_ast),
+        ):
+            _populate_period_stats(
+                team_sk, team_gl,
+                ast.get("2010", {}),
+                ast.get("2020", {}),
+            )
+
+        # Filter period rows to players with any scoring-period activity
+        my_period_sk  = [r for r in my_period_sk  if r.p_goals + r.p_assists + r.p_blk + r.p_hits + r.p_sog + r.p_ppp + r.p_gwg > 0]
+        opp_period_sk = [r for r in opp_period_sk if r.p_goals + r.p_assists + r.p_blk + r.p_hits + r.p_sog + r.p_ppp + r.p_gwg > 0]
+        my_period_gl  = [r for r in my_period_gl  if r.p_saves > 0 or r.p_wins > 0]
+        opp_period_gl = [r for r in opp_period_gl if r.p_saves > 0 or r.p_wins > 0]
 
         snapshot = ScoringSnapshot(
             timestamp=datetime.now(),
@@ -350,6 +412,10 @@ class ScoringEngine:
             my_goalie_period_totals=_fantrax_goalie_totals(my_ast.get("2020", {})),
             opp_skater_period_totals=_fantrax_skater_totals(opp_ast.get("2010", {})),
             opp_goalie_period_totals=_fantrax_goalie_totals(opp_ast.get("2020", {})),
+            my_period_skaters=my_period_sk,
+            my_period_goalies=my_period_gl,
+            opp_period_skaters=opp_period_sk,
+            opp_period_goalies=opp_period_gl,
             live_game_count=len(live_games),
             period_start=period_start,
             period_end=period_end,

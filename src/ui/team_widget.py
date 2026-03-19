@@ -13,6 +13,10 @@ class TeamWidget(QWidget):
     def __init__(self, team_label: str, flash_duration_ms: int = 5000, parent=None):
         super().__init__(parent)
         self._flash_duration_ms = flash_duration_ms
+        self._show_period = False
+        self._last_snapshot: ScoringSnapshot | None = None
+        self._is_my_team = True
+        self._last_changed: set = set()
 
         layout = QVBoxLayout(self)
         layout.setContentsMargins(2, 2, 2, 2)
@@ -51,22 +55,50 @@ class TeamWidget(QWidget):
     def set_label(self, text: str) -> None:
         self._label.setText(text)
 
+    def set_view_mode(self, show_period: bool) -> None:
+        self._show_period = show_period
+        self._skater_table.set_view_mode(show_period)
+        self._goalie_table.set_view_mode(show_period)
+        if self._last_snapshot:
+            self._render()
+
     def update_data(
         self,
         snapshot: ScoringSnapshot,
         is_my_team: bool,
         changed: set[tuple[str, str]],
     ) -> None:
-        if is_my_team:
-            skaters = snapshot.my_skaters
-            goalies = snapshot.my_goalies
-            skater_totals = snapshot.my_skater_totals
-            goalie_totals = snapshot.my_goalie_totals
-        else:
-            skaters = snapshot.opp_skaters
-            goalies = snapshot.opp_goalies
-            skater_totals = snapshot.opp_skater_totals
-            goalie_totals = snapshot.opp_goalie_totals
+        self._last_snapshot = snapshot
+        self._is_my_team = is_my_team
+        self._last_changed = changed
+        self._render()
 
-        self._skater_table.update_data(skaters, skater_totals, changed)
-        self._goalie_table.update_data(goalies, goalie_totals, changed)
+    def _render(self) -> None:
+        snapshot = self._last_snapshot
+        if snapshot is None:
+            return
+        if self._is_my_team:
+            if self._show_period:
+                skaters       = snapshot.my_period_skaters
+                goalies       = snapshot.my_period_goalies
+                skater_totals = snapshot.my_skater_period_totals
+                goalie_totals = snapshot.my_goalie_period_totals
+            else:
+                skaters       = snapshot.my_skaters
+                goalies       = snapshot.my_goalies
+                skater_totals = snapshot.my_skater_totals
+                goalie_totals = snapshot.my_goalie_totals
+        else:
+            if self._show_period:
+                skaters       = snapshot.opp_period_skaters
+                goalies       = snapshot.opp_period_goalies
+                skater_totals = snapshot.opp_skater_period_totals
+                goalie_totals = snapshot.opp_goalie_period_totals
+            else:
+                skaters       = snapshot.opp_skaters
+                goalies       = snapshot.opp_goalies
+                skater_totals = snapshot.opp_skater_totals
+                goalie_totals = snapshot.opp_goalie_totals
+
+        self._skater_table.update_data(skaters, skater_totals, self._last_changed)
+        self._goalie_table.update_data(goalies, goalie_totals, self._last_changed)
