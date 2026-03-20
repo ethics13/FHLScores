@@ -29,7 +29,23 @@ _STATS: list[tuple[str, str, bool, bool]] = [
 _GREEN      = QColor(0, 160, 0)
 _RED        = QColor(200, 0, 0)
 _GRAY       = QColor(120, 120, 120)
+_ORANGE     = QColor(210, 120, 0)
 _ROW_FLASH  = QColor(255, 165, 0, 220)    # vivid amber/orange for score-change highlight
+
+# Estimated stats per player-game (used for clinch calculations)
+_PER_PLAYER_GAME: dict[str, float] = {
+    "goals":    0.30,
+    "assists":  0.50,
+    "blk":      0.80,
+    "hits":     1.20,
+    "sog":      2.50,
+    "ppp":      0.30,
+    "gwg":      0.10,
+    "wins":     0.80,
+    "gaa":      2.50,
+    "save_pct": 0.0,   # ratio stat — skip clinch
+    "saves":    27.0,
+}
 
 _HIGHLIGHT_MS = 10_000
 
@@ -50,6 +66,18 @@ def _fmt(val, is_goalie: bool, attr: str) -> str:
     if attr == "save_pct":
         return f"{val:.3f}"
     return str(val)
+
+
+def _fmt_diff(my_val, opp_val, attr: str) -> str:
+    if attr == "save_pct":
+        diff = my_val - opp_val
+        if diff == 0:
+            return "="
+        return f"+{diff:.3f}" if diff > 0 else f"{diff:.3f}"
+    diff = int(round(my_val)) - int(round(opp_val))
+    if diff == 0:
+        return "="
+    return f"+{diff}" if diff > 0 else str(diff)
 
 
 class ComparisonWidget(QWidget):
@@ -95,7 +123,7 @@ class ComparisonWidget(QWidget):
         layout.addWidget(lbl)
 
         col_headers = ["Team"] + [s[0] for s in _STATS]
-        self._table = QTableWidget(2, len(col_headers))
+        self._table = QTableWidget(4, len(col_headers))
         self._table.setHorizontalHeaderLabels(col_headers)
         self._table.horizontalHeader().setStyleSheet(_HEADER_STYLE)
         self._table.horizontalHeader().setSectionResizeMode(0, QHeaderView.ResizeMode.ResizeToContents)
@@ -153,6 +181,14 @@ class ComparisonWidget(QWidget):
         my_gl: GoalieTotals,
         opp_sk: SkaterTotals,
         opp_gl: GoalieTotals,
+        my_sk_pgr: int = 0,
+        opp_sk_pgr: int = 0,
+        my_gl_pgr: int = 0,
+        opp_gl_pgr: int = 0,
+        my_sk_pgp: int = 0,
+        opp_sk_pgp: int = 0,
+        my_gl_pgp: int = 0,
+        opp_gl_pgp: int = 0,
     ) -> None:
         bold_font = QFont(); bold_font.setBold(True); bold_font.setPointSize(8)
 
@@ -223,10 +259,90 @@ class ComparisonWidget(QWidget):
 
                 self._table.setItem(row, col_idx, item)
 
+        # DIFF row
+        diff_font = QFont(); diff_font.setPointSize(8); diff_font.setItalic(True)
+        diff_label = QTableWidgetItem("DIFF")
+        diff_label.setFont(diff_font)
+        diff_label.setTextAlignment(Qt.AlignmentFlag.AlignCenter)
+        diff_label.setForeground(_GRAY)
+        self._table.setItem(2, 0, diff_label)
+
+        for col_idx, (hdr, attr, is_goalie, lower_better) in enumerate(_STATS, start=1):
+            src_idx = 1 if is_goalie else 0
+            my_val  = getattr(my_src[src_idx],  attr, 0)
+            opp_val = getattr(opp_src[src_idx], attr, 0)
+
+            item = QTableWidgetItem(_fmt_diff(my_val, opp_val, attr))
+            item.setFont(diff_font)
+            item.setTextAlignment(Qt.AlignmentFlag.AlignCenter)
+
+            if my_val == opp_val:
+                item.setForeground(_GRAY)
+            elif (my_val > opp_val) ^ lower_better:
+                item.setForeground(_GREEN)
+            else:
+                item.setForeground(_RED)
+
+            self._table.setItem(2, col_idx, item)
+
+        # STATUS row — clinch tracker
+        status_font = QFont(); status_font.setPointSize(7); status_font.setBold(True)
+        status_label = QTableWidgetItem("STATUS")
+        status_label.setFont(status_font)
+        status_label.setTextAlignment(Qt.AlignmentFlag.AlignCenter)
+        status_label.setForeground(_GRAY)
+        self._table.setItem(3, 0, status_label)
+
+        for col_idx, (hdr, attr, is_goalie, lower_better) in enumerate(_STATS, start=1):
+            src_idx = 1 if is_goalie else 0
+            my_val  = getattr(my_src[src_idx],  attr, 0)
+            opp_val = getattr(opp_src[src_idx], attr, 0)
+
+            my_pgr  = my_gl_pgr  if is_goalie else my_sk_pgr
+            opp_pgr = opp_gl_pgr if is_goalie else opp_sk_pgr
+            my_pgp  = my_gl_pgp  if is_goalie else my_sk_pgp
+            opp_pgp = opp_gl_pgp if is_goalie else opp_sk_pgp
+
+            # Actual pace rate floored at the league estimate — prevents a cold
+            # stretch (e.g. 0 GWGs in 15 games) from zeroing out the projection
+            fallback = _PER_PLAYER_GAME.get(attr, 0.0)
+            if attr == "save_pct":
+                my_rate = opp_rate = 0.0   # ratio stat — skip
+            else:
+                my_rate  = max((my_val  / my_pgp)  if my_pgp  > 0 else fallback, fallback)
+                opp_rate = max((opp_val / opp_pgp) if opp_pgp > 0 else fallback, fallback)
+
+            my_max  = my_rate  * my_pgr
+            opp_max = opp_rate * opp_pgr
+
+            if my_val == opp_val:
+                status, color = "=", _GRAY
+            elif my_rate == 0.0 and opp_rate == 0.0:
+                status, color = "~", _GRAY
+            elif lower_better:
+                my_lead = opp_val - my_val   # positive = I'm winning (fewer GA)
+                if my_lead > 0:
+                    status, color = ("SAFE", _GREEN) if my_lead > my_max else ("RISK", _ORANGE)
+                else:
+                    status, color = "OUT", _RED   # GA only goes up; can never recover
+            else:
+                my_lead = my_val - opp_val
+                if my_lead > 0:
+                    status, color = ("SAFE", _GREEN) if my_lead > opp_max else ("RISK", _ORANGE)
+                else:
+                    deficit = -my_lead
+                    status, color = ("OUT", _RED) if deficit > my_max else ("RISK", _ORANGE)
+
+            item = QTableWidgetItem(status)
+            item.setFont(status_font)
+            item.setTextAlignment(Qt.AlignmentFlag.AlignCenter)
+            item.setForeground(color)
+            self._table.setItem(3, col_idx, item)
+
         # Re-apply active row highlights (items were just recreated)
         for row in self._highlight_until:
             self._apply_row_bg(row, _ROW_FLASH)
 
         # Fix height
         header_h = self._table.horizontalHeader().height()
-        self._table.setFixedHeight(header_h + 2 * 22 + 2)
+        self._table.setFixedHeight(header_h + 4 * 22 + 2)

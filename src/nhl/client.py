@@ -102,6 +102,59 @@ class NHLClient:
                 break
         return games
 
+    def _fetch_games_in_range(
+        self, start, end, skip_completed_on: object = None
+    ) -> dict[str, int]:
+        """Fetch all games between start and end, optionally skipping completed games on skip_completed_on.
+        Makes two fetches if the range spans more than one NHL gameWeek."""
+        from datetime import date as _date, timedelta
+        _DONE = {"OFF", "FINAL", "OVER"}
+        team_games: dict[str, int] = {}
+        fetch_dates = [start]
+        # If range is > 7 days or end is in a later week, fetch the end week too
+        if (end - start).days >= 7:
+            fetch_dates.append(end)
+        seen_game_ids: set = set()
+        for fetch_date in fetch_dates:
+            try:
+                resp = self._client.get(f"/v1/schedule/{fetch_date.isoformat()}")
+                resp.raise_for_status()
+                data = resp.json()
+            except Exception:
+                continue
+            for day in data.get("gameWeek", []):
+                try:
+                    day_date = _date.fromisoformat(day["date"])
+                except (KeyError, ValueError):
+                    continue
+                if day_date < start or day_date > end:
+                    continue
+                for g in day.get("games", []):
+                    gid = g.get("id")
+                    if gid in seen_game_ids:
+                        continue
+                    seen_game_ids.add(gid)
+                    if skip_completed_on and day_date == skip_completed_on:
+                        if g.get("gameState", "") in _DONE:
+                            continue
+                    at = g.get("awayTeam", {}).get("abbrev", "").upper()
+                    ht = g.get("homeTeam", {}).get("abbrev", "").upper()
+                    if at:
+                        team_games[at] = team_games.get(at, 0) + 1
+                    if ht:
+                        team_games[ht] = team_games.get(ht, 0) + 1
+        return team_games
+
+    def get_total_games_in_period(self, period_start, period_end) -> dict[str, int]:
+        """Return {team_abbrev: total_games} for every game between period_start and period_end."""
+        return self._fetch_games_in_range(period_start, period_end)
+
+    def get_games_remaining_in_period(self, period_end) -> dict[str, int]:
+        """Return {team_abbrev: games_remaining} from today through period_end."""
+        from datetime import date as _date
+        today = _date.today()
+        return self._fetch_games_in_range(today, period_end, skip_completed_on=today)
+
     def get_live_games(self) -> list[NHLGame]:
         return [g for g in self.get_todays_games() if g.state == "LIVE"]
 

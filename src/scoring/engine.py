@@ -22,6 +22,9 @@ class SkaterRow:
     position: str
     game_state: str = ""   # "LIVE", "FUT", "OFF", ""
     wperf: float = 0.0     # scoring-period performance score
+    games_remaining: int = 0
+    games_played: int = 0
+    scratched: bool = False   # team had LIVE/OFF game but player not in NHL boxscore
     # Today's NHL stats
     goals: int = 0
     assists: int = 0
@@ -50,6 +53,8 @@ class GoalieRow:
     nhl_opponent: str
     game_state: str = ""   # "LIVE", "FUT", "OFF", ""
     wperf: float = 0.0     # scoring-period performance score
+    games_remaining: int = 0
+    games_played: int = 0
     # Today's NHL stats
     wins: int = 0
     ot_losses: int = 0
@@ -115,6 +120,15 @@ class ScoringSnapshot:
     my_period_goalies: list[GoalieRow] = field(default_factory=list)
     opp_period_skaters: list[SkaterRow] = field(default_factory=list)
     opp_period_goalies: list[GoalieRow] = field(default_factory=list)
+    # Sum of games remaining/played across all period players (for clinch calculations)
+    my_sk_pgr: int = 0
+    opp_sk_pgr: int = 0
+    my_gl_pgr: int = 0
+    opp_gl_pgr: int = 0
+    my_sk_pgp: int = 0
+    opp_sk_pgp: int = 0
+    my_gl_pgp: int = 0
+    opp_gl_pgp: int = 0
     live_game_count: int = 0
     period_start: Optional[date] = None
     period_end: Optional[date] = None
@@ -302,6 +316,20 @@ class ScoringEngine:
         )
         # Only need today's NHL games — period totals come from Fantrax directly
         today_games = self._nhl.get_games_for_date(today.isoformat())
+
+        # Games remaining per team through end of scoring period
+        team_gp: dict[str, int] = {}
+        team_total: dict[str, int] = {}
+        if period_end:
+            try:
+                team_gp = self._nhl.get_games_remaining_in_period(period_end)
+            except Exception:
+                pass
+            if period_start:
+                try:
+                    team_total = self._nhl.get_total_games_in_period(period_start, period_end)
+                except Exception:
+                    pass
         live_games = [g for g in today_games if g.state in _LIVE_STATES]
 
         # Today's teams for table filter + opponent column + game state
@@ -322,6 +350,8 @@ class ScoringEngine:
         # Fetch today's boxscores for active/completed games
         skater_by_id: dict[int, NHLSkaterStats] = {}
         goalie_by_id: dict[int, NHLGoalieStats] = {}
+        # Track teams whose boxscores were successfully fetched (used for scratch detection)
+        teams_with_boxscores: set[str] = set()
 
         today_active = [g for g in today_games if g.state in _LIVE_STATES | _DONE_STATES]
         for game in today_active:
@@ -335,6 +365,7 @@ class ScoringEngine:
 
                 for sk in boxscore.skaters:
                     skater_by_id[sk.player_id] = sk
+                    teams_with_boxscores.add(sk.team_abbrev.upper())
 
                 for gl in boxscore.goalies:
                     goalie_by_id[gl.player_id] = gl
@@ -363,19 +394,22 @@ class ScoringEngine:
         my_roster = self._fantrax.get_roster(self._my_team_id, self._league_id)
         opp_roster = self._fantrax.get_roster(opp_team_id, self._league_id)
 
+        # Teams whose boxscores were fetched = eligible for scratch detection
+        active_teams = teams_with_boxscores
+
         # Today's players for the tables (filtered to teams playing today)
-        my_skaters, my_goalies = self._build_rows(my_roster, nhl_skater_map, nhl_goalie_map, playing_teams, team_to_opponent, team_to_state)
-        opp_skaters, opp_goalies = self._build_rows(opp_roster, nhl_skater_map, nhl_goalie_map, playing_teams, team_to_opponent, team_to_state)
+        my_skaters, my_goalies = self._build_rows(my_roster, nhl_skater_map, nhl_goalie_map, playing_teams, active_teams, team_to_opponent, team_to_state, team_gp, team_total)
+        opp_skaters, opp_goalies = self._build_rows(opp_roster, nhl_skater_map, nhl_goalie_map, playing_teams, active_teams, team_to_opponent, team_to_state, team_gp, team_total)
 
         # Period totals from Fantrax — exact match to their live scoring page
         my_ast  = active_stats.get(self._my_team_id, {})
         opp_ast = active_stats.get(opp_team_id, {})
 
-        # Period rows — all roster players regardless of today's game schedule
+        # Period rows — all roster players regardless of today's game schedule (no scratch detection)
         my_period_sk, my_period_gl = self._build_rows(
-            my_roster, nhl_skater_map, nhl_goalie_map, None, team_to_opponent, team_to_state)
+            my_roster, nhl_skater_map, nhl_goalie_map, None, None, team_to_opponent, team_to_state, team_gp, team_total)
         opp_period_sk, opp_period_gl = self._build_rows(
-            opp_roster, nhl_skater_map, nhl_goalie_map, None, team_to_opponent, team_to_state)
+            opp_roster, nhl_skater_map, nhl_goalie_map, None, None, team_to_opponent, team_to_state, team_gp, team_total)
 
         # Populate period stats on today rows AND period rows
         for team_sk, team_gl, ast in (
@@ -390,7 +424,18 @@ class ScoringEngine:
                 ast.get("2020", {}),
             )
 
-        # Filter period rows to players with any scoring-period activity
+        # pgr/pgp computed from full roster BEFORE activity filter — includes
+        # goalies/skaters who haven't played yet but still have games remaining
+        my_sk_pgr  = sum(r.games_remaining for r in my_period_sk)
+        opp_sk_pgr = sum(r.games_remaining for r in opp_period_sk)
+        my_gl_pgr  = sum(r.games_remaining for r in my_period_gl)
+        opp_gl_pgr = sum(r.games_remaining for r in opp_period_gl)
+        my_sk_pgp  = sum(r.games_played for r in my_period_sk)
+        opp_sk_pgp = sum(r.games_played for r in opp_period_sk)
+        my_gl_pgp  = sum(r.games_played for r in my_period_gl)
+        opp_gl_pgp = sum(r.games_played for r in opp_period_gl)
+
+        # Filter period rows to players with any scoring-period activity (display only)
         my_period_sk  = [r for r in my_period_sk  if r.p_goals + r.p_assists + r.p_blk + r.p_hits + r.p_sog + r.p_ppp + r.p_gwg > 0]
         opp_period_sk = [r for r in opp_period_sk if r.p_goals + r.p_assists + r.p_blk + r.p_hits + r.p_sog + r.p_ppp + r.p_gwg > 0]
         my_period_gl  = [r for r in my_period_gl  if r.p_saves > 0 or r.p_wins > 0]
@@ -416,6 +461,10 @@ class ScoringEngine:
             my_period_goalies=my_period_gl,
             opp_period_skaters=opp_period_sk,
             opp_period_goalies=opp_period_gl,
+            my_sk_pgr=my_sk_pgr,   opp_sk_pgr=opp_sk_pgr,
+            my_gl_pgr=my_gl_pgr,   opp_gl_pgr=opp_gl_pgr,
+            my_sk_pgp=my_sk_pgp,   opp_sk_pgp=opp_sk_pgp,
+            my_gl_pgp=my_gl_pgp,   opp_gl_pgp=opp_gl_pgp,
             live_game_count=len(live_games),
             period_start=period_start,
             period_end=period_end,
@@ -431,8 +480,11 @@ class ScoringEngine:
         nhl_skater_map: dict[str, list[NHLSkaterStats]],
         nhl_goalie_map: dict[str, list[NHLGoalieStats]],
         playing_teams: set[str] = None,
+        active_teams: set[str] = None,
         team_to_opponent: dict[str, str] = None,
         team_to_state: dict[str, str] = None,
+        team_gp: dict[str, int] = None,
+        team_total: dict[str, int] = None,
     ) -> tuple[list[SkaterRow], list[GoalieRow]]:
         skaters: list[SkaterRow] = []
         goalies: list[GoalieRow] = []
@@ -444,6 +496,9 @@ class ScoringEngine:
                 continue
             opp_str = (team_to_opponent or {}).get(team_up, "")
             game_state = (team_to_state or {}).get(team_up, "")
+            gp = (team_gp or {}).get(team_up, 0)
+            total = (team_total or {}).get(team_up, 0)
+            gp_played = max(0, total - gp)
             norm = _normalize_name(fp.name)
             if fp.position.upper() in ("G", "GOALIE"):
                 goalie_stats = _match_goalie(norm, fp.team_abbrev, nhl_goalie_map)
@@ -453,6 +508,8 @@ class ScoringEngine:
                     team_abbrev=fp.team_abbrev,
                     nhl_opponent=opp_str,
                     game_state=game_state,
+                    games_remaining=gp,
+                    games_played=gp_played,
                 )
                 if goalie_stats:
                     row.wins = goalie_stats.wins
@@ -475,6 +532,8 @@ class ScoringEngine:
                     nhl_opponent=opp_str,
                     position=fp.position,
                     game_state=game_state,
+                    games_remaining=gp,
+                    games_played=gp_played,
                 )
                 if skater_stats:
                     row.goals = skater_stats.goals
@@ -486,6 +545,9 @@ class ScoringEngine:
                     row.ppg = skater_stats.ppg
                     row.ppp = skater_stats.ppp
                     row.gwg = skater_stats.gwg
+                else:
+                    # Mark scratched if team's boxscore was fetched but player is absent
+                    row.scratched = active_teams is not None and team_up in active_teams
                 skaters.append(row)
 
         skaters.sort(key=_skater_sort_key)
@@ -550,7 +612,7 @@ def detect_changes(
             or_ = old_map.get(nr.fantrax_id)
             if not or_:
                 continue
-            for stat in ("goals", "assists", "points", "blk", "hits", "sog", "ppg", "ppp", "gwg"):
+            for stat in ("goals", "assists", "points", "blk", "hits", "sog", "ppg", "ppp", "gwg", "scratched"):
                 if getattr(or_, stat) != getattr(nr, stat):
                     changed.add((nr.fantrax_id, stat))
 

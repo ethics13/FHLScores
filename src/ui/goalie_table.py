@@ -13,13 +13,13 @@ _STATE_COLOR: dict[str, QColor] = {
 from ui.flash_delegate import FlashDelegate
 from scoring.engine import GoalieRow, GoalieTotals
 
-GOALIE_COLUMNS = ["Name", "WPerf", "Team", "Opp", "W", "GA", "SV%", "SV"]
+GOALIE_COLUMNS = ["Name", "WPerf", "Team", "Opp", "REM", "W", "GA", "SV%", "SV"]
 
 STAT_TO_COL: dict[str, int] = {
-    "wins": 4,
-    "goals_against": 5,
-    "save_pct": 6,
-    "saves": 7,
+    "wins": 5,
+    "goals_against": 6,
+    "save_pct": 7,
+    "saves": 8,
 }
 
 _WPERF_COL = 1
@@ -70,7 +70,8 @@ class GoalieTable(QWidget):
         self._table.setColumnWidth(1, 40)
         self._table.horizontalHeader().setSectionResizeMode(2, QHeaderView.ResizeMode.ResizeToContents)
         self._table.horizontalHeader().setSectionResizeMode(3, QHeaderView.ResizeMode.ResizeToContents)
-        for col in range(4, len(GOALIE_COLUMNS)):
+        self._table.horizontalHeader().setSectionResizeMode(4, QHeaderView.ResizeMode.ResizeToContents)
+        for col in range(5, len(GOALIE_COLUMNS)):
             self._table.horizontalHeader().setSectionResizeMode(col, QHeaderView.ResizeMode.ResizeToContents)
         self._table.verticalHeader().setVisible(False)
         self._table.verticalHeader().setDefaultSectionSize(22)
@@ -147,10 +148,11 @@ class GoalieTable(QWidget):
                         item.setBackground(bg)
             self._set_cell(row_idx, 2, p.team_abbrev)
             self._set_cell(row_idx, 3, p.nhl_opponent)
-            self._set_cell(row_idx, 4, str(w))
-            self._set_cell(row_idx, 5, str(ga))
-            self._set_cell(row_idx, 6, f"{svp:.3f}")
-            self._set_cell(row_idx, 7, str(sv))
+            self._set_cell(row_idx, 4, str(p.games_remaining) if p.games_remaining > 0 else "-")
+            self._set_cell(row_idx, 5, str(w))
+            self._set_cell(row_idx, 6, str(ga))
+            self._set_cell(row_idx, 7, f"{svp:.3f}")
+            self._set_cell(row_idx, 8, str(sv))
 
             if p.game_state in _STATE_COLOR:
                 self._set_row_bg(row_idx, _STATE_COLOR[p.game_state])
@@ -176,10 +178,10 @@ class GoalieTable(QWidget):
             tw  = sum(p.p_wins         for p in players)
             tsa = tsv + tga
             tsvp = (tsv / tsa) if tsa > 0 else 0.0
-            totals_data = ["TOTALS", "", "", "", str(tw), str(tga), f"{tsvp:.3f}", str(tsv)]
+            totals_data = ["TOTALS", "", "", "", "", str(tw), str(tga), f"{tsvp:.3f}", str(tsv)]
         else:
             totals_data = [
-                "TOTALS", "", "", "",
+                "TOTALS", "", "", "", "",
                 str(totals.wins),
                 str(totals.goals_against), f"{totals.save_pct:.3f}",
                 str(totals.saves),
@@ -191,6 +193,11 @@ class GoalieTable(QWidget):
             item.setFlags(item.flags() & ~Qt.ItemFlag.ItemIsSelectable)
             item.setTextAlignment(Qt.AlignmentFlag.AlignCenter)
             self._table.setItem(totals_row, col, item)
+
+        if not self._show_period:
+            for stat, col in STAT_TO_COL.items():
+                if any((p.fantrax_id, stat) in changed_ids for p in players):
+                    self._delegate.mark_changed(totals_row, col)
 
     def _set_row_bg(self, row: int, color: QColor) -> None:
         for col in range(self._table.columnCount()):

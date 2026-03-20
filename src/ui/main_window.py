@@ -40,6 +40,8 @@ class MainWindow(QMainWindow):
         self._config = config
         self._last_snapshot: ScoringSnapshot | None = None
         self._worker: WorkerThread | None = None
+        self._scratch_alert: str = ""
+        self._scratch_alert_polls: int = 0
 
         self.setWindowTitle("FHL Live Scoring")
         self.resize(1400, 700)
@@ -213,6 +215,16 @@ class MainWindow(QMainWindow):
             changed = detect_changes(self._last_snapshot, snapshot)
 
         self._last_snapshot = snapshot
+
+        # Detect newly scratched players on my team
+        if changed:
+            scratch_ids = {fid for fid, stat in changed if stat == "scratched"}
+            if scratch_ids:
+                names = [sk.name for sk in snapshot.my_skaters if sk.fantrax_id in scratch_ids and sk.scratched]
+                if names:
+                    self._scratch_alert = f" | ⚠ SCRATCH: {', '.join(names)}"
+                    self._scratch_alert_polls = 10
+
         self._sound.handle_changes(changed)
 
         self._my_widget.update_data(snapshot, is_my_team=True,  changed=changed)
@@ -226,6 +238,10 @@ class MainWindow(QMainWindow):
         self._comparison.update_data(
             snapshot.my_skater_period_totals,  snapshot.my_goalie_period_totals,
             snapshot.opp_skater_period_totals, snapshot.opp_goalie_period_totals,
+            my_sk_pgr=snapshot.my_sk_pgr,   opp_sk_pgr=snapshot.opp_sk_pgr,
+            my_gl_pgr=snapshot.my_gl_pgr,   opp_gl_pgr=snapshot.opp_gl_pgr,
+            my_sk_pgp=snapshot.my_sk_pgp,   opp_sk_pgp=snapshot.opp_sk_pgp,
+            my_gl_pgp=snapshot.my_gl_pgp,   opp_gl_pgp=snapshot.opp_gl_pgp,
         )
 
         interval_s = (
@@ -241,8 +257,16 @@ class MainWindow(QMainWindow):
             ps = snapshot.period_start.strftime("%b %d").lstrip("0").replace(" 0", " ")
             pe = snapshot.period_end.strftime("%b %d").lstrip("0").replace(" 0", " ")
             period_str = f" | Period: {ps}–{pe}"
+
+        scratch_str = ""
+        if self._scratch_alert_polls > 0:
+            self._scratch_alert_polls -= 1
+            scratch_str = self._scratch_alert
+        else:
+            self._scratch_alert = ""
+
         self._status.showMessage(
-            f"Last updated: {ts}{period_str} | Live Games: {snapshot.live_game_count} | Poll: {interval_s}s"
+            f"Last updated: {ts}{period_str} | Live Games: {snapshot.live_game_count} | Poll: {interval_s}s{scratch_str}"
         )
 
     def _on_error(self, message: str) -> None:

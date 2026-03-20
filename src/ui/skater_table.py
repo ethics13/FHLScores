@@ -2,6 +2,8 @@ from __future__ import annotations
 
 from PyQt6.QtCore import Qt
 from PyQt6.QtGui import QColor, QFont
+
+_SCRATCH_COLOR = QColor(160, 160, 160)
 from PyQt6.QtWidgets import QWidget, QVBoxLayout, QTableWidget, QTableWidgetItem, QHeaderView
 
 _STATE_COLOR: dict[str, QColor] = {
@@ -13,16 +15,16 @@ _STATE_COLOR: dict[str, QColor] = {
 from ui.flash_delegate import FlashDelegate
 from scoring.engine import SkaterRow, SkaterTotals
 
-SKATER_COLUMNS = ["Name", "WPerf", "Team", "Opp", "Pos", "G", "A", "BLK", "Hits", "SOG", "PPP", "GWG"]
+SKATER_COLUMNS = ["Name", "WPerf", "Team", "Opp", "REM", "Pos", "G", "A", "BLK", "Hits", "SOG", "PPP", "GWG"]
 
 STAT_TO_COL: dict[str, int] = {
-    "goals": 5,
-    "assists": 6,
-    "blk": 7,
-    "hits": 8,
-    "sog": 9,
-    "ppp": 10,
-    "gwg": 11,
+    "goals": 6,
+    "assists": 7,
+    "blk": 8,
+    "hits": 9,
+    "sog": 10,
+    "ppp": 11,
+    "gwg": 12,
 }
 
 _WPERF_COL = 1
@@ -73,7 +75,8 @@ class SkaterTable(QWidget):
         self._table.setColumnWidth(1, 40)
         self._table.horizontalHeader().setSectionResizeMode(2, QHeaderView.ResizeMode.ResizeToContents)
         self._table.horizontalHeader().setSectionResizeMode(3, QHeaderView.ResizeMode.ResizeToContents)
-        for col in range(4, len(SKATER_COLUMNS)):
+        self._table.horizontalHeader().setSectionResizeMode(4, QHeaderView.ResizeMode.ResizeToContents)
+        for col in range(5, len(SKATER_COLUMNS)):
             self._table.horizontalHeader().setSectionResizeMode(col, QHeaderView.ResizeMode.ResizeToContents)
         self._table.verticalHeader().setVisible(False)
         self._table.verticalHeader().setDefaultSectionSize(22)
@@ -142,7 +145,12 @@ class SkaterTable(QWidget):
             ppp = p.p_ppp     if self._show_period else p.ppp
             gwg = p.p_gwg     if self._show_period else p.gwg
 
-            self._set_cell(row_idx, 0, p.name, align=Qt.AlignmentFlag.AlignLeft | Qt.AlignmentFlag.AlignVCenter, tooltip=tip)
+            name_text = (p.name + " (SCR)") if p.scratched else p.name
+            self._set_cell(row_idx, 0, name_text, align=Qt.AlignmentFlag.AlignLeft | Qt.AlignmentFlag.AlignVCenter, tooltip=tip)
+            if p.scratched:
+                item = self._table.item(row_idx, 0)
+                if item:
+                    item.setForeground(_SCRATCH_COLOR)
             self._set_cell(row_idx, 1, _wperf_emoji(p.wperf))
             if not self._show_period:
                 bg = _wperf_bg(p.wperf)
@@ -152,14 +160,15 @@ class SkaterTable(QWidget):
                         item.setBackground(bg)
             self._set_cell(row_idx, 2, p.team_abbrev)
             self._set_cell(row_idx, 3, p.nhl_opponent)
-            self._set_cell(row_idx, 4, p.position)
-            self._set_cell(row_idx, 5, str(g))
-            self._set_cell(row_idx, 6, str(a))
-            self._set_cell(row_idx, 7, str(blk))
-            self._set_cell(row_idx, 8, str(hit))
-            self._set_cell(row_idx, 9, str(sog))
-            self._set_cell(row_idx, 10, str(ppp))
-            self._set_cell(row_idx, 11, str(gwg))
+            self._set_cell(row_idx, 4, str(p.games_remaining) if p.games_remaining > 0 else "-")
+            self._set_cell(row_idx, 5, p.position)
+            self._set_cell(row_idx, 6, str(g))
+            self._set_cell(row_idx, 7, str(a))
+            self._set_cell(row_idx, 8, str(blk))
+            self._set_cell(row_idx, 9, str(hit))
+            self._set_cell(row_idx, 10, str(sog))
+            self._set_cell(row_idx, 11, str(ppp))
+            self._set_cell(row_idx, 12, str(gwg))
 
             if p.game_state in _STATE_COLOR:
                 self._set_row_bg(row_idx, _STATE_COLOR[p.game_state])
@@ -182,10 +191,10 @@ class SkaterTable(QWidget):
             tso = sum(p.p_sog     for p in players)
             tpp = sum(p.p_ppp     for p in players)
             tgw = sum(p.p_gwg     for p in players)
-            totals_data = ["TOTALS", "", "", "", "", str(tg), str(ta), str(tbl), str(thi), str(tso), str(tpp), str(tgw)]
+            totals_data = ["TOTALS", "", "", "", "", "", str(tg), str(ta), str(tbl), str(thi), str(tso), str(tpp), str(tgw)]
         else:
             totals_data = [
-                "TOTALS", "", "", "", "",
+                "TOTALS", "", "", "", "", "",
                 str(totals.goals), str(totals.assists),
                 str(totals.blk), str(totals.hits), str(totals.sog),
                 str(totals.ppp), str(totals.gwg),
@@ -197,6 +206,11 @@ class SkaterTable(QWidget):
             item.setFlags(item.flags() & ~Qt.ItemFlag.ItemIsSelectable)
             item.setTextAlignment(Qt.AlignmentFlag.AlignCenter)
             self._table.setItem(totals_row, col, item)
+
+        if not self._show_period:
+            for stat, col in STAT_TO_COL.items():
+                if any((p.fantrax_id, stat) in changed_ids for p in players):
+                    self._delegate.mark_changed(totals_row, col)
 
     def _set_row_bg(self, row: int, color: QColor) -> None:
         for col in range(self._table.columnCount()):
