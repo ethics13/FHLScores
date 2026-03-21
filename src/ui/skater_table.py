@@ -15,7 +15,8 @@ _STATE_COLOR: dict[str, QColor] = {
 from ui.flash_delegate import FlashDelegate
 from scoring.engine import SkaterRow, SkaterTotals
 
-SKATER_COLUMNS = ["Name", "WPerf", "Team", "Opp", "REM", "Pos", "G", "A", "BLK", "Hits", "SOG", "PPP", "GWG"]
+SKATER_COLUMNS = ["Name", "WPerf", "Team", "Opp", "REM", "Pos", "G", "A", "BLK", "Hits", "SOG", "PPP", "GWG", "Ros%"]
+_ROS_COL = 13
 
 STAT_TO_COL: dict[str, int] = {
     "goals": 6,
@@ -29,19 +30,21 @@ STAT_TO_COL: dict[str, int] = {
 
 _WPERF_COL = 1
 
-def _wperf_emoji(score: float) -> str:
-    if score <= 0:  return ""
-    if score < 2:   return "❄️"
-    if score < 4:   return "🚀"
-    if score < 7:   return "🔥"
-    return                  "🔥🔥"
+def _wperf_emoji(wperf: float, games: int) -> str:
+    if games == 0: return ""
+    rate = wperf / games
+    if rate < 2.0: return "❄️"
+    if rate < 4.5: return "🚀"
+    if rate < 7.0: return "🔥"
+    return                "🔥🔥"
 
-def _wperf_bg(score: float) -> QColor | None:
-    if score <= 0:  return None
-    if score < 2:   return QColor(173, 216, 230)   # light blue
-    if score < 4:   return QColor(255, 240, 80)    # yellow
-    if score < 7:   return QColor(255, 160, 40)    # orange
-    return                  QColor(210, 40, 40)     # red
+def _wperf_bg(wperf: float, games: int) -> QColor | None:
+    if games == 0: return None
+    rate = wperf / games
+    if rate < 2.0: return QColor(173, 216, 230)   # light blue  (cold)
+    if rate < 4.5: return QColor(255, 240, 80)    # yellow
+    if rate < 7.0: return QColor(255, 160, 40)    # orange
+    return                QColor(210, 40, 40)      # red
 
 _HEADER_STYLE = (
     "QHeaderView::section {"
@@ -78,6 +81,7 @@ class SkaterTable(QWidget):
         self._table.horizontalHeader().setSectionResizeMode(4, QHeaderView.ResizeMode.ResizeToContents)
         for col in range(5, len(SKATER_COLUMNS)):
             self._table.horizontalHeader().setSectionResizeMode(col, QHeaderView.ResizeMode.ResizeToContents)
+        self._table.setColumnHidden(_ROS_COL, True)  # visible only in period mode
         self._table.verticalHeader().setVisible(False)
         self._table.verticalHeader().setDefaultSectionSize(22)
         self._table.setEditTriggers(QTableWidget.EditTrigger.NoEditTriggers)
@@ -101,6 +105,7 @@ class SkaterTable(QWidget):
 
     def set_view_mode(self, show_period: bool) -> None:
         self._show_period = show_period
+        self._table.setColumnHidden(_ROS_COL, not show_period)
 
     def update_data(
         self,
@@ -151,9 +156,9 @@ class SkaterTable(QWidget):
                 item = self._table.item(row_idx, 0)
                 if item:
                     item.setForeground(_SCRATCH_COLOR)
-            self._set_cell(row_idx, 1, _wperf_emoji(p.wperf))
+            self._set_cell(row_idx, 1, _wperf_emoji(p.wperf, p.games_played))
             if not self._show_period:
-                bg = _wperf_bg(p.wperf)
+                bg = _wperf_bg(p.wperf, p.games_played)
                 if bg:
                     item = self._table.item(row_idx, _WPERF_COL)
                     if item:
@@ -162,13 +167,24 @@ class SkaterTable(QWidget):
             self._set_cell(row_idx, 3, p.nhl_opponent)
             self._set_cell(row_idx, 4, str(p.games_remaining) if p.games_remaining > 0 else "-")
             self._set_cell(row_idx, 5, p.position)
-            self._set_cell(row_idx, 6, str(g))
-            self._set_cell(row_idx, 7, str(a))
-            self._set_cell(row_idx, 8, str(blk))
-            self._set_cell(row_idx, 9, str(hit))
-            self._set_cell(row_idx, 10, str(sog))
-            self._set_cell(row_idx, 11, str(ppp))
-            self._set_cell(row_idx, 12, str(gwg))
+            if self._show_period:
+                self._set_cell(row_idx, 6, str(g))
+                self._set_cell(row_idx, 7, str(a))
+                self._set_cell(row_idx, 8, str(blk))
+                self._set_cell(row_idx, 9, str(hit))
+                self._set_cell(row_idx, 10, str(sog))
+                self._set_cell(row_idx, 11, str(ppp))
+                self._set_cell(row_idx, 12, str(gwg))
+                ros_str = f"{p.ros_pct:.0f}%" if p.ros_pct > 0 else "--"
+                self._set_cell(row_idx, _ROS_COL, ros_str)
+            else:
+                self._set_cell(row_idx, 6,  str(g),   tooltip=f"Period: {p.p_goals}")
+                self._set_cell(row_idx, 7,  str(a),   tooltip=f"Period: {p.p_assists}")
+                self._set_cell(row_idx, 8,  str(blk), tooltip=f"Period: {p.p_blk}")
+                self._set_cell(row_idx, 9,  str(hit), tooltip=f"Period: {p.p_hits}")
+                self._set_cell(row_idx, 10, str(sog), tooltip=f"Period: {p.p_sog}")
+                self._set_cell(row_idx, 11, str(ppp), tooltip=f"Period: {p.p_ppp}")
+                self._set_cell(row_idx, 12, str(gwg), tooltip=f"Period: {p.p_gwg}")
 
             if p.game_state in _STATE_COLOR:
                 self._set_row_bg(row_idx, _STATE_COLOR[p.game_state])
@@ -191,7 +207,7 @@ class SkaterTable(QWidget):
             tso = sum(p.p_sog     for p in players)
             tpp = sum(p.p_ppp     for p in players)
             tgw = sum(p.p_gwg     for p in players)
-            totals_data = ["TOTALS", "", "", "", "", "", str(tg), str(ta), str(tbl), str(thi), str(tso), str(tpp), str(tgw)]
+            totals_data = ["TOTALS", "", "", "", "", "", str(tg), str(ta), str(tbl), str(thi), str(tso), str(tpp), str(tgw), ""]
         else:
             totals_data = [
                 "TOTALS", "", "", "", "", "",

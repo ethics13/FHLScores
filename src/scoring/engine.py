@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import time as _time
 import unicodedata
 from dataclasses import dataclass, field
 from datetime import date, datetime
@@ -25,6 +26,7 @@ class SkaterRow:
     games_remaining: int = 0
     games_played: int = 0
     scratched: bool = False   # team had LIVE/OFF game but player not in NHL boxscore
+    ros_pct: float = 0.0      # % rostered globally (background-fetched; 0 until available)
     # Today's NHL stats
     goals: int = 0
     assists: int = 0
@@ -66,6 +68,7 @@ class GoalieRow:
     goals_against: int = 0
     toi_seconds: int = 0
     has_played: bool = False
+    ros_pct: float = 0.0      # % rostered globally (background-fetched; 0 until available)
     # Full scoring-period stats (from Fantrax)
     p_wins: int = 0
     p_goals_against: int = 0
@@ -96,6 +99,32 @@ class GoalieTotals:
     shots_against: int = 0
     saves: int = 0
     goals_against: int = 0
+
+
+@dataclass
+class WaiverRow:
+    """An unowned player available on the waiver wire who played today."""
+    name: str
+    team_abbrev: str
+    position: str
+    nhl_opponent: str
+    game_state: str
+    games_remaining: int = 0
+    projected: float = 0.0    # sort key: period_wperf + projected_remaining
+    ros_pct: float = 0.0      # % rostered globally (populated after first background fetch)
+    # Period stats (accumulated across scoring period; today always included)
+    p_goals: int = 0
+    p_assists: int = 0
+    p_blk: int = 0
+    p_hits: int = 0
+    p_sog: int = 0
+    p_ppp: int = 0
+    p_gwg: int = 0
+    # Goalie period stats
+    p_wins: int = 0
+    p_saves: int = 0
+    p_save_pct: float = 0.0
+    p_goals_against: int = 0
 
 
 @dataclass
@@ -134,6 +163,8 @@ class ScoringSnapshot:
     period_end: Optional[date] = None
     my_team_name: str = ""
     opp_team_name: str = ""
+    available_skaters: list[WaiverRow] = field(default_factory=list)
+    available_goalies: list[WaiverRow] = field(default_factory=list)
 
 
 # ---------------------------------------------------------------------------
@@ -303,6 +334,14 @@ class ScoringEngine:
         self._last_snapshot: Optional[ScoringSnapshot] = None
         # Cache completed boxscores so past days aren't re-fetched every poll
         self._completed_boxscores: dict[int, NHLBoxscore] = {}
+        # Cache of all rostered player names (refreshed every 2 minutes)
+        self._rostered_names_cache: set[str] = set()
+        self._rostered_names_ts: float = 0.0
+        # Accumulated per-player NHL stats across the scoring period (for waiver ranking)
+        # dict[player_id] → {"goals":n, "assists":n, ..., "games":n}
+        self._period_player_stats: dict[int, dict] = {}
+        self._period_stats_game_ids: set[int] = set()   # game_ids already processed
+        self._period_cache_key: tuple = (None, None)    # (period_start, period_end)
 
     def refresh(self) -> ScoringSnapshot:
         _LIVE_STATES = {"LIVE", "CRIT"}
@@ -435,11 +474,70 @@ class ScoringEngine:
         my_gl_pgp  = sum(r.games_played for r in my_period_gl)
         opp_gl_pgp = sum(r.games_played for r in opp_period_gl)
 
-        # Filter period rows to players with any scoring-period activity (display only)
-        my_period_sk  = [r for r in my_period_sk  if r.p_goals + r.p_assists + r.p_blk + r.p_hits + r.p_sog + r.p_ppp + r.p_gwg > 0]
-        opp_period_sk = [r for r in opp_period_sk if r.p_goals + r.p_assists + r.p_blk + r.p_hits + r.p_sog + r.p_ppp + r.p_gwg > 0]
-        my_period_gl  = [r for r in my_period_gl  if r.p_saves > 0 or r.p_wins > 0]
-        opp_period_gl = [r for r in opp_period_gl if r.p_saves > 0 or r.p_wins > 0]
+        # Players who appeared in Fantrax period stats at all (even with 0 counted stats,
+        # e.g. a physical player whose league doesn't score hits/BLK)
+        my_sk_active  = set(my_ast.get("2010", {}).keys())
+        opp_sk_active = set(opp_ast.get("2010", {}).keys())
+        my_gl_active  = set(my_ast.get("2020", {}).keys())
+        opp_gl_active = set(opp_ast.get("2020", {}).keys())
+
+        def _sk_played(r: SkaterRow, active_ids: set) -> bool:
+            return (r.fantrax_id in active_ids or
+                    r.games_played > 0 or
+                    r.p_goals + r.p_assists + r.p_blk + r.p_hits + r.p_sog + r.p_ppp + r.p_gwg > 0)
+
+        def _gl_played(r: GoalieRow, active_ids: set) -> bool:
+            return r.fantrax_id in active_ids or r.p_saves > 0 or r.p_wins > 0
+
+        # Filter period rows to players who played at least one game this period
+        my_period_sk  = [r for r in my_period_sk  if _sk_played(r, my_sk_active)]
+        opp_period_sk = [r for r in opp_period_sk if _sk_played(r, opp_sk_active)]
+        my_period_gl  = [r for r in my_period_gl  if _gl_played(r, my_gl_active)]
+        opp_period_gl = [r for r in opp_period_gl if _gl_played(r, opp_gl_active)]
+
+        # Available players (waiver wire) + roster Ros% — single ownership fetch for all
+        available_sk: list[WaiverRow] = []
+        available_gl: list[WaiverRow] = []
+        try:
+            rostered = self._get_rostered_names()
+            # Incrementally build period stats for unowned player ranking
+            if period_start and period_end:
+                self._refresh_period_player_stats(period_start, period_end)
+
+            # Collect ALL names needing Ros%: roster + waiver candidates (one combined fetch)
+            all_ownership_names: list[str] = [fp.name for fp in my_roster + opp_roster]
+            for sk in skater_by_id.values():
+                if _normalize_name(sk.name_default) not in rostered:
+                    all_ownership_names.append(sk.name_default)
+            for gl in goalie_by_id.values():
+                if gl.has_played and _normalize_name(gl.name_default) not in rostered:
+                    all_ownership_names.append(gl.name_default)
+            for hist in self._period_player_stats.values():
+                pname = hist.get("_name", "")
+                if pname and _normalize_name(pname) not in rostered:
+                    all_ownership_names.append(pname)
+            all_ownership_names = list(dict.fromkeys(n for n in all_ownership_names if n))
+
+            try:
+                combined_ownership = self._fantrax.get_player_ownership(
+                    self._league_id, all_ownership_names)
+            except Exception:
+                combined_ownership = {}
+
+            # Backfill ros_pct on period rows now that ownership is available
+            for row in my_period_sk + opp_period_sk:
+                row.ros_pct = combined_ownership.get(_normalize_name(row.name), 0.0)
+            for row in my_period_gl + opp_period_gl:
+                row.ros_pct = combined_ownership.get(_normalize_name(row.name), 0.0)
+
+            available_sk, available_gl = self._build_available(
+                skater_by_id, goalie_by_id, rostered,
+                playing_teams,
+                team_to_opponent, team_to_state, team_gp, team_total,
+                combined_ownership,
+            )
+        except Exception:
+            pass
 
         snapshot = ScoringSnapshot(
             timestamp=datetime.now(),
@@ -470,6 +568,8 @@ class ScoringEngine:
             period_end=period_end,
             my_team_name=self._fantrax.get_team_name(self._my_team_id),
             opp_team_name=self._fantrax.get_team_name(opp_team_id),
+            available_skaters=available_sk,
+            available_goalies=available_gl,
         )
         self._last_snapshot = snapshot
         return snapshot
@@ -485,6 +585,7 @@ class ScoringEngine:
         team_to_state: dict[str, str] = None,
         team_gp: dict[str, int] = None,
         team_total: dict[str, int] = None,
+        ownership: dict[str, float] = None,
     ) -> tuple[list[SkaterRow], list[GoalieRow]]:
         skaters: list[SkaterRow] = []
         goalies: list[GoalieRow] = []
@@ -522,6 +623,7 @@ class ScoringEngine:
                     row.goals_against = goalie_stats.goals_against
                     row.toi_seconds = goalie_stats.toi_seconds
                     row.has_played = goalie_stats.has_played
+                row.ros_pct = (ownership or {}).get(norm, 0.0)
                 goalies.append(row)
             else:
                 skater_stats = _match_skater(norm, fp.team_abbrev, nhl_skater_map)
@@ -548,10 +650,237 @@ class ScoringEngine:
                 else:
                     # Mark scratched if team's boxscore was fetched but player is absent
                     row.scratched = active_teams is not None and team_up in active_teams
+                row.ros_pct = (ownership or {}).get(norm, 0.0)
                 skaters.append(row)
 
         skaters.sort(key=_skater_sort_key)
         return skaters, goalies
+
+    def _refresh_period_player_stats(self, period_start, period_end) -> None:
+        """Incrementally accumulate NHL stats for all players across past days of the period.
+        Fetches up to 8 uncached boxscores per call to limit latency."""
+        cache_key = (period_start, period_end)
+        if cache_key != self._period_cache_key:
+            # New scoring period — reset
+            self._period_player_stats.clear()
+            self._period_stats_game_ids.clear()
+            self._period_cache_key = cache_key
+
+        try:
+            all_ids = self._nhl.get_completed_game_ids_in_period(period_start, period_end)
+        except Exception:
+            return
+
+        fetched = 0
+        for gid in all_ids:
+            if gid in self._period_stats_game_ids:
+                continue
+            if fetched >= 8:
+                break  # resume next refresh
+            try:
+                if gid in self._completed_boxscores:
+                    boxscore = self._completed_boxscores[gid]
+                else:
+                    boxscore = self._nhl.get_boxscore(gid)
+                    self._completed_boxscores[gid] = boxscore
+                for sk in boxscore.skaters:
+                    acc = self._period_player_stats.setdefault(sk.player_id, {
+                        "goals": 0, "assists": 0, "blk": 0,
+                        "hits": 0, "sog": 0, "ppp": 0, "games": 0,
+                    })
+                    acc["goals"]   += sk.goals
+                    acc["assists"] += sk.assists
+                    acc["blk"]     += sk.blk
+                    acc["hits"]    += sk.hits
+                    acc["sog"]     += sk.sog
+                    acc["ppp"]     += sk.ppp
+                    acc["games"]   += 1
+                    # Store identity so FUT players can be shown pre-game
+                    acc["_name"] = sk.name_default
+                    acc["_team"] = sk.team_abbrev.upper()
+                    acc["_pos"]  = sk.position
+                for gl in boxscore.goalies:
+                    if not gl.has_played:
+                        continue
+                    acc = self._period_player_stats.setdefault(gl.player_id, {
+                        "wins": 0, "saves": 0, "goals_against": 0,
+                        "shots_against": 0, "games": 0,
+                    })
+                    acc["wins"]          += gl.wins
+                    acc["saves"]         += gl.saves
+                    acc["goals_against"] += gl.goals_against
+                    acc["shots_against"] += gl.shots_against
+                    acc["games"]         += 1
+                    acc["_name"]  = gl.name_default
+                    acc["_team"]  = gl.team_abbrev.upper()
+                    acc["_pos"]   = "G"
+                    acc["_goalie"] = True
+                self._period_stats_game_ids.add(gid)
+                fetched += 1
+            except Exception:
+                continue
+
+    def _get_rostered_names(self) -> set[str]:
+        """Return normalized names of all rostered players, cached for 2 minutes."""
+        now = _time.monotonic()
+        if now - self._rostered_names_ts > 120:
+            raw = self._fantrax.get_all_rostered_names(self._league_id)
+            self._rostered_names_cache = {_normalize_name(n) for n in raw}
+            self._rostered_names_ts = now
+        return self._rostered_names_cache
+
+    def _build_available(
+        self,
+        skater_by_id: dict,
+        goalie_by_id: dict,
+        rostered_names: set[str],
+        playing_teams: set[str],
+        team_to_opponent: dict,
+        team_to_state: dict,
+        team_gp: dict,
+        team_total: dict,
+        ownership: dict[str, float] = None,
+    ) -> tuple[list[WaiverRow], list[WaiverRow]]:
+        skaters: list[WaiverRow] = []
+        goalies: list[WaiverRow] = []
+        ownership = ownership or {}
+
+        seen_ids: set[int] = set()
+
+        # ── Players with LIVE/OFF game today (have boxscore stats) ──────────
+        for sk in skater_by_id.values():
+            if _normalize_name(sk.name_default) in rostered_names:
+                continue
+            seen_ids.add(sk.player_id)
+            team_up = sk.team_abbrev.upper()
+            rem = (team_gp or {}).get(team_up, 0)
+
+            hist = self._period_player_stats.get(sk.player_id, {})
+            p_goals   = hist.get("goals",   0) + sk.goals
+            p_assists = hist.get("assists",  0) + sk.assists
+            p_blk     = hist.get("blk",      0) + sk.blk
+            p_hits    = hist.get("hits",     0) + sk.hits
+            p_sog     = hist.get("sog",      0) + sk.sog
+            p_ppp     = hist.get("ppp",      0) + sk.ppp
+            games_played = hist.get("games", 0) + 1
+
+            period_wperf = _compute_skater_wperf({
+                "goals": p_goals, "assists": p_assists, "blk": p_blk,
+                "hits": p_hits, "sog": p_sog, "ppp": p_ppp,
+            })
+            rate = period_wperf / max(1, games_played)
+            projected = period_wperf + rate * rem
+
+            skaters.append(WaiverRow(
+                name=sk.name_default, team_abbrev=sk.team_abbrev,
+                position=sk.position,
+                nhl_opponent=(team_to_opponent or {}).get(team_up, ""),
+                game_state=(team_to_state or {}).get(team_up, ""),
+                games_remaining=rem,
+                projected=projected,
+                ros_pct=ownership.get(_normalize_name(sk.name_default), 0.0),
+                p_goals=p_goals, p_assists=p_assists, p_blk=p_blk,
+                p_hits=p_hits, p_sog=p_sog, p_ppp=p_ppp,
+            ))
+
+        for gl in goalie_by_id.values():
+            if not gl.has_played:
+                continue
+            if _normalize_name(gl.name_default) in rostered_names:
+                continue
+            seen_ids.add(gl.player_id)
+            team_up = gl.team_abbrev.upper()
+            rem = (team_gp or {}).get(team_up, 0)
+
+            hist = self._period_player_stats.get(gl.player_id, {})
+            p_wins   = hist.get("wins",          0) + gl.wins
+            p_saves  = hist.get("saves",         0) + gl.saves
+            p_ga     = hist.get("goals_against", 0) + gl.goals_against
+            p_sa     = hist.get("shots_against", 0) + gl.shots_against
+            p_svp    = p_saves / p_sa if p_sa > 0 else 0.0
+            games_played = hist.get("games", 0) + 1
+
+            period_wperf = _compute_goalie_wperf({
+                "wins": p_wins, "saves": p_saves, "save_pct": p_svp,
+            })
+            rate = period_wperf / max(1, games_played)
+            projected = period_wperf + rate * rem
+
+            goalies.append(WaiverRow(
+                name=gl.name_default, team_abbrev=gl.team_abbrev,
+                position="G",
+                nhl_opponent=(team_to_opponent or {}).get(team_up, ""),
+                game_state=(team_to_state or {}).get(team_up, ""),
+                games_remaining=rem,
+                projected=projected,
+                ros_pct=ownership.get(_normalize_name(gl.name_default), 0.0),
+                p_wins=p_wins, p_saves=p_saves,
+                p_save_pct=p_svp, p_goals_against=p_ga,
+            ))
+
+        # ── Players with FUT game today (period stats only, game not started) ─
+        # Uses identity stored in _period_player_stats from earlier boxscores.
+        pt = playing_teams or set()
+        for pid, hist in self._period_player_stats.items():
+            if pid in seen_ids:
+                continue
+            team_up = hist.get("_team", "")
+            if not team_up or team_up not in pt:
+                continue
+            pname = hist.get("_name", "")
+            if not pname or _normalize_name(pname) in rostered_names:
+                continue
+            rem = (team_gp or {}).get(team_up, 0)
+            games_played = hist.get("games", 0)
+
+            if hist.get("_goalie"):
+                p_wins  = hist.get("wins",          0)
+                p_saves = hist.get("saves",         0)
+                p_ga    = hist.get("goals_against", 0)
+                p_sa    = hist.get("shots_against", 0)
+                p_svp   = p_saves / p_sa if p_sa > 0 else 0.0
+                period_wperf = _compute_goalie_wperf({
+                    "wins": p_wins, "saves": p_saves, "save_pct": p_svp,
+                })
+                rate = period_wperf / max(1, games_played)
+                goalies.append(WaiverRow(
+                    name=pname, team_abbrev=hist.get("_team", ""),
+                    position="G",
+                    nhl_opponent=(team_to_opponent or {}).get(team_up, ""),
+                    game_state=(team_to_state or {}).get(team_up, "FUT"),
+                    games_remaining=rem,
+                    projected=period_wperf + rate * rem,
+                    ros_pct=ownership.get(_normalize_name(pname), 0.0),
+                    p_wins=p_wins, p_saves=p_saves,
+                    p_save_pct=p_svp, p_goals_against=p_ga,
+                ))
+            else:
+                p_goals   = hist.get("goals",   0)
+                p_assists = hist.get("assists",  0)
+                p_blk     = hist.get("blk",      0)
+                p_hits    = hist.get("hits",     0)
+                p_sog     = hist.get("sog",      0)
+                p_ppp     = hist.get("ppp",      0)
+                period_wperf = _compute_skater_wperf({
+                    "goals": p_goals, "assists": p_assists, "blk": p_blk,
+                    "hits": p_hits, "sog": p_sog, "ppp": p_ppp,
+                })
+                rate = period_wperf / max(1, games_played)
+                skaters.append(WaiverRow(
+                    name=pname, team_abbrev=hist.get("_team", ""),
+                    position=hist.get("_pos", ""),
+                    nhl_opponent=(team_to_opponent or {}).get(team_up, ""),
+                    game_state=(team_to_state or {}).get(team_up, "FUT"),
+                    games_remaining=rem,
+                    projected=period_wperf + rate * rem,
+                    ros_pct=ownership.get(_normalize_name(pname), 0.0),
+                    p_goals=p_goals, p_assists=p_assists, p_blk=p_blk,
+                    p_hits=p_hits, p_sog=p_sog, p_ppp=p_ppp,
+                ))
+
+        skaters.sort(key=lambda r: r.projected, reverse=True)
+        goalies.sort(key=lambda r: r.projected, reverse=True)
+        return skaters[:20], goalies[:10]
 
     @property
     def last_snapshot(self) -> Optional[ScoringSnapshot]:

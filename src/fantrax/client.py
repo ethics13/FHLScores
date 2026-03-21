@@ -92,6 +92,9 @@ class FantraxClient:
         self._team_names: dict[str, str] = {}  # team_id → display name
         self._day_stats_cache: dict[str, dict] = {}  # date_str → allTeamsStats dict
         self._scip_to_field: dict[str, str] = {}    # built once from API response
+        self._ownership_cache: dict[str, float] = {}  # normalized_name → ros_pct
+        self._ownership_ts: float = 0.0
+        self._ownership_thread_running: bool = False
 
     def reset_league_cache(self) -> None:
         """Clear all per-league cached data when switching leagues."""
@@ -99,6 +102,8 @@ class FantraxClient:
         self._scip_to_field.clear()
         self._positions.clear()
         self._team_names.clear()
+        self._ownership_cache.clear()
+        self._ownership_ts = 0.0
 
     def login(self) -> None:
         """Authenticate via Selenium (headless Chrome) and cache cookies."""
@@ -383,7 +388,12 @@ class FantraxClient:
 
             all_teams = day_data.get("statsPerTeam", {}).get("allTeamsStats", {})
             for team_id in (my_team_id, opp_team_id):
-                team_stats_map = all_teams.get(team_id, {}).get("ACTIVE", {}).get("statsMap", {})
+                # Merge stats from ALL roster slots (ACTIVE, BN, etc.) so bench
+                # players and today's scratches still accumulate period totals.
+                team_stats_map: dict = {}
+                for slot_data in all_teams.get(team_id, {}).values():
+                    if isinstance(slot_data, dict):
+                        team_stats_map.update(slot_data.get("statsMap", {}))
                 for scorer_id, raw in team_stats_map.items():
                     if scorer_id.startswith("_"):
                         continue  # skip aggregate rows (_2010, _2020)
@@ -433,6 +443,123 @@ class FantraxClient:
                 active_stats[team_id][group][scorer_id] = stats
 
         return opp_team_id, period_start, period_end, active_stats
+
+    def get_all_rostered_names(self, league_id: str) -> set[str]:
+        """Return raw names of all players on any fantasy roster in the league."""
+        team_ids = list(self._team_names.keys())
+        if not team_ids:
+            return set()
+        methods = [
+            {"method": "getTeamRosterInfo", "data": {"teamId": tid, "view": "STATS"}}
+            for tid in team_ids
+        ]
+        try:
+            results = self._api(league_id, methods)
+        except Exception:
+            return set()
+        names: set[str] = set()
+        for data in results:
+            for table in data.get("tables", []):
+                for row in table.get("rows", []):
+                    scorer = row.get("scorer")
+                    if scorer:
+                        name = scorer.get("name", "")
+                        if name:
+                            names.add(name)
+        return names
+
+
+    def get_player_ownership(self, league_id: str, names: list[str]) -> dict[str, float]:
+        """Return {normalized_name: ros_pct} for the given player names.
+
+        Searches getPlayerStats by last name for each player.  Results are
+        cached for 10 minutes.  Launches a background thread so the first
+        call returns immediately (shows '--'); subsequent polls get real data.
+        """
+        import threading
+        import unicodedata
+
+        def _norm(n: str) -> str:
+            n = unicodedata.normalize("NFD", n)
+            n = "".join(c for c in n if unicodedata.category(c) != "Mn")
+            parts = n.lower().split()
+            if not parts:
+                return ""
+            first = parts[0].rstrip(".")
+            last = " ".join(parts[1:]) if len(parts) > 1 else first
+            return f"{first[0]}.{last.replace(' ', '')}" if first else last
+
+        now = time.monotonic()
+        # Return cache if fresh AND all requested names are already cached
+        missing = [n for n in names if _norm(n) not in self._ownership_cache]
+        if not missing and now - self._ownership_ts < 600:
+            return self._ownership_cache
+
+        if self._ownership_thread_running:
+            return self._ownership_cache
+
+        names_to_fetch = list(names)
+
+        def _run() -> None:
+            self._ownership_thread_running = True
+            try:
+                result: dict[str, float] = dict(self._ownership_cache)
+                for raw_name in names_to_fetch:
+                    norm = _norm(raw_name)
+                    if norm in result:
+                        continue
+                    # Use last name as search token (most discriminating)
+                    parts = raw_name.strip().split()
+                    search_token = parts[-1] if parts else raw_name
+                    ros = self._search_player_ros(league_id, raw_name, search_token)
+                    result[norm] = ros  # store 0 too so we don't retry 0%-owned players
+                self._ownership_cache = result
+                self._ownership_ts = time.monotonic()
+            finally:
+                self._ownership_thread_running = False
+
+        self._ownership_thread_running = True
+        t = threading.Thread(target=_run, daemon=True)
+        t.start()
+        return self._ownership_cache
+
+    def _search_player_ros(self, league_id: str, full_name: str, search_token: str) -> float:
+        """Return Ros% for a player by searching getPlayerStats with their last name.
+
+        NHL names are abbreviated ('S. Steel'); Fantrax names are full ('Sam Steel').
+        Compare via normalized 'first-initial.lastname' form to handle both.
+        """
+        import unicodedata as _ud
+
+        def _n(s: str) -> str:
+            s = _ud.normalize("NFD", s)
+            s = "".join(c for c in s if _ud.category(c) != "Mn")
+            parts = s.lower().split()
+            if not parts:
+                return ""
+            first = parts[0].rstrip(".")
+            last = " ".join(parts[1:]) if len(parts) > 1 else first
+            return f"{first[0]}.{last.replace(' ', '')}" if first else last
+
+        target = _n(full_name)
+        try:
+            # statusOrTeamFilter "ALL" returns both available and rostered players.
+            data = self._api1(league_id, "getPlayerStats",
+                              {"searchName": search_token, "statusOrTeamFilter": "ALL"})
+            for row in (data.get("statsTable") or []):
+                scorer = row.get("scorer") or {}
+                if _n(scorer.get("name", "")) != target:
+                    continue
+                for cell in row.get("cells", []):
+                    content = str(cell.get("content", ""))
+                    if content.endswith("%") and "gainColor" not in cell:
+                        try:
+                            return float(content.rstrip("%"))
+                        except ValueError:
+                            pass
+        except Exception:
+            pass
+        return 0.0
 
     def get_opponent_team_id(self, my_team_id: str, league_id: str) -> str:
         opp, _, _, _ = self.get_matchup_info(my_team_id, league_id)

@@ -9,7 +9,8 @@
       "WebFetch(domain:raw.githubusercontent.com)",
       "WebFetch(domain:fantraxapi.kometa.wiki)",
       "Bash(pip show:*)",
-      "WebFetch(domain:replit.com)"
+      "WebFetch(domain:replit.com)",
+      "Bash(rm:*)"
     ]
   }
 }

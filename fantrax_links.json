@@ -1,0 +1,354 @@
+[
+  {
+    "className": "link--a11y ng-tns-c618212028-0",
+    "href": "",
+    "id": "",
+    "parentClass": "fx-layout ng-tns-c618212028-0",
+    "parentTag": "APP-ROOT",
+    "text": "Skip to main content"
+  },
+  {
+    "className": "fx-link sportile ng-star-inserted",
+    "href": "/fantasy/league/j3yl79c7man4av42/team/roster",
+    "id": "",
+    "parentClass": "nav-tiles nav-tiles--break--small-desktop ng-star-inserted",
+    "parentTag": "DIV",
+    "text": "group\nRoster"
+  },
+  {
+    "className": "fx-link sportile ng-star-inserted",
+    "href": "/fantasy/league/j3yl79c7man4av42/livescoring",
+    "id": "",
+    "parentClass": "nav-tiles nav-tiles--break--small-desktop ng-star-inserted",
+    "parentTag": "DIV",
+    "text": "scoreboard\nMatchups"
+  },
+  {
+    "className": "fx-link sportile current ng-star-inserted",
+    "href": "/fantasy/league/j3yl79c7man4av42/players",
+    "id": "",
+    "parentClass": "nav-tiles nav-tiles--break--small-desktop ng-star-inserted",
+    "parentTag": "DIV",
+    "text": "person\nPlayers"
+  },
+  {
+    "className": "fx-link sportile sportile--first ng-star-inserted",
+    "href": "/fantasy/league/j3yl79c7man4av42/home",
+    "id": "",
+    "parentClass": "nav-tiles nav-tiles--break--small-desktop ng-star-inserted",
+    "parentTag": "DIV",
+    "text": "home\nLeague"
+  },
+  {
+    "className": "fx-link ng-star-inserted",
+    "href": "/fantasy/league/j3yl79c7man4av42/standings",
+    "id": "",
+    "parentClass": "nav-links ng-star-inserted",
+    "parentTag": "DIV",
+    "text": "format_list_numbered\nStandings"
+  },
+  {
+    "className": "fx-link ng-star-inserted",
+    "href": "/news/league/j3yl79c7man4av42/nhl/fantasy-columns",
+    "id": "",
+    "parentClass": "nav-links ng-star-inserted",
+    "parentTag": "DIV",
+    "text": "feed\nFantasy Advice"
+  },
+  {
+    "className": "",
+    "href": "",
+    "id": "",
+    "parentClass": "scorer__info__name",
+    "parentTag": "DIV",
+    "text": "Sam Steel"
+  },
+  {
+    "className": "",
+    "href": "",
+    "id": "",
+    "parentClass": "scorer__info__name",
+    "parentTag": "DIV",
+    "text": "Alex Iafallo"
+  },
+  {
+    "className": "",
+    "href": "",
+    "id": "",
+    "parentClass": "scorer__info__name",
+    "parentTag": "DIV",
+    "text": "Jamie Oleksiak"
+  },
+  {
+    "className": "",
+    "href": "",
+    "id": "",
+    "parentClass": "scorer__info__name",
+    "parentTag": "DIV",
+    "text": "Michael Amadio"
+  },
+  {
+    "className": "",
+    "href": "",
+    "id": "",
+    "parentClass": "scorer__info__name",
+    "parentTag": "DIV",
+    "text": "Ryan Pulock"
+  },
+  {
+    "className": "",
+    "href": "",
+    "id": "",
+    "parentClass": "scorer__info__name",
+    "parentTag": "DIV",
+    "text": "Will Borgen"
+  },
+  {
+    "className": "",
+    "href": "",
+    "id": "",
+    "parentClass": "scorer__info__name",
+    "parentTag": "DIV",
+    "text": "Zemgus Girgensons"
+  },
+  {
+    "className": "",
+    "href": "",
+    "id": "",
+    "parentClass": "scorer__info__name",
+    "parentTag": "DIV",
+    "text": "Andrew Peeke"
+  },
+  {
+    "className": "",
+    "href": "",
+    "id": "",
+    "parentClass": "scorer__info__name",
+    "parentTag": "DIV",
+    "text": "Mikey Anderson"
+  },
+  {
+    "className": "",
+    "href": "",
+    "id": "",
+    "parentClass": "scorer__info__name",
+    "parentTag": "DIV",
+    "text": "Nick Cousins"
+  },
+  {
+    "className": "",
+    "href": "",
+    "id": "",
+    "parentClass": "scorer__info__name",
+    "parentTag": "DIV",
+    "text": "Ondrej Palat"
+  },
+  {
+    "className": "",
+    "href": "",
+    "id": "",
+    "parentClass": "scorer__info__name",
+    "parentTag": "DIV",
+    "text": "Alex Killorn"
+  },
+  {
+    "className": "ng-star-inserted",
+    "href": "/news/nhl/boxscore/06d16?view=GAMECAST",
+    "id": "",
+    "parentClass": "i-table__cell i-table__cell--small i-table__cell--center ng-star-inserted",
+    "parentTag": "TABLE-CELL",
+    "text": "@UTA\nFri 10:00PM"
+  },
+  {
+    "className": "",
+    "href": "",
+    "id": "",
+    "parentClass": "scorer__info__name",
+    "parentTag": "DIV",
+    "text": "Simon Benoit"
+  },
+  {
+    "className": "ng-star-inserted",
+    "href": "/news/nhl/boxscore/06d12?view=GAMECAST",
+    "id": "",
+    "parentClass": "i-table__cell i-table__cell--small i-table__cell--center ng-star-inserted",
+    "parentTag": "TABLE-CELL",
+    "text": "CAR 1\n@TOR 1"
+  },
+  {
+    "className": "",
+    "href": "",
+    "id": "",
+    "parentClass": "scorer__info__name",
+    "parentTag": "DIV",
+    "text": "Dakota Joshua"
+  },
+  {
+    "className": "ng-star-inserted",
+    "href": "/news/nhl/boxscore/06d12?view=GAMECAST",
+    "id": "",
+    "parentClass": "i-table__cell i-table__cell--small i-table__cell--center ng-star-inserted",
+    "parentTag": "TABLE-CELL",
+    "text": "CAR 1\n@TOR 1"
+  },
+  {
+    "className": "",
+    "href": "",
+    "id": "",
+    "parentClass": "scorer__info__name",
+    "parentTag": "DIV",
+    "text": "Zach Whitecloud"
+  },
+  {
+    "className": "ng-star-inserted",
+    "href": "/news/nhl/boxscore/06d15?view=GAMECAST",
+    "id": "",
+    "parentClass": "i-table__cell i-table__cell--small i-table__cell--center ng-star-inserted",
+    "parentTag": "TABLE-CELL",
+    "text": "FLA\nFri 9:00PM"
+  },
+  {
+    "className": "",
+    "href": "",
+    "id": "",
+    "parentClass": "scorer__info__name",
+    "parentTag": "DIV",
+    "text": "Tyler Myers"
+  },
+  {
+    "className": "",
+    "href": "",
+    "id": "",
+    "parentClass": "scorer__info__name",
+    "parentTag": "DIV",
+    "text": "Cody Glass"
+  },
+  {
+    "className": "ng-star-inserted",
+    "href": "/news/nhl/boxscore/06d13?view=GAMECAST",
+    "id": "",
+    "parentClass": "i-table__cell i-table__cell--small i-table__cell--center ng-star-inserted",
+    "parentTag": "TABLE-CELL",
+    "text": "NJD 0\n@WSH 1"
+  },
+  {
+    "className": "",
+    "href": "",
+    "id": "",
+    "parentClass": "scorer__info__name",
+    "parentTag": "DIV",
+    "text": "Connor Brown"
+  },
+  {
+    "className": "ng-star-inserted",
+    "href": "/news/nhl/boxscore/06d13?view=GAMECAST",
+    "id": "",
+    "parentClass": "i-table__cell i-table__cell--small i-table__cell--center ng-star-inserted",
+    "parentTag": "TABLE-CELL",
+    "text": "NJD 0\n@WSH 1"
+  },
+  {
+    "className": "",
+    "href": "",
+    "id": "",
+    "parentClass": "scorer__info__name",
+    "parentTag": "DIV",
+    "text": "Brendan Gallagher"
+  },
+  {
+    "className": "",
+    "href": "",
+    "id": "",
+    "parentClass": "scorer__info__name",
+    "parentTag": "DIV",
+    "text": "James van Riemsdyk"
+  },
+  {
+    "className": "",
+    "href": "/news/nhl/fantasy-columns",
+    "id": "",
+    "parentClass": "",
+    "parentTag": "H3",
+    "text": "Fantasy Advice"
+  },
+  {
+    "className": "fantrax-hq",
+    "href": "https://www.fantraxhq.com/",
+    "id": "",
+    "parentClass": "",
+    "parentTag": "H5",
+    "text": ""
+  },
+  {
+    "className": "mdc-icon-button mat-mdc-icon-button mat-mdc-button-base mat-unthemed",
+    "href": "/news/nhl/fantasy-columns",
+    "id": "",
+    "parentClass": "",
+    "parentTag": "NAV",
+    "text": "input"
+  },
+  {
+    "className": "flextable__row ng-star-inserted",
+    "href": "/news/league/j3yl79c7man4av42/nhl/fantasy-columns/27wz7713mmxcyh0n",
+    "id": "",
+    "parentClass": "flextable ng-star-inserted",
+    "parentTag": "DIV",
+    "text": "Fantasy Hockey Cold List \u2013 Week 21\nMar 19"
+  },
+  {
+    "className": "flextable__row ng-star-inserted",
+    "href": "/news/league/j3yl79c7man4av42/nhl/fantasy-columns/amsmxuoqmmoseb8r",
+    "id": "",
+    "parentClass": "flextable ng-star-inserted",
+    "parentTag": "DIV",
+    "text": "Fantasy Hockey Playoff Sleepers \u2013 March 13\nMar 13"
+  },
+  {
+    "className": "flextable__row ng-star-inserted",
+    "href": "/news/league/j3yl79c7man4av42/nhl/fantasy-columns/f8tqy2k3mmlvfv9s",
+    "id": "",
+    "parentClass": "flextable ng-star-inserted",
+    "parentTag": "DIV",
+    "text": "Fantasy Hockey Cold List \u2013 Week 20\nMar 11"
+  },
+  {
+    "className": "flextable__row ng-star-inserted",
+    "href": "/news/league/j3yl79c7man4av42/nhl/fantasy-columns/w4yspbe2mmj3f8wt",
+    "id": "",
+    "parentClass": "flextable ng-star-inserted",
+    "parentTag": "DIV",
+    "text": "Fantasy Hockey Waiver Wire Report: Streams for Week 22\nMar 9"
+  },
+  {
+    "className": "flextable__row ng-star-inserted",
+    "href": "/news/league/j3yl79c7man4av42/nhl/fantasy-columns/fqnbzigcmmhto64n",
+    "id": "",
+    "parentClass": "flextable ng-star-inserted",
+    "parentTag": "DIV",
+    "text": "Fantasy Hockey Playoff Sleepers\nMar 8"
+  },
+  {
+    "className": "flextable__row ng-star-inserted",
+    "href": "/news/league/j3yl79c7man4av42/nhl/fantasy-columns/dl6kbsicmmer39fy",
+    "id": "",
+    "parentClass": "flextable ng-star-inserted",
+    "parentTag": "DIV",
+    "text": "Fantasy Hockey Cold List \u2013 Week 19\nMar 6"
+  },
+  {
+    "className": "flextable__row ng-star-inserted",
+    "href": "/news/league/j3yl79c7man4av42/nhl/fantasy-columns/w610rpzmmm0j4i3y",
+    "id": "",
+    "parentClass": "flextable ng-star-inserted",
+    "parentTag": "DIV",
+    "text": "NHL Injury Report for February 24: Olympic Injury Fallout\nFeb 24"
+  },
+  {
+    "className": "flextable__row ng-star-inserted",
+    "href": "/news/league/j3yl79c7man4av42/nhl/fantasy-columns/7mbwpf66mlz2jb2i",
+    "id": "",
+    "parentClass": "flextable ng-star-inserted",
+    "parentTag": "DIV",
+    "text": "Fantasy Hockey Waiver Wire: Streamers for Week 19\nFeb 23"
+  }
+]

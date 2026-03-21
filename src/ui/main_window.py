@@ -16,6 +16,7 @@ from scoring.engine import ScoringEngine, ScoringSnapshot, detect_changes
 from ui.team_widget import TeamWidget
 from ui.comparison_widget import ComparisonWidget
 from ui.sound_player import SoundPlayer
+from ui.waiver_dialog import WaiverDialog
 
 
 class WorkerThread(QThread):
@@ -51,6 +52,7 @@ class MainWindow(QMainWindow):
         self._nhl = NHLClient()
         self._engine: ScoringEngine | None = None
         self._sound = SoundPlayer()
+        self._waiver_dialog = WaiverDialog(self)
 
         # Central widget
         central = QWidget()
@@ -93,6 +95,12 @@ class MainWindow(QMainWindow):
         self._sound_btn.setFixedWidth(90)
         self._sound_btn.clicked.connect(self._on_sound_toggled)
         selector_layout.addWidget(self._sound_btn)
+
+        self._waiver_btn = QPushButton("Waivers")
+        self._waiver_btn.setFont(f)
+        self._waiver_btn.setFixedWidth(75)
+        self._waiver_btn.clicked.connect(self._on_waiver_clicked)
+        selector_layout.addWidget(self._waiver_btn)
 
         main_layout.addWidget(selector_bar)
 
@@ -190,6 +198,13 @@ class MainWindow(QMainWindow):
         self._sound.enabled = checked
         self._sound_btn.setText("Sound: ON" if checked else "Sound: OFF")
 
+    def _on_waiver_clicked(self) -> None:
+        if self._waiver_dialog.isVisible():
+            self._waiver_dialog.hide()
+        else:
+            self._waiver_dialog.show()
+            self._waiver_dialog.raise_()
+
     def _on_league_changed(self, _index: int) -> None:
         # Ignore signals fired before initial load completes
         if not self._fantrax._logged_in:
@@ -244,6 +259,13 @@ class MainWindow(QMainWindow):
             my_gl_pgp=snapshot.my_gl_pgp,   opp_gl_pgp=snapshot.opp_gl_pgp,
         )
 
+        ts = snapshot.timestamp.strftime("%H:%M:%S")
+        self._waiver_dialog.update_data(
+            snapshot.available_skaters,
+            snapshot.available_goalies,
+            timestamp=ts,
+        )
+
         interval_s = (
             self._config.poll_interval_live if snapshot.live_game_count > 0
             else self._config.poll_interval_idle
@@ -251,7 +273,6 @@ class MainWindow(QMainWindow):
         self._poll_timer.stop()
         self._poll_timer.start(interval_s * 1000)
 
-        ts = snapshot.timestamp.strftime("%H:%M:%S")
         period_str = ""
         if snapshot.period_start and snapshot.period_end:
             ps = snapshot.period_start.strftime("%b %d").lstrip("0").replace(" 0", " ")

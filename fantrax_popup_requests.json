@@ -1,0 +1,3674 @@
+{
+  "clicked": true,
+  "clicked_text": "Sam Steel",
+  "page_load_fxpa_methods": [
+    "login",
+    "getRefObject",
+    "getSportsByJoinImportance",
+    "getSportsByPlayImportance",
+    "getRefObject",
+    "getRefObject",
+    "getMenu",
+    "getGameLobbies",
+    "getRefObject",
+    "login",
+    "getRefObject",
+    "getSportsByJoinImportance",
+    "getSportsByPlayImportance",
+    "getRefObject",
+    "getRefObject",
+    "getMenu",
+    "getGameLobbies",
+    "getRefObject",
+    "notificationCenter",
+    "chatAdmin",
+    "getPlayerStats",
+    "getFantasyTeams",
+    "getFantasyColumns",
+    "getFantasyLeagueInfo",
+    "chatAdmin",
+    "getPendingTransactions"
+  ],
+  "new_requests_after_click": [
+    {
+      "url": "https://video.primis.tech/uploads/cn1/video/users/hls/29874/video_689db2c745077821718086/vid69bd9dab60f8c683710797.mp4/w_480_00003.ts",
+      "method": "GET"
+    },
+    {
+      "url": "https://g2.gumgum.com/hbid/imp?displaymanager=Prebid.js%20-%20gumgum&displaymanagerver=10.27.0&lt=1774052658144&to=240&id5Id=ID5*TDtbeRGUhB2IdvLTp47mguKat8f2y_LTp47mguKat8f__2m95RtaAQEBCmm95RsAlQW4OTBEj4H9-Mhqqdx82w&id5IdLinkType=null&aun=fantrax_desktop_med_rect_atf&tdid=07e6969d-43f5-49d0-80a9-c8e1038d45e4&uid2=A4AAAC5GwXAjtsuSY5PGnHVrqlXCeNopi4Mn8U-ZEtMptPnwco3FXOBx2jSTFFBRpqSB0Eui3y3AubKKPPPM6tsten3S-SkjOT0S6goU6pMBkS5IeIPrU0YgDTSt27pfwiz-5l4bg31sFh90cbLRt1U9j8Cs-a7nzqwslhv1Gos4c72sgvk5WR7COFbvJhLw42Gmug-A0MUFDVWSqecHM6J1nw&gpid=%2F15184186%2Ffantrax_desktop_med_rect_atf&pv=e6e6233c-6afb-43fa-aafd-173507ae87a1&maxw=300&maxh=600&si=343839&pi=3&bf=300x600%2C160x600%2C120x600%2C300x250%2C300x100%2C300x50&schain=1.0%2C1!freestar.com%2C1203%2C1%2C%2C%2C&tId=uf0d5dcb9-6e47-4cfb-88e0-f571a174b807&vw=1904&vh=933&sw=800&sh=600&pu=https%3A%2F%2Fwww.fantrax.com%2Ffantasy%2Fleague%2Fj3yl79c7man4av42%2Fplayers&tpl=https%3A%2F%2Fwww.fantrax.com%2Ffantasy%2Fleague%2Fj3yl79c7man4av42%2Fplayers&ce=false&dpr=1&jcsi=%7B%22t%22%3A0%2C%22rq%22%3A8%2C%22pbv%22%3A%2210.27.0%22%7D&ogu=https%3A%2F%2Fwww.fantrax.com%2F&ns=10240&ua=Mozilla%2F5.0%20(Windows%20NT%2010.0%3B%20Win64%3B%20x64)%20AppleWebKit%2F537.36%20(KHTML%2C%20like%20Gecko)%20HeadlessChrome%2F146.0.0.0%20Safari%2F537.36&sua=%7B%22source%22%3A1%2C%22platform%22%3A%7B%22brand%22%3A%22Windows%22%7D%2C%22browsers%22%3A%5B%7B%22brand%22%3A%22Chromium%22%2C%22version%22%3A%5B%22146%22%5D%7D%2C%7B%22brand%22%3A%22Not-A.Brand%22%2C%22version%22%3A%5B%2224%22%5D%7D%2C%7B%22brand%22%3A%22Google%20Chrome%22%2C%22version%22%3A%5B%22146%22%5D%7D%5D%2C%22mobile%22%3A0%7D&dnt=0&os=Windows&osv=10&dt=2&lang=en&make=&model=",
+      "method": "GET"
+    },
+    {
+      "url": "https://g2.gumgum.com/hbid/imp?displaymanager=Prebid.js%20-%20gumgum&displaymanagerver=10.27.0&lt=1774052658144&to=240&id5Id=ID5*TDtbeRGUhB2IdvLTp47mguKat8f2y_LTp47mguKat8f__2m95RtaAQEBCmm95RsAlQW4OTBEj4H9-Mhqqdx82w&id5IdLinkType=null&aun=fantrax_desktop_med_rect_atf&tdid=07e6969d-43f5-49d0-80a9-c8e1038d45e4&uid2=A4AAAC5GwXAjtsuSY5PGnHVrqlXCeNopi4Mn8U-ZEtMptPnwco3FXOBx2jSTFFBRpqSB0Eui3y3AubKKPPPM6tsten3S-SkjOT0S6goU6pMBkS5IeIPrU0YgDTSt27pfwiz-5l4bg31sFh90cbLRt1U9j8Cs-a7nzqwslhv1Gos4c72sgvk5WR7COFbvJhLw42Gmug-A0MUFDVWSqecHM6J1nw&gpid=%2F15184186%2Ffantrax_desktop_med_rect_atf&pv=e6e6233c-6afb-43fa-aafd-173507ae87a1&maxw=300&maxh=600&si=343838&pi=3&bf=300x600%2C160x600%2C120x600%2C300x250%2C300x100%2C300x50&schain=1.0%2C1!freestar.com%2C1203%2C1%2C%2C%2C&tId=uf0d5dcb9-6e47-4cfb-88e0-f571a174b807&vw=1904&vh=933&sw=800&sh=600&pu=https%3A%2F%2Fwww.fantrax.com%2Ffantasy%2Fleague%2Fj3yl79c7man4av42%2Fplayers&tpl=https%3A%2F%2Fwww.fantrax.com%2Ffantasy%2Fleague%2Fj3yl79c7man4av42%2Fplayers&ce=false&dpr=1&jcsi=%7B%22t%22%3A0%2C%22rq%22%3A8%2C%22pbv%22%3A%2210.27.0%22%7D&ogu=https%3A%2F%2Fwww.fantrax.com%2F&ns=10240&ua=Mozilla%2F5.0%20(Windows%20NT%2010.0%3B%20Win64%3B%20x64)%20AppleWebKit%2F537.36%20(KHTML%2C%20like%20Gecko)%20HeadlessChrome%2F146.0.0.0%20Safari%2F537.36&sua=%7B%22source%22%3A1%2C%22platform%22%3A%7B%22brand%22%3A%22Windows%22%7D%2C%22browsers%22%3A%5B%7B%22brand%22%3A%22Chromium%22%2C%22version%22%3A%5B%22146%22%5D%7D%2C%7B%22brand%22%3A%22Not-A.Brand%22%2C%22version%22%3A%5B%2224%22%5D%7D%2C%7B%22brand%22%3A%22Google%20Chrome%22%2C%22version%22%3A%5B%22146%22%5D%7D%5D%2C%22mobile%22%3A0%7D&dnt=0&os=Windows&osv=10&dt=2&lang=en&make=&model=",
+      "method": "GET"
+    },
+    {
+      "url": "https://g2.gumgum.com/hbid/imp?displaymanager=Prebid.js%20-%20gumgum&displaymanagerver=10.27.0&lt=1774052658144&to=240&id5Id=ID5*TDtbeRGUhB2IdvLTp47mguKat8f2y_LTp47mguKat8f__2m95RtaAQEBCmm95RsAlQW4OTBEj4H9-Mhqqdx82w&id5IdLinkType=null&aun=fantrax_desktop_med_rect_atf&tdid=07e6969d-43f5-49d0-80a9-c8e1038d45e4&uid2=A4AAAC5GwXAjtsuSY5PGnHVrqlXCeNopi4Mn8U-ZEtMptPnwco3FXOBx2jSTFFBRpqSB0Eui3y3AubKKPPPM6tsten3S-SkjOT0S6goU6pMBkS5IeIPrU0YgDTSt27pfwiz-5l4bg31sFh90cbLRt1U9j8Cs-a7nzqwslhv1Gos4c72sgvk5WR7COFbvJhLw42Gmug-A0MUFDVWSqecHM6J1nw&gpid=%2F15184186%2Ffantrax_desktop_med_rect_atf&pv=e6e6233c-6afb-43fa-aafd-173507ae87a1&maxw=300&maxh=600&si=343843&pi=3&bf=300x600%2C160x600%2C120x600%2C300x250%2C300x100%2C300x50&schain=1.0%2C1!freestar.com%2C1203%2C1%2C%2C%2C&tId=uf0d5dcb9-6e47-4cfb-88e0-f571a174b807&vw=1904&vh=933&sw=800&sh=600&pu=https%3A%2F%2Fwww.fantrax.com%2Ffantasy%2Fleague%2Fj3yl79c7man4av42%2Fplayers&tpl=https%3A%2F%2Fwww.fantrax.com%2Ffantasy%2Fleague%2Fj3yl79c7man4av42%2Fplayers&ce=false&dpr=1&jcsi=%7B%22t%22%3A0%2C%22rq%22%3A8%2C%22pbv%22%3A%2210.27.0%22%7D&ogu=https%3A%2F%2Fwww.fantrax.com%2F&ns=10240&ua=Mozilla%2F5.0%20(Windows%20NT%2010.0%3B%20Win64%3B%20x64)%20AppleWebKit%2F537.36%20(KHTML%2C%20like%20Gecko)%20HeadlessChrome%2F146.0.0.0%20Safari%2F537.36&sua=%7B%22source%22%3A1%2C%22platform%22%3A%7B%22brand%22%3A%22Windows%22%7D%2C%22browsers%22%3A%5B%7B%22brand%22%3A%22Chromium%22%2C%22version%22%3A%5B%22146%22%5D%7D%2C%7B%22brand%22%3A%22Not-A.Brand%22%2C%22version%22%3A%5B%2224%22%5D%7D%2C%7B%22brand%22%3A%22Google%20Chrome%22%2C%22version%22%3A%5B%22146%22%5D%7D%5D%2C%22mobile%22%3A0%7D&dnt=0&os=Windows&osv=10&dt=2&lang=en&make=&model=",
+      "method": "GET"
+    },
+    {
+      "url": "https://g2.gumgum.com/hbid/imp?displaymanager=Prebid.js%20-%20gumgum&displaymanagerver=10.27.0&lt=1774052658144&to=240&id5Id=ID5*TDtbeRGUhB2IdvLTp47mguKat8f2y_LTp47mguKat8f__2m95RtaAQEBCmm95RsAlQW4OTBEj4H9-Mhqqdx82w&id5IdLinkType=null&aun=fantrax_desktop_med_rect_atf&tdid=07e6969d-43f5-49d0-80a9-c8e1038d45e4&uid2=A4AAAC5GwXAjtsuSY5PGnHVrqlXCeNopi4Mn8U-ZEtMptPnwco3FXOBx2jSTFFBRpqSB0Eui3y3AubKKPPPM6tsten3S-SkjOT0S6goU6pMBkS5IeIPrU0YgDTSt27pfwiz-5l4bg31sFh90cbLRt1U9j8Cs-a7nzqwslhv1Gos4c72sgvk5WR7COFbvJhLw42Gmug-A0MUFDVWSqecHM6J1nw&gpid=%2F15184186%2Ffantrax_desktop_med_rect_atf&pv=e6e6233c-6afb-43fa-aafd-173507ae87a1&maxw=300&maxh=600&si=343844&pi=3&bf=300x600%2C160x600%2C120x600%2C300x250%2C300x100%2C300x50&schain=1.0%2C1!freestar.com%2C1203%2C1%2C%2C%2C&tId=uf0d5dcb9-6e47-4cfb-88e0-f571a174b807&vw=1904&vh=933&sw=800&sh=600&pu=https%3A%2F%2Fwww.fantrax.com%2Ffantasy%2Fleague%2Fj3yl79c7man4av42%2Fplayers&tpl=https%3A%2F%2Fwww.fantrax.com%2Ffantasy%2Fleague%2Fj3yl79c7man4av42%2Fplayers&ce=false&dpr=1&jcsi=%7B%22t%22%3A0%2C%22rq%22%3A8%2C%22pbv%22%3A%2210.27.0%22%7D&ogu=https%3A%2F%2Fwww.fantrax.com%2F&ns=10240&ua=Mozilla%2F5.0%20(Windows%20NT%2010.0%3B%20Win64%3B%20x64)%20AppleWebKit%2F537.36%20(KHTML%2C%20like%20Gecko)%20HeadlessChrome%2F146.0.0.0%20Safari%2F537.36&sua=%7B%22source%22%3A1%2C%22platform%22%3A%7B%22brand%22%3A%22Windows%22%7D%2C%22browsers%22%3A%5B%7B%22brand%22%3A%22Chromium%22%2C%22version%22%3A%5B%22146%22%5D%7D%2C%7B%22brand%22%3A%22Not-A.Brand%22%2C%22version%22%3A%5B%2224%22%5D%7D%2C%7B%22brand%22%3A%22Google%20Chrome%22%2C%22version%22%3A%5B%22146%22%5D%7D%5D%2C%22mobile%22%3A0%7D&dnt=0&os=Windows&osv=10&dt=2&lang=en&make=&model=",
+      "method": "GET"
+    },
+    {
+      "url": "https://tlx.3lift.com/header/auction?lib=prebid&v=10.27.0&referrer=https%3A%2F%2Fwww.fantrax.com%2Ffantasy%2Fleague%2Fj3yl79c7man4av42%2Fplayers&tmax=3000",
+      "method": "POST",
+      "body": {
+        "imp": [
+          {
+            "id": 0,
+            "tagid": "Freestar_RON_Display",
+            "banner": {
+              "format": [
+                {
+                  "w": 300,
+                  "h": 600
+                },
+                {
+                  "w": 160,
+                  "h": 600
+                },
+                {
+                  "w": 120,
+                  "h": 600
+                },
+                {
+                  "w": 300,
+                  "h": 250
+                },
+                {
+                  "w": 300,
+                  "h": 100
+                },
+                {
+                  "w": 300,
+                  "h": 50
+                }
+              ]
+            },
+            "fpd": {
+              "context": {
+                "data": {
+                  "fs_ad_product": "display",
+                  "fs_ad_optimization": "",
+                  "gameraPlacementId": "MS0yLTE",
+                  "gameraId": [
+                    "gamera_22",
+                    "gamera_24",
+                    "gamera_104",
+                    "gamera_16",
+                    "gamera_17",
+                    "gamera_11",
+                    "gamera_25",
+                    "gamera_105",
+                    "gamera_39",
+                    "gamera_14"
+                  ],
+                  "adserver": {
+                    "name": "gam",
+                    "adslot": "/15184186/fantrax_desktop_med_rect_atf"
+                  }
+                },
+                "gpid": "/15184186/fantrax_desktop_med_rect_atf",
+                "tid": "uc8b5c093-780b-48a8-b212-01d9fa0e876a",
+                "tidSource": "pbjs"
+              }
+            },
+            "ext": {
+              "data": {
+                "fs_ad_product": "display",
+                "fs_ad_optimization": "",
+                "gameraPlacementId": "MS0yLTE",
+                "gameraId": [
+                  "gamera_22",
+                  "gamera_24",
+                  "gamera_104",
+                  "gamera_16",
+                  "gamera_17",
+                  "gamera_11",
+                  "gamera_25",
+                  "gamera_105",
+                  "gamera_39",
+                  "gamera_14"
+                ],
+                "adserver": {
+                  "name": "gam",
+                  "adslot": "/15184186/fantrax_desktop_med_rect_atf"
+                }
+              },
+              "gpid": "/15184186/fantrax_desktop_med_rect_atf",
+              "tid": "uc8b5c093-780b-48a8-b212-01d9fa0e876a",
+              "tidSource": "pbjs"
+            }
+          }
+        ],
+        "user": {
+          "ext": {
+            "eids": [
+              {
+                "source": "amxdt.net",
+                "uids": [
+                  {
+                    "id": "amx*3*f21488f4-69b5-4aeb-87a1-b3705ad19de1*e382bc9fe0e377e2f0e867923fa9589d",
+                    "atype": 1
+                  }
+                ]
+              },
+              {
+                "source": "criteo.com",
+                "uids": [
+                  {
+                    "id": "6U-n_V9LeVBKMjJMbUlzaW9aZWlWdiUyRmw5SVJCemZzb0xlZDUlMkJobHFSeUs2SHBwMUo0N1ZRcCUyRkpZSURjVzFiJTJGWmRLVzBLMTVRS0NPcERUQTdraDZ6MTBacGF0MkpYVHczZWs0VERkYm0wUDhsJTJGenMlM0Q",
+                    "atype": 1
+                  }
+                ]
+              },
+              {
+                "source": "neustar.biz",
+                "uids": [
+                  {
+                    "id": "E1:tUM2dCQRed0Uf4WIJMzsQ5hpHkK60uvJ8zP79FnrOZRBvdca924yq6_72FqW5cEY0PhCAIuwSLttxUMqx1O8KAQFbKs_9BjyzPELrxQK8Js",
+                    "atype": 1
+                  }
+                ]
+              },
+              {
+                "source": "audigent.com",
+                "uids": [
+                  {
+                    "id": "0001yum0ea8bil6jh66kfg7bhbgbc76bg9bka86g9labackkc2jl",
+                    "atype": 1
+                  }
+                ]
+              },
+              {
+                "source": "id5-sync.com",
+                "uids": [
+                  {
+                    "id": "ID5*TDtbeRGUhB2IdvLTp47mguKat8f2y_LTp47mguKat8f__2m95RtaAQEBCmm95RsAlQW4OTBEj4H9-Mhqqdx82w",
+                    "atype": 1,
+                    "ext": {
+                      "linkType": 0,
+                      "pba": "qdkDLpErAPvRtUnzGYRQszWOgJT8KYzmERiXpOW1JbJq2gHHq0XJrGJH8spIdIjtynptqh6Cc1AN5C6G8/aCwQ=="
+                    }
+                  }
+                ]
+              },
+              {
+                "source": "pubcid.org",
+                "uids": [
+                  {
+                    "id": "51d24762-8492-4b68-af7c-ebe6e5f1dda6",
+                    "atype": 1
+                  }
+                ]
+              },
+              {
+                "source": "adserver.org",
+                "uids": [
+                  {
+                    "id": "07e6969d-43f5-49d0-80a9-c8e1038d45e4",
+                    "atype": 1,
+                    "ext": {
+                      "rtiPartner": "TDID"
+                    }
+                  }
+                ],
+                "inserter": "adserver.org",
+                "matcher": "adserver.org",
+                "mm": 4
+              },
+              {
+                "inserter": "optable.co",
+                "matcher": "truedata.co",
+                "mm": 5,
+                "source": "criteo-hemapi.com",
+                "uids": [
+                  {
+                    "id": "kRgFZV83bGF6VXhWelBxMFJaZVpidm14RlBHUmhZbTZFMCUyQiUyRkd2ZXhOZ29yTG8wa0VPbVQxaHI4d00yZmMlMkJQJTJCRzlTOXpmcVZWQWZFJTJGNUNiZFlvcXBvSUtBNXlaT1E0U3oxZnNYak1ubUZhV1RZNlElM0Q",
+                    "atype": 3,
+                    "ext": {
+                      "stype": "cto_bundle_hem_api"
+                    }
+                  }
+                ]
+              },
+              {
+                "inserter": "optable.co",
+                "matcher": "truedata.co",
+                "mm": 5,
+                "source": "yahoo.com",
+                "uids": [
+                  {
+                    "id": "VJD5WwVVWUYBd6in03cMG4OZ-bN8bHBXzvqmKw-6YqekKNAtATiatXHyMPPLSjEkMxRkbvf9ImHNGksynyefyg",
+                    "atype": 3
+                  }
+                ]
+              },
+              {
+                "inserter": "optable.co",
+                "matcher": "truedata.co",
+                "mm": 5,
+                "source": "uidapi.com",
+                "uids": [
+                  {
+                    "id": "A4AAAC5GwXAjtsuSY5PGnHVrqlXCeNopi4Mn8U-ZEtMptPnwco3FXOBx2jSTFFBRpqSB0Eui3y3AubKKPPPM6tsten3S-SkjOT0S6goU6pMBkS5IeIPrU0YgDTSt27pfwiz-5l4bg31sFh90cbLRt1U9j8Cs-a7nzqwslhv1Gos4c72sgvk5WR7COFbvJhLw42Gmug-A0MUFDVWSqecHM6J1nw",
+                    "atype": 3,
+                    "ext": {
+                      "optable": {
+                        "ref": "0"
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "ext": {
+          "schain": {
+            "ver": "1.0",
+            "complete": 1,
+            "nodes": [
+              {
+                "asi": "freestar.com",
+                "sid": "1203",
+                "hp": 1
+              }
+            ]
+          },
+          "fpd": {
+            "context": {
+              "domain": "fantrax.com",
+              "publisher": {
+                "domain": "fantrax.com",
+                "ext": {
+                  "fs_company": 1203
+                }
+              },
+              "page": "https://www.fantrax.com/fantasy/league/j3yl79c7man4av42/players",
+              "name": "fantrax-com",
+              "cat": [
+                "IAB17"
+              ],
+              "sectioncat": [
+                "IAB17"
+              ],
+              "pagecat": [
+                "IAB17"
+              ],
+              "mobile": 0,
+              "ref": "",
+              "content": {
+                "data": [
+                  {
+                    "name": "fantrax.com",
+                    "ext": {
+                      "taxonomyname": "iab_content_taxonomy"
+                    },
+                    "segment": []
+                  }
+                ],
+                "language": "en"
+              },
+              "ext": {
+                "data": {
+                  "fs_optimized": false,
+                  "fs_site": 3129,
+                  "documentLang": "en"
+                }
+              }
+            },
+            "user": {
+              "id": "e10eafc9-8649-4d08-a0dc-71574e888167",
+              "ext": {
+                "eids": [
+                  {
+                    "source": "amxdt.net",
+                    "uids": [
+                      {
+                        "id": "amx*3*f21488f4-69b5-4aeb-87a1-b3705ad19de1*e382bc9fe0e377e2f0e867923fa9589d",
+                        "atype": 1
+                      }
+                    ]
+                  },
+                  {
+                    "source": "criteo.com",
+                    "uids": [
+                      {
+                        "id": "6U-n_V9LeVBKMjJMbUlzaW9aZWlWdiUyRmw5SVJCemZzb0xlZDUlMkJobHFSeUs2SHBwMUo0N1ZRcCUyRkpZSURjVzFiJTJGWmRLVzBLMTVRS0NPcERUQTdraDZ6MTBacGF0MkpYVHczZWs0VERkYm0wUDhsJTJGenMlM0Q",
+                        "atype": 1
+                      }
+                    ]
+                  },
+                  {
+                    "source": "neustar.biz",
+                    "uids": [
+                      {
+                        "id": "E1:tUM2dCQRed0Uf4WIJMzsQ5hpHkK60uvJ8zP79FnrOZRBvdca924yq6_72FqW5cEY0PhCAIuwSLttxUMqx1O8KAQFbKs_9BjyzPELrxQK8Js",
+                        "atype": 1
+                      }
+                    ]
+                  },
+                  {
+                    "source": "audigent.com",
+                    "uids": [
+                      {
+                        "id": "0001yum0ea8bil6jh66kfg7bhbgbc76bg9bka86g9labackkc2jl",
+                        "atype": 1
+                      }
+                    ]
+                  },
+                  {
+                    "source": "id5-sync.com",
+                    "uids": [
+                      {
+                        "id": "ID5*TDtbeRGUhB2IdvLTp47mguKat8f2y_LTp47mguKat8f__2m95RtaAQEBCmm95RsAlQW4OTBEj4H9-Mhqqdx82w",
+                        "atype": 1,
+                        "ext": {
+                          "linkType": 0,
+                          "pba": "qdkDLpErAPvRtUnzGYRQszWOgJT8KYzmERiXpOW1JbJq2gHHq0XJrGJH8spIdIjtynptqh6Cc1AN5C6G8/aCwQ=="
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "source": "pubcid.org",
+                    "uids": [
+                      {
+                        "id": "51d24762-8492-4b68-af7c-ebe6e5f1dda6",
+                        "atype": 1
+                      }
+                    ]
+                  },
+                  {
+                    "source": "adserver.org",
+                    "uids": [
+                      {
+                        "id": "07e6969d-43f5-49d0-80a9-c8e1038d45e4",
+                        "atype": 1,
+                        "ext": {
+                          "rtiPartner": "TDID"
+                        }
+                      }
+                    ],
+                    "inserter": "adserver.org",
+                    "matcher": "adserver.org",
+                    "mm": 4
+                  },
+                  {
+                    "inserter": "optable.co",
+                    "matcher": "truedata.co",
+                    "mm": 5,
+                    "source": "criteo-hemapi.com",
+                    "uids": [
+                      {
+                        "id": "kRgFZV83bGF6VXhWelBxMFJaZVpidm14RlBHUmhZbTZFMCUyQiUyRkd2ZXhOZ29yTG8wa0VPbVQxaHI4d00yZmMlMkJQJTJCRzlTOXpmcVZWQWZFJTJGNUNiZFlvcXBvSUtBNXlaT1E0U3oxZnNYak1ubUZhV1RZNlElM0Q",
+                        "atype": 3,
+                        "ext": {
+                          "stype": "cto_bundle_hem_api"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "inserter": "optable.co",
+                    "matcher": "truedata.co",
+                    "mm": 5,
+                    "source": "yahoo.com",
+                    "uids": [
+                      {
+                        "id": "VJD5WwVVWUYBd6in03cMG4OZ-bN8bHBXzvqmKw-6YqekKNAtATiatXHyMPPLSjEkMxRkbvf9ImHNGksynyefyg",
+                        "atype": 3
+                      }
+                    ]
+                  },
+                  {
+                    "inserter": "optable.co",
+                    "matcher": "truedata.co",
+                    "mm": 5,
+                    "source": "uidapi.com",
+                    "uids": [
+                      {
+                        "id": "A4AAAC5GwXAjtsuSY5PGnHVrqlXCeNopi4Mn8U-ZEtMptPnwco3FXOBx2jSTFFBRpqSB0Eui3y3AubKKPPPM6tsten3S-SkjOT0S6goU6pMBkS5IeIPrU0YgDTSt27pfwiz-5l4bg31sFh90cbLRt1U9j8Cs-a7nzqwslhv1Gos4c72sgvk5WR7COFbvJhLw42Gmug-A0MUFDVWSqecHM6J1nw",
+                        "atype": 3,
+                        "ext": {
+                          "optable": {
+                            "ref": "0"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          "ortb2": {
+            "site": {
+              "domain": "fantrax.com",
+              "publisher": {
+                "domain": "fantrax.com",
+                "ext": {
+                  "fs_company": 1203
+                }
+              },
+              "page": "https://www.fantrax.com/fantasy/league/j3yl79c7man4av42/players",
+              "name": "fantrax-com",
+              "cat": [
+                "IAB17"
+              ],
+              "sectioncat": [
+                "IAB17"
+              ],
+              "pagecat": [
+                "IAB17"
+              ],
+              "mobile": 0,
+              "ref": "",
+              "content": {
+                "data": [
+                  {
+                    "name": "fantrax.com",
+                    "ext": {
+                      "taxonomyname": "iab_content_taxonomy"
+                    },
+                    "segment": []
+                  }
+                ],
+                "language": "en"
+              },
+              "ext": {
+                "data": {
+                  "fs_optimized": false,
+                  "fs_site": 3129,
+                  "documentLang": "en"
+                }
+              }
+            },
+            "user": {
+              "id": "e10eafc9-8649-4d08-a0dc-71574e888167",
+              "ext": {
+                "eids": [
+                  {
+                    "source": "amxdt.net",
+                    "uids": [
+                      {
+                        "id": "amx*3*f21488f4-69b5-4aeb-87a1-b3705ad19de1*e382bc9fe0e377e2f0e867923fa9589d",
+                        "atype": 1
+                      }
+                    ]
+                  },
+                  {
+                    "source": "criteo.com",
+                    "uids": [
+                      {
+                        "id": "6U-n_V9LeVBKMjJMbUlzaW9aZWlWdiUyRmw5SVJCemZzb0xlZDUlMkJobHFSeUs2SHBwMUo0N1ZRcCUyRkpZSURjVzFiJTJGWmRLVzBLMTVRS0NPcERUQTdraDZ6MTBacGF0MkpYVHczZWs0VERkYm0wUDhsJTJGenMlM0Q",
+                        "atype": 1
+                      }
+                    ]
+                  },
+                  {
+                    "source": "neustar.biz",
+                    "uids": [
+                      {
+                        "id": "E1:tUM2dCQRed0Uf4WIJMzsQ5hpHkK60uvJ8zP79FnrOZRBvdca924yq6_72FqW5cEY0PhCAIuwSLttxUMqx1O8KAQFbKs_9BjyzPELrxQK8Js",
+                        "atype": 1
+                      }
+                    ]
+                  },
+                  {
+                    "source": "audigent.com",
+                    "uids": [
+                      {
+                        "id": "0001yum0ea8bil6jh66kfg7bhbgbc76bg9bka86g9labackkc2jl",
+                        "atype": 1
+                      }
+                    ]
+                  },
+                  {
+                    "source": "id5-sync.com",
+                    "uids": [
+                      {
+                        "id": "ID5*TDtbeRGUhB2IdvLTp47mguKat8f2y_LTp47mguKat8f__2m95RtaAQEBCmm95RsAlQW4OTBEj4H9-Mhqqdx82w",
+                        "atype": 1,
+                        "ext": {
+                          "linkType": 0,
+                          "pba": "qdkDLpErAPvRtUnzGYRQszWOgJT8KYzmERiXpOW1JbJq2gHHq0XJrGJH8spIdIjtynptqh6Cc1AN5C6G8/aCwQ=="
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "source": "pubcid.org",
+                    "uids": [
+                      {
+                        "id": "51d24762-8492-4b68-af7c-ebe6e5f1dda6",
+                        "atype": 1
+                      }
+                    ]
+                  },
+                  {
+                    "source": "adserver.org",
+                    "uids": [
+                      {
+                        "id": "07e6969d-43f5-49d0-80a9-c8e1038d45e4",
+                        "atype": 1,
+                        "ext": {
+                          "rtiPartner": "TDID"
+                        }
+                      }
+                    ],
+                    "inserter": "adserver.org",
+                    "matcher": "adserver.org",
+                    "mm": 4
+                  },
+                  {
+                    "inserter": "optable.co",
+                    "matcher": "truedata.co",
+                    "mm": 5,
+                    "source": "criteo-hemapi.com",
+                    "uids": [
+                      {
+                        "id": "kRgFZV83bGF6VXhWelBxMFJaZVpidm14RlBHUmhZbTZFMCUyQiUyRkd2ZXhOZ29yTG8wa0VPbVQxaHI4d00yZmMlMkJQJTJCRzlTOXpmcVZWQWZFJTJGNUNiZFlvcXBvSUtBNXlaT1E0U3oxZnNYak1ubUZhV1RZNlElM0Q",
+                        "atype": 3,
+                        "ext": {
+                          "stype": "cto_bundle_hem_api"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "inserter": "optable.co",
+                    "matcher": "truedata.co",
+                    "mm": 5,
+                    "source": "yahoo.com",
+                    "uids": [
+                      {
+                        "id": "VJD5WwVVWUYBd6in03cMG4OZ-bN8bHBXzvqmKw-6YqekKNAtATiatXHyMPPLSjEkMxRkbvf9ImHNGksynyefyg",
+                        "atype": 3
+                      }
+                    ]
+                  },
+                  {
+                    "inserter": "optable.co",
+                    "matcher": "truedata.co",
+                    "mm": 5,
+                    "source": "uidapi.com",
+                    "uids": [
+                      {
+                        "id": "A4AAAC5GwXAjtsuSY5PGnHVrqlXCeNopi4Mn8U-ZEtMptPnwco3FXOBx2jSTFFBRpqSB0Eui3y3AubKKPPPM6tsten3S-SkjOT0S6goU6pMBkS5IeIPrU0YgDTSt27pfwiz-5l4bg31sFh90cbLRt1U9j8Cs-a7nzqwslhv1Gos4c72sgvk5WR7COFbvJhLw42Gmug-A0MUFDVWSqecHM6J1nw",
+                        "atype": 3,
+                        "ext": {
+                          "optable": {
+                            "ref": "0"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "device": {
+              "w": 800,
+              "h": 600,
+              "dnt": 0,
+              "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/146.0.0.0 Safari/537.36",
+              "language": "en",
+              "ext": {
+                "vpw": 1904,
+                "vph": 933
+              },
+              "geo": {
+                "region": "NY",
+                "city": "New York",
+                "country": "US",
+                "ext": {}
+              },
+              "devicetype": 2,
+              "make": "",
+              "model": "",
+              "os": "Windows",
+              "osv": "10",
+              "sua": {
+                "source": 1,
+                "platform": {
+                  "brand": "Windows"
+                },
+                "browsers": [
+                  {
+                    "brand": "Chromium",
+                    "version": [
+                      "146"
+                    ]
+                  },
+                  {
+                    "brand": "Not-A.Brand",
+                    "version": [
+                      "24"
+                    ]
+                  },
+                  {
+                    "brand": "Google Chrome",
+                    "version": [
+                      "146"
+                    ]
+                  }
+                ],
+                "mobile": 0
+              }
+            },
+            "geo": {
+              "region": "NY",
+              "city": "New York",
+              "country": "US",
+              "ext": {}
+            },
+            "ext": {
+              "prebid": {
+                "adServerCurrency": "USD",
+                "storedrequest": {
+                  "id": "f20a6258-ed38-48d5-9cef-ec48c9438341"
+                }
+              }
+            },
+            "badv": [
+              "upvalior.com",
+              "yieldlove.com",
+              "planblue.com",
+              "moneypen.co",
+              "bidsopt.com",
+              "money-matters.today",
+              "ascendeum.com",
+              "astonmartindallas.com",
+              "accessmediazone.com",
+              "prebidanalytics.com",
+              "opera.com",
+              "lactationqbank.com",
+              "ajillionmax.com",
+              "macpaw.com",
+              "wfc-fehfbzaxfshzdvgm.z01.azurefd.net",
+              "ato.mx",
+              "bidgear.com",
+              "pubgalaxy.com",
+              "nemluvio.com",
+              "adtelligent.com",
+              "guthealthwellness.com",
+              "bei.azureedge.net",
+              "vungle.com",
+              "motionspots.com",
+              "cdph.ca.gov",
+              "clickport.top",
+              "easyadblocker.com",
+              "mimecast.com",
+              "go1.getghostapp.com",
+              "adrecover.com",
+              "headbidding.com",
+              "wayrates.com",
+              "galderma.com",
+              "pegasuspublishers.com",
+              "goarmy.com",
+              "adapace-2.bc-sys.com",
+              "d13aq0uo1npt7x.cloudfront.net",
+              "monetizemore.com",
+              "mediafuse.com",
+              "bankbazaar.com",
+              "passwordmanagercomparison.com",
+              "needtoimpeach.com",
+              "hotelscombined.com",
+              "getcovered.illinois.gov",
+              "asiandate.com",
+              "privacybadger.org",
+              "gadmobe.com",
+              "mediamint.com",
+              "oyun.fr",
+              "proper.io",
+              "printrecipes.net",
+              "askanexpertonline.com",
+              "shopdoona.com",
+              "vdx.tv",
+              "arcadetab.com",
+              "fmlabsonline.com",
+              "justanswer.com",
+              "tk0x1.com",
+              "firstimpression.io",
+              "doubleclick.net",
+              "totaladblock.com",
+              "adcash.com",
+              "1blocker.com",
+              "carba.io",
+              "ghostery.com",
+              "ila3.com",
+              "cdn.ms1a.com",
+              "global-cdn-cc.b-cdn.net",
+              "searchandprint.recipes",
+              "standsapp.org",
+              "shop.advanceautoparts.com",
+              "gov.il",
+              "tudiendanchoi.com",
+              "advanceautoparts.com",
+              "propermedia.com",
+              "mobuppsrtb.com",
+              "chineseladydate.com",
+              "digitalcontentnow.com",
+              "tobaccomotorwear.com",
+              "wavebrowser.co",
+              "latamdate.com",
+              "thaimatches.com",
+              "onlineactivation.org",
+              "q-grips.com",
+              "wapstart.ru",
+              "ragu.com",
+              "tryexuberant.com",
+              "rb.com",
+              "basicfundamentals.co.in",
+              "1md.org",
+              "a4g.com",
+              "bizzclick.com",
+              "ebookrenta.com",
+              "oyun.se",
+              "onlineactivation.com,",
+              "loansocieties.com",
+              "gaolisz.com",
+              "mediavine.com",
+              "testing-domain.com",
+              "ckmfang.com",
+              "leovegas.com",
+              "synonehundred.com",
+              "selectmedia.asia",
+              "mxu-dmf8avezecfuascm.z01.azurefd.net",
+              "trkbid.com",
+              "adpushup.com",
+              "pubgears.com",
+              "covid19.ca.gov",
+              "adremover.org",
+              "october7files.com",
+              "adblockplus.org",
+              "freequizgames.com",
+              "weeklypenny.com",
+              "popcornews.com",
+              "waardex.com",
+              "allcontentthere.com",
+              "adaway.org",
+              "sekindo.com",
+              "manualsdirectory.org",
+              "ziffdavis.com",
+              "mediaoptions.com",
+              "rtbhouse.com",
+              "all-in1-digitalcontent.net",
+              "wellspan.org",
+              "jxu.azureedge.net",
+              "socialpulsemedia.com",
+              "renta.co.jp",
+              "pubwise.io",
+              "pampillonia.com",
+              "d1qeadpezvp4g.cloudfront.net",
+              "claritycheck.com",
+              "frompdftodoc.com",
+              "adblockultimate.net",
+              "adnimation.com",
+              "araglegal.com",
+              "proper.com",
+              "digitaladsystems.com",
+              "loyal.app",
+              "ezoic.com",
+              "didna.io",
+              "playwire.com",
+              "adomik.com",
+              "webtradingspot.com",
+              "adgone.org",
+              "smadex.com",
+              "survey.money-matters.today",
+              "aipac.org",
+              "getadblock.com",
+              "decenterads.com",
+              "envisionx.co",
+              "roxot.com",
+              "adrizer.com",
+              "adops.com",
+              "nomoredarkspot.com",
+              "trojanwall.click",
+              "adskeeper.com",
+              "jlacosta.com",
+              "contentlists.com",
+              "xapads.com",
+              "idf.il",
+              "adapace-3.bc-sys.com",
+              "hi-chew.com",
+              "visitmyrtlebeach.com",
+              "nucific.com",
+              "fanony.com",
+              "streamrail.com",
+              "learnaboutpd.com",
+              "newormedia.com",
+              "onlineactivation.io,",
+              "ice.gov",
+              "mensdrivingforce.com",
+              "purify-app.com",
+              "www.gov.il",
+              "saturday-october-seven.com",
+              "weewhiskeyfest.com",
+              "loginonline.co",
+              "comodo.com",
+              "test.com",
+              "luckyvybz.top",
+              "hola.org",
+              "coveredca.com",
+              "serverbid.com",
+              "oldmoparts.com",
+              "dbmmszp46juph.cloudfront.net",
+              "sportsnewsman.com",
+              "streamrail.net",
+              "tightropeinteractive.com",
+              "vashoot.com",
+              "epom.com",
+              "oko.uk",
+              "adguard.com",
+              "rtk.io",
+              "digitalcontent-now.com",
+              "publisherdesk.com",
+              "publift.com",
+              "upmcphysicianresources.com",
+              "triviaboss.com",
+              "getaclearrear.com",
+              "niutux.com",
+              "appodeal.com",
+              "emergenc.com",
+              "cafemedia.com",
+              "explore.reference.com",
+              "recipestab.com",
+              "experienceparkland.com",
+              "ip.safelystorage.net",
+              "tekblue.net",
+              "adthrive.com"
+            ],
+            "bcat": [
+              "IAB25-3",
+              "IAB26-2",
+              "IAB25-2",
+              "IAB25-1",
+              "IAB25-7",
+              "IAB25-6",
+              "IAB26",
+              "IAB25",
+              "IAB25-5",
+              "IAB26-4",
+              "IAB25-4",
+              "IAB26-3"
+            ],
+            "source": {
+              "ext": {
+                "schain": {
+                  "ver": "1.0",
+                  "complete": 1,
+                  "nodes": [
+                    {
+                      "asi": "freestar.com",
+                      "sid": "1203",
+                      "hp": 1
+                    }
+                  ]
+                },
+                "tidSource": "pbjs"
+              },
+              "tid": "ub6c59b4c-a66e-4978-a7d7-15f48f3051c0"
+            }
+          }
+        }
+      }
+    },
+    {
+      "url": "https://fastlane.rubiconproject.com/a/api/fastlane.json?account_id=16924&site_id=500600&zone_id=2983354&size_id=15&alt_size_ids=9%2C8%2C10%2C19%2C44&rp_schain=1.0,1!freestar.com,1203,1,,,&eid_amxdt.net=amx*3*f21488f4-69b5-4aeb-87a1-b3705ad19de1*e382bc9fe0e377e2f0e867923fa9589d%5E1%5E%5E%5E%5E%5E&eid_criteo.com=6U-n_V9LeVBKMjJMbUlzaW9aZWlWdiUyRmw5SVJCemZzb0xlZDUlMkJobHFSeUs2SHBwMUo0N1ZRcCUyRkpZSURjVzFiJTJGWmRLVzBLMTVRS0NPcERUQTdraDZ6MTBacGF0MkpYVHczZWs0VERkYm0wUDhsJTJGenMlM0Q%5E1%5E%5E%5E%5E%5E&eid_neustar.biz=E1%3AtUM2dCQRed0Uf4WIJMzsQ5hpHkK60uvJ8zP79FnrOZRBvdca924yq6_72FqW5cEY0PhCAIuwSLttxUMqx1O8KAQFbKs_9BjyzPELrxQK8Js%5E1%5E%5E%5E%5E%5E&eid_audigent.com=0001yum0ea8bil6jh66kfg7bhbgbc76bg9bka86g9labackkc2jl%5E1%5E%5E%5E%5E%5E&eid_id5-sync.com=ID5*TDtbeRGUhB2IdvLTp47mguKat8f2y_LTp47mguKat8f__2m95RtaAQEBCmm95RsAlQW4OTBEj4H9-Mhqqdx82w%5E1%5E%5E%5E%5E%5E&eid_pubcid.org=51d24762-8492-4b68-af7c-ebe6e5f1dda6%5E1%5E%5E%5E%5E%5E&eid_adserver.org=07e6969d-43f5-49d0-80a9-c8e1038d45e4%5E1%5E%5Eadserver.org%5Eadserver.org%5E4%5ETDID&eid_criteo-hemapi.com=kRgFZV83bGF6VXhWelBxMFJaZVpidm14RlBHUmhZbTZFMCUyQiUyRkd2ZXhOZ29yTG8wa0VPbVQxaHI4d00yZmMlMkJQJTJCRzlTOXpmcVZWQWZFJTJGNUNiZFlvcXBvSUtBNXlaT1E0U3oxZnNYak1ubUZhV1RZNlElM0Q%5E3%5E%5Eoptable.co%5Etruedata.co%5E5%5E&eid_yahoo.com=VJD5WwVVWUYBd6in03cMG4OZ-bN8bHBXzvqmKw-6YqekKNAtATiatXHyMPPLSjEkMxRkbvf9ImHNGksynyefyg%5E3%5E%5Eoptable.co%5Etruedata.co%5E5%5E&eid_uidapi.com=A4AAAC5GwXAjtsuSY5PGnHVrqlXCeNopi4Mn8U-ZEtMptPnwco3FXOBx2jSTFFBRpqSB0Eui3y3AubKKPPPM6tsten3S-SkjOT0S6goU6pMBkS5IeIPrU0YgDTSt27pfwiz-5l4bg31sFh90cbLRt1U9j8Cs-a7nzqwslhv1Gos4c72sgvk5WR7COFbvJhLw42Gmug-A0MUFDVWSqecHM6J1nw%5E3%5E%5Eoptable.co%5Etruedata.co%5E5%5E&rf=https%3A%2F%2Fwww.fantrax.com%2Ffantasy%2Fleague%2Fj3yl79c7man4av42%2Fplayers&tg_v.id=e10eafc9-8649-4d08-a0dc-71574e888167&tg_i.domain=fantrax.com&tg_i.page=https%3A%2F%2Fwww.fantrax.com%2Ffantasy%2Fleague%2Fj3yl79c7man4av42%2Fplayers&tg_i.name=fantrax-com&tg_i.cat=IAB17&tg_i.sectioncat=IAB17&tg_i.pagecat=IAB17&tg_i.mobile=0&tg_i.fs_optimized=false&tg_i.fs_site=3129&tg_i.documentLang=en&tg_i.fs_ad_product=display&tg_i.gameraPlacementId=MS0yLTE&tg_i.gameraId=gamera_22%2Cgamera_24%2Cgamera_104%2Cgamera_16%2Cgamera_17%2Cgamera_11%2Cgamera_25%2Cgamera_105%2Cgamera_39%2Cgamera_14&tg_i.dfp_ad_unit_code=%2F15184186%2Ffantrax_desktop_med_rect_atf&tk_flint=pbjs_lite_v10.27.0&x_source.tid=ue0d85011-59ab-4f1a-9588-82069cdfdaf3&l_pb_bid_id=fd13ad4f-8801-4ea5-b333-3cc449c04865&p_screen_res=800x600&rp_secure=1&x_imp.ext.tid=u049ac286-8092-4d91-8b92-ef837594ff39&p_site.mobile=0&p_gpid=%2F15184186%2Ffantrax_desktop_med_rect_atf&m_ch_ua=%22Chromium%22%7Cv%3D%22146%22%2C%22Not-A.Brand%22%7Cv%3D%2224%22%2C%22Google%20Chrome%22%7Cv%3D%22146%22&m_ch_mobile=%3F0&m_ch_platform=Windows&slots=1&rand=0.7105685708412937",
+      "method": "GET"
+    },
+    {
+      "url": "https://ads.yieldmo.com/exchange/prebid?pbav=10.27.0&p=%5B%7B%22placement_id%22%3A%22fantrax_desktop_med_rect_atf%22%2C%22callback_id%22%3A%22d5a1cdd3-3402-4992-931a-187febdfa780%22%2C%22sizes%22%3A%5B%5B300%2C600%5D%2C%5B160%2C600%5D%2C%5B120%2C600%5D%2C%5B300%2C250%5D%2C%5B300%2C100%5D%2C%5B300%2C50%5D%5D%2C%22ym_placement_id%22%3A%222662464007037722661%22%2C%22gpid%22%3A%22%2F15184186%2Ffantrax_desktop_med_rect_atf%22%2C%22tid%22%3A%22uaca81ff8-55d9-43b5-8b15-9ce510927916%22%2C%22auctionId%22%3A%22ubbc3f228-f5cf-4f05-b7d6-de9dfdb2906c%22%7D%5D&page_url=https%3A%2F%2Fwww.fantrax.com%2Ffantasy%2Fleague%2Fj3yl79c7man4av42%2Fplayers&bust=1774052658151&dnt=false&description=Fantrax%20offers%20the%20most%20customizable%20fantasy%20league%20management%20service%20in%20the%20industry%2C%20with%20free%20offerings%20in%20baseball%2C%20football%2C%20basketball%2C%20hockey%2C%20soccer%2C%20golf%2C%20and%20racing.%20Fantrax%20Commissioner%20is%20the%20industry%20leader%20when%20it%20comes%20to%20dynasty%20leagues%2C%20but%20our%20redraft%20and%20keeper%20leagues%20also%20beat%20the%20competition.%20Switch%20your%20leagues%20over%20today!&tmax=3000&userConsent=%7B%22gdprApplies%22%3A%22%22%2C%22cmp%22%3A%22%22%2C%22gpp%22%3A%22%22%2C%22gpp_sid%22%3A%5B%5D%7D&us_privacy=&pr=&title=League%20Players%20-%20Fantrax&w=1904&h=933&schain=%7B%22ver%22%3A%221.0%22%2C%22complete%22%3A1%2C%22nodes%22%3A%5B%7B%22asi%22%3A%22freestar.com%22%2C%22sid%22%3A%221203%22%2C%22hp%22%3A1%7D%5D%7D&eids=%5B%7B%22source%22%3A%22amxdt.net%22%2C%22uids%22%3A%5B%7B%22id%22%3A%22amx*3*f21488f4-69b5-4aeb-87a1-b3705ad19de1*e382bc9fe0e377e2f0e867923fa9589d%22%2C%22atype%22%3A1%7D%5D%7D%2C%7B%22source%22%3A%22criteo.com%22%2C%22uids%22%3A%5B%7B%22id%22%3A%226U-n_V9LeVBKMjJMbUlzaW9aZWlWdiUyRmw5SVJCemZzb0xlZDUlMkJobHFSeUs2SHBwMUo0N1ZRcCUyRkpZSURjVzFiJTJGWmRLVzBLMTVRS0NPcERUQTdraDZ6MTBacGF0MkpYVHczZWs0VERkYm0wUDhsJTJGenMlM0Q%22%2C%22atype%22%3A1%7D%5D%7D%2C%7B%22source%22%3A%22neustar.biz%22%2C%22uids%22%3A%5B%7B%22id%22%3A%22E1%3AtUM2dCQRed0Uf4WIJMzsQ5hpHkK60uvJ8zP79FnrOZRBvdca924yq6_72FqW5cEY0PhCAIuwSLttxUMqx1O8KAQFbKs_9BjyzPELrxQK8Js%22%2C%22atype%22%3A1%2C%22ext%22%3A%7B%22rtiPartner%22%3A%22fabrickId%22%7D%7D%5D%7D%2C%7B%22source%22%3A%22audigent.com%22%2C%22uids%22%3A%5B%7B%22id%22%3A%220001yum0ea8bil6jh66kfg7bhbgbc76bg9bka86g9labackkc2jl%22%2C%22atype%22%3A1%7D%5D%7D%2C%7B%22source%22%3A%22id5-sync.com%22%2C%22uids%22%3A%5B%7B%22id%22%3A%22ID5*TDtbeRGUhB2IdvLTp47mguKat8f2y_LTp47mguKat8f__2m95RtaAQEBCmm95RsAlQW4OTBEj4H9-Mhqqdx82w%22%2C%22atype%22%3A1%2C%22ext%22%3A%7B%22linkType%22%3A0%2C%22pba%22%3A%22qdkDLpErAPvRtUnzGYRQszWOgJT8KYzmERiXpOW1JbJq2gHHq0XJrGJH8spIdIjtynptqh6Cc1AN5C6G8%2FaCwQ%3D%3D%22%7D%7D%5D%7D%2C%7B%22source%22%3A%22pubcid.org%22%2C%22uids%22%3A%5B%7B%22id%22%3A%2251d24762-8492-4b68-af7c-ebe6e5f1dda6%22%2C%22atype%22%3A1%7D%5D%7D%2C%7B%22source%22%3A%22adserver.org%22%2C%22uids%22%3A%5B%7B%22id%22%3A%2207e6969d-43f5-49d0-80a9-c8e1038d45e4%22%2C%22atype%22%3A1%2C%22ext%22%3A%7B%22rtiPartner%22%3A%22TDID%22%7D%7D%5D%2C%22inserter%22%3A%22adserver.org%22%2C%22matcher%22%3A%22adserver.org%22%2C%22mm%22%3A4%7D%2C%7B%22inserter%22%3A%22optable.co%22%2C%22matcher%22%3A%22truedata.co%22%2C%22mm%22%3A5%2C%22source%22%3A%22criteo-hemapi.com%22%2C%22uids%22%3A%5B%7B%22id%22%3A%22kRgFZV83bGF6VXhWelBxMFJaZVpidm14RlBHUmhZbTZFMCUyQiUyRkd2ZXhOZ29yTG8wa0VPbVQxaHI4d00yZmMlMkJQJTJCRzlTOXpmcVZWQWZFJTJGNUNiZFlvcXBvSUtBNXlaT1E0U3oxZnNYak1ubUZhV1RZNlElM0Q%22%2C%22atype%22%3A3%2C%22ext%22%3A%7B%22stype%22%3A%22cto_bundle_hem_api%22%7D%7D%5D%7D%2C%7B%22inserter%22%3A%22optable.co%22%2C%22matcher%22%3A%22truedata.co%22%2C%22mm%22%3A5%2C%22source%22%3A%22yahoo.com%22%2C%22uids%22%3A%5B%7B%22id%22%3A%22VJD5WwVVWUYBd6in03cMG4OZ-bN8bHBXzvqmKw-6YqekKNAtATiatXHyMPPLSjEkMxRkbvf9ImHNGksynyefyg%22%2C%22atype%22%3A3%7D%5D%7D%2C%7B%22inserter%22%3A%22optable.co%22%2C%22matcher%22%3A%22truedata.co%22%2C%22mm%22%3A5%2C%22source%22%3A%22uidapi.com%22%2C%22uids%22%3A%5B%7B%22id%22%3A%22A4AAAC5GwXAjtsuSY5PGnHVrqlXCeNopi4Mn8U-ZEtMptPnwco3FXOBx2jSTFFBRpqSB0Eui3y3AubKKPPPM6tsten3S-SkjOT0S6goU6pMBkS5IeIPrU0YgDTSt27pfwiz-5l4bg31sFh90cbLRt1U9j8Cs-a7nzqwslhv1Gos4c72sgvk5WR7COFbvJhLw42Gmug-A0MUFDVWSqecHM6J1nw%22%2C%22atype%22%3A3%2C%22ext%22%3A%7B%22rtiPartner%22%3A%22UID2%22%7D%7D%5D%7D%5D",
+      "method": "GET"
+    },
+    {
+      "url": "https://grid-bidder.criteo.com/openrtb_2_5/pbjs/auction/request?profileId=207&av=37&wv=10.27.0&cb=60470536631&lsavail=1&bundle=ESvtFF92dzFpS0tGJTJCeUIwbHF4b2ViR0pOcjJ4T2FNZjNDNE5YbUgxcktUaW9nZkFCUFdQbldxMTVxSW5pREFuYTJoTGp6Rmk4N25FV1llMXlRWkd2cUFwUVVtY0I5aHRWWGVIZjIzZG1jUkdyblIzOG9hWSUyQkZUTXVqelNhNlF5WnQwcTE3MnUwWHFwQWo4OVZiRmglMkJ6ZHNJNmclM0QlM0Q&networkId=6097&gzip=1",
+      "method": "POST",
+      "body_raw": "\u001f\u008b\b\u0000\u0000\u0000\u0000\u0000\u0000\n\u00adYYo\u00e3:\u00b2\u00fe+\u0081\u009ef\u000e,\u00b7d\u00cb\u00b2\u009d\u00c1<d_\u009d\u00ce\u00e6l\u0007\u008d\u00a0D\u0096$\u00c6\u0014\u00a9\u0090\u0094m\u00b9\u0091\u00ff>\u00a0,\u00c9Nw\u00fa\u00de\u000b\u00dc\u0081\u001fLq\u00ad\u00e5\u00ab\u008fE\u00f2\u00a7\u00c3\u00b2\u00dc\u00d9\u00fd\u00fb\u00a7\u0083K\u00e3\u00ec\u00fet(\u0018\u00b0\u00ff\u00b1~\u0005\u00fa\u009a+I\u000bb\u009c]\u00872\u009ds(\u009dN\u00dd\"s\u00c32\u00b6\u0002\u00c3\u00a4pv\u001d\u00a7\u00e3$\u0090\u00a1\u0082k\u000e\u00043\u0014\u00e6\u008c:\u00bb\u00ce\u00e4\u00ce+/\u00ef\u008f\u00daV[\u00f9w]~\u00ed\u00f5\u00da\u00fa\u00d7^\u00b0)\u00fb\u00de\u00f6G\u00b8U\u001en\u0095\u00fd\u00ad\u00c1\u0083\u00ed\u00c1[\u001f\u00fd\u00f1VC\u00e0\u00fc\u00e88@5\u00aa9*\u00ab\u00a2\u0080\f\u009d]\u00db\u00eeT\r\\ZE\u00bf\u00f9\u0003\u007f\u0014\u00f8\u00a3\u00f0[\f\u00c2(X\u00beR\u00d43#\u00f3\u00d7\f\u00e9\u00abBb^\u00c1\u00c4\u00ce\u00c7G\u00c7IrF\u00ff\u00ef#:\u008e\u00a9\u00ba\u0017~\u000f\u00bc\u0081\u0007\u00b1\u00db\u00c7\u001e\u00ba\u00817\u00a0\u00ee\u00a8\u001f\u00fan\u00d8\u001b\u000f\u0006Q\u00e0\u00fb\u0003\u001f\u00d7\u00bd\u00efd\u00a1\u0088\u00951\u008f\u00de\u00b4\u00d3q\"F\u00e9Z\u00f6\u0095\u0014hg\u0013\u0005\u00e7V\u0014\u0003I5\u00f9\u00ff\"A\u0004\u00c6(g\u00f7o\u00bf\u00d3\u00ef\f:\u00a3\u00ce\u00b8\u00e3{\u001d?\u00f8\u00d1q\u00d6\u00a3)\u00f6\u00e2\u00fe\u00c8s1\u008c\u0006n0\u001c\r\u00dc\u0088\u0086\u0081\u00db\u008b\u0083\u0090\u000e\u00fc\u0080D\u00d1\u00b8\u009aE\u0088\u00b5\u0018F\u00e6\u00b1\u00aa\u00cc\u00e8w\u009cX\u00aa\fL\u0005\u00a6\u0085\u00b3\u00db\u00f7\u00bc\u008e\u0093:\u00bb\u00a1\u00e7}t\u00aa\u001a?\u00fc\u00ad\u00a6\u00f7kM3\u00aa7\u00f8\u00b5\u00c6\u00ff\u00ad\u00cf\u00c0\u00fb\u00f8\u00f1\u00d1q4\u0092BY\t>~t\u001c\u00cd\fV0\u0096\u00190\u00b11H\u0097H\u00eb\u00e5\u00bc\u00888\u00d3\u00e9Z\u00f8?\u00f4\u00a9\u0003!\u00d6\u00afDf9\u0088\u00b2\u0092\u00b3\u00ffQ\u00db\u00c8\u00f7\u00bc\u0081\u00d7w>:N\u000e\u0089\u00f5MjL\u00aew\u00bf}[,\u0016\u00dd\u00ad\u0099*0\u0080.\u00bfq\u0084\u00a4\u00c0oo\u00fd\u0092\u000f\u00c7d\u0098\u0081"
+    },
+    {
+      "url": "https://tlx.3lift.com/header/auction?lib=prebid&v=10.27.0&referrer=https%3A%2F%2Fwww.fantrax.com%2Ffantasy%2Fleague%2Fj3yl79c7man4av42%2Fplayers&tmax=3000",
+      "method": "POST",
+      "body": {
+        "imp": [
+          {
+            "id": 0,
+            "tagid": "Freestar_RON_Display",
+            "banner": {
+              "format": [
+                {
+                  "w": 970,
+                  "h": 90
+                },
+                {
+                  "w": 728,
+                  "h": 90
+                },
+                {
+                  "w": 468,
+                  "h": 60
+                },
+                {
+                  "w": 320,
+                  "h": 100
+                },
+                {
+                  "w": 300,
+                  "h": 100
+                },
+                {
+                  "w": 320,
+                  "h": 50
+                },
+                {
+                  "w": 300,
+                  "h": 50
+                }
+              ]
+            },
+            "fpd": {
+              "context": {
+                "data": {
+                  "fs_ad_product": "display",
+                  "fs_ad_optimization": "",
+                  "gameraPlacementId": "MS0zLTE",
+                  "gameraId": [
+                    "gamera_22",
+                    "gamera_24",
+                    "gamera_104",
+                    "gamera_16",
+                    "gamera_17",
+                    "gamera_11",
+                    "gamera_25",
+                    "gamera_105",
+                    "gamera_39",
+                    "gamera_14"
+                  ],
+                  "adserver": {
+                    "name": "gam",
+                    "adslot": "/15184186/fantrax_desktop_leaderboard_atf"
+                  }
+                },
+                "gpid": "/15184186/fantrax_desktop_leaderboard_atf",
+                "tid": "u7a5765b1-7ec8-4906-9fc8-8b7c729df935",
+                "tidSource": "pbjs"
+              }
+            },
+            "ext": {
+              "data": {
+                "fs_ad_product": "display",
+                "fs_ad_optimization": "",
+                "gameraPlacementId": "MS0zLTE",
+                "gameraId": [
+                  "gamera_22",
+                  "gamera_24",
+                  "gamera_104",
+                  "gamera_16",
+                  "gamera_17",
+                  "gamera_11",
+                  "gamera_25",
+                  "gamera_105",
+                  "gamera_39",
+                  "gamera_14"
+                ],
+                "adserver": {
+                  "name": "gam",
+                  "adslot": "/15184186/fantrax_desktop_leaderboard_atf"
+                }
+              },
+              "gpid": "/15184186/fantrax_desktop_leaderboard_atf",
+              "tid": "u7a5765b1-7ec8-4906-9fc8-8b7c729df935",
+              "tidSource": "pbjs"
+            }
+          }
+        ],
+        "user": {
+          "ext": {
+            "eids": [
+              {
+                "source": "amxdt.net",
+                "uids": [
+                  {
+                    "id": "amx*3*f21488f4-69b5-4aeb-87a1-b3705ad19de1*e382bc9fe0e377e2f0e867923fa9589d",
+                    "atype": 1
+                  }
+                ]
+              },
+              {
+                "source": "criteo.com",
+                "uids": [
+                  {
+                    "id": "6U-n_V9LeVBKMjJMbUlzaW9aZWlWdiUyRmw5SVJCemZzb0xlZDUlMkJobHFSeUs2SHBwMUo0N1ZRcCUyRkpZSURjVzFiJTJGWmRLVzBLMTVRS0NPcERUQTdraDZ6MTBacGF0MkpYVHczZWs0VERkYm0wUDhsJTJGenMlM0Q",
+                    "atype": 1
+                  }
+                ]
+              },
+              {
+                "source": "neustar.biz",
+                "uids": [
+                  {
+                    "id": "E1:tUM2dCQRed0Uf4WIJMzsQ5hpHkK60uvJ8zP79FnrOZRBvdca924yq6_72FqW5cEY0PhCAIuwSLttxUMqx1O8KAQFbKs_9BjyzPELrxQK8Js",
+                    "atype": 1
+                  }
+                ]
+              },
+              {
+                "source": "audigent.com",
+                "uids": [
+                  {
+                    "id": "0001yum0ea8bil6jh66kfg7bhbgbc76bg9bka86g9labackkc2jl",
+                    "atype": 1
+                  }
+                ]
+              },
+              {
+                "source": "id5-sync.com",
+                "uids": [
+                  {
+                    "id": "ID5*TDtbeRGUhB2IdvLTp47mguKat8f2y_LTp47mguKat8f__2m95RtaAQEBCmm95RsAlQW4OTBEj4H9-Mhqqdx82w",
+                    "atype": 1,
+                    "ext": {
+                      "linkType": 0,
+                      "pba": "qdkDLpErAPvRtUnzGYRQszWOgJT8KYzmERiXpOW1JbJq2gHHq0XJrGJH8spIdIjtynptqh6Cc1AN5C6G8/aCwQ=="
+                    }
+                  }
+                ]
+              },
+              {
+                "source": "pubcid.org",
+                "uids": [
+                  {
+                    "id": "51d24762-8492-4b68-af7c-ebe6e5f1dda6",
+                    "atype": 1
+                  }
+                ]
+              },
+              {
+                "source": "adserver.org",
+                "uids": [
+                  {
+                    "id": "07e6969d-43f5-49d0-80a9-c8e1038d45e4",
+                    "atype": 1,
+                    "ext": {
+                      "rtiPartner": "TDID"
+                    }
+                  }
+                ],
+                "inserter": "adserver.org",
+                "matcher": "adserver.org",
+                "mm": 4
+              },
+              {
+                "inserter": "optable.co",
+                "matcher": "truedata.co",
+                "mm": 5,
+                "source": "criteo-hemapi.com",
+                "uids": [
+                  {
+                    "id": "kRgFZV83bGF6VXhWelBxMFJaZVpidm14RlBHUmhZbTZFMCUyQiUyRkd2ZXhOZ29yTG8wa0VPbVQxaHI4d00yZmMlMkJQJTJCRzlTOXpmcVZWQWZFJTJGNUNiZFlvcXBvSUtBNXlaT1E0U3oxZnNYak1ubUZhV1RZNlElM0Q",
+                    "atype": 3,
+                    "ext": {
+                      "stype": "cto_bundle_hem_api"
+                    }
+                  }
+                ]
+              },
+              {
+                "inserter": "optable.co",
+                "matcher": "truedata.co",
+                "mm": 5,
+                "source": "yahoo.com",
+                "uids": [
+                  {
+                    "id": "VJD5WwVVWUYBd6in03cMG4OZ-bN8bHBXzvqmKw-6YqekKNAtATiatXHyMPPLSjEkMxRkbvf9ImHNGksynyefyg",
+                    "atype": 3
+                  }
+                ]
+              },
+              {
+                "inserter": "optable.co",
+                "matcher": "truedata.co",
+                "mm": 5,
+                "source": "uidapi.com",
+                "uids": [
+                  {
+                    "id": "A4AAAC5GwXAjtsuSY5PGnHVrqlXCeNopi4Mn8U-ZEtMptPnwco3FXOBx2jSTFFBRpqSB0Eui3y3AubKKPPPM6tsten3S-SkjOT0S6goU6pMBkS5IeIPrU0YgDTSt27pfwiz-5l4bg31sFh90cbLRt1U9j8Cs-a7nzqwslhv1Gos4c72sgvk5WR7COFbvJhLw42Gmug-A0MUFDVWSqecHM6J1nw",
+                    "atype": 3,
+                    "ext": {
+                      "optable": {
+                        "ref": "0"
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "ext": {
+          "schain": {
+            "ver": "1.0",
+            "complete": 1,
+            "nodes": [
+              {
+                "asi": "freestar.com",
+                "sid": "1203",
+                "hp": 1
+              }
+            ]
+          },
+          "fpd": {
+            "context": {
+              "domain": "fantrax.com",
+              "publisher": {
+                "domain": "fantrax.com",
+                "ext": {
+                  "fs_company": 1203
+                }
+              },
+              "page": "https://www.fantrax.com/fantasy/league/j3yl79c7man4av42/players",
+              "name": "fantrax-com",
+              "cat": [
+                "IAB17"
+              ],
+              "sectioncat": [
+                "IAB17"
+              ],
+              "pagecat": [
+                "IAB17"
+              ],
+              "mobile": 0,
+              "ref": "",
+              "content": {
+                "data": [
+                  {
+                    "name": "fantrax.com",
+                    "ext": {
+                      "taxonomyname": "iab_content_taxonomy"
+                    },
+                    "segment": []
+                  }
+                ],
+                "language": "en"
+              },
+              "ext": {
+                "data": {
+                  "fs_optimized": false,
+                  "fs_site": 3129,
+                  "documentLang": "en"
+                }
+              }
+            },
+            "user": {
+              "id": "e10eafc9-8649-4d08-a0dc-71574e888167",
+              "ext": {
+                "eids": [
+                  {
+                    "source": "amxdt.net",
+                    "uids": [
+                      {
+                        "id": "amx*3*f21488f4-69b5-4aeb-87a1-b3705ad19de1*e382bc9fe0e377e2f0e867923fa9589d",
+                        "atype": 1
+                      }
+                    ]
+                  },
+                  {
+                    "source": "criteo.com",
+                    "uids": [
+                      {
+                        "id": "6U-n_V9LeVBKMjJMbUlzaW9aZWlWdiUyRmw5SVJCemZzb0xlZDUlMkJobHFSeUs2SHBwMUo0N1ZRcCUyRkpZSURjVzFiJTJGWmRLVzBLMTVRS0NPcERUQTdraDZ6MTBacGF0MkpYVHczZWs0VERkYm0wUDhsJTJGenMlM0Q",
+                        "atype": 1
+                      }
+                    ]
+                  },
+                  {
+                    "source": "neustar.biz",
+                    "uids": [
+                      {
+                        "id": "E1:tUM2dCQRed0Uf4WIJMzsQ5hpHkK60uvJ8zP79FnrOZRBvdca924yq6_72FqW5cEY0PhCAIuwSLttxUMqx1O8KAQFbKs_9BjyzPELrxQK8Js",
+                        "atype": 1
+                      }
+                    ]
+                  },
+                  {
+                    "source": "audigent.com",
+                    "uids": [
+                      {
+                        "id": "0001yum0ea8bil6jh66kfg7bhbgbc76bg9bka86g9labackkc2jl",
+                        "atype": 1
+                      }
+                    ]
+                  },
+                  {
+                    "source": "id5-sync.com",
+                    "uids": [
+                      {
+                        "id": "ID5*TDtbeRGUhB2IdvLTp47mguKat8f2y_LTp47mguKat8f__2m95RtaAQEBCmm95RsAlQW4OTBEj4H9-Mhqqdx82w",
+                        "atype": 1,
+                        "ext": {
+                          "linkType": 0,
+                          "pba": "qdkDLpErAPvRtUnzGYRQszWOgJT8KYzmERiXpOW1JbJq2gHHq0XJrGJH8spIdIjtynptqh6Cc1AN5C6G8/aCwQ=="
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "source": "pubcid.org",
+                    "uids": [
+                      {
+                        "id": "51d24762-8492-4b68-af7c-ebe6e5f1dda6",
+                        "atype": 1
+                      }
+                    ]
+                  },
+                  {
+                    "source": "adserver.org",
+                    "uids": [
+                      {
+                        "id": "07e6969d-43f5-49d0-80a9-c8e1038d45e4",
+                        "atype": 1,
+                        "ext": {
+                          "rtiPartner": "TDID"
+                        }
+                      }
+                    ],
+                    "inserter": "adserver.org",
+                    "matcher": "adserver.org",
+                    "mm": 4
+                  },
+                  {
+                    "inserter": "optable.co",
+                    "matcher": "truedata.co",
+                    "mm": 5,
+                    "source": "criteo-hemapi.com",
+                    "uids": [
+                      {
+                        "id": "kRgFZV83bGF6VXhWelBxMFJaZVpidm14RlBHUmhZbTZFMCUyQiUyRkd2ZXhOZ29yTG8wa0VPbVQxaHI4d00yZmMlMkJQJTJCRzlTOXpmcVZWQWZFJTJGNUNiZFlvcXBvSUtBNXlaT1E0U3oxZnNYak1ubUZhV1RZNlElM0Q",
+                        "atype": 3,
+                        "ext": {
+                          "stype": "cto_bundle_hem_api"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "inserter": "optable.co",
+                    "matcher": "truedata.co",
+                    "mm": 5,
+                    "source": "yahoo.com",
+                    "uids": [
+                      {
+                        "id": "VJD5WwVVWUYBd6in03cMG4OZ-bN8bHBXzvqmKw-6YqekKNAtATiatXHyMPPLSjEkMxRkbvf9ImHNGksynyefyg",
+                        "atype": 3
+                      }
+                    ]
+                  },
+                  {
+                    "inserter": "optable.co",
+                    "matcher": "truedata.co",
+                    "mm": 5,
+                    "source": "uidapi.com",
+                    "uids": [
+                      {
+                        "id": "A4AAAC5GwXAjtsuSY5PGnHVrqlXCeNopi4Mn8U-ZEtMptPnwco3FXOBx2jSTFFBRpqSB0Eui3y3AubKKPPPM6tsten3S-SkjOT0S6goU6pMBkS5IeIPrU0YgDTSt27pfwiz-5l4bg31sFh90cbLRt1U9j8Cs-a7nzqwslhv1Gos4c72sgvk5WR7COFbvJhLw42Gmug-A0MUFDVWSqecHM6J1nw",
+                        "atype": 3,
+                        "ext": {
+                          "optable": {
+                            "ref": "0"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          "ortb2": {
+            "site": {
+              "domain": "fantrax.com",
+              "publisher": {
+                "domain": "fantrax.com",
+                "ext": {
+                  "fs_company": 1203
+                }
+              },
+              "page": "https://www.fantrax.com/fantasy/league/j3yl79c7man4av42/players",
+              "name": "fantrax-com",
+              "cat": [
+                "IAB17"
+              ],
+              "sectioncat": [
+                "IAB17"
+              ],
+              "pagecat": [
+                "IAB17"
+              ],
+              "mobile": 0,
+              "ref": "",
+              "content": {
+                "data": [
+                  {
+                    "name": "fantrax.com",
+                    "ext": {
+                      "taxonomyname": "iab_content_taxonomy"
+                    },
+                    "segment": []
+                  }
+                ],
+                "language": "en"
+              },
+              "ext": {
+                "data": {
+                  "fs_optimized": false,
+                  "fs_site": 3129,
+                  "documentLang": "en"
+                }
+              }
+            },
+            "user": {
+              "id": "e10eafc9-8649-4d08-a0dc-71574e888167",
+              "ext": {
+                "eids": [
+                  {
+                    "source": "amxdt.net",
+                    "uids": [
+                      {
+                        "id": "amx*3*f21488f4-69b5-4aeb-87a1-b3705ad19de1*e382bc9fe0e377e2f0e867923fa9589d",
+                        "atype": 1
+                      }
+                    ]
+                  },
+                  {
+                    "source": "criteo.com",
+                    "uids": [
+                      {
+                        "id": "6U-n_V9LeVBKMjJMbUlzaW9aZWlWdiUyRmw5SVJCemZzb0xlZDUlMkJobHFSeUs2SHBwMUo0N1ZRcCUyRkpZSURjVzFiJTJGWmRLVzBLMTVRS0NPcERUQTdraDZ6MTBacGF0MkpYVHczZWs0VERkYm0wUDhsJTJGenMlM0Q",
+                        "atype": 1
+                      }
+                    ]
+                  },
+                  {
+                    "source": "neustar.biz",
+                    "uids": [
+                      {
+                        "id": "E1:tUM2dCQRed0Uf4WIJMzsQ5hpHkK60uvJ8zP79FnrOZRBvdca924yq6_72FqW5cEY0PhCAIuwSLttxUMqx1O8KAQFbKs_9BjyzPELrxQK8Js",
+                        "atype": 1
+                      }
+                    ]
+                  },
+                  {
+                    "source": "audigent.com",
+                    "uids": [
+                      {
+                        "id": "0001yum0ea8bil6jh66kfg7bhbgbc76bg9bka86g9labackkc2jl",
+                        "atype": 1
+                      }
+                    ]
+                  },
+                  {
+                    "source": "id5-sync.com",
+                    "uids": [
+                      {
+                        "id": "ID5*TDtbeRGUhB2IdvLTp47mguKat8f2y_LTp47mguKat8f__2m95RtaAQEBCmm95RsAlQW4OTBEj4H9-Mhqqdx82w",
+                        "atype": 1,
+                        "ext": {
+                          "linkType": 0,
+                          "pba": "qdkDLpErAPvRtUnzGYRQszWOgJT8KYzmERiXpOW1JbJq2gHHq0XJrGJH8spIdIjtynptqh6Cc1AN5C6G8/aCwQ=="
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "source": "pubcid.org",
+                    "uids": [
+                      {
+                        "id": "51d24762-8492-4b68-af7c-ebe6e5f1dda6",
+                        "atype": 1
+                      }
+                    ]
+                  },
+                  {
+                    "source": "adserver.org",
+                    "uids": [
+                      {
+                        "id": "07e6969d-43f5-49d0-80a9-c8e1038d45e4",
+                        "atype": 1,
+                        "ext": {
+                          "rtiPartner": "TDID"
+                        }
+                      }
+                    ],
+                    "inserter": "adserver.org",
+                    "matcher": "adserver.org",
+                    "mm": 4
+                  },
+                  {
+                    "inserter": "optable.co",
+                    "matcher": "truedata.co",
+                    "mm": 5,
+                    "source": "criteo-hemapi.com",
+                    "uids": [
+                      {
+                        "id": "kRgFZV83bGF6VXhWelBxMFJaZVpidm14RlBHUmhZbTZFMCUyQiUyRkd2ZXhOZ29yTG8wa0VPbVQxaHI4d00yZmMlMkJQJTJCRzlTOXpmcVZWQWZFJTJGNUNiZFlvcXBvSUtBNXlaT1E0U3oxZnNYak1ubUZhV1RZNlElM0Q",
+                        "atype": 3,
+                        "ext": {
+                          "stype": "cto_bundle_hem_api"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "inserter": "optable.co",
+                    "matcher": "truedata.co",
+                    "mm": 5,
+                    "source": "yahoo.com",
+                    "uids": [
+                      {
+                        "id": "VJD5WwVVWUYBd6in03cMG4OZ-bN8bHBXzvqmKw-6YqekKNAtATiatXHyMPPLSjEkMxRkbvf9ImHNGksynyefyg",
+                        "atype": 3
+                      }
+                    ]
+                  },
+                  {
+                    "inserter": "optable.co",
+                    "matcher": "truedata.co",
+                    "mm": 5,
+                    "source": "uidapi.com",
+                    "uids": [
+                      {
+                        "id": "A4AAAC5GwXAjtsuSY5PGnHVrqlXCeNopi4Mn8U-ZEtMptPnwco3FXOBx2jSTFFBRpqSB0Eui3y3AubKKPPPM6tsten3S-SkjOT0S6goU6pMBkS5IeIPrU0YgDTSt27pfwiz-5l4bg31sFh90cbLRt1U9j8Cs-a7nzqwslhv1Gos4c72sgvk5WR7COFbvJhLw42Gmug-A0MUFDVWSqecHM6J1nw",
+                        "atype": 3,
+                        "ext": {
+                          "optable": {
+                            "ref": "0"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "device": {
+              "w": 800,
+              "h": 600,
+              "dnt": 0,
+              "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/146.0.0.0 Safari/537.36",
+              "language": "en",
+              "ext": {
+                "vpw": 1904,
+                "vph": 933
+              },
+              "geo": {
+                "region": "NY",
+                "city": "New York",
+                "country": "US",
+                "ext": {}
+              },
+              "devicetype": 2,
+              "make": "",
+              "model": "",
+              "os": "Windows",
+              "osv": "10",
+              "sua": {
+                "source": 1,
+                "platform": {
+                  "brand": "Windows"
+                },
+                "browsers": [
+                  {
+                    "brand": "Chromium",
+                    "version": [
+                      "146"
+                    ]
+                  },
+                  {
+                    "brand": "Not-A.Brand",
+                    "version": [
+                      "24"
+                    ]
+                  },
+                  {
+                    "brand": "Google Chrome",
+                    "version": [
+                      "146"
+                    ]
+                  }
+                ],
+                "mobile": 0
+              }
+            },
+            "geo": {
+              "region": "NY",
+              "city": "New York",
+              "country": "US",
+              "ext": {}
+            },
+            "ext": {
+              "prebid": {
+                "adServerCurrency": "USD",
+                "storedrequest": {
+                  "id": "f20a6258-ed38-48d5-9cef-ec48c9438341"
+                }
+              }
+            },
+            "badv": [
+              "upvalior.com",
+              "yieldlove.com",
+              "planblue.com",
+              "moneypen.co",
+              "bidsopt.com",
+              "money-matters.today",
+              "ascendeum.com",
+              "astonmartindallas.com",
+              "accessmediazone.com",
+              "prebidanalytics.com",
+              "opera.com",
+              "lactationqbank.com",
+              "ajillionmax.com",
+              "macpaw.com",
+              "wfc-fehfbzaxfshzdvgm.z01.azurefd.net",
+              "ato.mx",
+              "bidgear.com",
+              "pubgalaxy.com",
+              "nemluvio.com",
+              "adtelligent.com",
+              "guthealthwellness.com",
+              "bei.azureedge.net",
+              "vungle.com",
+              "motionspots.com",
+              "cdph.ca.gov",
+              "clickport.top",
+              "easyadblocker.com",
+              "mimecast.com",
+              "go1.getghostapp.com",
+              "adrecover.com",
+              "headbidding.com",
+              "wayrates.com",
+              "galderma.com",
+              "pegasuspublishers.com",
+              "goarmy.com",
+              "adapace-2.bc-sys.com",
+              "d13aq0uo1npt7x.cloudfront.net",
+              "monetizemore.com",
+              "mediafuse.com",
+              "bankbazaar.com",
+              "passwordmanagercomparison.com",
+              "needtoimpeach.com",
+              "hotelscombined.com",
+              "getcovered.illinois.gov",
+              "asiandate.com",
+              "privacybadger.org",
+              "gadmobe.com",
+              "mediamint.com",
+              "oyun.fr",
+              "proper.io",
+              "printrecipes.net",
+              "askanexpertonline.com",
+              "shopdoona.com",
+              "vdx.tv",
+              "arcadetab.com",
+              "fmlabsonline.com",
+              "justanswer.com",
+              "tk0x1.com",
+              "firstimpression.io",
+              "doubleclick.net",
+              "totaladblock.com",
+              "adcash.com",
+              "1blocker.com",
+              "carba.io",
+              "ghostery.com",
+              "ila3.com",
+              "cdn.ms1a.com",
+              "global-cdn-cc.b-cdn.net",
+              "searchandprint.recipes",
+              "standsapp.org",
+              "shop.advanceautoparts.com",
+              "gov.il",
+              "tudiendanchoi.com",
+              "advanceautoparts.com",
+              "propermedia.com",
+              "mobuppsrtb.com",
+              "chineseladydate.com",
+              "digitalcontentnow.com",
+              "tobaccomotorwear.com",
+              "wavebrowser.co",
+              "latamdate.com",
+              "thaimatches.com",
+              "onlineactivation.org",
+              "q-grips.com",
+              "wapstart.ru",
+              "ragu.com",
+              "tryexuberant.com",
+              "rb.com",
+              "basicfundamentals.co.in",
+              "1md.org",
+              "a4g.com",
+              "bizzclick.com",
+              "ebookrenta.com",
+              "oyun.se",
+              "onlineactivation.com,",
+              "loansocieties.com",
+              "gaolisz.com",
+              "mediavine.com",
+              "testing-domain.com",
+              "ckmfang.com",
+              "leovegas.com",
+              "synonehundred.com",
+              "selectmedia.asia",
+              "mxu-dmf8avezecfuascm.z01.azurefd.net",
+              "trkbid.com",
+              "adpushup.com",
+              "pubgears.com",
+              "covid19.ca.gov",
+              "adremover.org",
+              "october7files.com",
+              "adblockplus.org",
+              "freequizgames.com",
+              "weeklypenny.com",
+              "popcornews.com",
+              "waardex.com",
+              "allcontentthere.com",
+              "adaway.org",
+              "sekindo.com",
+              "manualsdirectory.org",
+              "ziffdavis.com",
+              "mediaoptions.com",
+              "rtbhouse.com",
+              "all-in1-digitalcontent.net",
+              "wellspan.org",
+              "jxu.azureedge.net",
+              "socialpulsemedia.com",
+              "renta.co.jp",
+              "pubwise.io",
+              "pampillonia.com",
+              "d1qeadpezvp4g.cloudfront.net",
+              "claritycheck.com",
+              "frompdftodoc.com",
+              "adblockultimate.net",
+              "adnimation.com",
+              "araglegal.com",
+              "proper.com",
+              "digitaladsystems.com",
+              "loyal.app",
+              "ezoic.com",
+              "didna.io",
+              "playwire.com",
+              "adomik.com",
+              "webtradingspot.com",
+              "adgone.org",
+              "smadex.com",
+              "survey.money-matters.today",
+              "aipac.org",
+              "getadblock.com",
+              "decenterads.com",
+              "envisionx.co",
+              "roxot.com",
+              "adrizer.com",
+              "adops.com",
+              "nomoredarkspot.com",
+              "trojanwall.click",
+              "adskeeper.com",
+              "jlacosta.com",
+              "contentlists.com",
+              "xapads.com",
+              "idf.il",
+              "adapace-3.bc-sys.com",
+              "hi-chew.com",
+              "visitmyrtlebeach.com",
+              "nucific.com",
+              "fanony.com",
+              "streamrail.com",
+              "learnaboutpd.com",
+              "newormedia.com",
+              "onlineactivation.io,",
+              "ice.gov",
+              "mensdrivingforce.com",
+              "purify-app.com",
+              "www.gov.il",
+              "saturday-october-seven.com",
+              "weewhiskeyfest.com",
+              "loginonline.co",
+              "comodo.com",
+              "test.com",
+              "luckyvybz.top",
+              "hola.org",
+              "coveredca.com",
+              "serverbid.com",
+              "oldmoparts.com",
+              "dbmmszp46juph.cloudfront.net",
+              "sportsnewsman.com",
+              "streamrail.net",
+              "tightropeinteractive.com",
+              "vashoot.com",
+              "epom.com",
+              "oko.uk",
+              "adguard.com",
+              "rtk.io",
+              "digitalcontent-now.com",
+              "publisherdesk.com",
+              "publift.com",
+              "upmcphysicianresources.com",
+              "triviaboss.com",
+              "getaclearrear.com",
+              "niutux.com",
+              "appodeal.com",
+              "emergenc.com",
+              "cafemedia.com",
+              "explore.reference.com",
+              "recipestab.com",
+              "experienceparkland.com",
+              "ip.safelystorage.net",
+              "tekblue.net",
+              "adthrive.com"
+            ],
+            "bcat": [
+              "IAB25-3",
+              "IAB26-2",
+              "IAB25-2",
+              "IAB25-1",
+              "IAB25-7",
+              "IAB25-6",
+              "IAB26",
+              "IAB25",
+              "IAB25-5",
+              "IAB26-4",
+              "IAB25-4",
+              "IAB26-3"
+            ],
+            "source": {
+              "ext": {
+                "schain": {
+                  "ver": "1.0",
+                  "complete": 1,
+                  "nodes": [
+                    {
+                      "asi": "freestar.com",
+                      "sid": "1203",
+                      "hp": 1
+                    }
+                  ]
+                },
+                "tidSource": "pbjs"
+              },
+              "tid": "uda03ee11-f315-44e3-8802-f2663d980714"
+            }
+          }
+        }
+      }
+    },
+    {
+      "url": "https://g2.gumgum.com/hbid/imp?displaymanager=Prebid.js%20-%20gumgum&displaymanagerver=10.27.0&lt=1774052658228&to=240&id5Id=ID5*TDtbeRGUhB2IdvLTp47mguKat8f2y_LTp47mguKat8f__2m95RtaAQEBCmm95RsAlQW4OTBEj4H9-Mhqqdx82w&id5IdLinkType=null&aun=fantrax_desktop_leaderboard_atf&tdid=07e6969d-43f5-49d0-80a9-c8e1038d45e4&uid2=A4AAAC5GwXAjtsuSY5PGnHVrqlXCeNopi4Mn8U-ZEtMptPnwco3FXOBx2jSTFFBRpqSB0Eui3y3AubKKPPPM6tsten3S-SkjOT0S6goU6pMBkS5IeIPrU0YgDTSt27pfwiz-5l4bg31sFh90cbLRt1U9j8Cs-a7nzqwslhv1Gos4c72sgvk5WR7COFbvJhLw42Gmug-A0MUFDVWSqecHM6J1nw&gpid=%2F15184186%2Ffantrax_desktop_leaderboard_atf&pv=e6e6233c-6afb-43fa-aafd-173507ae87a1&maxw=970&maxh=90&si=343842&pi=3&bf=970x90%2C728x90%2C468x60%2C320x100%2C300x100%2C320x50%2C300x50&schain=1.0%2C1!freestar.com%2C1203%2C1%2C%2C%2C&tId=u2e46cef4-8dc9-4de8-8bba-328b0dda30d6&vw=1904&vh=933&sw=800&sh=600&pu=https%3A%2F%2Fwww.fantrax.com%2Ffantasy%2Fleague%2Fj3yl79c7man4av42%2Fplayers&tpl=https%3A%2F%2Fwww.fantrax.com%2Ffantasy%2Fleague%2Fj3yl79c7man4av42%2Fplayers&ce=false&dpr=1&jcsi=%7B%22t%22%3A0%2C%22rq%22%3A8%2C%22pbv%22%3A%2210.27.0%22%7D&ogu=https%3A%2F%2Fwww.fantrax.com%2F&ns=10240&ua=Mozilla%2F5.0%20(Windows%20NT%2010.0%3B%20Win64%3B%20x64)%20AppleWebKit%2F537.36%20(KHTML%2C%20like%20Gecko)%20HeadlessChrome%2F146.0.0.0%20Safari%2F537.36&sua=%7B%22source%22%3A1%2C%22platform%22%3A%7B%22brand%22%3A%22Windows%22%7D%2C%22browsers%22%3A%5B%7B%22brand%22%3A%22Chromium%22%2C%22version%22%3A%5B%22146%22%5D%7D%2C%7B%22brand%22%3A%22Not-A.Brand%22%2C%22version%22%3A%5B%2224%22%5D%7D%2C%7B%22brand%22%3A%22Google%20Chrome%22%2C%22version%22%3A%5B%22146%22%5D%7D%5D%2C%22mobile%22%3A0%7D&dnt=0&os=Windows&osv=10&dt=2&lang=en&make=&model=",
+      "method": "GET"
+    },
+    {
+      "url": "https://g2.gumgum.com/hbid/imp?displaymanager=Prebid.js%20-%20gumgum&displaymanagerver=10.27.0&lt=1774052658228&to=240&id5Id=ID5*TDtbeRGUhB2IdvLTp47mguKat8f2y_LTp47mguKat8f__2m95RtaAQEBCmm95RsAlQW4OTBEj4H9-Mhqqdx82w&id5IdLinkType=null&aun=fantrax_desktop_leaderboard_atf&tdid=07e6969d-43f5-49d0-80a9-c8e1038d45e4&uid2=A4AAAC5GwXAjtsuSY5PGnHVrqlXCeNopi4Mn8U-ZEtMptPnwco3FXOBx2jSTFFBRpqSB0Eui3y3AubKKPPPM6tsten3S-SkjOT0S6goU6pMBkS5IeIPrU0YgDTSt27pfwiz-5l4bg31sFh90cbLRt1U9j8Cs-a7nzqwslhv1Gos4c72sgvk5WR7COFbvJhLw42Gmug-A0MUFDVWSqecHM6J1nw&gpid=%2F15184186%2Ffantrax_desktop_leaderboard_atf&pv=e6e6233c-6afb-43fa-aafd-173507ae87a1&maxw=970&maxh=90&si=343840&pi=3&bf=970x90%2C728x90%2C468x60%2C320x100%2C300x100%2C320x50%2C300x50&schain=1.0%2C1!freestar.com%2C1203%2C1%2C%2C%2C&tId=u2e46cef4-8dc9-4de8-8bba-328b0dda30d6&vw=1904&vh=933&sw=800&sh=600&pu=https%3A%2F%2Fwww.fantrax.com%2Ffantasy%2Fleague%2Fj3yl79c7man4av42%2Fplayers&tpl=https%3A%2F%2Fwww.fantrax.com%2Ffantasy%2Fleague%2Fj3yl79c7man4av42%2Fplayers&ce=false&dpr=1&jcsi=%7B%22t%22%3A0%2C%22rq%22%3A8%2C%22pbv%22%3A%2210.27.0%22%7D&ogu=https%3A%2F%2Fwww.fantrax.com%2F&ns=10240&ua=Mozilla%2F5.0%20(Windows%20NT%2010.0%3B%20Win64%3B%20x64)%20AppleWebKit%2F537.36%20(KHTML%2C%20like%20Gecko)%20HeadlessChrome%2F146.0.0.0%20Safari%2F537.36&sua=%7B%22source%22%3A1%2C%22platform%22%3A%7B%22brand%22%3A%22Windows%22%7D%2C%22browsers%22%3A%5B%7B%22brand%22%3A%22Chromium%22%2C%22version%22%3A%5B%22146%22%5D%7D%2C%7B%22brand%22%3A%22Not-A.Brand%22%2C%22version%22%3A%5B%2224%22%5D%7D%2C%7B%22brand%22%3A%22Google%20Chrome%22%2C%22version%22%3A%5B%22146%22%5D%7D%5D%2C%22mobile%22%3A0%7D&dnt=0&os=Windows&osv=10&dt=2&lang=en&make=&model=",
+      "method": "GET"
+    },
+    {
+      "url": "https://g2.gumgum.com/hbid/imp?displaymanager=Prebid.js%20-%20gumgum&displaymanagerver=10.27.0&lt=1774052658228&to=240&id5Id=ID5*TDtbeRGUhB2IdvLTp47mguKat8f2y_LTp47mguKat8f__2m95RtaAQEBCmm95RsAlQW4OTBEj4H9-Mhqqdx82w&id5IdLinkType=null&aun=fantrax_desktop_leaderboard_atf&tdid=07e6969d-43f5-49d0-80a9-c8e1038d45e4&uid2=A4AAAC5GwXAjtsuSY5PGnHVrqlXCeNopi4Mn8U-ZEtMptPnwco3FXOBx2jSTFFBRpqSB0Eui3y3AubKKPPPM6tsten3S-SkjOT0S6goU6pMBkS5IeIPrU0YgDTSt27pfwiz-5l4bg31sFh90cbLRt1U9j8Cs-a7nzqwslhv1Gos4c72sgvk5WR7COFbvJhLw42Gmug-A0MUFDVWSqecHM6J1nw&gpid=%2F15184186%2Ffantrax_desktop_leaderboard_atf&pv=e6e6233c-6afb-43fa-aafd-173507ae87a1&maxw=970&maxh=90&si=343841&pi=3&bf=970x90%2C728x90%2C468x60%2C320x100%2C300x100%2C320x50%2C300x50&schain=1.0%2C1!freestar.com%2C1203%2C1%2C%2C%2C&tId=u2e46cef4-8dc9-4de8-8bba-328b0dda30d6&vw=1904&vh=933&sw=800&sh=600&pu=https%3A%2F%2Fwww.fantrax.com%2Ffantasy%2Fleague%2Fj3yl79c7man4av42%2Fplayers&tpl=https%3A%2F%2Fwww.fantrax.com%2Ffantasy%2Fleague%2Fj3yl79c7man4av42%2Fplayers&ce=false&dpr=1&jcsi=%7B%22t%22%3A0%2C%22rq%22%3A8%2C%22pbv%22%3A%2210.27.0%22%7D&ogu=https%3A%2F%2Fwww.fantrax.com%2F&ns=10240&ua=Mozilla%2F5.0%20(Windows%20NT%2010.0%3B%20Win64%3B%20x64)%20AppleWebKit%2F537.36%20(KHTML%2C%20like%20Gecko)%20HeadlessChrome%2F146.0.0.0%20Safari%2F537.36&sua=%7B%22source%22%3A1%2C%22platform%22%3A%7B%22brand%22%3A%22Windows%22%7D%2C%22browsers%22%3A%5B%7B%22brand%22%3A%22Chromium%22%2C%22version%22%3A%5B%22146%22%5D%7D%2C%7B%22brand%22%3A%22Not-A.Brand%22%2C%22version%22%3A%5B%2224%22%5D%7D%2C%7B%22brand%22%3A%22Google%20Chrome%22%2C%22version%22%3A%5B%22146%22%5D%7D%5D%2C%22mobile%22%3A0%7D&dnt=0&os=Windows&osv=10&dt=2&lang=en&make=&model=",
+      "method": "GET"
+    },
+    {
+      "url": "https://g2.gumgum.com/hbid/imp?displaymanager=Prebid.js%20-%20gumgum&displaymanagerver=10.27.0&lt=1774052658228&to=240&id5Id=ID5*TDtbeRGUhB2IdvLTp47mguKat8f2y_LTp47mguKat8f__2m95RtaAQEBCmm95RsAlQW4OTBEj4H9-Mhqqdx82w&id5IdLinkType=null&aun=fantrax_desktop_leaderboard_atf&tdid=07e6969d-43f5-49d0-80a9-c8e1038d45e4&uid2=A4AAAC5GwXAjtsuSY5PGnHVrqlXCeNopi4Mn8U-ZEtMptPnwco3FXOBx2jSTFFBRpqSB0Eui3y3AubKKPPPM6tsten3S-SkjOT0S6goU6pMBkS5IeIPrU0YgDTSt27pfwiz-5l4bg31sFh90cbLRt1U9j8Cs-a7nzqwslhv1Gos4c72sgvk5WR7COFbvJhLw42Gmug-A0MUFDVWSqecHM6J1nw&gpid=%2F15184186%2Ffantrax_desktop_leaderboard_atf&pv=e6e6233c-6afb-43fa-aafd-173507ae87a1&maxw=970&maxh=90&si=343844&pi=3&bf=970x90%2C728x90%2C468x60%2C320x100%2C300x100%2C320x50%2C300x50&schain=1.0%2C1!freestar.com%2C1203%2C1%2C%2C%2C&tId=u2e46cef4-8dc9-4de8-8bba-328b0dda30d6&vw=1904&vh=933&sw=800&sh=600&pu=https%3A%2F%2Fwww.fantrax.com%2Ffantasy%2Fleague%2Fj3yl79c7man4av42%2Fplayers&tpl=https%3A%2F%2Fwww.fantrax.com%2Ffantasy%2Fleague%2Fj3yl79c7man4av42%2Fplayers&ce=false&dpr=1&jcsi=%7B%22t%22%3A0%2C%22rq%22%3A8%2C%22pbv%22%3A%2210.27.0%22%7D&ogu=https%3A%2F%2Fwww.fantrax.com%2F&ns=10240&ua=Mozilla%2F5.0%20(Windows%20NT%2010.0%3B%20Win64%3B%20x64)%20AppleWebKit%2F537.36%20(KHTML%2C%20like%20Gecko)%20HeadlessChrome%2F146.0.0.0%20Safari%2F537.36&sua=%7B%22source%22%3A1%2C%22platform%22%3A%7B%22brand%22%3A%22Windows%22%7D%2C%22browsers%22%3A%5B%7B%22brand%22%3A%22Chromium%22%2C%22version%22%3A%5B%22146%22%5D%7D%2C%7B%22brand%22%3A%22Not-A.Brand%22%2C%22version%22%3A%5B%2224%22%5D%7D%2C%7B%22brand%22%3A%22Google%20Chrome%22%2C%22version%22%3A%5B%22146%22%5D%7D%5D%2C%22mobile%22%3A0%7D&dnt=0&os=Windows&osv=10&dt=2&lang=en&make=&model=",
+      "method": "GET"
+    },
+    {
+      "url": "https://g2.gumgum.com/hbid/imp?displaymanager=Prebid.js%20-%20gumgum&displaymanagerver=10.27.0&lt=1774052658228&to=240&id5Id=ID5*TDtbeRGUhB2IdvLTp47mguKat8f2y_LTp47mguKat8f__2m95RtaAQEBCmm95RsAlQW4OTBEj4H9-Mhqqdx82w&id5IdLinkType=null&aun=fantrax_desktop_leaderboard_atf&tdid=07e6969d-43f5-49d0-80a9-c8e1038d45e4&uid2=A4AAAC5GwXAjtsuSY5PGnHVrqlXCeNopi4Mn8U-ZEtMptPnwco3FXOBx2jSTFFBRpqSB0Eui3y3AubKKPPPM6tsten3S-SkjOT0S6goU6pMBkS5IeIPrU0YgDTSt27pfwiz-5l4bg31sFh90cbLRt1U9j8Cs-a7nzqwslhv1Gos4c72sgvk5WR7COFbvJhLw42Gmug-A0MUFDVWSqecHM6J1nw&gpid=%2F15184186%2Ffantrax_desktop_leaderboard_atf&pv=e6e6233c-6afb-43fa-aafd-173507ae87a1&maxw=970&maxh=90&si=343845&pi=3&bf=970x90%2C728x90%2C468x60%2C320x100%2C300x100%2C320x50%2C300x50&schain=1.0%2C1!freestar.com%2C1203%2C1%2C%2C%2C&tId=u2e46cef4-8dc9-4de8-8bba-328b0dda30d6&vw=1904&vh=933&sw=800&sh=600&pu=https%3A%2F%2Fwww.fantrax.com%2Ffantasy%2Fleague%2Fj3yl79c7man4av42%2Fplayers&tpl=https%3A%2F%2Fwww.fantrax.com%2Ffantasy%2Fleague%2Fj3yl79c7man4av42%2Fplayers&ce=false&dpr=1&jcsi=%7B%22t%22%3A0%2C%22rq%22%3A8%2C%22pbv%22%3A%2210.27.0%22%7D&ogu=https%3A%2F%2Fwww.fantrax.com%2F&ns=10240&ua=Mozilla%2F5.0%20(Windows%20NT%2010.0%3B%20Win64%3B%20x64)%20AppleWebKit%2F537.36%20(KHTML%2C%20like%20Gecko)%20HeadlessChrome%2F146.0.0.0%20Safari%2F537.36&sua=%7B%22source%22%3A1%2C%22platform%22%3A%7B%22brand%22%3A%22Windows%22%7D%2C%22browsers%22%3A%5B%7B%22brand%22%3A%22Chromium%22%2C%22version%22%3A%5B%22146%22%5D%7D%2C%7B%22brand%22%3A%22Not-A.Brand%22%2C%22version%22%3A%5B%2224%22%5D%7D%2C%7B%22brand%22%3A%22Google%20Chrome%22%2C%22version%22%3A%5B%22146%22%5D%7D%5D%2C%22mobile%22%3A0%7D&dnt=0&os=Windows&osv=10&dt=2&lang=en&make=&model=",
+      "method": "GET"
+    },
+    {
+      "url": "https://g2.gumgum.com/hbid/imp?displaymanager=Prebid.js%20-%20gumgum&displaymanagerver=10.27.0&lt=1774052658228&to=240&id5Id=ID5*TDtbeRGUhB2IdvLTp47mguKat8f2y_LTp47mguKat8f__2m95RtaAQEBCmm95RsAlQW4OTBEj4H9-Mhqqdx82w&id5IdLinkType=null&aun=fantrax_desktop_leaderboard_atf&tdid=07e6969d-43f5-49d0-80a9-c8e1038d45e4&uid2=A4AAAC5GwXAjtsuSY5PGnHVrqlXCeNopi4Mn8U-ZEtMptPnwco3FXOBx2jSTFFBRpqSB0Eui3y3AubKKPPPM6tsten3S-SkjOT0S6goU6pMBkS5IeIPrU0YgDTSt27pfwiz-5l4bg31sFh90cbLRt1U9j8Cs-a7nzqwslhv1Gos4c72sgvk5WR7COFbvJhLw42Gmug-A0MUFDVWSqecHM6J1nw&gpid=%2F15184186%2Ffantrax_desktop_leaderboard_atf&pv=e6e6233c-6afb-43fa-aafd-173507ae87a1&maxw=970&maxh=90&si=343846&pi=3&bf=970x90%2C728x90%2C468x60%2C320x100%2C300x100%2C320x50%2C300x50&schain=1.0%2C1!freestar.com%2C1203%2C1%2C%2C%2C&tId=u2e46cef4-8dc9-4de8-8bba-328b0dda30d6&vw=1904&vh=933&sw=800&sh=600&pu=https%3A%2F%2Fwww.fantrax.com%2Ffantasy%2Fleague%2Fj3yl79c7man4av42%2Fplayers&tpl=https%3A%2F%2Fwww.fantrax.com%2Ffantasy%2Fleague%2Fj3yl79c7man4av42%2Fplayers&ce=false&dpr=1&jcsi=%7B%22t%22%3A0%2C%22rq%22%3A8%2C%22pbv%22%3A%2210.27.0%22%7D&ogu=https%3A%2F%2Fwww.fantrax.com%2F&ns=10240&ua=Mozilla%2F5.0%20(Windows%20NT%2010.0%3B%20Win64%3B%20x64)%20AppleWebKit%2F537.36%20(KHTML%2C%20like%20Gecko)%20HeadlessChrome%2F146.0.0.0%20Safari%2F537.36&sua=%7B%22source%22%3A1%2C%22platform%22%3A%7B%22brand%22%3A%22Windows%22%7D%2C%22browsers%22%3A%5B%7B%22brand%22%3A%22Chromium%22%2C%22version%22%3A%5B%22146%22%5D%7D%2C%7B%22brand%22%3A%22Not-A.Brand%22%2C%22version%22%3A%5B%2224%22%5D%7D%2C%7B%22brand%22%3A%22Google%20Chrome%22%2C%22version%22%3A%5B%22146%22%5D%7D%5D%2C%22mobile%22%3A0%7D&dnt=0&os=Windows&osv=10&dt=2&lang=en&make=&model=",
+      "method": "GET"
+    },
+    {
+      "url": "https://ads.yieldmo.com/exchange/prebid?pbav=10.27.0&p=%5B%7B%22placement_id%22%3A%22fantrax_desktop_leaderboard_atf%22%2C%22callback_id%22%3A%227fb1ede6-276e-4cb2-b183-de5df6eccb87%22%2C%22sizes%22%3A%5B%5B970%2C90%5D%2C%5B728%2C90%5D%2C%5B468%2C60%5D%2C%5B320%2C100%5D%2C%5B300%2C100%5D%2C%5B320%2C50%5D%2C%5B300%2C50%5D%5D%2C%22ym_placement_id%22%3A%222662464007037722661%22%2C%22gpid%22%3A%22%2F15184186%2Ffantrax_desktop_leaderboard_atf%22%2C%22tid%22%3A%22u471a2bd3-9e86-4add-bee4-7d98ecd2e112%22%2C%22auctionId%22%3A%22uf2f047b8-c114-4976-b06b-260d83a456dc%22%7D%5D&page_url=https%3A%2F%2Fwww.fantrax.com%2Ffantasy%2Fleague%2Fj3yl79c7man4av42%2Fplayers&bust=1774052658229&dnt=false&description=Fantrax%20offers%20the%20most%20customizable%20fantasy%20league%20management%20service%20in%20the%20industry%2C%20with%20free%20offerings%20in%20baseball%2C%20football%2C%20basketball%2C%20hockey%2C%20soccer%2C%20golf%2C%20and%20racing.%20Fantrax%20Commissioner%20is%20the%20industry%20leader%20when%20it%20comes%20to%20dynasty%20leagues%2C%20but%20our%20redraft%20and%20keeper%20leagues%20also%20beat%20the%20competition.%20Switch%20your%20leagues%20over%20today!&tmax=3000&userConsent=%7B%22gdprApplies%22%3A%22%22%2C%22cmp%22%3A%22%22%2C%22gpp%22%3A%22%22%2C%22gpp_sid%22%3A%5B%5D%7D&us_privacy=&pr=&title=League%20Players%20-%20Fantrax&w=1904&h=933&schain=%7B%22ver%22%3A%221.0%22%2C%22complete%22%3A1%2C%22nodes%22%3A%5B%7B%22asi%22%3A%22freestar.com%22%2C%22sid%22%3A%221203%22%2C%22hp%22%3A1%7D%5D%7D&eids=%5B%7B%22source%22%3A%22amxdt.net%22%2C%22uids%22%3A%5B%7B%22id%22%3A%22amx*3*f21488f4-69b5-4aeb-87a1-b3705ad19de1*e382bc9fe0e377e2f0e867923fa9589d%22%2C%22atype%22%3A1%7D%5D%7D%2C%7B%22source%22%3A%22criteo.com%22%2C%22uids%22%3A%5B%7B%22id%22%3A%226U-n_V9LeVBKMjJMbUlzaW9aZWlWdiUyRmw5SVJCemZzb0xlZDUlMkJobHFSeUs2SHBwMUo0N1ZRcCUyRkpZSURjVzFiJTJGWmRLVzBLMTVRS0NPcERUQTdraDZ6MTBacGF0MkpYVHczZWs0VERkYm0wUDhsJTJGenMlM0Q%22%2C%22atype%22%3A1%7D%5D%7D%2C%7B%22source%22%3A%22neustar.biz%22%2C%22uids%22%3A%5B%7B%22id%22%3A%22E1%3AtUM2dCQRed0Uf4WIJMzsQ5hpHkK60uvJ8zP79FnrOZRBvdca924yq6_72FqW5cEY0PhCAIuwSLttxUMqx1O8KAQFbKs_9BjyzPELrxQK8Js%22%2C%22atype%22%3A1%2C%22ext%22%3A%7B%22rtiPartner%22%3A%22fabrickId%22%7D%7D%5D%7D%2C%7B%22source%22%3A%22audigent.com%22%2C%22uids%22%3A%5B%7B%22id%22%3A%220001yum0ea8bil6jh66kfg7bhbgbc76bg9bka86g9labackkc2jl%22%2C%22atype%22%3A1%7D%5D%7D%2C%7B%22source%22%3A%22id5-sync.com%22%2C%22uids%22%3A%5B%7B%22id%22%3A%22ID5*TDtbeRGUhB2IdvLTp47mguKat8f2y_LTp47mguKat8f__2m95RtaAQEBCmm95RsAlQW4OTBEj4H9-Mhqqdx82w%22%2C%22atype%22%3A1%2C%22ext%22%3A%7B%22linkType%22%3A0%2C%22pba%22%3A%22qdkDLpErAPvRtUnzGYRQszWOgJT8KYzmERiXpOW1JbJq2gHHq0XJrGJH8spIdIjtynptqh6Cc1AN5C6G8%2FaCwQ%3D%3D%22%7D%7D%5D%7D%2C%7B%22source%22%3A%22pubcid.org%22%2C%22uids%22%3A%5B%7B%22id%22%3A%2251d24762-8492-4b68-af7c-ebe6e5f1dda6%22%2C%22atype%22%3A1%7D%5D%7D%2C%7B%22source%22%3A%22adserver.org%22%2C%22uids%22%3A%5B%7B%22id%22%3A%2207e6969d-43f5-49d0-80a9-c8e1038d45e4%22%2C%22atype%22%3A1%2C%22ext%22%3A%7B%22rtiPartner%22%3A%22TDID%22%7D%7D%5D%2C%22inserter%22%3A%22adserver.org%22%2C%22matcher%22%3A%22adserver.org%22%2C%22mm%22%3A4%7D%2C%7B%22inserter%22%3A%22optable.co%22%2C%22matcher%22%3A%22truedata.co%22%2C%22mm%22%3A5%2C%22source%22%3A%22criteo-hemapi.com%22%2C%22uids%22%3A%5B%7B%22id%22%3A%22kRgFZV83bGF6VXhWelBxMFJaZVpidm14RlBHUmhZbTZFMCUyQiUyRkd2ZXhOZ29yTG8wa0VPbVQxaHI4d00yZmMlMkJQJTJCRzlTOXpmcVZWQWZFJTJGNUNiZFlvcXBvSUtBNXlaT1E0U3oxZnNYak1ubUZhV1RZNlElM0Q%22%2C%22atype%22%3A3%2C%22ext%22%3A%7B%22stype%22%3A%22cto_bundle_hem_api%22%7D%7D%5D%7D%2C%7B%22inserter%22%3A%22optable.co%22%2C%22matcher%22%3A%22truedata.co%22%2C%22mm%22%3A5%2C%22source%22%3A%22yahoo.com%22%2C%22uids%22%3A%5B%7B%22id%22%3A%22VJD5WwVVWUYBd6in03cMG4OZ-bN8bHBXzvqmKw-6YqekKNAtATiatXHyMPPLSjEkMxRkbvf9ImHNGksynyefyg%22%2C%22atype%22%3A3%7D%5D%7D%2C%7B%22inserter%22%3A%22optable.co%22%2C%22matcher%22%3A%22truedata.co%22%2C%22mm%22%3A5%2C%22source%22%3A%22uidapi.com%22%2C%22uids%22%3A%5B%7B%22id%22%3A%22A4AAAC5GwXAjtsuSY5PGnHVrqlXCeNopi4Mn8U-ZEtMptPnwco3FXOBx2jSTFFBRpqSB0Eui3y3AubKKPPPM6tsten3S-SkjOT0S6goU6pMBkS5IeIPrU0YgDTSt27pfwiz-5l4bg31sFh90cbLRt1U9j8Cs-a7nzqwslhv1Gos4c72sgvk5WR7COFbvJhLw42Gmug-A0MUFDVWSqecHM6J1nw%22%2C%22atype%22%3A3%2C%22ext%22%3A%7B%22rtiPartner%22%3A%22UID2%22%7D%7D%5D%7D%5D",
+      "method": "GET"
+    },
+    {
+      "url": "https://fastlane.rubiconproject.com/a/api/fastlane.json?account_id=16924&site_id=500600&zone_id=2983354&size_id=2&alt_size_ids=1%2C19%2C43%2C44%2C55%2C117&rp_schain=1.0,1!freestar.com,1203,1,,,&eid_amxdt.net=amx*3*f21488f4-69b5-4aeb-87a1-b3705ad19de1*e382bc9fe0e377e2f0e867923fa9589d%5E1%5E%5E%5E%5E%5E&eid_criteo.com=6U-n_V9LeVBKMjJMbUlzaW9aZWlWdiUyRmw5SVJCemZzb0xlZDUlMkJobHFSeUs2SHBwMUo0N1ZRcCUyRkpZSURjVzFiJTJGWmRLVzBLMTVRS0NPcERUQTdraDZ6MTBacGF0MkpYVHczZWs0VERkYm0wUDhsJTJGenMlM0Q%5E1%5E%5E%5E%5E%5E&eid_neustar.biz=E1%3AtUM2dCQRed0Uf4WIJMzsQ5hpHkK60uvJ8zP79FnrOZRBvdca924yq6_72FqW5cEY0PhCAIuwSLttxUMqx1O8KAQFbKs_9BjyzPELrxQK8Js%5E1%5E%5E%5E%5E%5EfabrickId&eid_audigent.com=0001yum0ea8bil6jh66kfg7bhbgbc76bg9bka86g9labackkc2jl%5E1%5E%5E%5E%5E%5E&eid_id5-sync.com=ID5*TDtbeRGUhB2IdvLTp47mguKat8f2y_LTp47mguKat8f__2m95RtaAQEBCmm95RsAlQW4OTBEj4H9-Mhqqdx82w%5E1%5E%5E%5E%5E%5E&eid_pubcid.org=51d24762-8492-4b68-af7c-ebe6e5f1dda6%5E1%5E%5E%5E%5E%5E&eid_adserver.org=07e6969d-43f5-49d0-80a9-c8e1038d45e4%5E1%5E%5Eadserver.org%5Eadserver.org%5E4%5ETDID&eid_criteo-hemapi.com=kRgFZV83bGF6VXhWelBxMFJaZVpidm14RlBHUmhZbTZFMCUyQiUyRkd2ZXhOZ29yTG8wa0VPbVQxaHI4d00yZmMlMkJQJTJCRzlTOXpmcVZWQWZFJTJGNUNiZFlvcXBvSUtBNXlaT1E0U3oxZnNYak1ubUZhV1RZNlElM0Q%5E3%5E%5Eoptable.co%5Etruedata.co%5E5%5E&eid_yahoo.com=VJD5WwVVWUYBd6in03cMG4OZ-bN8bHBXzvqmKw-6YqekKNAtATiatXHyMPPLSjEkMxRkbvf9ImHNGksynyefyg%5E3%5E%5Eoptable.co%5Etruedata.co%5E5%5E&eid_uidapi.com=A4AAAC5GwXAjtsuSY5PGnHVrqlXCeNopi4Mn8U-ZEtMptPnwco3FXOBx2jSTFFBRpqSB0Eui3y3AubKKPPPM6tsten3S-SkjOT0S6goU6pMBkS5IeIPrU0YgDTSt27pfwiz-5l4bg31sFh90cbLRt1U9j8Cs-a7nzqwslhv1Gos4c72sgvk5WR7COFbvJhLw42Gmug-A0MUFDVWSqecHM6J1nw%5E3%5E%5Eoptable.co%5Etruedata.co%5E5%5EUID2&rf=https%3A%2F%2Fwww.fantrax.com%2Ffantasy%2Fleague%2Fj3yl79c7man4av42%2Fplayers&tg_v.id=e10eafc9-8649-4d08-a0dc-71574e888167&tg_i.domain=fantrax.com&tg_i.page=https%3A%2F%2Fwww.fantrax.com%2Ffantasy%2Fleague%2Fj3yl79c7man4av42%2Fplayers&tg_i.name=fantrax-com&tg_i.cat=IAB17&tg_i.sectioncat=IAB17&tg_i.pagecat=IAB17&tg_i.mobile=0&tg_i.fs_optimized=false&tg_i.fs_site=3129&tg_i.documentLang=en&tg_i.fs_ad_product=display&tg_i.gameraPlacementId=MS0zLTE&tg_i.gameraId=gamera_22%2Cgamera_24%2Cgamera_104%2Cgamera_16%2Cgamera_17%2Cgamera_11%2Cgamera_25%2Cgamera_105%2Cgamera_39%2Cgamera_14&tg_i.dfp_ad_unit_code=%2F15184186%2Ffantrax_desktop_leaderboard_atf&tk_flint=pbjs_lite_v10.27.0&x_source.tid=u55319b6e-73ce-403d-bb3a-4d6a66baeb66&l_pb_bid_id=f4918ff3-8a76-4069-8fe7-73cf93ba4836&p_screen_res=800x600&rp_secure=1&x_imp.ext.tid=u5b4b77ae-36aa-4685-b7b5-aec3044f3d55&p_site.mobile=0&p_gpid=%2F15184186%2Ffantrax_desktop_leaderboard_atf&m_ch_ua=%22Chromium%22%7Cv%3D%22146%22%2C%22Not-A.Brand%22%7Cv%3D%2224%22%2C%22Google%20Chrome%22%7Cv%3D%22146%22&m_ch_mobile=%3F0&m_ch_platform=Windows&slots=1&rand=0.3603341709842285",
+      "method": "GET"
+    },
+    {
+      "url": "https://grid-bidder.criteo.com/openrtb_2_5/pbjs/auction/request?profileId=207&av=37&wv=10.27.0&cb=57588628611&lsavail=1&bundle=ESvtFF92dzFpS0tGJTJCeUIwbHF4b2ViR0pOcjJ4T2FNZjNDNE5YbUgxcktUaW9nZkFCUFdQbldxMTVxSW5pREFuYTJoTGp6Rmk4N25FV1llMXlRWkd2cUFwUVVtY0I5aHRWWGVIZjIzZG1jUkdyblIzOG9hWSUyQkZUTXVqelNhNlF5WnQwcTE3MnUwWHFwQWo4OVZiRmglMkJ6ZHNJNmclM0QlM0Q&networkId=6097&gzip=1",
+      "method": "POST",
+      "body_raw": "\u001f\u008b\b\u0000\u0000\u0000\u0000\u0000\u0000\n\u00adYYo\u00e3:\u00b2\u00fe+\u0081\u009ef\u000e,\u00b7d\u00cb\u00b6\u009c\u00c1<d_\u009d\u00ce\u00e6l\u0007\u008d\u00a0D\u0096$\u00c6\u0014\u00a9\u0090\u0094m\u00b9\u0091\u00ff>\u00a0,\u00c9Nw\u00fa^\\\u00dc\u0081\u001fLq\u00ad\u00e5\u00ab\u008fE\u00f2\u00a7\u00c3\u00b2\u00dc\u00d9\u00fd\u00fb\u00a7\u0083K\u00e3\u00ec\u00fet(\u0018\u00b0\u00ff\u00b1~\u0005\u00fa\u009a+I\u000bb\u009c]\u00872\u009ds(\u009dN\u00dd\"s\u00c32\u00b6\u0002\u00c3\u00a4pv\u001d\u00a7\u00e3$\u0090\u00a1\u0082k\u000e\u00043\u0014\u00e6\u008c:\u00bb\u00ce\u00e4\u00ce[]\u00de\u001f\u00b5\u00ad\u00b6\u00f2\u00ef\u00ba\u00fc\u00da\u00eb\u00b5\u00f5\u00af\u00bd`S\u00f6\u00bd\u00ed\u008f\u00e1Vy\u00b4U\u00f6\u00b7\u0006\u000f\u00b6\u0007o}\u00f4\u00c7[\r\u0081\u00f3\u00a3\u00e3\u0000\u00d5\u00a8\u00e6\u00a8\u00ac\u008a\u00022tvm\u00bbS5pi\u0015\u00fd\u00e6\u000f\u00fc0\u00f0\u00c3\u00e1\u00b7\u0018\u0084Q\u00b0|\u00a5\u00a8gF\u00e6\u00af\u001c\u0081\u00a2\u008a$(\u00fa\n&v>>:N\u00923\u00fa\u007f\u001a\u00d4qL5\u00a2\u0080\u0081O\u00bdx0v\u00fb\u0083A\u00e0\u0006\u00a1\u00ef\u00b9@p\u00e0\u000e1\u00ec\u0087\u0083h\u00dc\u001b\u00fb\u00e1\u00ba\u00f7\u009d,\u0014\u00b1\u0092\u00e6\u00d1\u009bv:N\u00c4(]k\u00b0\u0092\u0002\u00edl\u00a2\u00e0\u00dcJc \u00a9&\u00ff\u00df\u0085\u0088\u00c0\u0018\u00e5\u00ec\u00fe\u00edw\u00fa\u009dA'\u00ec\u008c;\u00be\u00d7\u00f1\u0083\u001f\u001d\u00a7\u009a\u0000\u00868\u001a\u00f4h\u00e8\u0006>\u00fan0\u00c6\u0081;\u00a6a\u00df\u00f5\u0007\u00a4\u00d7\u00f3=\u00828\u001eW\u00b3\b\u00b1\u0096\u00c4\u00c8<V\u0095=\u00fd\u008e\u0013K\u0095\u0081\u00a9P\u00b5pv\u00c7#\u00af\u00e3\u00a4\u00ce\u00ee\u00d8\u00fb\u00e8T\u0015\u00a3^\u00f8\u00b9\"\u0018\u00ae+\u0086ME\u00bf\u00b7\u001e\u00e2{m\u008d\u00f7[M\u00ddg\u00f0k\u0097\u0081\u00f7\u00f1\u00e3\u00a3\u00e3h$\u0085\u00b2\u00f2|\u00fc\u00e88\u009a\u0019\u00ac\u00d0-3`bc\u00a1.\u0091\u00d6\u00f9y\u0011q\u00a6\u00d3\u00b5*\u007f\u00e8S\u00c7G\u00ac_\u0089\u00ccr\u0010\u00a5\u00b3\u00eb\u00f7\u00bc\u00feGm1\u00df\u00f3\u0006^\u00df\u00f9\u00e889$\u00d6Y\u00a91\u00b9\u00de\u00fd\u00f6m\u00b1Xt\u00b7f\u00aa\u0000\u0002\u00ba\u00fc"
+    },
+    {
+      "url": "https://pl.primis.tech/live/liveView.php?hash=ozcmPTEznXRiPTEzqzyxX2V2ZW50PTI1JaNypaZypyRcoWU9MTp3NDA1MwYmNCZ2nWRspGkurWVlVzVlPTMhMS4jJaM9MTE2MDI0JaN0YT0jJat9MmAjJax9MTY5JaZcZF9jYXNmRG9gYWyhPXq3ql5zYW50pzF4LzNioSZmqWJJZD13q3phZzFhqHJurC5wo20zZGVvqWqJozZipz1uqGyiow1BQyQyMwAyMxYyMwBGTFIyMwAyMxYyMwAlJTIjJTJGJTIjrDAhNDAznXNBpHA9MCZmZGg2PSZjoGF5oGymqEyxPTE1MwE2JzN1ZGx9pGyjLU1UpG1Mq1x0THqFM01DNDNPQSUmRCUmRCZ1p2VlVUE9TW96nWkfYSUlRwUhMCUlMCUlOFqcozRiq3MyMwBOVCUlMDEjLwAyM0IyMwBXnW42NCUmQvUlMHt2NCUlOSUlMEFjpGkyV2VvS2y0JTJGNTM3LwM2JTIjJTI4S0uUTUjyMxMyMwBfnWgyJTIjR2Vwn28yMwxyMwBIZWFxoGVmp0Nbpz9gZSUlRwE0Nv4jLwAhMCUlMFNuZzFlnSUlRwUmNl4mNvZwp3V1nWQ9NwyvZGU1MWEmYmI1YSZwo250ZW50RzyfZUyxPTAzoWVxnWFQoGF5TGymqEyxPTAzoWVxnWFMnXN0SWQ9MCZxqXI9ODAjJzqxpHI9MCZaZHBlQ29hp2VhqD0znXNXZVBup3NHZHBlPTEzY2NjYT0jJzNwpGFDo25mZW50PSZwYaVmqGVlPTE3NmQjNTI2NTt3MmpzqWyxPVNyn2yhZG9TUGkurWVlNwyvZGU1MWE0ZwI4YlZjqWJVpzj9nHR0pHMyM0EyMxYyMxZ3q3phZzFhqHJurC5wo20yMxZzYW50YXN5JTJGoGVuZ3VyJTJGnwN5oDp5YmqgYW40YXY0MvUlRaBfYXyypaMzZzkiYXRTqGF0qXM9ZzFfp2UzZWyxp3A9nWykJaB4nWQ9YwQlZTQlNDA4NTAkZDRwODU5YzY0ZTEmZwVuMGQ2ZTx=",
+      "method": "GET"
+    },
+    {
+      "url": "https://pl.primis.tech/live/liveView.php?hash=ozcmPTEznXRiPTEzqzyxX2V2ZW50PTQlJaNypaZypyRcoWU9MTp3NDA1MwYmNCZ2nWRspGkurWVlVzVlPTMhMS4jJaM9MTE2MDI0JaN0YT0jJat9MmAjJax9MTY5JaZcZF9jYXNmRG9gYWyhPXq3ql5zYW50pzF4LzNioSZmqWJJZD13q3phZzFhqHJurC5wo20zZGVvqWqJozZipz1uqGyiow1BQyQyMwAyMxYyMwBGTFIyMwAyMxYyMwAlJTIjJTJGJTIjrDAhNDAznXNBpHA9MCZmZGg2PSZjoGF5oGymqEyxPTE1MwE2JzN1ZGx9pGyjLU1UpG1Mq1x0THqFM01DNDNPQSUmRCUmRCZ1p2VlVUE9TW96nWkfYSUlRwUhMCUlMCUlOFqcozRiq3MyMwBOVCUlMDEjLwAyM0IyMwBXnW42NCUmQvUlMHt2NCUlOSUlMEFjpGkyV2VvS2y0JTJGNTM3LwM2JTIjJTI4S0uUTUjyMxMyMwBfnWgyJTIjR2Vwn28yMwxyMwBIZWFxoGVmp0Nbpz9gZSUlRwE0Nv4jLwAhMCUlMFNuZzFlnSUlRwUmNl4mNvZwp3V1nWQ9NwyvZGU1MWEmYmI1YSZwo250ZW50RzyfZUyxPTAzoWVxnWFQoGF5TGymqEyxPTAzoWVxnWFMnXN0SWQ9MCZxqXI9ODAjJzqxpHI9MCZaZHBlQ29hp2VhqD0znXNXZVBup3NHZHBlPTEzY2NjYT0jJzNwpGFDo25mZW50PSZwYaVmqGVlPTE3NmQjNTI2NTt3NTpzqWyxPVNyn2yhZG9TUGkurWVlNwyvZGU1MWE0ZwI4YlZjqWJVpzj9nHR0pHMyM0EyMxYyMxZ3q3phZzFhqHJurC5wo20yMxZzYW50YXN5JTJGoGVuZ3VyJTJGnwN5oDp5YmqgYW40YXY0MvUlRaBfYXyypaMzZzkiYXRTqGF0qXM9ZzFfp2UzZWyxp3A9nWykJaB4nWQ9MTByNDx2MWQmMzY5N2Q0OGI3NWQ1NTplMGImZDJuYzI=",
+      "method": "GET"
+    },
+    {
+      "url": "https://api.floors.dev/sgw/v1/floors?d=fantrax.com&t=desktop&k=1&r=2&c=US",
+      "method": "GET"
+    },
+    {
+      "url": "https://gum.criteo.com/sid/json?origin=prebid&topUrl=https%3A%2F%2Fwww.fantrax.com%2F&domain=www.fantrax.com&bundle=ESvtFF92dzFpS0tGJTJCeUIwbHF4b2ViR0pOcjJ4T2FNZjNDNE5YbUgxcktUaW9nZkFCUFdQbldxMTVxSW5pREFuYTJoTGp6Rmk4N25FV1llMXlRWkd2cUFwUVVtY0I5aHRWWGVIZjIzZG1jUkdyblIzOG9hWSUyQkZUTXVqelNhNlF5WnQwcTE3MnUwWHFwQWo4OVZiRmglMkJ6ZHNJNmclM0QlM0Q&cw=1&lsw=1",
+      "method": "GET"
+    },
+    {
+      "url": "https://pl.primis.tech/live/liveView.php?hash=ozcmPTEznXRiPTEzqzyxX2V2ZW50PTYzp2VlqzVlVGygZT0kNmp0MDUlNwM0JaZcZF9joGF5ZXJWZXI9Ml4kLwAzpm01ODA1NlZmqGE9MTplNwA4MwQzrD0mMDAzrT0kNwxzoXN0YT0kNmI2MDA0OCZ2nWRsqzFmqFR5pGU9MlZ2nWRsqzyyq2FvnWkcqHyTqGF0ZT0kJaZcZF9jYXNmRG9gYWyhPXq3ql5zYW50pzF4LzNioSZmqWJJZD13q3phZzFhqHJurC5wo20zZGVvqWqJozZipz1uqGyiow1BQyQyMwAyMxYyMwBGTFIyMwAyMxYyMwAlJTIjJTJGJTIjrDAhNDAznXNBpHA9MCZwqWRcPXBcpC1NVHBgTHqZNEk3RTNNQmQmT0EyM0QyM0QzqXNypyVBPU1irzyfoGEyMxY1LwAyMwAyMwuXnW5xo3qmJTIjTyQyMwAkMC4jJTNCJTIjV2yhNwQyM0IyMwB4NwQyMwxyMwBBpHBfZVqyYxgcqCUlRwUmNl4mNvUlMCUlOEgIVE1MJTJDJTIjoGyeZSUlMEqyY2giJTI5JTIjSGVuZGkyp3NDnHJioWUyMxYkNDYhMC4jLwAyMwBTYWZupzxyMxY1MmphMmYzY3N1qWyxPTY5YzRyNTFuM2MlNWEzpaZhPSR7VyBsUyZOX01BQ1JPsSZuqHRyoXB0TXVfqGyjoGyypw0lMCZwo250ZW50RzyfZUyxPTAzoWVxnWFQoGF5TGymqEyxPTAzoWVxnWFMnXN0SWQ9MCZjoGFwZW1yoaRTqHJyYW1UrXByPTMzp3NjX2y1pm0jJzqxpHI9MCZaZHBlQ29hp2VhqD0znXNXZVBup3NHZHBlPTEzY2NjYT0jJzNwpGFDo25mZW50PSZwYaVmqGVlPTE3NmQjNTI2NwElOTQzqWyxPVNyn2yhZG9TUGkurWVlNwyvZGU1MWE0ZwI4YlZjqWJVpzj9nHR0pHMyM0EyMxYyMxZ3q3phZzFhqHJurC5wo20yMxZzYW50YXN5JTJGoGVuZ3VyJTJGnwN5oDp5YmqgYW40YXY0MvUlRaBfYXyypaMzZzkiYXRTqGF0qXM9ZzFfp2UzZWyxp3A9nWykJaB4nWQ9ZGM0MDZyNwZxOTQkY2U1Ymt5ZWNwMGI1NDMjYmA2ZzU=",
+      "method": "GET"
+    },
+    {
+      "url": "https://pl.primis.tech/live/liveView.php?hash=ozcmPTEznXRiPTEzqzyxX2V2ZW50PTYzp2VlqzVlVGygZT0kNmp0MDUlNwM0JaZcZF9joGF5ZXJWZXI9Ml4kLwAzpm01ODA1NlZmqGE9MTplNwI3NDpzrD0mMDAzrT0kNwxzoXN0YT0kNmI2MDA0OCZ2nWRsqzFmqFR5pGU9MlZ2nWRsqzyyq2FvnWkcqHyTqGF0ZT0kJaZcZF9jYXNmRG9gYWyhPXq3ql5zYW50pzF4LzNioSZmqWJJZD13q3phZzFhqHJurC5wo20zZGVvqWqJozZipz1uqGyiow1BQyQyMwAyMxYyMwBGTFIyMwAyMxYyMwAlJTIjJTJGJTIjrDAhNDAznXNBpHA9MCZwqWRcPXBcpC1NVHBgTHqZNEk3RTNNQmQmT0EyM0QyM0QzqXNypyVBPU1irzyfoGEyMxY1LwAyMwAyMwuXnW5xo3qmJTIjTyQyMwAkMC4jJTNCJTIjV2yhNwQyM0IyMwB4NwQyMwxyMwBBpHBfZVqyYxgcqCUlRwUmNl4mNvUlMCUlOEgIVE1MJTJDJTIjoGyeZSUlMEqyY2giJTI5JTIjSGVuZGkyp3NDnHJioWUyMxYkNDYhMC4jLwAyMwBTYWZupzxyMxY1MmphMmYzY3N1qWyxPTY5YzRyNTFuM2MlNWEzpaZhPSR7VyBsUyZOX01BQ1JPsSZuqHRyoXB0TXVfqGyjoGyypw0lMCZwo250ZW50RzyfZUyxPTAzoWVxnWFQoGF5TGymqEyxPTAzoWVxnWFMnXN0SWQ9MCZjoGFwZW1yoaRTqHJyYW1UrXByPTMzZ2Rjpw0jJzqxpHJDo25mZW50PSZcp1qyUGFmp0qxpHI9MSZwY3BuPTAzY2NjYUNioaNyoaQ9JzNvqXN0ZXI9MTp3NDA1MwY2MTI5NSZ1nWQ9U2VenW5xo1NQoGF5ZXI2OWJxZTUkYTRzMwuwJaB1YyVloD1bqHRjplUmQSUlRvUlRaq3ql5zYW50pzF4LzNioSUlRzZuoaRup3xyMxZfZWFaqWUyMxZdM3yfNmywN21uowRuqwQlJTJGpGkurWVlplZzoG9uqFN0YXR1pm1zYWkmZSZynWRmpD1cnXEzpHucZD01NGZwZwA2YTRuZGU2NmNzMDIkZWQ0OWUkOTxmMWVuNA==",
+      "method": "GET"
+    }
+  ],
+  "fantrax_new_requests": [
+    {
+      "url": "https://g2.gumgum.com/hbid/imp?displaymanager=Prebid.js%20-%20gumgum&displaymanagerver=10.27.0&lt=1774052658144&to=240&id5Id=ID5*TDtbeRGUhB2IdvLTp47mguKat8f2y_LTp47mguKat8f__2m95RtaAQEBCmm95RsAlQW4OTBEj4H9-Mhqqdx82w&id5IdLinkType=null&aun=fantrax_desktop_med_rect_atf&tdid=07e6969d-43f5-49d0-80a9-c8e1038d45e4&uid2=A4AAAC5GwXAjtsuSY5PGnHVrqlXCeNopi4Mn8U-ZEtMptPnwco3FXOBx2jSTFFBRpqSB0Eui3y3AubKKPPPM6tsten3S-SkjOT0S6goU6pMBkS5IeIPrU0YgDTSt27pfwiz-5l4bg31sFh90cbLRt1U9j8Cs-a7nzqwslhv1Gos4c72sgvk5WR7COFbvJhLw42Gmug-A0MUFDVWSqecHM6J1nw&gpid=%2F15184186%2Ffantrax_desktop_med_rect_atf&pv=e6e6233c-6afb-43fa-aafd-173507ae87a1&maxw=300&maxh=600&si=343839&pi=3&bf=300x600%2C160x600%2C120x600%2C300x250%2C300x100%2C300x50&schain=1.0%2C1!freestar.com%2C1203%2C1%2C%2C%2C&tId=uf0d5dcb9-6e47-4cfb-88e0-f571a174b807&vw=1904&vh=933&sw=800&sh=600&pu=https%3A%2F%2Fwww.fantrax.com%2Ffantasy%2Fleague%2Fj3yl79c7man4av42%2Fplayers&tpl=https%3A%2F%2Fwww.fantrax.com%2Ffantasy%2Fleague%2Fj3yl79c7man4av42%2Fplayers&ce=false&dpr=1&jcsi=%7B%22t%22%3A0%2C%22rq%22%3A8%2C%22pbv%22%3A%2210.27.0%22%7D&ogu=https%3A%2F%2Fwww.fantrax.com%2F&ns=10240&ua=Mozilla%2F5.0%20(Windows%20NT%2010.0%3B%20Win64%3B%20x64)%20AppleWebKit%2F537.36%20(KHTML%2C%20like%20Gecko)%20HeadlessChrome%2F146.0.0.0%20Safari%2F537.36&sua=%7B%22source%22%3A1%2C%22platform%22%3A%7B%22brand%22%3A%22Windows%22%7D%2C%22browsers%22%3A%5B%7B%22brand%22%3A%22Chromium%22%2C%22version%22%3A%5B%22146%22%5D%7D%2C%7B%22brand%22%3A%22Not-A.Brand%22%2C%22version%22%3A%5B%2224%22%5D%7D%2C%7B%22brand%22%3A%22Google%20Chrome%22%2C%22version%22%3A%5B%22146%22%5D%7D%5D%2C%22mobile%22%3A0%7D&dnt=0&os=Windows&osv=10&dt=2&lang=en&make=&model=",
+      "method": "GET"
+    },
+    {
+      "url": "https://g2.gumgum.com/hbid/imp?displaymanager=Prebid.js%20-%20gumgum&displaymanagerver=10.27.0&lt=1774052658144&to=240&id5Id=ID5*TDtbeRGUhB2IdvLTp47mguKat8f2y_LTp47mguKat8f__2m95RtaAQEBCmm95RsAlQW4OTBEj4H9-Mhqqdx82w&id5IdLinkType=null&aun=fantrax_desktop_med_rect_atf&tdid=07e6969d-43f5-49d0-80a9-c8e1038d45e4&uid2=A4AAAC5GwXAjtsuSY5PGnHVrqlXCeNopi4Mn8U-ZEtMptPnwco3FXOBx2jSTFFBRpqSB0Eui3y3AubKKPPPM6tsten3S-SkjOT0S6goU6pMBkS5IeIPrU0YgDTSt27pfwiz-5l4bg31sFh90cbLRt1U9j8Cs-a7nzqwslhv1Gos4c72sgvk5WR7COFbvJhLw42Gmug-A0MUFDVWSqecHM6J1nw&gpid=%2F15184186%2Ffantrax_desktop_med_rect_atf&pv=e6e6233c-6afb-43fa-aafd-173507ae87a1&maxw=300&maxh=600&si=343838&pi=3&bf=300x600%2C160x600%2C120x600%2C300x250%2C300x100%2C300x50&schain=1.0%2C1!freestar.com%2C1203%2C1%2C%2C%2C&tId=uf0d5dcb9-6e47-4cfb-88e0-f571a174b807&vw=1904&vh=933&sw=800&sh=600&pu=https%3A%2F%2Fwww.fantrax.com%2Ffantasy%2Fleague%2Fj3yl79c7man4av42%2Fplayers&tpl=https%3A%2F%2Fwww.fantrax.com%2Ffantasy%2Fleague%2Fj3yl79c7man4av42%2Fplayers&ce=false&dpr=1&jcsi=%7B%22t%22%3A0%2C%22rq%22%3A8%2C%22pbv%22%3A%2210.27.0%22%7D&ogu=https%3A%2F%2Fwww.fantrax.com%2F&ns=10240&ua=Mozilla%2F5.0%20(Windows%20NT%2010.0%3B%20Win64%3B%20x64)%20AppleWebKit%2F537.36%20(KHTML%2C%20like%20Gecko)%20HeadlessChrome%2F146.0.0.0%20Safari%2F537.36&sua=%7B%22source%22%3A1%2C%22platform%22%3A%7B%22brand%22%3A%22Windows%22%7D%2C%22browsers%22%3A%5B%7B%22brand%22%3A%22Chromium%22%2C%22version%22%3A%5B%22146%22%5D%7D%2C%7B%22brand%22%3A%22Not-A.Brand%22%2C%22version%22%3A%5B%2224%22%5D%7D%2C%7B%22brand%22%3A%22Google%20Chrome%22%2C%22version%22%3A%5B%22146%22%5D%7D%5D%2C%22mobile%22%3A0%7D&dnt=0&os=Windows&osv=10&dt=2&lang=en&make=&model=",
+      "method": "GET"
+    },
+    {
+      "url": "https://g2.gumgum.com/hbid/imp?displaymanager=Prebid.js%20-%20gumgum&displaymanagerver=10.27.0&lt=1774052658144&to=240&id5Id=ID5*TDtbeRGUhB2IdvLTp47mguKat8f2y_LTp47mguKat8f__2m95RtaAQEBCmm95RsAlQW4OTBEj4H9-Mhqqdx82w&id5IdLinkType=null&aun=fantrax_desktop_med_rect_atf&tdid=07e6969d-43f5-49d0-80a9-c8e1038d45e4&uid2=A4AAAC5GwXAjtsuSY5PGnHVrqlXCeNopi4Mn8U-ZEtMptPnwco3FXOBx2jSTFFBRpqSB0Eui3y3AubKKPPPM6tsten3S-SkjOT0S6goU6pMBkS5IeIPrU0YgDTSt27pfwiz-5l4bg31sFh90cbLRt1U9j8Cs-a7nzqwslhv1Gos4c72sgvk5WR7COFbvJhLw42Gmug-A0MUFDVWSqecHM6J1nw&gpid=%2F15184186%2Ffantrax_desktop_med_rect_atf&pv=e6e6233c-6afb-43fa-aafd-173507ae87a1&maxw=300&maxh=600&si=343843&pi=3&bf=300x600%2C160x600%2C120x600%2C300x250%2C300x100%2C300x50&schain=1.0%2C1!freestar.com%2C1203%2C1%2C%2C%2C&tId=uf0d5dcb9-6e47-4cfb-88e0-f571a174b807&vw=1904&vh=933&sw=800&sh=600&pu=https%3A%2F%2Fwww.fantrax.com%2Ffantasy%2Fleague%2Fj3yl79c7man4av42%2Fplayers&tpl=https%3A%2F%2Fwww.fantrax.com%2Ffantasy%2Fleague%2Fj3yl79c7man4av42%2Fplayers&ce=false&dpr=1&jcsi=%7B%22t%22%3A0%2C%22rq%22%3A8%2C%22pbv%22%3A%2210.27.0%22%7D&ogu=https%3A%2F%2Fwww.fantrax.com%2F&ns=10240&ua=Mozilla%2F5.0%20(Windows%20NT%2010.0%3B%20Win64%3B%20x64)%20AppleWebKit%2F537.36%20(KHTML%2C%20like%20Gecko)%20HeadlessChrome%2F146.0.0.0%20Safari%2F537.36&sua=%7B%22source%22%3A1%2C%22platform%22%3A%7B%22brand%22%3A%22Windows%22%7D%2C%22browsers%22%3A%5B%7B%22brand%22%3A%22Chromium%22%2C%22version%22%3A%5B%22146%22%5D%7D%2C%7B%22brand%22%3A%22Not-A.Brand%22%2C%22version%22%3A%5B%2224%22%5D%7D%2C%7B%22brand%22%3A%22Google%20Chrome%22%2C%22version%22%3A%5B%22146%22%5D%7D%5D%2C%22mobile%22%3A0%7D&dnt=0&os=Windows&osv=10&dt=2&lang=en&make=&model=",
+      "method": "GET"
+    },
+    {
+      "url": "https://g2.gumgum.com/hbid/imp?displaymanager=Prebid.js%20-%20gumgum&displaymanagerver=10.27.0&lt=1774052658144&to=240&id5Id=ID5*TDtbeRGUhB2IdvLTp47mguKat8f2y_LTp47mguKat8f__2m95RtaAQEBCmm95RsAlQW4OTBEj4H9-Mhqqdx82w&id5IdLinkType=null&aun=fantrax_desktop_med_rect_atf&tdid=07e6969d-43f5-49d0-80a9-c8e1038d45e4&uid2=A4AAAC5GwXAjtsuSY5PGnHVrqlXCeNopi4Mn8U-ZEtMptPnwco3FXOBx2jSTFFBRpqSB0Eui3y3AubKKPPPM6tsten3S-SkjOT0S6goU6pMBkS5IeIPrU0YgDTSt27pfwiz-5l4bg31sFh90cbLRt1U9j8Cs-a7nzqwslhv1Gos4c72sgvk5WR7COFbvJhLw42Gmug-A0MUFDVWSqecHM6J1nw&gpid=%2F15184186%2Ffantrax_desktop_med_rect_atf&pv=e6e6233c-6afb-43fa-aafd-173507ae87a1&maxw=300&maxh=600&si=343844&pi=3&bf=300x600%2C160x600%2C120x600%2C300x250%2C300x100%2C300x50&schain=1.0%2C1!freestar.com%2C1203%2C1%2C%2C%2C&tId=uf0d5dcb9-6e47-4cfb-88e0-f571a174b807&vw=1904&vh=933&sw=800&sh=600&pu=https%3A%2F%2Fwww.fantrax.com%2Ffantasy%2Fleague%2Fj3yl79c7man4av42%2Fplayers&tpl=https%3A%2F%2Fwww.fantrax.com%2Ffantasy%2Fleague%2Fj3yl79c7man4av42%2Fplayers&ce=false&dpr=1&jcsi=%7B%22t%22%3A0%2C%22rq%22%3A8%2C%22pbv%22%3A%2210.27.0%22%7D&ogu=https%3A%2F%2Fwww.fantrax.com%2F&ns=10240&ua=Mozilla%2F5.0%20(Windows%20NT%2010.0%3B%20Win64%3B%20x64)%20AppleWebKit%2F537.36%20(KHTML%2C%20like%20Gecko)%20HeadlessChrome%2F146.0.0.0%20Safari%2F537.36&sua=%7B%22source%22%3A1%2C%22platform%22%3A%7B%22brand%22%3A%22Windows%22%7D%2C%22browsers%22%3A%5B%7B%22brand%22%3A%22Chromium%22%2C%22version%22%3A%5B%22146%22%5D%7D%2C%7B%22brand%22%3A%22Not-A.Brand%22%2C%22version%22%3A%5B%2224%22%5D%7D%2C%7B%22brand%22%3A%22Google%20Chrome%22%2C%22version%22%3A%5B%22146%22%5D%7D%5D%2C%22mobile%22%3A0%7D&dnt=0&os=Windows&osv=10&dt=2&lang=en&make=&model=",
+      "method": "GET"
+    },
+    {
+      "url": "https://tlx.3lift.com/header/auction?lib=prebid&v=10.27.0&referrer=https%3A%2F%2Fwww.fantrax.com%2Ffantasy%2Fleague%2Fj3yl79c7man4av42%2Fplayers&tmax=3000",
+      "method": "POST",
+      "body": {
+        "imp": [
+          {
+            "id": 0,
+            "tagid": "Freestar_RON_Display",
+            "banner": {
+              "format": [
+                {
+                  "w": 300,
+                  "h": 600
+                },
+                {
+                  "w": 160,
+                  "h": 600
+                },
+                {
+                  "w": 120,
+                  "h": 600
+                },
+                {
+                  "w": 300,
+                  "h": 250
+                },
+                {
+                  "w": 300,
+                  "h": 100
+                },
+                {
+                  "w": 300,
+                  "h": 50
+                }
+              ]
+            },
+            "fpd": {
+              "context": {
+                "data": {
+                  "fs_ad_product": "display",
+                  "fs_ad_optimization": "",
+                  "gameraPlacementId": "MS0yLTE",
+                  "gameraId": [
+                    "gamera_22",
+                    "gamera_24",
+                    "gamera_104",
+                    "gamera_16",
+                    "gamera_17",
+                    "gamera_11",
+                    "gamera_25",
+                    "gamera_105",
+                    "gamera_39",
+                    "gamera_14"
+                  ],
+                  "adserver": {
+                    "name": "gam",
+                    "adslot": "/15184186/fantrax_desktop_med_rect_atf"
+                  }
+                },
+                "gpid": "/15184186/fantrax_desktop_med_rect_atf",
+                "tid": "uc8b5c093-780b-48a8-b212-01d9fa0e876a",
+                "tidSource": "pbjs"
+              }
+            },
+            "ext": {
+              "data": {
+                "fs_ad_product": "display",
+                "fs_ad_optimization": "",
+                "gameraPlacementId": "MS0yLTE",
+                "gameraId": [
+                  "gamera_22",
+                  "gamera_24",
+                  "gamera_104",
+                  "gamera_16",
+                  "gamera_17",
+                  "gamera_11",
+                  "gamera_25",
+                  "gamera_105",
+                  "gamera_39",
+                  "gamera_14"
+                ],
+                "adserver": {
+                  "name": "gam",
+                  "adslot": "/15184186/fantrax_desktop_med_rect_atf"
+                }
+              },
+              "gpid": "/15184186/fantrax_desktop_med_rect_atf",
+              "tid": "uc8b5c093-780b-48a8-b212-01d9fa0e876a",
+              "tidSource": "pbjs"
+            }
+          }
+        ],
+        "user": {
+          "ext": {
+            "eids": [
+              {
+                "source": "amxdt.net",
+                "uids": [
+                  {
+                    "id": "amx*3*f21488f4-69b5-4aeb-87a1-b3705ad19de1*e382bc9fe0e377e2f0e867923fa9589d",
+                    "atype": 1
+                  }
+                ]
+              },
+              {
+                "source": "criteo.com",
+                "uids": [
+                  {
+                    "id": "6U-n_V9LeVBKMjJMbUlzaW9aZWlWdiUyRmw5SVJCemZzb0xlZDUlMkJobHFSeUs2SHBwMUo0N1ZRcCUyRkpZSURjVzFiJTJGWmRLVzBLMTVRS0NPcERUQTdraDZ6MTBacGF0MkpYVHczZWs0VERkYm0wUDhsJTJGenMlM0Q",
+                    "atype": 1
+                  }
+                ]
+              },
+              {
+                "source": "neustar.biz",
+                "uids": [
+                  {
+                    "id": "E1:tUM2dCQRed0Uf4WIJMzsQ5hpHkK60uvJ8zP79FnrOZRBvdca924yq6_72FqW5cEY0PhCAIuwSLttxUMqx1O8KAQFbKs_9BjyzPELrxQK8Js",
+                    "atype": 1
+                  }
+                ]
+              },
+              {
+                "source": "audigent.com",
+                "uids": [
+                  {
+                    "id": "0001yum0ea8bil6jh66kfg7bhbgbc76bg9bka86g9labackkc2jl",
+                    "atype": 1
+                  }
+                ]
+              },
+              {
+                "source": "id5-sync.com",
+                "uids": [
+                  {
+                    "id": "ID5*TDtbeRGUhB2IdvLTp47mguKat8f2y_LTp47mguKat8f__2m95RtaAQEBCmm95RsAlQW4OTBEj4H9-Mhqqdx82w",
+                    "atype": 1,
+                    "ext": {
+                      "linkType": 0,
+                      "pba": "qdkDLpErAPvRtUnzGYRQszWOgJT8KYzmERiXpOW1JbJq2gHHq0XJrGJH8spIdIjtynptqh6Cc1AN5C6G8/aCwQ=="
+                    }
+                  }
+                ]
+              },
+              {
+                "source": "pubcid.org",
+                "uids": [
+                  {
+                    "id": "51d24762-8492-4b68-af7c-ebe6e5f1dda6",
+                    "atype": 1
+                  }
+                ]
+              },
+              {
+                "source": "adserver.org",
+                "uids": [
+                  {
+                    "id": "07e6969d-43f5-49d0-80a9-c8e1038d45e4",
+                    "atype": 1,
+                    "ext": {
+                      "rtiPartner": "TDID"
+                    }
+                  }
+                ],
+                "inserter": "adserver.org",
+                "matcher": "adserver.org",
+                "mm": 4
+              },
+              {
+                "inserter": "optable.co",
+                "matcher": "truedata.co",
+                "mm": 5,
+                "source": "criteo-hemapi.com",
+                "uids": [
+                  {
+                    "id": "kRgFZV83bGF6VXhWelBxMFJaZVpidm14RlBHUmhZbTZFMCUyQiUyRkd2ZXhOZ29yTG8wa0VPbVQxaHI4d00yZmMlMkJQJTJCRzlTOXpmcVZWQWZFJTJGNUNiZFlvcXBvSUtBNXlaT1E0U3oxZnNYak1ubUZhV1RZNlElM0Q",
+                    "atype": 3,
+                    "ext": {
+                      "stype": "cto_bundle_hem_api"
+                    }
+                  }
+                ]
+              },
+              {
+                "inserter": "optable.co",
+                "matcher": "truedata.co",
+                "mm": 5,
+                "source": "yahoo.com",
+                "uids": [
+                  {
+                    "id": "VJD5WwVVWUYBd6in03cMG4OZ-bN8bHBXzvqmKw-6YqekKNAtATiatXHyMPPLSjEkMxRkbvf9ImHNGksynyefyg",
+                    "atype": 3
+                  }
+                ]
+              },
+              {
+                "inserter": "optable.co",
+                "matcher": "truedata.co",
+                "mm": 5,
+                "source": "uidapi.com",
+                "uids": [
+                  {
+                    "id": "A4AAAC5GwXAjtsuSY5PGnHVrqlXCeNopi4Mn8U-ZEtMptPnwco3FXOBx2jSTFFBRpqSB0Eui3y3AubKKPPPM6tsten3S-SkjOT0S6goU6pMBkS5IeIPrU0YgDTSt27pfwiz-5l4bg31sFh90cbLRt1U9j8Cs-a7nzqwslhv1Gos4c72sgvk5WR7COFbvJhLw42Gmug-A0MUFDVWSqecHM6J1nw",
+                    "atype": 3,
+                    "ext": {
+                      "optable": {
+                        "ref": "0"
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "ext": {
+          "schain": {
+            "ver": "1.0",
+            "complete": 1,
+            "nodes": [
+              {
+                "asi": "freestar.com",
+                "sid": "1203",
+                "hp": 1
+              }
+            ]
+          },
+          "fpd": {
+            "context": {
+              "domain": "fantrax.com",
+              "publisher": {
+                "domain": "fantrax.com",
+                "ext": {
+                  "fs_company": 1203
+                }
+              },
+              "page": "https://www.fantrax.com/fantasy/league/j3yl79c7man4av42/players",
+              "name": "fantrax-com",
+              "cat": [
+                "IAB17"
+              ],
+              "sectioncat": [
+                "IAB17"
+              ],
+              "pagecat": [
+                "IAB17"
+              ],
+              "mobile": 0,
+              "ref": "",
+              "content": {
+                "data": [
+                  {
+                    "name": "fantrax.com",
+                    "ext": {
+                      "taxonomyname": "iab_content_taxonomy"
+                    },
+                    "segment": []
+                  }
+                ],
+                "language": "en"
+              },
+              "ext": {
+                "data": {
+                  "fs_optimized": false,
+                  "fs_site": 3129,
+                  "documentLang": "en"
+                }
+              }
+            },
+            "user": {
+              "id": "e10eafc9-8649-4d08-a0dc-71574e888167",
+              "ext": {
+                "eids": [
+                  {
+                    "source": "amxdt.net",
+                    "uids": [
+                      {
+                        "id": "amx*3*f21488f4-69b5-4aeb-87a1-b3705ad19de1*e382bc9fe0e377e2f0e867923fa9589d",
+                        "atype": 1
+                      }
+                    ]
+                  },
+                  {
+                    "source": "criteo.com",
+                    "uids": [
+                      {
+                        "id": "6U-n_V9LeVBKMjJMbUlzaW9aZWlWdiUyRmw5SVJCemZzb0xlZDUlMkJobHFSeUs2SHBwMUo0N1ZRcCUyRkpZSURjVzFiJTJGWmRLVzBLMTVRS0NPcERUQTdraDZ6MTBacGF0MkpYVHczZWs0VERkYm0wUDhsJTJGenMlM0Q",
+                        "atype": 1
+                      }
+                    ]
+                  },
+                  {
+                    "source": "neustar.biz",
+                    "uids": [
+                      {
+                        "id": "E1:tUM2dCQRed0Uf4WIJMzsQ5hpHkK60uvJ8zP79FnrOZRBvdca924yq6_72FqW5cEY0PhCAIuwSLttxUMqx1O8KAQFbKs_9BjyzPELrxQK8Js",
+                        "atype": 1
+                      }
+                    ]
+                  },
+                  {
+                    "source": "audigent.com",
+                    "uids": [
+                      {
+                        "id": "0001yum0ea8bil6jh66kfg7bhbgbc76bg9bka86g9labackkc2jl",
+                        "atype": 1
+                      }
+                    ]
+                  },
+                  {
+                    "source": "id5-sync.com",
+                    "uids": [
+                      {
+                        "id": "ID5*TDtbeRGUhB2IdvLTp47mguKat8f2y_LTp47mguKat8f__2m95RtaAQEBCmm95RsAlQW4OTBEj4H9-Mhqqdx82w",
+                        "atype": 1,
+                        "ext": {
+                          "linkType": 0,
+                          "pba": "qdkDLpErAPvRtUnzGYRQszWOgJT8KYzmERiXpOW1JbJq2gHHq0XJrGJH8spIdIjtynptqh6Cc1AN5C6G8/aCwQ=="
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "source": "pubcid.org",
+                    "uids": [
+                      {
+                        "id": "51d24762-8492-4b68-af7c-ebe6e5f1dda6",
+                        "atype": 1
+                      }
+                    ]
+                  },
+                  {
+                    "source": "adserver.org",
+                    "uids": [
+                      {
+                        "id": "07e6969d-43f5-49d0-80a9-c8e1038d45e4",
+                        "atype": 1,
+                        "ext": {
+                          "rtiPartner": "TDID"
+                        }
+                      }
+                    ],
+                    "inserter": "adserver.org",
+                    "matcher": "adserver.org",
+                    "mm": 4
+                  },
+                  {
+                    "inserter": "optable.co",
+                    "matcher": "truedata.co",
+                    "mm": 5,
+                    "source": "criteo-hemapi.com",
+                    "uids": [
+                      {
+                        "id": "kRgFZV83bGF6VXhWelBxMFJaZVpidm14RlBHUmhZbTZFMCUyQiUyRkd2ZXhOZ29yTG8wa0VPbVQxaHI4d00yZmMlMkJQJTJCRzlTOXpmcVZWQWZFJTJGNUNiZFlvcXBvSUtBNXlaT1E0U3oxZnNYak1ubUZhV1RZNlElM0Q",
+                        "atype": 3,
+                        "ext": {
+                          "stype": "cto_bundle_hem_api"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "inserter": "optable.co",
+                    "matcher": "truedata.co",
+                    "mm": 5,
+                    "source": "yahoo.com",
+                    "uids": [
+                      {
+                        "id": "VJD5WwVVWUYBd6in03cMG4OZ-bN8bHBXzvqmKw-6YqekKNAtATiatXHyMPPLSjEkMxRkbvf9ImHNGksynyefyg",
+                        "atype": 3
+                      }
+                    ]
+                  },
+                  {
+                    "inserter": "optable.co",
+                    "matcher": "truedata.co",
+                    "mm": 5,
+                    "source": "uidapi.com",
+                    "uids": [
+                      {
+                        "id": "A4AAAC5GwXAjtsuSY5PGnHVrqlXCeNopi4Mn8U-ZEtMptPnwco3FXOBx2jSTFFBRpqSB0Eui3y3AubKKPPPM6tsten3S-SkjOT0S6goU6pMBkS5IeIPrU0YgDTSt27pfwiz-5l4bg31sFh90cbLRt1U9j8Cs-a7nzqwslhv1Gos4c72sgvk5WR7COFbvJhLw42Gmug-A0MUFDVWSqecHM6J1nw",
+                        "atype": 3,
+                        "ext": {
+                          "optable": {
+                            "ref": "0"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          "ortb2": {
+            "site": {
+              "domain": "fantrax.com",
+              "publisher": {
+                "domain": "fantrax.com",
+                "ext": {
+                  "fs_company": 1203
+                }
+              },
+              "page": "https://www.fantrax.com/fantasy/league/j3yl79c7man4av42/players",
+              "name": "fantrax-com",
+              "cat": [
+                "IAB17"
+              ],
+              "sectioncat": [
+                "IAB17"
+              ],
+              "pagecat": [
+                "IAB17"
+              ],
+              "mobile": 0,
+              "ref": "",
+              "content": {
+                "data": [
+                  {
+                    "name": "fantrax.com",
+                    "ext": {
+                      "taxonomyname": "iab_content_taxonomy"
+                    },
+                    "segment": []
+                  }
+                ],
+                "language": "en"
+              },
+              "ext": {
+                "data": {
+                  "fs_optimized": false,
+                  "fs_site": 3129,
+                  "documentLang": "en"
+                }
+              }
+            },
+            "user": {
+              "id": "e10eafc9-8649-4d08-a0dc-71574e888167",
+              "ext": {
+                "eids": [
+                  {
+                    "source": "amxdt.net",
+                    "uids": [
+                      {
+                        "id": "amx*3*f21488f4-69b5-4aeb-87a1-b3705ad19de1*e382bc9fe0e377e2f0e867923fa9589d",
+                        "atype": 1
+                      }
+                    ]
+                  },
+                  {
+                    "source": "criteo.com",
+                    "uids": [
+                      {
+                        "id": "6U-n_V9LeVBKMjJMbUlzaW9aZWlWdiUyRmw5SVJCemZzb0xlZDUlMkJobHFSeUs2SHBwMUo0N1ZRcCUyRkpZSURjVzFiJTJGWmRLVzBLMTVRS0NPcERUQTdraDZ6MTBacGF0MkpYVHczZWs0VERkYm0wUDhsJTJGenMlM0Q",
+                        "atype": 1
+                      }
+                    ]
+                  },
+                  {
+                    "source": "neustar.biz",
+                    "uids": [
+                      {
+                        "id": "E1:tUM2dCQRed0Uf4WIJMzsQ5hpHkK60uvJ8zP79FnrOZRBvdca924yq6_72FqW5cEY0PhCAIuwSLttxUMqx1O8KAQFbKs_9BjyzPELrxQK8Js",
+                        "atype": 1
+                      }
+                    ]
+                  },
+                  {
+                    "source": "audigent.com",
+                    "uids": [
+                      {
+                        "id": "0001yum0ea8bil6jh66kfg7bhbgbc76bg9bka86g9labackkc2jl",
+                        "atype": 1
+                      }
+                    ]
+                  },
+                  {
+                    "source": "id5-sync.com",
+                    "uids": [
+                      {
+                        "id": "ID5*TDtbeRGUhB2IdvLTp47mguKat8f2y_LTp47mguKat8f__2m95RtaAQEBCmm95RsAlQW4OTBEj4H9-Mhqqdx82w",
+                        "atype": 1,
+                        "ext": {
+                          "linkType": 0,
+                          "pba": "qdkDLpErAPvRtUnzGYRQszWOgJT8KYzmERiXpOW1JbJq2gHHq0XJrGJH8spIdIjtynptqh6Cc1AN5C6G8/aCwQ=="
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "source": "pubcid.org",
+                    "uids": [
+                      {
+                        "id": "51d24762-8492-4b68-af7c-ebe6e5f1dda6",
+                        "atype": 1
+                      }
+                    ]
+                  },
+                  {
+                    "source": "adserver.org",
+                    "uids": [
+                      {
+                        "id": "07e6969d-43f5-49d0-80a9-c8e1038d45e4",
+                        "atype": 1,
+                        "ext": {
+                          "rtiPartner": "TDID"
+                        }
+                      }
+                    ],
+                    "inserter": "adserver.org",
+                    "matcher": "adserver.org",
+                    "mm": 4
+                  },
+                  {
+                    "inserter": "optable.co",
+                    "matcher": "truedata.co",
+                    "mm": 5,
+                    "source": "criteo-hemapi.com",
+                    "uids": [
+                      {
+                        "id": "kRgFZV83bGF6VXhWelBxMFJaZVpidm14RlBHUmhZbTZFMCUyQiUyRkd2ZXhOZ29yTG8wa0VPbVQxaHI4d00yZmMlMkJQJTJCRzlTOXpmcVZWQWZFJTJGNUNiZFlvcXBvSUtBNXlaT1E0U3oxZnNYak1ubUZhV1RZNlElM0Q",
+                        "atype": 3,
+                        "ext": {
+                          "stype": "cto_bundle_hem_api"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "inserter": "optable.co",
+                    "matcher": "truedata.co",
+                    "mm": 5,
+                    "source": "yahoo.com",
+                    "uids": [
+                      {
+                        "id": "VJD5WwVVWUYBd6in03cMG4OZ-bN8bHBXzvqmKw-6YqekKNAtATiatXHyMPPLSjEkMxRkbvf9ImHNGksynyefyg",
+                        "atype": 3
+                      }
+                    ]
+                  },
+                  {
+                    "inserter": "optable.co",
+                    "matcher": "truedata.co",
+                    "mm": 5,
+                    "source": "uidapi.com",
+                    "uids": [
+                      {
+                        "id": "A4AAAC5GwXAjtsuSY5PGnHVrqlXCeNopi4Mn8U-ZEtMptPnwco3FXOBx2jSTFFBRpqSB0Eui3y3AubKKPPPM6tsten3S-SkjOT0S6goU6pMBkS5IeIPrU0YgDTSt27pfwiz-5l4bg31sFh90cbLRt1U9j8Cs-a7nzqwslhv1Gos4c72sgvk5WR7COFbvJhLw42Gmug-A0MUFDVWSqecHM6J1nw",
+                        "atype": 3,
+                        "ext": {
+                          "optable": {
+                            "ref": "0"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "device": {
+              "w": 800,
+              "h": 600,
+              "dnt": 0,
+              "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/146.0.0.0 Safari/537.36",
+              "language": "en",
+              "ext": {
+                "vpw": 1904,
+                "vph": 933
+              },
+              "geo": {
+                "region": "NY",
+                "city": "New York",
+                "country": "US",
+                "ext": {}
+              },
+              "devicetype": 2,
+              "make": "",
+              "model": "",
+              "os": "Windows",
+              "osv": "10",
+              "sua": {
+                "source": 1,
+                "platform": {
+                  "brand": "Windows"
+                },
+                "browsers": [
+                  {
+                    "brand": "Chromium",
+                    "version": [
+                      "146"
+                    ]
+                  },
+                  {
+                    "brand": "Not-A.Brand",
+                    "version": [
+                      "24"
+                    ]
+                  },
+                  {
+                    "brand": "Google Chrome",
+                    "version": [
+                      "146"
+                    ]
+                  }
+                ],
+                "mobile": 0
+              }
+            },
+            "geo": {
+              "region": "NY",
+              "city": "New York",
+              "country": "US",
+              "ext": {}
+            },
+            "ext": {
+              "prebid": {
+                "adServerCurrency": "USD",
+                "storedrequest": {
+                  "id": "f20a6258-ed38-48d5-9cef-ec48c9438341"
+                }
+              }
+            },
+            "badv": [
+              "upvalior.com",
+              "yieldlove.com",
+              "planblue.com",
+              "moneypen.co",
+              "bidsopt.com",
+              "money-matters.today",
+              "ascendeum.com",
+              "astonmartindallas.com",
+              "accessmediazone.com",
+              "prebidanalytics.com",
+              "opera.com",
+              "lactationqbank.com",
+              "ajillionmax.com",
+              "macpaw.com",
+              "wfc-fehfbzaxfshzdvgm.z01.azurefd.net",
+              "ato.mx",
+              "bidgear.com",
+              "pubgalaxy.com",
+              "nemluvio.com",
+              "adtelligent.com",
+              "guthealthwellness.com",
+              "bei.azureedge.net",
+              "vungle.com",
+              "motionspots.com",
+              "cdph.ca.gov",
+              "clickport.top",
+              "easyadblocker.com",
+              "mimecast.com",
+              "go1.getghostapp.com",
+              "adrecover.com",
+              "headbidding.com",
+              "wayrates.com",
+              "galderma.com",
+              "pegasuspublishers.com",
+              "goarmy.com",
+              "adapace-2.bc-sys.com",
+              "d13aq0uo1npt7x.cloudfront.net",
+              "monetizemore.com",
+              "mediafuse.com",
+              "bankbazaar.com",
+              "passwordmanagercomparison.com",
+              "needtoimpeach.com",
+              "hotelscombined.com",
+              "getcovered.illinois.gov",
+              "asiandate.com",
+              "privacybadger.org",
+              "gadmobe.com",
+              "mediamint.com",
+              "oyun.fr",
+              "proper.io",
+              "printrecipes.net",
+              "askanexpertonline.com",
+              "shopdoona.com",
+              "vdx.tv",
+              "arcadetab.com",
+              "fmlabsonline.com",
+              "justanswer.com",
+              "tk0x1.com",
+              "firstimpression.io",
+              "doubleclick.net",
+              "totaladblock.com",
+              "adcash.com",
+              "1blocker.com",
+              "carba.io",
+              "ghostery.com",
+              "ila3.com",
+              "cdn.ms1a.com",
+              "global-cdn-cc.b-cdn.net",
+              "searchandprint.recipes",
+              "standsapp.org",
+              "shop.advanceautoparts.com",
+              "gov.il",
+              "tudiendanchoi.com",
+              "advanceautoparts.com",
+              "propermedia.com",
+              "mobuppsrtb.com",
+              "chineseladydate.com",
+              "digitalcontentnow.com",
+              "tobaccomotorwear.com",
+              "wavebrowser.co",
+              "latamdate.com",
+              "thaimatches.com",
+              "onlineactivation.org",
+              "q-grips.com",
+              "wapstart.ru",
+              "ragu.com",
+              "tryexuberant.com",
+              "rb.com",
+              "basicfundamentals.co.in",
+              "1md.org",
+              "a4g.com",
+              "bizzclick.com",
+              "ebookrenta.com",
+              "oyun.se",
+              "onlineactivation.com,",
+              "loansocieties.com",
+              "gaolisz.com",
+              "mediavine.com",
+              "testing-domain.com",
+              "ckmfang.com",
+              "leovegas.com",
+              "synonehundred.com",
+              "selectmedia.asia",
+              "mxu-dmf8avezecfuascm.z01.azurefd.net",
+              "trkbid.com",
+              "adpushup.com",
+              "pubgears.com",
+              "covid19.ca.gov",
+              "adremover.org",
+              "october7files.com",
+              "adblockplus.org",
+              "freequizgames.com",
+              "weeklypenny.com",
+              "popcornews.com",
+              "waardex.com",
+              "allcontentthere.com",
+              "adaway.org",
+              "sekindo.com",
+              "manualsdirectory.org",
+              "ziffdavis.com",
+              "mediaoptions.com",
+              "rtbhouse.com",
+              "all-in1-digitalcontent.net",
+              "wellspan.org",
+              "jxu.azureedge.net",
+              "socialpulsemedia.com",
+              "renta.co.jp",
+              "pubwise.io",
+              "pampillonia.com",
+              "d1qeadpezvp4g.cloudfront.net",
+              "claritycheck.com",
+              "frompdftodoc.com",
+              "adblockultimate.net",
+              "adnimation.com",
+              "araglegal.com",
+              "proper.com",
+              "digitaladsystems.com",
+              "loyal.app",
+              "ezoic.com",
+              "didna.io",
+              "playwire.com",
+              "adomik.com",
+              "webtradingspot.com",
+              "adgone.org",
+              "smadex.com",
+              "survey.money-matters.today",
+              "aipac.org",
+              "getadblock.com",
+              "decenterads.com",
+              "envisionx.co",
+              "roxot.com",
+              "adrizer.com",
+              "adops.com",
+              "nomoredarkspot.com",
+              "trojanwall.click",
+              "adskeeper.com",
+              "jlacosta.com",
+              "contentlists.com",
+              "xapads.com",
+              "idf.il",
+              "adapace-3.bc-sys.com",
+              "hi-chew.com",
+              "visitmyrtlebeach.com",
+              "nucific.com",
+              "fanony.com",
+              "streamrail.com",
+              "learnaboutpd.com",
+              "newormedia.com",
+              "onlineactivation.io,",
+              "ice.gov",
+              "mensdrivingforce.com",
+              "purify-app.com",
+              "www.gov.il",
+              "saturday-october-seven.com",
+              "weewhiskeyfest.com",
+              "loginonline.co",
+              "comodo.com",
+              "test.com",
+              "luckyvybz.top",
+              "hola.org",
+              "coveredca.com",
+              "serverbid.com",
+              "oldmoparts.com",
+              "dbmmszp46juph.cloudfront.net",
+              "sportsnewsman.com",
+              "streamrail.net",
+              "tightropeinteractive.com",
+              "vashoot.com",
+              "epom.com",
+              "oko.uk",
+              "adguard.com",
+              "rtk.io",
+              "digitalcontent-now.com",
+              "publisherdesk.com",
+              "publift.com",
+              "upmcphysicianresources.com",
+              "triviaboss.com",
+              "getaclearrear.com",
+              "niutux.com",
+              "appodeal.com",
+              "emergenc.com",
+              "cafemedia.com",
+              "explore.reference.com",
+              "recipestab.com",
+              "experienceparkland.com",
+              "ip.safelystorage.net",
+              "tekblue.net",
+              "adthrive.com"
+            ],
+            "bcat": [
+              "IAB25-3",
+              "IAB26-2",
+              "IAB25-2",
+              "IAB25-1",
+              "IAB25-7",
+              "IAB25-6",
+              "IAB26",
+              "IAB25",
+              "IAB25-5",
+              "IAB26-4",
+              "IAB25-4",
+              "IAB26-3"
+            ],
+            "source": {
+              "ext": {
+                "schain": {
+                  "ver": "1.0",
+                  "complete": 1,
+                  "nodes": [
+                    {
+                      "asi": "freestar.com",
+                      "sid": "1203",
+                      "hp": 1
+                    }
+                  ]
+                },
+                "tidSource": "pbjs"
+              },
+              "tid": "ub6c59b4c-a66e-4978-a7d7-15f48f3051c0"
+            }
+          }
+        }
+      }
+    },
+    {
+      "url": "https://fastlane.rubiconproject.com/a/api/fastlane.json?account_id=16924&site_id=500600&zone_id=2983354&size_id=15&alt_size_ids=9%2C8%2C10%2C19%2C44&rp_schain=1.0,1!freestar.com,1203,1,,,&eid_amxdt.net=amx*3*f21488f4-69b5-4aeb-87a1-b3705ad19de1*e382bc9fe0e377e2f0e867923fa9589d%5E1%5E%5E%5E%5E%5E&eid_criteo.com=6U-n_V9LeVBKMjJMbUlzaW9aZWlWdiUyRmw5SVJCemZzb0xlZDUlMkJobHFSeUs2SHBwMUo0N1ZRcCUyRkpZSURjVzFiJTJGWmRLVzBLMTVRS0NPcERUQTdraDZ6MTBacGF0MkpYVHczZWs0VERkYm0wUDhsJTJGenMlM0Q%5E1%5E%5E%5E%5E%5E&eid_neustar.biz=E1%3AtUM2dCQRed0Uf4WIJMzsQ5hpHkK60uvJ8zP79FnrOZRBvdca924yq6_72FqW5cEY0PhCAIuwSLttxUMqx1O8KAQFbKs_9BjyzPELrxQK8Js%5E1%5E%5E%5E%5E%5E&eid_audigent.com=0001yum0ea8bil6jh66kfg7bhbgbc76bg9bka86g9labackkc2jl%5E1%5E%5E%5E%5E%5E&eid_id5-sync.com=ID5*TDtbeRGUhB2IdvLTp47mguKat8f2y_LTp47mguKat8f__2m95RtaAQEBCmm95RsAlQW4OTBEj4H9-Mhqqdx82w%5E1%5E%5E%5E%5E%5E&eid_pubcid.org=51d24762-8492-4b68-af7c-ebe6e5f1dda6%5E1%5E%5E%5E%5E%5E&eid_adserver.org=07e6969d-43f5-49d0-80a9-c8e1038d45e4%5E1%5E%5Eadserver.org%5Eadserver.org%5E4%5ETDID&eid_criteo-hemapi.com=kRgFZV83bGF6VXhWelBxMFJaZVpidm14RlBHUmhZbTZFMCUyQiUyRkd2ZXhOZ29yTG8wa0VPbVQxaHI4d00yZmMlMkJQJTJCRzlTOXpmcVZWQWZFJTJGNUNiZFlvcXBvSUtBNXlaT1E0U3oxZnNYak1ubUZhV1RZNlElM0Q%5E3%5E%5Eoptable.co%5Etruedata.co%5E5%5E&eid_yahoo.com=VJD5WwVVWUYBd6in03cMG4OZ-bN8bHBXzvqmKw-6YqekKNAtATiatXHyMPPLSjEkMxRkbvf9ImHNGksynyefyg%5E3%5E%5Eoptable.co%5Etruedata.co%5E5%5E&eid_uidapi.com=A4AAAC5GwXAjtsuSY5PGnHVrqlXCeNopi4Mn8U-ZEtMptPnwco3FXOBx2jSTFFBRpqSB0Eui3y3AubKKPPPM6tsten3S-SkjOT0S6goU6pMBkS5IeIPrU0YgDTSt27pfwiz-5l4bg31sFh90cbLRt1U9j8Cs-a7nzqwslhv1Gos4c72sgvk5WR7COFbvJhLw42Gmug-A0MUFDVWSqecHM6J1nw%5E3%5E%5Eoptable.co%5Etruedata.co%5E5%5E&rf=https%3A%2F%2Fwww.fantrax.com%2Ffantasy%2Fleague%2Fj3yl79c7man4av42%2Fplayers&tg_v.id=e10eafc9-8649-4d08-a0dc-71574e888167&tg_i.domain=fantrax.com&tg_i.page=https%3A%2F%2Fwww.fantrax.com%2Ffantasy%2Fleague%2Fj3yl79c7man4av42%2Fplayers&tg_i.name=fantrax-com&tg_i.cat=IAB17&tg_i.sectioncat=IAB17&tg_i.pagecat=IAB17&tg_i.mobile=0&tg_i.fs_optimized=false&tg_i.fs_site=3129&tg_i.documentLang=en&tg_i.fs_ad_product=display&tg_i.gameraPlacementId=MS0yLTE&tg_i.gameraId=gamera_22%2Cgamera_24%2Cgamera_104%2Cgamera_16%2Cgamera_17%2Cgamera_11%2Cgamera_25%2Cgamera_105%2Cgamera_39%2Cgamera_14&tg_i.dfp_ad_unit_code=%2F15184186%2Ffantrax_desktop_med_rect_atf&tk_flint=pbjs_lite_v10.27.0&x_source.tid=ue0d85011-59ab-4f1a-9588-82069cdfdaf3&l_pb_bid_id=fd13ad4f-8801-4ea5-b333-3cc449c04865&p_screen_res=800x600&rp_secure=1&x_imp.ext.tid=u049ac286-8092-4d91-8b92-ef837594ff39&p_site.mobile=0&p_gpid=%2F15184186%2Ffantrax_desktop_med_rect_atf&m_ch_ua=%22Chromium%22%7Cv%3D%22146%22%2C%22Not-A.Brand%22%7Cv%3D%2224%22%2C%22Google%20Chrome%22%7Cv%3D%22146%22&m_ch_mobile=%3F0&m_ch_platform=Windows&slots=1&rand=0.7105685708412937",
+      "method": "GET"
+    },
+    {
+      "url": "https://ads.yieldmo.com/exchange/prebid?pbav=10.27.0&p=%5B%7B%22placement_id%22%3A%22fantrax_desktop_med_rect_atf%22%2C%22callback_id%22%3A%22d5a1cdd3-3402-4992-931a-187febdfa780%22%2C%22sizes%22%3A%5B%5B300%2C600%5D%2C%5B160%2C600%5D%2C%5B120%2C600%5D%2C%5B300%2C250%5D%2C%5B300%2C100%5D%2C%5B300%2C50%5D%5D%2C%22ym_placement_id%22%3A%222662464007037722661%22%2C%22gpid%22%3A%22%2F15184186%2Ffantrax_desktop_med_rect_atf%22%2C%22tid%22%3A%22uaca81ff8-55d9-43b5-8b15-9ce510927916%22%2C%22auctionId%22%3A%22ubbc3f228-f5cf-4f05-b7d6-de9dfdb2906c%22%7D%5D&page_url=https%3A%2F%2Fwww.fantrax.com%2Ffantasy%2Fleague%2Fj3yl79c7man4av42%2Fplayers&bust=1774052658151&dnt=false&description=Fantrax%20offers%20the%20most%20customizable%20fantasy%20league%20management%20service%20in%20the%20industry%2C%20with%20free%20offerings%20in%20baseball%2C%20football%2C%20basketball%2C%20hockey%2C%20soccer%2C%20golf%2C%20and%20racing.%20Fantrax%20Commissioner%20is%20the%20industry%20leader%20when%20it%20comes%20to%20dynasty%20leagues%2C%20but%20our%20redraft%20and%20keeper%20leagues%20also%20beat%20the%20competition.%20Switch%20your%20leagues%20over%20today!&tmax=3000&userConsent=%7B%22gdprApplies%22%3A%22%22%2C%22cmp%22%3A%22%22%2C%22gpp%22%3A%22%22%2C%22gpp_sid%22%3A%5B%5D%7D&us_privacy=&pr=&title=League%20Players%20-%20Fantrax&w=1904&h=933&schain=%7B%22ver%22%3A%221.0%22%2C%22complete%22%3A1%2C%22nodes%22%3A%5B%7B%22asi%22%3A%22freestar.com%22%2C%22sid%22%3A%221203%22%2C%22hp%22%3A1%7D%5D%7D&eids=%5B%7B%22source%22%3A%22amxdt.net%22%2C%22uids%22%3A%5B%7B%22id%22%3A%22amx*3*f21488f4-69b5-4aeb-87a1-b3705ad19de1*e382bc9fe0e377e2f0e867923fa9589d%22%2C%22atype%22%3A1%7D%5D%7D%2C%7B%22source%22%3A%22criteo.com%22%2C%22uids%22%3A%5B%7B%22id%22%3A%226U-n_V9LeVBKMjJMbUlzaW9aZWlWdiUyRmw5SVJCemZzb0xlZDUlMkJobHFSeUs2SHBwMUo0N1ZRcCUyRkpZSURjVzFiJTJGWmRLVzBLMTVRS0NPcERUQTdraDZ6MTBacGF0MkpYVHczZWs0VERkYm0wUDhsJTJGenMlM0Q%22%2C%22atype%22%3A1%7D%5D%7D%2C%7B%22source%22%3A%22neustar.biz%22%2C%22uids%22%3A%5B%7B%22id%22%3A%22E1%3AtUM2dCQRed0Uf4WIJMzsQ5hpHkK60uvJ8zP79FnrOZRBvdca924yq6_72FqW5cEY0PhCAIuwSLttxUMqx1O8KAQFbKs_9BjyzPELrxQK8Js%22%2C%22atype%22%3A1%2C%22ext%22%3A%7B%22rtiPartner%22%3A%22fabrickId%22%7D%7D%5D%7D%2C%7B%22source%22%3A%22audigent.com%22%2C%22uids%22%3A%5B%7B%22id%22%3A%220001yum0ea8bil6jh66kfg7bhbgbc76bg9bka86g9labackkc2jl%22%2C%22atype%22%3A1%7D%5D%7D%2C%7B%22source%22%3A%22id5-sync.com%22%2C%22uids%22%3A%5B%7B%22id%22%3A%22ID5*TDtbeRGUhB2IdvLTp47mguKat8f2y_LTp47mguKat8f__2m95RtaAQEBCmm95RsAlQW4OTBEj4H9-Mhqqdx82w%22%2C%22atype%22%3A1%2C%22ext%22%3A%7B%22linkType%22%3A0%2C%22pba%22%3A%22qdkDLpErAPvRtUnzGYRQszWOgJT8KYzmERiXpOW1JbJq2gHHq0XJrGJH8spIdIjtynptqh6Cc1AN5C6G8%2FaCwQ%3D%3D%22%7D%7D%5D%7D%2C%7B%22source%22%3A%22pubcid.org%22%2C%22uids%22%3A%5B%7B%22id%22%3A%2251d24762-8492-4b68-af7c-ebe6e5f1dda6%22%2C%22atype%22%3A1%7D%5D%7D%2C%7B%22source%22%3A%22adserver.org%22%2C%22uids%22%3A%5B%7B%22id%22%3A%2207e6969d-43f5-49d0-80a9-c8e1038d45e4%22%2C%22atype%22%3A1%2C%22ext%22%3A%7B%22rtiPartner%22%3A%22TDID%22%7D%7D%5D%2C%22inserter%22%3A%22adserver.org%22%2C%22matcher%22%3A%22adserver.org%22%2C%22mm%22%3A4%7D%2C%7B%22inserter%22%3A%22optable.co%22%2C%22matcher%22%3A%22truedata.co%22%2C%22mm%22%3A5%2C%22source%22%3A%22criteo-hemapi.com%22%2C%22uids%22%3A%5B%7B%22id%22%3A%22kRgFZV83bGF6VXhWelBxMFJaZVpidm14RlBHUmhZbTZFMCUyQiUyRkd2ZXhOZ29yTG8wa0VPbVQxaHI4d00yZmMlMkJQJTJCRzlTOXpmcVZWQWZFJTJGNUNiZFlvcXBvSUtBNXlaT1E0U3oxZnNYak1ubUZhV1RZNlElM0Q%22%2C%22atype%22%3A3%2C%22ext%22%3A%7B%22stype%22%3A%22cto_bundle_hem_api%22%7D%7D%5D%7D%2C%7B%22inserter%22%3A%22optable.co%22%2C%22matcher%22%3A%22truedata.co%22%2C%22mm%22%3A5%2C%22source%22%3A%22yahoo.com%22%2C%22uids%22%3A%5B%7B%22id%22%3A%22VJD5WwVVWUYBd6in03cMG4OZ-bN8bHBXzvqmKw-6YqekKNAtATiatXHyMPPLSjEkMxRkbvf9ImHNGksynyefyg%22%2C%22atype%22%3A3%7D%5D%7D%2C%7B%22inserter%22%3A%22optable.co%22%2C%22matcher%22%3A%22truedata.co%22%2C%22mm%22%3A5%2C%22source%22%3A%22uidapi.com%22%2C%22uids%22%3A%5B%7B%22id%22%3A%22A4AAAC5GwXAjtsuSY5PGnHVrqlXCeNopi4Mn8U-ZEtMptPnwco3FXOBx2jSTFFBRpqSB0Eui3y3AubKKPPPM6tsten3S-SkjOT0S6goU6pMBkS5IeIPrU0YgDTSt27pfwiz-5l4bg31sFh90cbLRt1U9j8Cs-a7nzqwslhv1Gos4c72sgvk5WR7COFbvJhLw42Gmug-A0MUFDVWSqecHM6J1nw%22%2C%22atype%22%3A3%2C%22ext%22%3A%7B%22rtiPartner%22%3A%22UID2%22%7D%7D%5D%7D%5D",
+      "method": "GET"
+    },
+    {
+      "url": "https://tlx.3lift.com/header/auction?lib=prebid&v=10.27.0&referrer=https%3A%2F%2Fwww.fantrax.com%2Ffantasy%2Fleague%2Fj3yl79c7man4av42%2Fplayers&tmax=3000",
+      "method": "POST",
+      "body": {
+        "imp": [
+          {
+            "id": 0,
+            "tagid": "Freestar_RON_Display",
+            "banner": {
+              "format": [
+                {
+                  "w": 970,
+                  "h": 90
+                },
+                {
+                  "w": 728,
+                  "h": 90
+                },
+                {
+                  "w": 468,
+                  "h": 60
+                },
+                {
+                  "w": 320,
+                  "h": 100
+                },
+                {
+                  "w": 300,
+                  "h": 100
+                },
+                {
+                  "w": 320,
+                  "h": 50
+                },
+                {
+                  "w": 300,
+                  "h": 50
+                }
+              ]
+            },
+            "fpd": {
+              "context": {
+                "data": {
+                  "fs_ad_product": "display",
+                  "fs_ad_optimization": "",
+                  "gameraPlacementId": "MS0zLTE",
+                  "gameraId": [
+                    "gamera_22",
+                    "gamera_24",
+                    "gamera_104",
+                    "gamera_16",
+                    "gamera_17",
+                    "gamera_11",
+                    "gamera_25",
+                    "gamera_105",
+                    "gamera_39",
+                    "gamera_14"
+                  ],
+                  "adserver": {
+                    "name": "gam",
+                    "adslot": "/15184186/fantrax_desktop_leaderboard_atf"
+                  }
+                },
+                "gpid": "/15184186/fantrax_desktop_leaderboard_atf",
+                "tid": "u7a5765b1-7ec8-4906-9fc8-8b7c729df935",
+                "tidSource": "pbjs"
+              }
+            },
+            "ext": {
+              "data": {
+                "fs_ad_product": "display",
+                "fs_ad_optimization": "",
+                "gameraPlacementId": "MS0zLTE",
+                "gameraId": [
+                  "gamera_22",
+                  "gamera_24",
+                  "gamera_104",
+                  "gamera_16",
+                  "gamera_17",
+                  "gamera_11",
+                  "gamera_25",
+                  "gamera_105",
+                  "gamera_39",
+                  "gamera_14"
+                ],
+                "adserver": {
+                  "name": "gam",
+                  "adslot": "/15184186/fantrax_desktop_leaderboard_atf"
+                }
+              },
+              "gpid": "/15184186/fantrax_desktop_leaderboard_atf",
+              "tid": "u7a5765b1-7ec8-4906-9fc8-8b7c729df935",
+              "tidSource": "pbjs"
+            }
+          }
+        ],
+        "user": {
+          "ext": {
+            "eids": [
+              {
+                "source": "amxdt.net",
+                "uids": [
+                  {
+                    "id": "amx*3*f21488f4-69b5-4aeb-87a1-b3705ad19de1*e382bc9fe0e377e2f0e867923fa9589d",
+                    "atype": 1
+                  }
+                ]
+              },
+              {
+                "source": "criteo.com",
+                "uids": [
+                  {
+                    "id": "6U-n_V9LeVBKMjJMbUlzaW9aZWlWdiUyRmw5SVJCemZzb0xlZDUlMkJobHFSeUs2SHBwMUo0N1ZRcCUyRkpZSURjVzFiJTJGWmRLVzBLMTVRS0NPcERUQTdraDZ6MTBacGF0MkpYVHczZWs0VERkYm0wUDhsJTJGenMlM0Q",
+                    "atype": 1
+                  }
+                ]
+              },
+              {
+                "source": "neustar.biz",
+                "uids": [
+                  {
+                    "id": "E1:tUM2dCQRed0Uf4WIJMzsQ5hpHkK60uvJ8zP79FnrOZRBvdca924yq6_72FqW5cEY0PhCAIuwSLttxUMqx1O8KAQFbKs_9BjyzPELrxQK8Js",
+                    "atype": 1
+                  }
+                ]
+              },
+              {
+                "source": "audigent.com",
+                "uids": [
+                  {
+                    "id": "0001yum0ea8bil6jh66kfg7bhbgbc76bg9bka86g9labackkc2jl",
+                    "atype": 1
+                  }
+                ]
+              },
+              {
+                "source": "id5-sync.com",
+                "uids": [
+                  {
+                    "id": "ID5*TDtbeRGUhB2IdvLTp47mguKat8f2y_LTp47mguKat8f__2m95RtaAQEBCmm95RsAlQW4OTBEj4H9-Mhqqdx82w",
+                    "atype": 1,
+                    "ext": {
+                      "linkType": 0,
+                      "pba": "qdkDLpErAPvRtUnzGYRQszWOgJT8KYzmERiXpOW1JbJq2gHHq0XJrGJH8spIdIjtynptqh6Cc1AN5C6G8/aCwQ=="
+                    }
+                  }
+                ]
+              },
+              {
+                "source": "pubcid.org",
+                "uids": [
+                  {
+                    "id": "51d24762-8492-4b68-af7c-ebe6e5f1dda6",
+                    "atype": 1
+                  }
+                ]
+              },
+              {
+                "source": "adserver.org",
+                "uids": [
+                  {
+                    "id": "07e6969d-43f5-49d0-80a9-c8e1038d45e4",
+                    "atype": 1,
+                    "ext": {
+                      "rtiPartner": "TDID"
+                    }
+                  }
+                ],
+                "inserter": "adserver.org",
+                "matcher": "adserver.org",
+                "mm": 4
+              },
+              {
+                "inserter": "optable.co",
+                "matcher": "truedata.co",
+                "mm": 5,
+                "source": "criteo-hemapi.com",
+                "uids": [
+                  {
+                    "id": "kRgFZV83bGF6VXhWelBxMFJaZVpidm14RlBHUmhZbTZFMCUyQiUyRkd2ZXhOZ29yTG8wa0VPbVQxaHI4d00yZmMlMkJQJTJCRzlTOXpmcVZWQWZFJTJGNUNiZFlvcXBvSUtBNXlaT1E0U3oxZnNYak1ubUZhV1RZNlElM0Q",
+                    "atype": 3,
+                    "ext": {
+                      "stype": "cto_bundle_hem_api"
+                    }
+                  }
+                ]
+              },
+              {
+                "inserter": "optable.co",
+                "matcher": "truedata.co",
+                "mm": 5,
+                "source": "yahoo.com",
+                "uids": [
+                  {
+                    "id": "VJD5WwVVWUYBd6in03cMG4OZ-bN8bHBXzvqmKw-6YqekKNAtATiatXHyMPPLSjEkMxRkbvf9ImHNGksynyefyg",
+                    "atype": 3
+                  }
+                ]
+              },
+              {
+                "inserter": "optable.co",
+                "matcher": "truedata.co",
+                "mm": 5,
+                "source": "uidapi.com",
+                "uids": [
+                  {
+                    "id": "A4AAAC5GwXAjtsuSY5PGnHVrqlXCeNopi4Mn8U-ZEtMptPnwco3FXOBx2jSTFFBRpqSB0Eui3y3AubKKPPPM6tsten3S-SkjOT0S6goU6pMBkS5IeIPrU0YgDTSt27pfwiz-5l4bg31sFh90cbLRt1U9j8Cs-a7nzqwslhv1Gos4c72sgvk5WR7COFbvJhLw42Gmug-A0MUFDVWSqecHM6J1nw",
+                    "atype": 3,
+                    "ext": {
+                      "optable": {
+                        "ref": "0"
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "ext": {
+          "schain": {
+            "ver": "1.0",
+            "complete": 1,
+            "nodes": [
+              {
+                "asi": "freestar.com",
+                "sid": "1203",
+                "hp": 1
+              }
+            ]
+          },
+          "fpd": {
+            "context": {
+              "domain": "fantrax.com",
+              "publisher": {
+                "domain": "fantrax.com",
+                "ext": {
+                  "fs_company": 1203
+                }
+              },
+              "page": "https://www.fantrax.com/fantasy/league/j3yl79c7man4av42/players",
+              "name": "fantrax-com",
+              "cat": [
+                "IAB17"
+              ],
+              "sectioncat": [
+                "IAB17"
+              ],
+              "pagecat": [
+                "IAB17"
+              ],
+              "mobile": 0,
+              "ref": "",
+              "content": {
+                "data": [
+                  {
+                    "name": "fantrax.com",
+                    "ext": {
+                      "taxonomyname": "iab_content_taxonomy"
+                    },
+                    "segment": []
+                  }
+                ],
+                "language": "en"
+              },
+              "ext": {
+                "data": {
+                  "fs_optimized": false,
+                  "fs_site": 3129,
+                  "documentLang": "en"
+                }
+              }
+            },
+            "user": {
+              "id": "e10eafc9-8649-4d08-a0dc-71574e888167",
+              "ext": {
+                "eids": [
+                  {
+                    "source": "amxdt.net",
+                    "uids": [
+                      {
+                        "id": "amx*3*f21488f4-69b5-4aeb-87a1-b3705ad19de1*e382bc9fe0e377e2f0e867923fa9589d",
+                        "atype": 1
+                      }
+                    ]
+                  },
+                  {
+                    "source": "criteo.com",
+                    "uids": [
+                      {
+                        "id": "6U-n_V9LeVBKMjJMbUlzaW9aZWlWdiUyRmw5SVJCemZzb0xlZDUlMkJobHFSeUs2SHBwMUo0N1ZRcCUyRkpZSURjVzFiJTJGWmRLVzBLMTVRS0NPcERUQTdraDZ6MTBacGF0MkpYVHczZWs0VERkYm0wUDhsJTJGenMlM0Q",
+                        "atype": 1
+                      }
+                    ]
+                  },
+                  {
+                    "source": "neustar.biz",
+                    "uids": [
+                      {
+                        "id": "E1:tUM2dCQRed0Uf4WIJMzsQ5hpHkK60uvJ8zP79FnrOZRBvdca924yq6_72FqW5cEY0PhCAIuwSLttxUMqx1O8KAQFbKs_9BjyzPELrxQK8Js",
+                        "atype": 1
+                      }
+                    ]
+                  },
+                  {
+                    "source": "audigent.com",
+                    "uids": [
+                      {
+                        "id": "0001yum0ea8bil6jh66kfg7bhbgbc76bg9bka86g9labackkc2jl",
+                        "atype": 1
+                      }
+                    ]
+                  },
+                  {
+                    "source": "id5-sync.com",
+                    "uids": [
+                      {
+                        "id": "ID5*TDtbeRGUhB2IdvLTp47mguKat8f2y_LTp47mguKat8f__2m95RtaAQEBCmm95RsAlQW4OTBEj4H9-Mhqqdx82w",
+                        "atype": 1,
+                        "ext": {
+                          "linkType": 0,
+                          "pba": "qdkDLpErAPvRtUnzGYRQszWOgJT8KYzmERiXpOW1JbJq2gHHq0XJrGJH8spIdIjtynptqh6Cc1AN5C6G8/aCwQ=="
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "source": "pubcid.org",
+                    "uids": [
+                      {
+                        "id": "51d24762-8492-4b68-af7c-ebe6e5f1dda6",
+                        "atype": 1
+                      }
+                    ]
+                  },
+                  {
+                    "source": "adserver.org",
+                    "uids": [
+                      {
+                        "id": "07e6969d-43f5-49d0-80a9-c8e1038d45e4",
+                        "atype": 1,
+                        "ext": {
+                          "rtiPartner": "TDID"
+                        }
+                      }
+                    ],
+                    "inserter": "adserver.org",
+                    "matcher": "adserver.org",
+                    "mm": 4
+                  },
+                  {
+                    "inserter": "optable.co",
+                    "matcher": "truedata.co",
+                    "mm": 5,
+                    "source": "criteo-hemapi.com",
+                    "uids": [
+                      {
+                        "id": "kRgFZV83bGF6VXhWelBxMFJaZVpidm14RlBHUmhZbTZFMCUyQiUyRkd2ZXhOZ29yTG8wa0VPbVQxaHI4d00yZmMlMkJQJTJCRzlTOXpmcVZWQWZFJTJGNUNiZFlvcXBvSUtBNXlaT1E0U3oxZnNYak1ubUZhV1RZNlElM0Q",
+                        "atype": 3,
+                        "ext": {
+                          "stype": "cto_bundle_hem_api"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "inserter": "optable.co",
+                    "matcher": "truedata.co",
+                    "mm": 5,
+                    "source": "yahoo.com",
+                    "uids": [
+                      {
+                        "id": "VJD5WwVVWUYBd6in03cMG4OZ-bN8bHBXzvqmKw-6YqekKNAtATiatXHyMPPLSjEkMxRkbvf9ImHNGksynyefyg",
+                        "atype": 3
+                      }
+                    ]
+                  },
+                  {
+                    "inserter": "optable.co",
+                    "matcher": "truedata.co",
+                    "mm": 5,
+                    "source": "uidapi.com",
+                    "uids": [
+                      {
+                        "id": "A4AAAC5GwXAjtsuSY5PGnHVrqlXCeNopi4Mn8U-ZEtMptPnwco3FXOBx2jSTFFBRpqSB0Eui3y3AubKKPPPM6tsten3S-SkjOT0S6goU6pMBkS5IeIPrU0YgDTSt27pfwiz-5l4bg31sFh90cbLRt1U9j8Cs-a7nzqwslhv1Gos4c72sgvk5WR7COFbvJhLw42Gmug-A0MUFDVWSqecHM6J1nw",
+                        "atype": 3,
+                        "ext": {
+                          "optable": {
+                            "ref": "0"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          "ortb2": {
+            "site": {
+              "domain": "fantrax.com",
+              "publisher": {
+                "domain": "fantrax.com",
+                "ext": {
+                  "fs_company": 1203
+                }
+              },
+              "page": "https://www.fantrax.com/fantasy/league/j3yl79c7man4av42/players",
+              "name": "fantrax-com",
+              "cat": [
+                "IAB17"
+              ],
+              "sectioncat": [
+                "IAB17"
+              ],
+              "pagecat": [
+                "IAB17"
+              ],
+              "mobile": 0,
+              "ref": "",
+              "content": {
+                "data": [
+                  {
+                    "name": "fantrax.com",
+                    "ext": {
+                      "taxonomyname": "iab_content_taxonomy"
+                    },
+                    "segment": []
+                  }
+                ],
+                "language": "en"
+              },
+              "ext": {
+                "data": {
+                  "fs_optimized": false,
+                  "fs_site": 3129,
+                  "documentLang": "en"
+                }
+              }
+            },
+            "user": {
+              "id": "e10eafc9-8649-4d08-a0dc-71574e888167",
+              "ext": {
+                "eids": [
+                  {
+                    "source": "amxdt.net",
+                    "uids": [
+                      {
+                        "id": "amx*3*f21488f4-69b5-4aeb-87a1-b3705ad19de1*e382bc9fe0e377e2f0e867923fa9589d",
+                        "atype": 1
+                      }
+                    ]
+                  },
+                  {
+                    "source": "criteo.com",
+                    "uids": [
+                      {
+                        "id": "6U-n_V9LeVBKMjJMbUlzaW9aZWlWdiUyRmw5SVJCemZzb0xlZDUlMkJobHFSeUs2SHBwMUo0N1ZRcCUyRkpZSURjVzFiJTJGWmRLVzBLMTVRS0NPcERUQTdraDZ6MTBacGF0MkpYVHczZWs0VERkYm0wUDhsJTJGenMlM0Q",
+                        "atype": 1
+                      }
+                    ]
+                  },
+                  {
+                    "source": "neustar.biz",
+                    "uids": [
+                      {
+                        "id": "E1:tUM2dCQRed0Uf4WIJMzsQ5hpHkK60uvJ8zP79FnrOZRBvdca924yq6_72FqW5cEY0PhCAIuwSLttxUMqx1O8KAQFbKs_9BjyzPELrxQK8Js",
+                        "atype": 1
+                      }
+                    ]
+                  },
+                  {
+                    "source": "audigent.com",
+                    "uids": [
+                      {
+                        "id": "0001yum0ea8bil6jh66kfg7bhbgbc76bg9bka86g9labackkc2jl",
+                        "atype": 1
+                      }
+                    ]
+                  },
+                  {
+                    "source": "id5-sync.com",
+                    "uids": [
+                      {
+                        "id": "ID5*TDtbeRGUhB2IdvLTp47mguKat8f2y_LTp47mguKat8f__2m95RtaAQEBCmm95RsAlQW4OTBEj4H9-Mhqqdx82w",
+                        "atype": 1,
+                        "ext": {
+                          "linkType": 0,
+                          "pba": "qdkDLpErAPvRtUnzGYRQszWOgJT8KYzmERiXpOW1JbJq2gHHq0XJrGJH8spIdIjtynptqh6Cc1AN5C6G8/aCwQ=="
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "source": "pubcid.org",
+                    "uids": [
+                      {
+                        "id": "51d24762-8492-4b68-af7c-ebe6e5f1dda6",
+                        "atype": 1
+                      }
+                    ]
+                  },
+                  {
+                    "source": "adserver.org",
+                    "uids": [
+                      {
+                        "id": "07e6969d-43f5-49d0-80a9-c8e1038d45e4",
+                        "atype": 1,
+                        "ext": {
+                          "rtiPartner": "TDID"
+                        }
+                      }
+                    ],
+                    "inserter": "adserver.org",
+                    "matcher": "adserver.org",
+                    "mm": 4
+                  },
+                  {
+                    "inserter": "optable.co",
+                    "matcher": "truedata.co",
+                    "mm": 5,
+                    "source": "criteo-hemapi.com",
+                    "uids": [
+                      {
+                        "id": "kRgFZV83bGF6VXhWelBxMFJaZVpidm14RlBHUmhZbTZFMCUyQiUyRkd2ZXhOZ29yTG8wa0VPbVQxaHI4d00yZmMlMkJQJTJCRzlTOXpmcVZWQWZFJTJGNUNiZFlvcXBvSUtBNXlaT1E0U3oxZnNYak1ubUZhV1RZNlElM0Q",
+                        "atype": 3,
+                        "ext": {
+                          "stype": "cto_bundle_hem_api"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "inserter": "optable.co",
+                    "matcher": "truedata.co",
+                    "mm": 5,
+                    "source": "yahoo.com",
+                    "uids": [
+                      {
+                        "id": "VJD5WwVVWUYBd6in03cMG4OZ-bN8bHBXzvqmKw-6YqekKNAtATiatXHyMPPLSjEkMxRkbvf9ImHNGksynyefyg",
+                        "atype": 3
+                      }
+                    ]
+                  },
+                  {
+                    "inserter": "optable.co",
+                    "matcher": "truedata.co",
+                    "mm": 5,
+                    "source": "uidapi.com",
+                    "uids": [
+                      {
+                        "id": "A4AAAC5GwXAjtsuSY5PGnHVrqlXCeNopi4Mn8U-ZEtMptPnwco3FXOBx2jSTFFBRpqSB0Eui3y3AubKKPPPM6tsten3S-SkjOT0S6goU6pMBkS5IeIPrU0YgDTSt27pfwiz-5l4bg31sFh90cbLRt1U9j8Cs-a7nzqwslhv1Gos4c72sgvk5WR7COFbvJhLw42Gmug-A0MUFDVWSqecHM6J1nw",
+                        "atype": 3,
+                        "ext": {
+                          "optable": {
+                            "ref": "0"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "device": {
+              "w": 800,
+              "h": 600,
+              "dnt": 0,
+              "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/146.0.0.0 Safari/537.36",
+              "language": "en",
+              "ext": {
+                "vpw": 1904,
+                "vph": 933
+              },
+              "geo": {
+                "region": "NY",
+                "city": "New York",
+                "country": "US",
+                "ext": {}
+              },
+              "devicetype": 2,
+              "make": "",
+              "model": "",
+              "os": "Windows",
+              "osv": "10",
+              "sua": {
+                "source": 1,
+                "platform": {
+                  "brand": "Windows"
+                },
+                "browsers": [
+                  {
+                    "brand": "Chromium",
+                    "version": [
+                      "146"
+                    ]
+                  },
+                  {
+                    "brand": "Not-A.Brand",
+                    "version": [
+                      "24"
+                    ]
+                  },
+                  {
+                    "brand": "Google Chrome",
+                    "version": [
+                      "146"
+                    ]
+                  }
+                ],
+                "mobile": 0
+              }
+            },
+            "geo": {
+              "region": "NY",
+              "city": "New York",
+              "country": "US",
+              "ext": {}
+            },
+            "ext": {
+              "prebid": {
+                "adServerCurrency": "USD",
+                "storedrequest": {
+                  "id": "f20a6258-ed38-48d5-9cef-ec48c9438341"
+                }
+              }
+            },
+            "badv": [
+              "upvalior.com",
+              "yieldlove.com",
+              "planblue.com",
+              "moneypen.co",
+              "bidsopt.com",
+              "money-matters.today",
+              "ascendeum.com",
+              "astonmartindallas.com",
+              "accessmediazone.com",
+              "prebidanalytics.com",
+              "opera.com",
+              "lactationqbank.com",
+              "ajillionmax.com",
+              "macpaw.com",
+              "wfc-fehfbzaxfshzdvgm.z01.azurefd.net",
+              "ato.mx",
+              "bidgear.com",
+              "pubgalaxy.com",
+              "nemluvio.com",
+              "adtelligent.com",
+              "guthealthwellness.com",
+              "bei.azureedge.net",
+              "vungle.com",
+              "motionspots.com",
+              "cdph.ca.gov",
+              "clickport.top",
+              "easyadblocker.com",
+              "mimecast.com",
+              "go1.getghostapp.com",
+              "adrecover.com",
+              "headbidding.com",
+              "wayrates.com",
+              "galderma.com",
+              "pegasuspublishers.com",
+              "goarmy.com",
+              "adapace-2.bc-sys.com",
+              "d13aq0uo1npt7x.cloudfront.net",
+              "monetizemore.com",
+              "mediafuse.com",
+              "bankbazaar.com",
+              "passwordmanagercomparison.com",
+              "needtoimpeach.com",
+              "hotelscombined.com",
+              "getcovered.illinois.gov",
+              "asiandate.com",
+              "privacybadger.org",
+              "gadmobe.com",
+              "mediamint.com",
+              "oyun.fr",
+              "proper.io",
+              "printrecipes.net",
+              "askanexpertonline.com",
+              "shopdoona.com",
+              "vdx.tv",
+              "arcadetab.com",
+              "fmlabsonline.com",
+              "justanswer.com",
+              "tk0x1.com",
+              "firstimpression.io",
+              "doubleclick.net",
+              "totaladblock.com",
+              "adcash.com",
+              "1blocker.com",
+              "carba.io",
+              "ghostery.com",
+              "ila3.com",
+              "cdn.ms1a.com",
+              "global-cdn-cc.b-cdn.net",
+              "searchandprint.recipes",
+              "standsapp.org",
+              "shop.advanceautoparts.com",
+              "gov.il",
+              "tudiendanchoi.com",
+              "advanceautoparts.com",
+              "propermedia.com",
+              "mobuppsrtb.com",
+              "chineseladydate.com",
+              "digitalcontentnow.com",
+              "tobaccomotorwear.com",
+              "wavebrowser.co",
+              "latamdate.com",
+              "thaimatches.com",
+              "onlineactivation.org",
+              "q-grips.com",
+              "wapstart.ru",
+              "ragu.com",
+              "tryexuberant.com",
+              "rb.com",
+              "basicfundamentals.co.in",
+              "1md.org",
+              "a4g.com",
+              "bizzclick.com",
+              "ebookrenta.com",
+              "oyun.se",
+              "onlineactivation.com,",
+              "loansocieties.com",
+              "gaolisz.com",
+              "mediavine.com",
+              "testing-domain.com",
+              "ckmfang.com",
+              "leovegas.com",
+              "synonehundred.com",
+              "selectmedia.asia",
+              "mxu-dmf8avezecfuascm.z01.azurefd.net",
+              "trkbid.com",
+              "adpushup.com",
+              "pubgears.com",
+              "covid19.ca.gov",
+              "adremover.org",
+              "october7files.com",
+              "adblockplus.org",
+              "freequizgames.com",
+              "weeklypenny.com",
+              "popcornews.com",
+              "waardex.com",
+              "allcontentthere.com",
+              "adaway.org",
+              "sekindo.com",
+              "manualsdirectory.org",
+              "ziffdavis.com",
+              "mediaoptions.com",
+              "rtbhouse.com",
+              "all-in1-digitalcontent.net",
+              "wellspan.org",
+              "jxu.azureedge.net",
+              "socialpulsemedia.com",
+              "renta.co.jp",
+              "pubwise.io",
+              "pampillonia.com",
+              "d1qeadpezvp4g.cloudfront.net",
+              "claritycheck.com",
+              "frompdftodoc.com",
+              "adblockultimate.net",
+              "adnimation.com",
+              "araglegal.com",
+              "proper.com",
+              "digitaladsystems.com",
+              "loyal.app",
+              "ezoic.com",
+              "didna.io",
+              "playwire.com",
+              "adomik.com",
+              "webtradingspot.com",
+              "adgone.org",
+              "smadex.com",
+              "survey.money-matters.today",
+              "aipac.org",
+              "getadblock.com",
+              "decenterads.com",
+              "envisionx.co",
+              "roxot.com",
+              "adrizer.com",
+              "adops.com",
+              "nomoredarkspot.com",
+              "trojanwall.click",
+              "adskeeper.com",
+              "jlacosta.com",
+              "contentlists.com",
+              "xapads.com",
+              "idf.il",
+              "adapace-3.bc-sys.com",
+              "hi-chew.com",
+              "visitmyrtlebeach.com",
+              "nucific.com",
+              "fanony.com",
+              "streamrail.com",
+              "learnaboutpd.com",
+              "newormedia.com",
+              "onlineactivation.io,",
+              "ice.gov",
+              "mensdrivingforce.com",
+              "purify-app.com",
+              "www.gov.il",
+              "saturday-october-seven.com",
+              "weewhiskeyfest.com",
+              "loginonline.co",
+              "comodo.com",
+              "test.com",
+              "luckyvybz.top",
+              "hola.org",
+              "coveredca.com",
+              "serverbid.com",
+              "oldmoparts.com",
+              "dbmmszp46juph.cloudfront.net",
+              "sportsnewsman.com",
+              "streamrail.net",
+              "tightropeinteractive.com",
+              "vashoot.com",
+              "epom.com",
+              "oko.uk",
+              "adguard.com",
+              "rtk.io",
+              "digitalcontent-now.com",
+              "publisherdesk.com",
+              "publift.com",
+              "upmcphysicianresources.com",
+              "triviaboss.com",
+              "getaclearrear.com",
+              "niutux.com",
+              "appodeal.com",
+              "emergenc.com",
+              "cafemedia.com",
+              "explore.reference.com",
+              "recipestab.com",
+              "experienceparkland.com",
+              "ip.safelystorage.net",
+              "tekblue.net",
+              "adthrive.com"
+            ],
+            "bcat": [
+              "IAB25-3",
+              "IAB26-2",
+              "IAB25-2",
+              "IAB25-1",
+              "IAB25-7",
+              "IAB25-6",
+              "IAB26",
+              "IAB25",
+              "IAB25-5",
+              "IAB26-4",
+              "IAB25-4",
+              "IAB26-3"
+            ],
+            "source": {
+              "ext": {
+                "schain": {
+                  "ver": "1.0",
+                  "complete": 1,
+                  "nodes": [
+                    {
+                      "asi": "freestar.com",
+                      "sid": "1203",
+                      "hp": 1
+                    }
+                  ]
+                },
+                "tidSource": "pbjs"
+              },
+              "tid": "uda03ee11-f315-44e3-8802-f2663d980714"
+            }
+          }
+        }
+      }
+    },
+    {
+      "url": "https://g2.gumgum.com/hbid/imp?displaymanager=Prebid.js%20-%20gumgum&displaymanagerver=10.27.0&lt=1774052658228&to=240&id5Id=ID5*TDtbeRGUhB2IdvLTp47mguKat8f2y_LTp47mguKat8f__2m95RtaAQEBCmm95RsAlQW4OTBEj4H9-Mhqqdx82w&id5IdLinkType=null&aun=fantrax_desktop_leaderboard_atf&tdid=07e6969d-43f5-49d0-80a9-c8e1038d45e4&uid2=A4AAAC5GwXAjtsuSY5PGnHVrqlXCeNopi4Mn8U-ZEtMptPnwco3FXOBx2jSTFFBRpqSB0Eui3y3AubKKPPPM6tsten3S-SkjOT0S6goU6pMBkS5IeIPrU0YgDTSt27pfwiz-5l4bg31sFh90cbLRt1U9j8Cs-a7nzqwslhv1Gos4c72sgvk5WR7COFbvJhLw42Gmug-A0MUFDVWSqecHM6J1nw&gpid=%2F15184186%2Ffantrax_desktop_leaderboard_atf&pv=e6e6233c-6afb-43fa-aafd-173507ae87a1&maxw=970&maxh=90&si=343842&pi=3&bf=970x90%2C728x90%2C468x60%2C320x100%2C300x100%2C320x50%2C300x50&schain=1.0%2C1!freestar.com%2C1203%2C1%2C%2C%2C&tId=u2e46cef4-8dc9-4de8-8bba-328b0dda30d6&vw=1904&vh=933&sw=800&sh=600&pu=https%3A%2F%2Fwww.fantrax.com%2Ffantasy%2Fleague%2Fj3yl79c7man4av42%2Fplayers&tpl=https%3A%2F%2Fwww.fantrax.com%2Ffantasy%2Fleague%2Fj3yl79c7man4av42%2Fplayers&ce=false&dpr=1&jcsi=%7B%22t%22%3A0%2C%22rq%22%3A8%2C%22pbv%22%3A%2210.27.0%22%7D&ogu=https%3A%2F%2Fwww.fantrax.com%2F&ns=10240&ua=Mozilla%2F5.0%20(Windows%20NT%2010.0%3B%20Win64%3B%20x64)%20AppleWebKit%2F537.36%20(KHTML%2C%20like%20Gecko)%20HeadlessChrome%2F146.0.0.0%20Safari%2F537.36&sua=%7B%22source%22%3A1%2C%22platform%22%3A%7B%22brand%22%3A%22Windows%22%7D%2C%22browsers%22%3A%5B%7B%22brand%22%3A%22Chromium%22%2C%22version%22%3A%5B%22146%22%5D%7D%2C%7B%22brand%22%3A%22Not-A.Brand%22%2C%22version%22%3A%5B%2224%22%5D%7D%2C%7B%22brand%22%3A%22Google%20Chrome%22%2C%22version%22%3A%5B%22146%22%5D%7D%5D%2C%22mobile%22%3A0%7D&dnt=0&os=Windows&osv=10&dt=2&lang=en&make=&model=",
+      "method": "GET"
+    },
+    {
+      "url": "https://g2.gumgum.com/hbid/imp?displaymanager=Prebid.js%20-%20gumgum&displaymanagerver=10.27.0&lt=1774052658228&to=240&id5Id=ID5*TDtbeRGUhB2IdvLTp47mguKat8f2y_LTp47mguKat8f__2m95RtaAQEBCmm95RsAlQW4OTBEj4H9-Mhqqdx82w&id5IdLinkType=null&aun=fantrax_desktop_leaderboard_atf&tdid=07e6969d-43f5-49d0-80a9-c8e1038d45e4&uid2=A4AAAC5GwXAjtsuSY5PGnHVrqlXCeNopi4Mn8U-ZEtMptPnwco3FXOBx2jSTFFBRpqSB0Eui3y3AubKKPPPM6tsten3S-SkjOT0S6goU6pMBkS5IeIPrU0YgDTSt27pfwiz-5l4bg31sFh90cbLRt1U9j8Cs-a7nzqwslhv1Gos4c72sgvk5WR7COFbvJhLw42Gmug-A0MUFDVWSqecHM6J1nw&gpid=%2F15184186%2Ffantrax_desktop_leaderboard_atf&pv=e6e6233c-6afb-43fa-aafd-173507ae87a1&maxw=970&maxh=90&si=343840&pi=3&bf=970x90%2C728x90%2C468x60%2C320x100%2C300x100%2C320x50%2C300x50&schain=1.0%2C1!freestar.com%2C1203%2C1%2C%2C%2C&tId=u2e46cef4-8dc9-4de8-8bba-328b0dda30d6&vw=1904&vh=933&sw=800&sh=600&pu=https%3A%2F%2Fwww.fantrax.com%2Ffantasy%2Fleague%2Fj3yl79c7man4av42%2Fplayers&tpl=https%3A%2F%2Fwww.fantrax.com%2Ffantasy%2Fleague%2Fj3yl79c7man4av42%2Fplayers&ce=false&dpr=1&jcsi=%7B%22t%22%3A0%2C%22rq%22%3A8%2C%22pbv%22%3A%2210.27.0%22%7D&ogu=https%3A%2F%2Fwww.fantrax.com%2F&ns=10240&ua=Mozilla%2F5.0%20(Windows%20NT%2010.0%3B%20Win64%3B%20x64)%20AppleWebKit%2F537.36%20(KHTML%2C%20like%20Gecko)%20HeadlessChrome%2F146.0.0.0%20Safari%2F537.36&sua=%7B%22source%22%3A1%2C%22platform%22%3A%7B%22brand%22%3A%22Windows%22%7D%2C%22browsers%22%3A%5B%7B%22brand%22%3A%22Chromium%22%2C%22version%22%3A%5B%22146%22%5D%7D%2C%7B%22brand%22%3A%22Not-A.Brand%22%2C%22version%22%3A%5B%2224%22%5D%7D%2C%7B%22brand%22%3A%22Google%20Chrome%22%2C%22version%22%3A%5B%22146%22%5D%7D%5D%2C%22mobile%22%3A0%7D&dnt=0&os=Windows&osv=10&dt=2&lang=en&make=&model=",
+      "method": "GET"
+    },
+    {
+      "url": "https://g2.gumgum.com/hbid/imp?displaymanager=Prebid.js%20-%20gumgum&displaymanagerver=10.27.0&lt=1774052658228&to=240&id5Id=ID5*TDtbeRGUhB2IdvLTp47mguKat8f2y_LTp47mguKat8f__2m95RtaAQEBCmm95RsAlQW4OTBEj4H9-Mhqqdx82w&id5IdLinkType=null&aun=fantrax_desktop_leaderboard_atf&tdid=07e6969d-43f5-49d0-80a9-c8e1038d45e4&uid2=A4AAAC5GwXAjtsuSY5PGnHVrqlXCeNopi4Mn8U-ZEtMptPnwco3FXOBx2jSTFFBRpqSB0Eui3y3AubKKPPPM6tsten3S-SkjOT0S6goU6pMBkS5IeIPrU0YgDTSt27pfwiz-5l4bg31sFh90cbLRt1U9j8Cs-a7nzqwslhv1Gos4c72sgvk5WR7COFbvJhLw42Gmug-A0MUFDVWSqecHM6J1nw&gpid=%2F15184186%2Ffantrax_desktop_leaderboard_atf&pv=e6e6233c-6afb-43fa-aafd-173507ae87a1&maxw=970&maxh=90&si=343841&pi=3&bf=970x90%2C728x90%2C468x60%2C320x100%2C300x100%2C320x50%2C300x50&schain=1.0%2C1!freestar.com%2C1203%2C1%2C%2C%2C&tId=u2e46cef4-8dc9-4de8-8bba-328b0dda30d6&vw=1904&vh=933&sw=800&sh=600&pu=https%3A%2F%2Fwww.fantrax.com%2Ffantasy%2Fleague%2Fj3yl79c7man4av42%2Fplayers&tpl=https%3A%2F%2Fwww.fantrax.com%2Ffantasy%2Fleague%2Fj3yl79c7man4av42%2Fplayers&ce=false&dpr=1&jcsi=%7B%22t%22%3A0%2C%22rq%22%3A8%2C%22pbv%22%3A%2210.27.0%22%7D&ogu=https%3A%2F%2Fwww.fantrax.com%2F&ns=10240&ua=Mozilla%2F5.0%20(Windows%20NT%2010.0%3B%20Win64%3B%20x64)%20AppleWebKit%2F537.36%20(KHTML%2C%20like%20Gecko)%20HeadlessChrome%2F146.0.0.0%20Safari%2F537.36&sua=%7B%22source%22%3A1%2C%22platform%22%3A%7B%22brand%22%3A%22Windows%22%7D%2C%22browsers%22%3A%5B%7B%22brand%22%3A%22Chromium%22%2C%22version%22%3A%5B%22146%22%5D%7D%2C%7B%22brand%22%3A%22Not-A.Brand%22%2C%22version%22%3A%5B%2224%22%5D%7D%2C%7B%22brand%22%3A%22Google%20Chrome%22%2C%22version%22%3A%5B%22146%22%5D%7D%5D%2C%22mobile%22%3A0%7D&dnt=0&os=Windows&osv=10&dt=2&lang=en&make=&model=",
+      "method": "GET"
+    },
+    {
+      "url": "https://g2.gumgum.com/hbid/imp?displaymanager=Prebid.js%20-%20gumgum&displaymanagerver=10.27.0&lt=1774052658228&to=240&id5Id=ID5*TDtbeRGUhB2IdvLTp47mguKat8f2y_LTp47mguKat8f__2m95RtaAQEBCmm95RsAlQW4OTBEj4H9-Mhqqdx82w&id5IdLinkType=null&aun=fantrax_desktop_leaderboard_atf&tdid=07e6969d-43f5-49d0-80a9-c8e1038d45e4&uid2=A4AAAC5GwXAjtsuSY5PGnHVrqlXCeNopi4Mn8U-ZEtMptPnwco3FXOBx2jSTFFBRpqSB0Eui3y3AubKKPPPM6tsten3S-SkjOT0S6goU6pMBkS5IeIPrU0YgDTSt27pfwiz-5l4bg31sFh90cbLRt1U9j8Cs-a7nzqwslhv1Gos4c72sgvk5WR7COFbvJhLw42Gmug-A0MUFDVWSqecHM6J1nw&gpid=%2F15184186%2Ffantrax_desktop_leaderboard_atf&pv=e6e6233c-6afb-43fa-aafd-173507ae87a1&maxw=970&maxh=90&si=343844&pi=3&bf=970x90%2C728x90%2C468x60%2C320x100%2C300x100%2C320x50%2C300x50&schain=1.0%2C1!freestar.com%2C1203%2C1%2C%2C%2C&tId=u2e46cef4-8dc9-4de8-8bba-328b0dda30d6&vw=1904&vh=933&sw=800&sh=600&pu=https%3A%2F%2Fwww.fantrax.com%2Ffantasy%2Fleague%2Fj3yl79c7man4av42%2Fplayers&tpl=https%3A%2F%2Fwww.fantrax.com%2Ffantasy%2Fleague%2Fj3yl79c7man4av42%2Fplayers&ce=false&dpr=1&jcsi=%7B%22t%22%3A0%2C%22rq%22%3A8%2C%22pbv%22%3A%2210.27.0%22%7D&ogu=https%3A%2F%2Fwww.fantrax.com%2F&ns=10240&ua=Mozilla%2F5.0%20(Windows%20NT%2010.0%3B%20Win64%3B%20x64)%20AppleWebKit%2F537.36%20(KHTML%2C%20like%20Gecko)%20HeadlessChrome%2F146.0.0.0%20Safari%2F537.36&sua=%7B%22source%22%3A1%2C%22platform%22%3A%7B%22brand%22%3A%22Windows%22%7D%2C%22browsers%22%3A%5B%7B%22brand%22%3A%22Chromium%22%2C%22version%22%3A%5B%22146%22%5D%7D%2C%7B%22brand%22%3A%22Not-A.Brand%22%2C%22version%22%3A%5B%2224%22%5D%7D%2C%7B%22brand%22%3A%22Google%20Chrome%22%2C%22version%22%3A%5B%22146%22%5D%7D%5D%2C%22mobile%22%3A0%7D&dnt=0&os=Windows&osv=10&dt=2&lang=en&make=&model=",
+      "method": "GET"
+    },
+    {
+      "url": "https://g2.gumgum.com/hbid/imp?displaymanager=Prebid.js%20-%20gumgum&displaymanagerver=10.27.0&lt=1774052658228&to=240&id5Id=ID5*TDtbeRGUhB2IdvLTp47mguKat8f2y_LTp47mguKat8f__2m95RtaAQEBCmm95RsAlQW4OTBEj4H9-Mhqqdx82w&id5IdLinkType=null&aun=fantrax_desktop_leaderboard_atf&tdid=07e6969d-43f5-49d0-80a9-c8e1038d45e4&uid2=A4AAAC5GwXAjtsuSY5PGnHVrqlXCeNopi4Mn8U-ZEtMptPnwco3FXOBx2jSTFFBRpqSB0Eui3y3AubKKPPPM6tsten3S-SkjOT0S6goU6pMBkS5IeIPrU0YgDTSt27pfwiz-5l4bg31sFh90cbLRt1U9j8Cs-a7nzqwslhv1Gos4c72sgvk5WR7COFbvJhLw42Gmug-A0MUFDVWSqecHM6J1nw&gpid=%2F15184186%2Ffantrax_desktop_leaderboard_atf&pv=e6e6233c-6afb-43fa-aafd-173507ae87a1&maxw=970&maxh=90&si=343845&pi=3&bf=970x90%2C728x90%2C468x60%2C320x100%2C300x100%2C320x50%2C300x50&schain=1.0%2C1!freestar.com%2C1203%2C1%2C%2C%2C&tId=u2e46cef4-8dc9-4de8-8bba-328b0dda30d6&vw=1904&vh=933&sw=800&sh=600&pu=https%3A%2F%2Fwww.fantrax.com%2Ffantasy%2Fleague%2Fj3yl79c7man4av42%2Fplayers&tpl=https%3A%2F%2Fwww.fantrax.com%2Ffantasy%2Fleague%2Fj3yl79c7man4av42%2Fplayers&ce=false&dpr=1&jcsi=%7B%22t%22%3A0%2C%22rq%22%3A8%2C%22pbv%22%3A%2210.27.0%22%7D&ogu=https%3A%2F%2Fwww.fantrax.com%2F&ns=10240&ua=Mozilla%2F5.0%20(Windows%20NT%2010.0%3B%20Win64%3B%20x64)%20AppleWebKit%2F537.36%20(KHTML%2C%20like%20Gecko)%20HeadlessChrome%2F146.0.0.0%20Safari%2F537.36&sua=%7B%22source%22%3A1%2C%22platform%22%3A%7B%22brand%22%3A%22Windows%22%7D%2C%22browsers%22%3A%5B%7B%22brand%22%3A%22Chromium%22%2C%22version%22%3A%5B%22146%22%5D%7D%2C%7B%22brand%22%3A%22Not-A.Brand%22%2C%22version%22%3A%5B%2224%22%5D%7D%2C%7B%22brand%22%3A%22Google%20Chrome%22%2C%22version%22%3A%5B%22146%22%5D%7D%5D%2C%22mobile%22%3A0%7D&dnt=0&os=Windows&osv=10&dt=2&lang=en&make=&model=",
+      "method": "GET"
+    },
+    {
+      "url": "https://g2.gumgum.com/hbid/imp?displaymanager=Prebid.js%20-%20gumgum&displaymanagerver=10.27.0&lt=1774052658228&to=240&id5Id=ID5*TDtbeRGUhB2IdvLTp47mguKat8f2y_LTp47mguKat8f__2m95RtaAQEBCmm95RsAlQW4OTBEj4H9-Mhqqdx82w&id5IdLinkType=null&aun=fantrax_desktop_leaderboard_atf&tdid=07e6969d-43f5-49d0-80a9-c8e1038d45e4&uid2=A4AAAC5GwXAjtsuSY5PGnHVrqlXCeNopi4Mn8U-ZEtMptPnwco3FXOBx2jSTFFBRpqSB0Eui3y3AubKKPPPM6tsten3S-SkjOT0S6goU6pMBkS5IeIPrU0YgDTSt27pfwiz-5l4bg31sFh90cbLRt1U9j8Cs-a7nzqwslhv1Gos4c72sgvk5WR7COFbvJhLw42Gmug-A0MUFDVWSqecHM6J1nw&gpid=%2F15184186%2Ffantrax_desktop_leaderboard_atf&pv=e6e6233c-6afb-43fa-aafd-173507ae87a1&maxw=970&maxh=90&si=343846&pi=3&bf=970x90%2C728x90%2C468x60%2C320x100%2C300x100%2C320x50%2C300x50&schain=1.0%2C1!freestar.com%2C1203%2C1%2C%2C%2C&tId=u2e46cef4-8dc9-4de8-8bba-328b0dda30d6&vw=1904&vh=933&sw=800&sh=600&pu=https%3A%2F%2Fwww.fantrax.com%2Ffantasy%2Fleague%2Fj3yl79c7man4av42%2Fplayers&tpl=https%3A%2F%2Fwww.fantrax.com%2Ffantasy%2Fleague%2Fj3yl79c7man4av42%2Fplayers&ce=false&dpr=1&jcsi=%7B%22t%22%3A0%2C%22rq%22%3A8%2C%22pbv%22%3A%2210.27.0%22%7D&ogu=https%3A%2F%2Fwww.fantrax.com%2F&ns=10240&ua=Mozilla%2F5.0%20(Windows%20NT%2010.0%3B%20Win64%3B%20x64)%20AppleWebKit%2F537.36%20(KHTML%2C%20like%20Gecko)%20HeadlessChrome%2F146.0.0.0%20Safari%2F537.36&sua=%7B%22source%22%3A1%2C%22platform%22%3A%7B%22brand%22%3A%22Windows%22%7D%2C%22browsers%22%3A%5B%7B%22brand%22%3A%22Chromium%22%2C%22version%22%3A%5B%22146%22%5D%7D%2C%7B%22brand%22%3A%22Not-A.Brand%22%2C%22version%22%3A%5B%2224%22%5D%7D%2C%7B%22brand%22%3A%22Google%20Chrome%22%2C%22version%22%3A%5B%22146%22%5D%7D%5D%2C%22mobile%22%3A0%7D&dnt=0&os=Windows&osv=10&dt=2&lang=en&make=&model=",
+      "method": "GET"
+    },
+    {
+      "url": "https://ads.yieldmo.com/exchange/prebid?pbav=10.27.0&p=%5B%7B%22placement_id%22%3A%22fantrax_desktop_leaderboard_atf%22%2C%22callback_id%22%3A%227fb1ede6-276e-4cb2-b183-de5df6eccb87%22%2C%22sizes%22%3A%5B%5B970%2C90%5D%2C%5B728%2C90%5D%2C%5B468%2C60%5D%2C%5B320%2C100%5D%2C%5B300%2C100%5D%2C%5B320%2C50%5D%2C%5B300%2C50%5D%5D%2C%22ym_placement_id%22%3A%222662464007037722661%22%2C%22gpid%22%3A%22%2F15184186%2Ffantrax_desktop_leaderboard_atf%22%2C%22tid%22%3A%22u471a2bd3-9e86-4add-bee4-7d98ecd2e112%22%2C%22auctionId%22%3A%22uf2f047b8-c114-4976-b06b-260d83a456dc%22%7D%5D&page_url=https%3A%2F%2Fwww.fantrax.com%2Ffantasy%2Fleague%2Fj3yl79c7man4av42%2Fplayers&bust=1774052658229&dnt=false&description=Fantrax%20offers%20the%20most%20customizable%20fantasy%20league%20management%20service%20in%20the%20industry%2C%20with%20free%20offerings%20in%20baseball%2C%20football%2C%20basketball%2C%20hockey%2C%20soccer%2C%20golf%2C%20and%20racing.%20Fantrax%20Commissioner%20is%20the%20industry%20leader%20when%20it%20comes%20to%20dynasty%20leagues%2C%20but%20our%20redraft%20and%20keeper%20leagues%20also%20beat%20the%20competition.%20Switch%20your%20leagues%20over%20today!&tmax=3000&userConsent=%7B%22gdprApplies%22%3A%22%22%2C%22cmp%22%3A%22%22%2C%22gpp%22%3A%22%22%2C%22gpp_sid%22%3A%5B%5D%7D&us_privacy=&pr=&title=League%20Players%20-%20Fantrax&w=1904&h=933&schain=%7B%22ver%22%3A%221.0%22%2C%22complete%22%3A1%2C%22nodes%22%3A%5B%7B%22asi%22%3A%22freestar.com%22%2C%22sid%22%3A%221203%22%2C%22hp%22%3A1%7D%5D%7D&eids=%5B%7B%22source%22%3A%22amxdt.net%22%2C%22uids%22%3A%5B%7B%22id%22%3A%22amx*3*f21488f4-69b5-4aeb-87a1-b3705ad19de1*e382bc9fe0e377e2f0e867923fa9589d%22%2C%22atype%22%3A1%7D%5D%7D%2C%7B%22source%22%3A%22criteo.com%22%2C%22uids%22%3A%5B%7B%22id%22%3A%226U-n_V9LeVBKMjJMbUlzaW9aZWlWdiUyRmw5SVJCemZzb0xlZDUlMkJobHFSeUs2SHBwMUo0N1ZRcCUyRkpZSURjVzFiJTJGWmRLVzBLMTVRS0NPcERUQTdraDZ6MTBacGF0MkpYVHczZWs0VERkYm0wUDhsJTJGenMlM0Q%22%2C%22atype%22%3A1%7D%5D%7D%2C%7B%22source%22%3A%22neustar.biz%22%2C%22uids%22%3A%5B%7B%22id%22%3A%22E1%3AtUM2dCQRed0Uf4WIJMzsQ5hpHkK60uvJ8zP79FnrOZRBvdca924yq6_72FqW5cEY0PhCAIuwSLttxUMqx1O8KAQFbKs_9BjyzPELrxQK8Js%22%2C%22atype%22%3A1%2C%22ext%22%3A%7B%22rtiPartner%22%3A%22fabrickId%22%7D%7D%5D%7D%2C%7B%22source%22%3A%22audigent.com%22%2C%22uids%22%3A%5B%7B%22id%22%3A%220001yum0ea8bil6jh66kfg7bhbgbc76bg9bka86g9labackkc2jl%22%2C%22atype%22%3A1%7D%5D%7D%2C%7B%22source%22%3A%22id5-sync.com%22%2C%22uids%22%3A%5B%7B%22id%22%3A%22ID5*TDtbeRGUhB2IdvLTp47mguKat8f2y_LTp47mguKat8f__2m95RtaAQEBCmm95RsAlQW4OTBEj4H9-Mhqqdx82w%22%2C%22atype%22%3A1%2C%22ext%22%3A%7B%22linkType%22%3A0%2C%22pba%22%3A%22qdkDLpErAPvRtUnzGYRQszWOgJT8KYzmERiXpOW1JbJq2gHHq0XJrGJH8spIdIjtynptqh6Cc1AN5C6G8%2FaCwQ%3D%3D%22%7D%7D%5D%7D%2C%7B%22source%22%3A%22pubcid.org%22%2C%22uids%22%3A%5B%7B%22id%22%3A%2251d24762-8492-4b68-af7c-ebe6e5f1dda6%22%2C%22atype%22%3A1%7D%5D%7D%2C%7B%22source%22%3A%22adserver.org%22%2C%22uids%22%3A%5B%7B%22id%22%3A%2207e6969d-43f5-49d0-80a9-c8e1038d45e4%22%2C%22atype%22%3A1%2C%22ext%22%3A%7B%22rtiPartner%22%3A%22TDID%22%7D%7D%5D%2C%22inserter%22%3A%22adserver.org%22%2C%22matcher%22%3A%22adserver.org%22%2C%22mm%22%3A4%7D%2C%7B%22inserter%22%3A%22optable.co%22%2C%22matcher%22%3A%22truedata.co%22%2C%22mm%22%3A5%2C%22source%22%3A%22criteo-hemapi.com%22%2C%22uids%22%3A%5B%7B%22id%22%3A%22kRgFZV83bGF6VXhWelBxMFJaZVpidm14RlBHUmhZbTZFMCUyQiUyRkd2ZXhOZ29yTG8wa0VPbVQxaHI4d00yZmMlMkJQJTJCRzlTOXpmcVZWQWZFJTJGNUNiZFlvcXBvSUtBNXlaT1E0U3oxZnNYak1ubUZhV1RZNlElM0Q%22%2C%22atype%22%3A3%2C%22ext%22%3A%7B%22stype%22%3A%22cto_bundle_hem_api%22%7D%7D%5D%7D%2C%7B%22inserter%22%3A%22optable.co%22%2C%22matcher%22%3A%22truedata.co%22%2C%22mm%22%3A5%2C%22source%22%3A%22yahoo.com%22%2C%22uids%22%3A%5B%7B%22id%22%3A%22VJD5WwVVWUYBd6in03cMG4OZ-bN8bHBXzvqmKw-6YqekKNAtATiatXHyMPPLSjEkMxRkbvf9ImHNGksynyefyg%22%2C%22atype%22%3A3%7D%5D%7D%2C%7B%22inserter%22%3A%22optable.co%22%2C%22matcher%22%3A%22truedata.co%22%2C%22mm%22%3A5%2C%22source%22%3A%22uidapi.com%22%2C%22uids%22%3A%5B%7B%22id%22%3A%22A4AAAC5GwXAjtsuSY5PGnHVrqlXCeNopi4Mn8U-ZEtMptPnwco3FXOBx2jSTFFBRpqSB0Eui3y3AubKKPPPM6tsten3S-SkjOT0S6goU6pMBkS5IeIPrU0YgDTSt27pfwiz-5l4bg31sFh90cbLRt1U9j8Cs-a7nzqwslhv1Gos4c72sgvk5WR7COFbvJhLw42Gmug-A0MUFDVWSqecHM6J1nw%22%2C%22atype%22%3A3%2C%22ext%22%3A%7B%22rtiPartner%22%3A%22UID2%22%7D%7D%5D%7D%5D",
+      "method": "GET"
+    },
+    {
+      "url": "https://fastlane.rubiconproject.com/a/api/fastlane.json?account_id=16924&site_id=500600&zone_id=2983354&size_id=2&alt_size_ids=1%2C19%2C43%2C44%2C55%2C117&rp_schain=1.0,1!freestar.com,1203,1,,,&eid_amxdt.net=amx*3*f21488f4-69b5-4aeb-87a1-b3705ad19de1*e382bc9fe0e377e2f0e867923fa9589d%5E1%5E%5E%5E%5E%5E&eid_criteo.com=6U-n_V9LeVBKMjJMbUlzaW9aZWlWdiUyRmw5SVJCemZzb0xlZDUlMkJobHFSeUs2SHBwMUo0N1ZRcCUyRkpZSURjVzFiJTJGWmRLVzBLMTVRS0NPcERUQTdraDZ6MTBacGF0MkpYVHczZWs0VERkYm0wUDhsJTJGenMlM0Q%5E1%5E%5E%5E%5E%5E&eid_neustar.biz=E1%3AtUM2dCQRed0Uf4WIJMzsQ5hpHkK60uvJ8zP79FnrOZRBvdca924yq6_72FqW5cEY0PhCAIuwSLttxUMqx1O8KAQFbKs_9BjyzPELrxQK8Js%5E1%5E%5E%5E%5E%5EfabrickId&eid_audigent.com=0001yum0ea8bil6jh66kfg7bhbgbc76bg9bka86g9labackkc2jl%5E1%5E%5E%5E%5E%5E&eid_id5-sync.com=ID5*TDtbeRGUhB2IdvLTp47mguKat8f2y_LTp47mguKat8f__2m95RtaAQEBCmm95RsAlQW4OTBEj4H9-Mhqqdx82w%5E1%5E%5E%5E%5E%5E&eid_pubcid.org=51d24762-8492-4b68-af7c-ebe6e5f1dda6%5E1%5E%5E%5E%5E%5E&eid_adserver.org=07e6969d-43f5-49d0-80a9-c8e1038d45e4%5E1%5E%5Eadserver.org%5Eadserver.org%5E4%5ETDID&eid_criteo-hemapi.com=kRgFZV83bGF6VXhWelBxMFJaZVpidm14RlBHUmhZbTZFMCUyQiUyRkd2ZXhOZ29yTG8wa0VPbVQxaHI4d00yZmMlMkJQJTJCRzlTOXpmcVZWQWZFJTJGNUNiZFlvcXBvSUtBNXlaT1E0U3oxZnNYak1ubUZhV1RZNlElM0Q%5E3%5E%5Eoptable.co%5Etruedata.co%5E5%5E&eid_yahoo.com=VJD5WwVVWUYBd6in03cMG4OZ-bN8bHBXzvqmKw-6YqekKNAtATiatXHyMPPLSjEkMxRkbvf9ImHNGksynyefyg%5E3%5E%5Eoptable.co%5Etruedata.co%5E5%5E&eid_uidapi.com=A4AAAC5GwXAjtsuSY5PGnHVrqlXCeNopi4Mn8U-ZEtMptPnwco3FXOBx2jSTFFBRpqSB0Eui3y3AubKKPPPM6tsten3S-SkjOT0S6goU6pMBkS5IeIPrU0YgDTSt27pfwiz-5l4bg31sFh90cbLRt1U9j8Cs-a7nzqwslhv1Gos4c72sgvk5WR7COFbvJhLw42Gmug-A0MUFDVWSqecHM6J1nw%5E3%5E%5Eoptable.co%5Etruedata.co%5E5%5EUID2&rf=https%3A%2F%2Fwww.fantrax.com%2Ffantasy%2Fleague%2Fj3yl79c7man4av42%2Fplayers&tg_v.id=e10eafc9-8649-4d08-a0dc-71574e888167&tg_i.domain=fantrax.com&tg_i.page=https%3A%2F%2Fwww.fantrax.com%2Ffantasy%2Fleague%2Fj3yl79c7man4av42%2Fplayers&tg_i.name=fantrax-com&tg_i.cat=IAB17&tg_i.sectioncat=IAB17&tg_i.pagecat=IAB17&tg_i.mobile=0&tg_i.fs_optimized=false&tg_i.fs_site=3129&tg_i.documentLang=en&tg_i.fs_ad_product=display&tg_i.gameraPlacementId=MS0zLTE&tg_i.gameraId=gamera_22%2Cgamera_24%2Cgamera_104%2Cgamera_16%2Cgamera_17%2Cgamera_11%2Cgamera_25%2Cgamera_105%2Cgamera_39%2Cgamera_14&tg_i.dfp_ad_unit_code=%2F15184186%2Ffantrax_desktop_leaderboard_atf&tk_flint=pbjs_lite_v10.27.0&x_source.tid=u55319b6e-73ce-403d-bb3a-4d6a66baeb66&l_pb_bid_id=f4918ff3-8a76-4069-8fe7-73cf93ba4836&p_screen_res=800x600&rp_secure=1&x_imp.ext.tid=u5b4b77ae-36aa-4685-b7b5-aec3044f3d55&p_site.mobile=0&p_gpid=%2F15184186%2Ffantrax_desktop_leaderboard_atf&m_ch_ua=%22Chromium%22%7Cv%3D%22146%22%2C%22Not-A.Brand%22%7Cv%3D%2224%22%2C%22Google%20Chrome%22%7Cv%3D%22146%22&m_ch_mobile=%3F0&m_ch_platform=Windows&slots=1&rand=0.3603341709842285",
+      "method": "GET"
+    },
+    {
+      "url": "https://api.floors.dev/sgw/v1/floors?d=fantrax.com&t=desktop&k=1&r=2&c=US",
+      "method": "GET"
+    },
+    {
+      "url": "https://gum.criteo.com/sid/json?origin=prebid&topUrl=https%3A%2F%2Fwww.fantrax.com%2F&domain=www.fantrax.com&bundle=ESvtFF92dzFpS0tGJTJCeUIwbHF4b2ViR0pOcjJ4T2FNZjNDNE5YbUgxcktUaW9nZkFCUFdQbldxMTVxSW5pREFuYTJoTGp6Rmk4N25FV1llMXlRWkd2cUFwUVVtY0I5aHRWWGVIZjIzZG1jUkdyblIzOG9hWSUyQkZUTXVqelNhNlF5WnQwcTE3MnUwWHFwQWo4OVZiRmglMkJ6ZHNJNmclM0QlM0Q&cw=1&lsw=1",
+      "method": "GET"
+    }
+  ]
+}

@@ -1,0 +1,385 @@
+[
+  {
+    "name": "Pierre-Luc Dubois",
+    "row_keys": [
+      "scorer",
+      "eligibleStatusIds",
+      "posId",
+      "cells",
+      "statusId",
+      "eligiblePosIds",
+      "actions"
+    ],
+    "scorer_keys": [
+      "teamName",
+      "urlName",
+      "headshotUrl",
+      "scorerId",
+      "disableLineupChange",
+      "posIdsNoFlex",
+      "defaultPosId",
+      "posShortNames",
+      "keeper",
+      "team",
+      "icons",
+      "primaryPosId",
+      "rookie",
+      "minorsEligible",
+      "posIds",
+      "teamId",
+      "name",
+      "teamShortName",
+      "shortName"
+    ],
+    "cells": [
+      {
+        "content": "27"
+      },
+      {
+        "content": "NJD 0<br/>@WSH 1",
+        "eventId": "06d13"
+      },
+      {
+        "content": "16"
+      },
+      {
+        "content": "273:37"
+      },
+      {
+        "content": "4"
+      },
+      {
+        "content": "4"
+      },
+      {
+        "content": "8"
+      },
+      {
+        "content": "-3"
+      },
+      {
+        "content": "2"
+      },
+      {
+        "content": "12"
+      },
+      {
+        "content": "25"
+      },
+      {
+        "content": "16.0"
+      },
+      {
+        "content": "2"
+      },
+      {
+        "content": "0"
+      }
+    ]
+  },
+  {
+    "name": "Adam Fantilli",
+    "row_keys": [
+      "scorer",
+      "eligibleStatusIds",
+      "posId",
+      "cells",
+      "statusId",
+      "eligiblePosIds",
+      "actions"
+    ],
+    "scorer_keys": [
+      "teamName",
+      "urlName",
+      "headshotUrl",
+      "scorerId",
+      "posIdsNoFlex",
+      "defaultPosId",
+      "posShortNames",
+      "keeper",
+      "team",
+      "icons",
+      "primaryPosId",
+      "rookie",
+      "minorsEligible",
+      "posIds",
+      "teamId",
+      "name",
+      "teamShortName",
+      "shortName"
+    ],
+    "cells": [
+      {
+        "content": "21"
+      },
+      {
+        "content": ""
+      },
+      {
+        "content": "68"
+      },
+      {
+        "content": "1275:55"
+      },
+      {
+        "content": "21"
+      },
+      {
+        "content": "30"
+      },
+      {
+        "content": "51"
+      },
+      {
+        "content": "-11"
+      },
+      {
+        "content": "34"
+      },
+      {
+        "content": "107"
+      },
+      {
+        "content": "184"
+      },
+      {
+        "content": "11.4"
+      },
+      {
+        "content": "4"
+      },
+      {
+        "content": "3"
+      }
+    ]
+  },
+  {
+    "name": "Juraj Slafkovsky",
+    "row_keys": [
+      "scorer",
+      "eligibleStatusIds",
+      "posId",
+      "cells",
+      "statusId",
+      "eligiblePosIds",
+      "actions"
+    ],
+    "scorer_keys": [
+      "teamName",
+      "urlName",
+      "headshotUrl",
+      "scorerId",
+      "posIdsNoFlex",
+      "defaultPosId",
+      "posShortNames",
+      "keeper",
+      "team",
+      "icons",
+      "primaryPosId",
+      "rookie",
+      "minorsEligible",
+      "posIds",
+      "teamId",
+      "name",
+      "teamShortName",
+      "shortName"
+    ],
+    "cells": [
+      {
+        "content": "21"
+      },
+      {
+        "content": ""
+      },
+      {
+        "content": "68"
+      },
+      {
+        "content": "1241:16"
+      },
+      {
+        "content": "25"
+      },
+      {
+        "content": "32"
+      },
+      {
+        "content": "57"
+      },
+      {
+        "content": "3"
+      },
+      {
+        "content": "44"
+      },
+      {
+        "content": "92"
+      },
+      {
+        "content": "147"
+      },
+      {
+        "content": "17.0"
+      },
+      {
+        "content": "13"
+      },
+      {
+        "content": "2"
+      }
+    ]
+  },
+  {
+    "name": "Trevor Zegras",
+    "row_keys": [
+      "scorer",
+      "eligibleStatusIds",
+      "posId",
+      "cells",
+      "statusId",
+      "eligiblePosIds",
+      "actions"
+    ],
+    "scorer_keys": [
+      "teamName",
+      "urlName",
+      "headshotUrl",
+      "scorerId",
+      "posIdsNoFlex",
+      "defaultPosId",
+      "posShortNames",
+      "keeper",
+      "team",
+      "icons",
+      "primaryPosId",
+      "rookie",
+      "minorsEligible",
+      "posIds",
+      "teamId",
+      "name",
+      "teamShortName",
+      "shortName"
+    ],
+    "cells": [
+      {
+        "content": "25"
+      },
+      {
+        "content": ""
+      },
+      {
+        "content": "63"
+      },
+      {
+        "content": "1181:27"
+      },
+      {
+        "content": "16"
+      },
+      {
+        "content": "30"
+      },
+      {
+        "content": "46"
+      },
+      {
+        "content": "-6"
+      },
+      {
+        "content": "38"
+      },
+      {
+        "content": "32"
+      },
+      {
+        "content": "132"
+      },
+      {
+        "content": "12.1"
+      },
+      {
+        "content": "5"
+      },
+      {
+        "content": "3"
+      }
+    ]
+  },
+  {
+    "name": "Lenni Hameenaho",
+    "row_keys": [
+      "scorer",
+      "eligibleStatusIds",
+      "posId",
+      "cells",
+      "statusId",
+      "eligiblePosIds",
+      "actions"
+    ],
+    "scorer_keys": [
+      "teamName",
+      "urlName",
+      "headshotUrl",
+      "scorerId",
+      "disableLineupChange",
+      "posIdsNoFlex",
+      "defaultPosId",
+      "posShortNames",
+      "team",
+      "icons",
+      "primaryPosId",
+      "rookie",
+      "minorsEligible",
+      "posIds",
+      "teamId",
+      "name",
+      "teamShortName",
+      "shortName"
+    ],
+    "cells": [
+      {
+        "content": "21"
+      },
+      {
+        "content": "NJD 0<br/>@WSH 1",
+        "eventId": "06d13"
+      },
+      {
+        "content": "8"
+      },
+      {
+        "content": "92:40"
+      },
+      {
+        "content": "0"
+      },
+      {
+        "content": "1"
+      },
+      {
+        "content": "1"
+      },
+      {
+        "content": "-2"
+      },
+      {
+        "content": "0"
+      },
+      {
+        "content": "6"
+      },
+      {
+        "content": "14"
+      },
+      {
+        "content": "0.0"
+      },
+      {
+        "content": "0"
+      },
+      {
+        "content": "0"
+      }
+    ]
+  }
+]

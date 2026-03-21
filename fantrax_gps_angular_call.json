@@ -1,0 +1,21 @@
+[
+  {
+    "url": "https://www.fantrax.com/fxpa/req?leagueId=j3yl79c7man4av42",
+    "full_body": {
+      "msgs": [
+        {
+          "method": "getPlayerStats",
+          "data": {}
+        }
+      ],
+      "uiv": 3,
+      "refUrl": "https://www.fantrax.com/fantasy/league/j3yl79c7man4av42/players",
+      "dt": 0,
+      "at": 0,
+      "av": "0.0",
+      "tz": "America/New_York",
+      "v": "179.0.1"
+    },
+    "getPlayerStats_data": {}
+  }
+]

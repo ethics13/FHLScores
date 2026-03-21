@@ -1,0 +1,91 @@
+{
+  "scorer_keys": [
+    "teamName",
+    "urlName",
+    "headshotUrl",
+    "scorerId",
+    "disableLineupChange",
+    "posIdsNoFlex",
+    "defaultPosId",
+    "posShortNames",
+    "team",
+    "icons",
+    "primaryPosId",
+    "rookie",
+    "minorsEligible",
+    "posIds",
+    "teamId",
+    "name",
+    "teamShortName",
+    "shortName"
+  ],
+  "scorer_sample": {
+    "teamName": "Calgary Flames",
+    "urlName": "mikael-backlund",
+    "headshotUrl": "https://fantraximg.com/si/headshots/NHL/hs004p4_96_9.png",
+    "scorerId": "004p4",
+    "disableLineupChange": true,
+    "posIdsNoFlex": [
+      "206"
+    ],
+    "defaultPosId": "206",
+    "posShortNames": "<b>C</b>",
+    "team": false,
+    "icons": [
+      {
+        "tooltip": "Mar 15, 8:48 AM: Backlund tallied a goal and fired four...",
+        "typeId": "9"
+      }
+    ],
+    "primaryPosId": "206",
+    "rookie": false,
+    "minorsEligible": false,
+    "posIds": [
+      "206",
+      "208"
+    ],
+    "teamId": "30200"
+  },
+  "row_keys": [
+    "scorer",
+    "eligibleStatusIds",
+    "posId",
+    "cells",
+    "statusId",
+    "eligiblePosIds",
+    "actions"
+  ],
+  "cells_sample": [
+    {
+      "content": "37"
+    },
+    {
+      "content": "FLA<br/>Fri 9:00PM",
+      "eventId": "06d15"
+    },
+    {
+      "content": "36"
+    },
+    {
+      "content": "656:54"
+    },
+    {
+      "content": "6"
+    },
+    {
+      "content": "10"
+    },
+    {
+      "content": "16"
+    },
+    {
+      "content": "2"
+    },
+    {
+      "content": "12"
+    },
+    {
+      "content": "5"
+    }
+  ]
+}

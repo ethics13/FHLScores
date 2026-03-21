@@ -1,0 +1,602 @@
+[
+  {
+    "className": "league-players-table fx-layout--ignore ng-star-inserted",
+    "href": "",
+    "tag": "LEAGUE-PLAYERS-TABLE",
+    "text": "Name\nRk\nSta\nAge\nOpp\nScore\nRos\n+/-\nGP\nG\nA\nSOG\nGWG\nPPP\nHit\nBlk\nadd\nSam Steel\nC,LW\n"
+  },
+  {
+    "className": "player-tx player-tx--single",
+    "href": "",
+    "tag": "PLAYER-TX",
+    "text": "add"
+  },
+  {
+    "className": "scorer scorer--round",
+    "href": "",
+    "tag": "SCORER",
+    "text": "Sam Steel\nC,LW\n- DAL"
+  },
+  {
+    "className": "scorer__image ng-star-inserted",
+    "href": "",
+    "tag": "FIGURE",
+    "text": ""
+  },
+  {
+    "className": "scorer__info",
+    "href": "",
+    "tag": "DIV",
+    "text": "Sam Steel\nC,LW\n- DAL"
+  },
+  {
+    "className": "scorer__info__name",
+    "href": "",
+    "tag": "DIV",
+    "text": "Sam Steel"
+  },
+  {
+    "className": "scorer__info__positions ng-star-inserted",
+    "href": "",
+    "tag": "DIV",
+    "text": "C,LW\n- DAL"
+  },
+  {
+    "className": "mat-mdc-tooltip-trigger scorer-icon scorer-icon--PLAYER_NEWS_RECENT ng-star-inserted",
+    "href": "",
+    "tag": "SPAN",
+    "text": ""
+  },
+  {
+    "className": "player-bookmark",
+    "href": "",
+    "tag": "PLAYER-BOOKMARK",
+    "text": "star\ngroup"
+  },
+  {
+    "className": "player-tx player-tx--single",
+    "href": "",
+    "tag": "PLAYER-TX",
+    "text": "add"
+  },
+  {
+    "className": "scorer scorer--round",
+    "href": "",
+    "tag": "SCORER",
+    "text": "Alex Iafallo\nLW,RW\n- WPG"
+  },
+  {
+    "className": "scorer__image ng-star-inserted",
+    "href": "",
+    "tag": "FIGURE",
+    "text": ""
+  },
+  {
+    "className": "scorer__info",
+    "href": "",
+    "tag": "DIV",
+    "text": "Alex Iafallo\nLW,RW\n- WPG"
+  },
+  {
+    "className": "scorer__info__name",
+    "href": "",
+    "tag": "DIV",
+    "text": "Alex Iafallo"
+  },
+  {
+    "className": "scorer__info__positions ng-star-inserted",
+    "href": "",
+    "tag": "DIV",
+    "text": "LW,RW\n- WPG"
+  },
+  {
+    "className": "mat-mdc-tooltip-trigger scorer-icon scorer-icon--PLAYER_NEWS_RECENT ng-star-inserted",
+    "href": "",
+    "tag": "SPAN",
+    "text": ""
+  },
+  {
+    "className": "player-bookmark",
+    "href": "",
+    "tag": "PLAYER-BOOKMARK",
+    "text": "star\ngroup"
+  },
+  {
+    "className": "player-tx player-tx--single",
+    "href": "",
+    "tag": "PLAYER-TX",
+    "text": "add"
+  },
+  {
+    "className": "scorer scorer--round",
+    "href": "",
+    "tag": "SCORER",
+    "text": "Jamie Oleksiak\nD\n- SEA"
+  },
+  {
+    "className": "scorer__image ng-star-inserted",
+    "href": "",
+    "tag": "FIGURE",
+    "text": ""
+  },
+  {
+    "className": "scorer__info",
+    "href": "",
+    "tag": "DIV",
+    "text": "Jamie Oleksiak\nD\n- SEA"
+  },
+  {
+    "className": "scorer__info__name",
+    "href": "",
+    "tag": "DIV",
+    "text": "Jamie Oleksiak"
+  },
+  {
+    "className": "scorer__info__positions ng-star-inserted",
+    "href": "",
+    "tag": "DIV",
+    "text": "D\n- SEA"
+  },
+  {
+    "className": "mat-mdc-tooltip-trigger scorer-icon scorer-icon--PLAYER_NEWS_RECENT ng-star-inserted",
+    "href": "",
+    "tag": "SPAN",
+    "text": ""
+  },
+  {
+    "className": "player-bookmark",
+    "href": "",
+    "tag": "PLAYER-BOOKMARK",
+    "text": "star\ngroup"
+  },
+  {
+    "className": "player-tx player-tx--single",
+    "href": "",
+    "tag": "PLAYER-TX",
+    "text": "add"
+  },
+  {
+    "className": "scorer scorer--round",
+    "href": "",
+    "tag": "SCORER",
+    "text": "Michael Amadio\nRW\n- OTT"
+  },
+  {
+    "className": "scorer__image ng-star-inserted",
+    "href": "",
+    "tag": "FIGURE",
+    "text": ""
+  },
+  {
+    "className": "scorer__info",
+    "href": "",
+    "tag": "DIV",
+    "text": "Michael Amadio\nRW\n- OTT"
+  },
+  {
+    "className": "scorer__info__name",
+    "href": "",
+    "tag": "DIV",
+    "text": "Michael Amadio"
+  },
+  {
+    "className": "scorer__info__positions ng-star-inserted",
+    "href": "",
+    "tag": "DIV",
+    "text": "RW\n- OTT"
+  },
+  {
+    "className": "mat-mdc-tooltip-trigger scorer-icon scorer-icon--PLAYER_NEWS_RECENT ng-star-inserted",
+    "href": "",
+    "tag": "SPAN",
+    "text": ""
+  },
+  {
+    "className": "player-bookmark",
+    "href": "",
+    "tag": "PLAYER-BOOKMARK",
+    "text": "star\ngroup"
+  },
+  {
+    "className": "player-tx player-tx--single",
+    "href": "",
+    "tag": "PLAYER-TX",
+    "text": "add"
+  },
+  {
+    "className": "scorer scorer--round",
+    "href": "",
+    "tag": "SCORER",
+    "text": "Ryan Pulock\nD\n- NYI"
+  },
+  {
+    "className": "scorer__image ng-star-inserted",
+    "href": "",
+    "tag": "FIGURE",
+    "text": ""
+  },
+  {
+    "className": "scorer__info",
+    "href": "",
+    "tag": "DIV",
+    "text": "Ryan Pulock\nD\n- NYI"
+  },
+  {
+    "className": "scorer__info__name",
+    "href": "",
+    "tag": "DIV",
+    "text": "Ryan Pulock"
+  },
+  {
+    "className": "scorer__info__positions ng-star-inserted",
+    "href": "",
+    "tag": "DIV",
+    "text": "D\n- NYI"
+  },
+  {
+    "className": "mat-mdc-tooltip-trigger scorer-icon scorer-icon--PLAYER_NEWS_RECENT ng-star-inserted",
+    "href": "",
+    "tag": "SPAN",
+    "text": ""
+  },
+  {
+    "className": "player-bookmark",
+    "href": "",
+    "tag": "PLAYER-BOOKMARK",
+    "text": "star\ngroup"
+  },
+  {
+    "className": "player-tx player-tx--single",
+    "href": "",
+    "tag": "PLAYER-TX",
+    "text": "add"
+  },
+  {
+    "className": "scorer scorer--round",
+    "href": "",
+    "tag": "SCORER",
+    "text": "Will Borgen\nD\n- NYR"
+  },
+  {
+    "className": "scorer__image ng-star-inserted",
+    "href": "",
+    "tag": "FIGURE",
+    "text": ""
+  },
+  {
+    "className": "scorer__info",
+    "href": "",
+    "tag": "DIV",
+    "text": "Will Borgen\nD\n- NYR"
+  },
+  {
+    "className": "scorer__info__name",
+    "href": "",
+    "tag": "DIV",
+    "text": "Will Borgen"
+  },
+  {
+    "className": "scorer__info__positions ng-star-inserted",
+    "href": "",
+    "tag": "DIV",
+    "text": "D\n- NYR"
+  },
+  {
+    "className": "mat-mdc-tooltip-trigger scorer-icon scorer-icon--PLAYER_NEWS ng-star-inserted",
+    "href": "",
+    "tag": "SPAN",
+    "text": ""
+  },
+  {
+    "className": "player-bookmark",
+    "href": "",
+    "tag": "PLAYER-BOOKMARK",
+    "text": "star\ngroup"
+  },
+  {
+    "className": "player-tx player-tx--single",
+    "href": "",
+    "tag": "PLAYER-TX",
+    "text": "add"
+  },
+  {
+    "className": "scorer scorer--round",
+    "href": "",
+    "tag": "SCORER",
+    "text": "Zemgus Girgensons\nC,LW\n- TBL"
+  },
+  {
+    "className": "scorer__image ng-star-inserted",
+    "href": "",
+    "tag": "FIGURE",
+    "text": ""
+  },
+  {
+    "className": "scorer__info",
+    "href": "",
+    "tag": "DIV",
+    "text": "Zemgus Girgensons\nC,LW\n- TBL"
+  },
+  {
+    "className": "scorer__info__name",
+    "href": "",
+    "tag": "DIV",
+    "text": "Zemgus Girgensons"
+  },
+  {
+    "className": "scorer__info__positions ng-star-inserted",
+    "href": "",
+    "tag": "DIV",
+    "text": "C,LW\n- TBL"
+  },
+  {
+    "className": "mat-mdc-tooltip-trigger scorer-icon scorer-icon--PLAYER_NEWS_RECENT ng-star-inserted",
+    "href": "",
+    "tag": "SPAN",
+    "text": ""
+  },
+  {
+    "className": "player-bookmark",
+    "href": "",
+    "tag": "PLAYER-BOOKMARK",
+    "text": "star\ngroup"
+  },
+  {
+    "className": "player-tx player-tx--single",
+    "href": "",
+    "tag": "PLAYER-TX",
+    "text": "add"
+  },
+  {
+    "className": "scorer scorer--round",
+    "href": "",
+    "tag": "SCORER",
+    "text": "Andrew Peeke\nD\n- BOS"
+  },
+  {
+    "className": "scorer__image ng-star-inserted",
+    "href": "",
+    "tag": "FIGURE",
+    "text": ""
+  },
+  {
+    "className": "scorer__info",
+    "href": "",
+    "tag": "DIV",
+    "text": "Andrew Peeke\nD\n- BOS"
+  },
+  {
+    "className": "scorer__info__name",
+    "href": "",
+    "tag": "DIV",
+    "text": "Andrew Peeke"
+  },
+  {
+    "className": "scorer__info__positions ng-star-inserted",
+    "href": "",
+    "tag": "DIV",
+    "text": "D\n- BOS"
+  },
+  {
+    "className": "mat-mdc-tooltip-trigger scorer-icon scorer-icon--PLAYER_NEWS_RECENT ng-star-inserted",
+    "href": "",
+    "tag": "SPAN",
+    "text": ""
+  },
+  {
+    "className": "player-bookmark",
+    "href": "",
+    "tag": "PLAYER-BOOKMARK",
+    "text": "star\ngroup"
+  },
+  {
+    "className": "player-tx player-tx--single",
+    "href": "",
+    "tag": "PLAYER-TX",
+    "text": "add"
+  },
+  {
+    "className": "scorer scorer--round",
+    "href": "",
+    "tag": "SCORER",
+    "text": "Mikey Anderson\nD\n- LAK"
+  },
+  {
+    "className": "scorer__image ng-star-inserted",
+    "href": "",
+    "tag": "FIGURE",
+    "text": ""
+  },
+  {
+    "className": "scorer__info",
+    "href": "",
+    "tag": "DIV",
+    "text": "Mikey Anderson\nD\n- LAK"
+  },
+  {
+    "className": "scorer__info__name",
+    "href": "",
+    "tag": "DIV",
+    "text": "Mikey Anderson"
+  },
+  {
+    "className": "scorer__info__positions ng-star-inserted",
+    "href": "",
+    "tag": "DIV",
+    "text": "D\n- LAK"
+  },
+  {
+    "className": "mat-mdc-tooltip-trigger scorer-icon scorer-icon--PLAYER_NEWS_RECENT ng-star-inserted",
+    "href": "",
+    "tag": "SPAN",
+    "text": ""
+  },
+  {
+    "className": "player-bookmark",
+    "href": "",
+    "tag": "PLAYER-BOOKMARK",
+    "text": "star\ngroup"
+  },
+  {
+    "className": "player-tx player-tx--single",
+    "href": "",
+    "tag": "PLAYER-TX",
+    "text": "add"
+  },
+  {
+    "className": "scorer scorer--round",
+    "href": "",
+    "tag": "SCORER",
+    "text": "Nick Cousins\nLW\n- OTT"
+  },
+  {
+    "className": "scorer__image ng-star-inserted",
+    "href": "",
+    "tag": "FIGURE",
+    "text": ""
+  },
+  {
+    "className": "scorer__info",
+    "href": "",
+    "tag": "DIV",
+    "text": "Nick Cousins\nLW\n- OTT"
+  },
+  {
+    "className": "scorer__info__name",
+    "href": "",
+    "tag": "DIV",
+    "text": "Nick Cousins"
+  },
+  {
+    "className": "scorer__info__positions ng-star-inserted",
+    "href": "",
+    "tag": "DIV",
+    "text": "LW\n- OTT"
+  },
+  {
+    "className": "mat-mdc-tooltip-trigger scorer-icon scorer-icon--PLAYER_NEWS ng-star-inserted",
+    "href": "",
+    "tag": "SPAN",
+    "text": ""
+  },
+  {
+    "className": "player-bookmark",
+    "href": "",
+    "tag": "PLAYER-BOOKMARK",
+    "text": "star\ngroup"
+  },
+  {
+    "className": "player-tx player-tx--single",
+    "href": "",
+    "tag": "PLAYER-TX",
+    "text": "add"
+  },
+  {
+    "className": "scorer scorer--round",
+    "href": "",
+    "tag": "SCORER",
+    "text": "Ondrej Palat\nLW\n- NYI"
+  },
+  {
+    "className": "scorer__image ng-star-inserted",
+    "href": "",
+    "tag": "FIGURE",
+    "text": ""
+  },
+  {
+    "className": "scorer__info",
+    "href": "",
+    "tag": "DIV",
+    "text": "Ondrej Palat\nLW\n- NYI"
+  },
+  {
+    "className": "scorer__info__name",
+    "href": "",
+    "tag": "DIV",
+    "text": "Ondrej Palat"
+  },
+  {
+    "className": "scorer__info__positions ng-star-inserted",
+    "href": "",
+    "tag": "DIV",
+    "text": "LW\n- NYI"
+  },
+  {
+    "className": "player-bookmark",
+    "href": "",
+    "tag": "PLAYER-BOOKMARK",
+    "text": "star\ngroup"
+  },
+  {
+    "className": "player-tx player-tx--single",
+    "href": "",
+    "tag": "PLAYER-TX",
+    "text": "add"
+  },
+  {
+    "className": "scorer scorer--round",
+    "href": "",
+    "tag": "SCORER",
+    "text": "Alex Killorn\nLW,RW\n- ANA"
+  },
+  {
+    "className": "scorer__image ng-star-inserted",
+    "href": "",
+    "tag": "FIGURE",
+    "text": ""
+  },
+  {
+    "className": "scorer__info",
+    "href": "",
+    "tag": "DIV",
+    "text": "Alex Killorn\nLW,RW\n- ANA"
+  },
+  {
+    "className": "scorer__info__name",
+    "href": "",
+    "tag": "DIV",
+    "text": "Alex Killorn"
+  },
+  {
+    "className": "scorer__info__positions ng-star-inserted",
+    "href": "",
+    "tag": "DIV",
+    "text": "LW,RW\n- ANA"
+  },
+  {
+    "className": "mat-mdc-tooltip-trigger scorer-icon scorer-icon--PLAYER_NEWS ng-star-inserted",
+    "href": "",
+    "tag": "SPAN",
+    "text": ""
+  },
+  {
+    "className": "player-bookmark",
+    "href": "",
+    "tag": "PLAYER-BOOKMARK",
+    "text": "star\ngroup"
+  },
+  {
+    "className": "player-tx player-tx--single",
+    "href": "",
+    "tag": "PLAYER-TX",
+    "text": "add"
+  },
+  {
+    "className": "scorer scorer--round",
+    "href": "",
+    "tag": "SCORER",
+    "text": "Simon Benoit\nD\n- TOR"
+  },
+  {
+    "className": "scorer__image ng-star-inserted",
+    "href": "",
+    "tag": "FIGURE",
+    "text": ""
+  },
+  {
+    "className": "scorer__info",
+    "href": "",
+    "tag": "DIV",
+    "text": "Simon Benoit\nD\n- TOR"
+  }
+]

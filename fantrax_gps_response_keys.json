@@ -1,0 +1,168 @@
+{
+  "top_level_keys": [
+    "displayedStatusOrTeam",
+    "paginatedResultSet",
+    "statsTable",
+    "scoringCategoryTypes",
+    "displayedSchedulePageAdj",
+    "numScoringPeriods",
+    "miscDisplayTypes",
+    "tabs",
+    "displayedView",
+    "displayedTimeStartType",
+    "posOrGroupList",
+    "goBackDays",
+    "playerNewsIconRecencyLegend",
+    "statisticsViewTypeIds",
+    "numPeriods",
+    "displayedPosOrGroup",
+    "displayedLists",
+    "seasonOrProjections",
+    "prevSchedPageAllowed",
+    "periodList",
+    "statisticsTimeframeTypes",
+    "miscData",
+    "displayedSortType",
+    "tableHeader",
+    "nextSchedPageAllowed",
+    "displayedPeriod",
+    "sortOptions",
+    "displayedSelections",
+    "displayedMiscDisplayType",
+    "displayedScoringCategoryType",
+    "claimsDropsAllowed",
+    "statusOrTeamList",
+    "displayedSeasonOrProjection"
+  ],
+  "stats_table_count": 20,
+  "other_fields": {
+    "displayedStatusOrTeam": "ALL_AVAILABLE",
+    "paginatedResultSet": "dict with 4 keys: ['totalNumPages', 'pageNumber', 'maxResultsPerPage', 'totalNumResults']",
+    "scoringCategoryTypes": "list[4]",
+    "displayedSchedulePageAdj": "0",
+    "numScoringPeriods": "25",
+    "miscDisplayTypes": "list[2]",
+    "tabs": "list[3]",
+    "displayedView": "STATS",
+    "displayedTimeStartType": "PERIOD_ONLY",
+    "posOrGroupList": "list[8]",
+    "goBackDays": "list[5]",
+    "playerNewsIconRecencyLegend": "list[3]",
+    "statisticsViewTypeIds": "list[2]",
+    "numPeriods": "25",
+    "displayedPosOrGroup": "HOCKEY_SKATING",
+    "displayedLists": "dict with 4 keys: ['goBackDays', 'scoringCategoryTypes', 'datePlayingDates', 'displayedSeasonOrProjections']",
+    "seasonOrProjections": "list[77]",
+    "prevSchedPageAllowed": "True",
+    "periodList": "list[25]",
+    "statisticsTimeframeTypes": "list[2]",
+    "miscData": "dict with 10 keys: ['displayedMinDate', 'tradeDeadlinePassed', 'displayedMaxDate', 'pageTitle', 'periodName']",
+    "displayedSortType": "SCORE",
+    "tableHeader": "dict with 1 keys: ['cells']",
+    "nextSchedPageAllowed": "True",
+    "displayedPeriod": "21",
+    "sortOptions": "list[9]",
+    "displayedSelections": "dict with 8 keys: ['datePlaying', 'searchName', 'displayedMiscDisplayType', 'displayedView', 'displayedStartDate']",
+    "displayedMiscDisplayType": "1",
+    "displayedScoringCategoryType": "5",
+    "claimsDropsAllowed": "True",
+    "statusOrTeamList": "list[73]",
+    "displayedSeasonOrProjection": "dict with 7 keys: ['code', 'endDate', 'name', 'showGoBackDays', 'shortName']"
+  },
+  "first_row_sample": {
+    "scorer": {
+      "teamName": "Dallas Stars",
+      "urlName": "sam-steel",
+      "headshotUrl": "https://fantraximg.com/si/headshots/NHL/hs03mn4_96_7.png",
+      "scorerId": "03mn4",
+      "rank": 285,
+      "posIdsNoFlex": [
+        "206",
+        "203"
+      ],
+      "defaultPosId": "206",
+      "posShortNames": "<b>C</b>,LW",
+      "team": false,
+      "icons": [
+        {
+          "tooltip": "Mar 17, 1:55 PM: Steel scored a goal on two shots, added...",
+          "typeId": "9"
+        }
+      ],
+      "primaryPosId": "206",
+      "rookie": false,
+      "minorsEligible": false,
+      "statusId": "4",
+      "posIds": [
+        "206",
+        "203",
+        "208"
+      ],
+      "teamId": "30260",
+      "name": "Sam Steel",
+      "teamShortName": "DAL",
+      "shortName": "S. Steel"
+    },
+    "multiPositions": "C,LW",
+    "cells": [
+      {
+        "content": "285"
+      },
+      {
+        "content": "FA",
+        "toolTip": "Free Agent"
+      },
+      {
+        "content": "28"
+      },
+      {
+        "content": ""
+      },
+      {
+        "content": "48.76"
+      },
+      {
+        "content": "12%"
+      },
+      {
+        "gainColor": -1,
+        "content": "-1%"
+      },
+      {
+        "content": "68"
+      },
+      {
+        "content": "12"
+      },
+      {
+        "content": "20"
+      },
+      {
+        "content": "79"
+      },
+      {
+        "content": "5"
+      },
+      {
+        "content": "3"
+      },
+      {
+        "content": "74"
+      },
+      {
+        "content": "27"
+      }
+    ],
+    "actions": [
+      {
+        "typeId": "1"
+      },
+      {
+        "typeId": "5"
+      },
+      {
+        "typeId": "7"
+      }
+    ]
+  }
+}

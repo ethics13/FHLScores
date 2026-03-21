@@ -1,0 +1,18 @@
+{
+  "status": "complete",
+  "ownership_found": 20,
+  "per_group": {
+    "C": 20,
+    "LW": 20,
+    "RW": 20,
+    "D": 20,
+    "G": 20
+  },
+  "sample": {
+    "Sam Steel": 12.0,
+    "Alex Iafallo": 8.0,
+    "Jamie Oleksiak": 5.0,
+    "Michael Amadio": 7.0,
+    "Ryan Pulock": 18.0
+  }
+}
